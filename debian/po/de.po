@@ -1,0 +1,312 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ddclient\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-02-16 18:56+0100\n"
+"PO-Revision-Date: 2002-09-01 00:00+0000\n"
+"Last-Translator:  Felix KrÃ¶ger <felix.kroeger@gmx.de>\n"
+"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: select
+#. Choices
+#: ../templates:3
+msgid "www.dyndns.org"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../templates:3
+msgid "www.easydns.com"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../templates:3
+msgid "www.dslreports.com"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../templates:3
+msgid "www.zoneedit.com"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../templates:3
+msgid "other"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../templates:5
+#, fuzzy
+msgid "Dynamic DNS service provider:"
+msgstr "Wählen Sie den dynamischen DNS Service Betreiber"
+
+#. Type: select
+#. Description
+#: ../templates:5
+#, fuzzy
+msgid ""
+"Please select the dynamic DNS service you are using. If the service you use "
+"is not listed, choose \"other\" and you will be asked for the protocol and "
+"the server name."
+msgstr ""
+"Bitte wählen Sie nun den dynamischen DNS Service Betreiber den Sie benutzen "
+"möchten. Wenn Ihr Betreiber hier nicht aufgeführt ist, wählen Sie bitte "
+"\"other\" und Sie werden nach dem Protocol und Servernamen gefragt."
+
+#. Type: string
+#. Description
+#: ../templates:12
+#, fuzzy
+msgid "Dynamic DNS server:"
+msgstr "Dynamischer DNS Server"
+
+#. Type: string
+#. Description
+#: ../templates:12
+msgid ""
+"Enter the name of the server which is providing you with dynamic DNS service "
+"(example: members.dyndns.org)."
+msgstr ""
+"Geben Sie den namen des dynamischen DNS Servers ein (z.B.: members.dyndns."
+"org)."
+
+#. Type: select
+#. Description
+#: ../templates:20
+#, fuzzy
+msgid "Dynamic DNS update protocol:"
+msgstr "Dynamisches DNS Update Protokoll"
+
+#. Type: select
+#. Description
+#: ../templates:20
+msgid ""
+"Select the dynamic DNS update protocol used by your dynamic DNS service "
+"provider."
+msgstr ""
+"Wählen Sie das Dynamisches DNS Update Protokoll aus, das von Ihrem "
+"dynamischen DNS Server benutzt wird."
+
+#. Type: string
+#. Description
+#: ../templates:26
+#, fuzzy
+msgid "DynDNS fully qualified domain names:"
+msgstr "Ihr DynDNS Domainname"
+
+#. Type: string
+#. Description
+#: ../templates:26
+msgid ""
+"Enter the list of fully qualified domain names for your host (like \"myname."
+"dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
+"dyndns.org\" for two hosts)."
+msgstr ""
+"Geben Sie eine Liste der vollständigen Domainnamen Ihres Rechners ein  (z."
+"B.: \"myname.dyndns.org\" oder wenn Sie mehrere haben \"myname1.dyndns.org,"
+"myname2.dyndns.org\")"
+
+#. Type: string
+#. Description
+#: ../templates:33
+#, fuzzy
+msgid "Username for dynamic DNS service:"
+msgstr "Ihr DynDNS Benutzername"
+
+#. Type: string
+#. Description
+#: ../templates:33
+msgid "Enter the username you use to log into the dynamic DNS service."
+msgstr "Geben Sie Ihren bei DynDNS verwendeten Benutzernamen ein"
+
+#. Type: password
+#. Description
+#: ../templates:38
+#, fuzzy
+msgid "Password for dynamic DNS service:"
+msgstr "Ihr DynDNS Passwort"
+
+#. Type: password
+#. Description
+#: ../templates:38
+#, fuzzy
+msgid "Enter the password you use to log into the dynamic DNS service."
+msgstr "Geben Sie Ihren bei DynDNS verwendeten Benutzernamen ein"
+
+#. Type: string
+#. Description
+#: ../templates:43
+#, fuzzy
+msgid "Interface used for dynamic DNS service:"
+msgstr "Schnittstelle für den DynDNS Service"
+
+#. Type: string
+#. Description
+#: ../templates:43
+msgid "Enter the interface which is used for using dynamic DNS service."
+msgstr ""
+"Geben Sie die Schnittstelle an die für den DynDNS Service benutzt werden "
+"soll (z.B.: eth0, ppp0, ippp0)"
+
+#. Type: boolean
+#. Description
+#: ../templates:49
+#, fuzzy
+msgid "Run ddclient on PPP connect?"
+msgstr "Ausführen des ddclient's bei Verbindungsaufbau"
+
+#. Type: boolean
+#. Description
+#: ../templates:49
+#, fuzzy
+msgid ""
+"Enable this if ddclient should be run every time a PPP connection is "
+"established."
+msgstr ""
+"Aktivieren Sie diese Funktion, wenn sie bei jedem Verbindungsaufbau den "
+"ddclient ausführen möchten."
+
+#. Type: boolean
+#. Description
+#: ../templates:56
+msgid "Run ddclient as daemon?"
+msgstr "Ausführung des ddclient's als Daemon?"
+
+#. Type: boolean
+#. Description
+#: ../templates:56
+#, fuzzy
+msgid ""
+"Please choose whether you want ddclient to be run in daemon mode on system "
+"startup."
+msgstr ""
+"Wollen Sie den ddclient als Daemon ausführen, wenn Ihr System gestartet wird?"
+
+#. Type: string
+#. Description
+#: ../templates:63
+#, fuzzy
+msgid "ddclient update interval:"
+msgstr "ddclient Update Intervall"
+
+#. Type: string
+#. Description
+#: ../templates:63
+#, fuzzy
+msgid ""
+"Please choose the delay between interface address checks. Values may be "
+"given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
+"\") or in days (e.g. \"1d\")."
+msgstr ""
+"Wie lange soll der ddclient warten bevor er überprüft ob sich die IP "
+"Addresse geändert hat? Werten können wie folgt angegeben werden: Sekunden (z."
+"B.: \"5s\"), Minuten (z.B.: \"3m\"), Stunden (z.B.: \"7h\") oder Tage (z.B.: "
+"\"1d\")."
+
+#. Type: note
+#. Description
+#: ../templates:70
+msgid "More powerful configuration"
+msgstr "Verbesserte Konfiguration"
+
+#. Type: note
+#. Description
+#: ../templates:70
+msgid ""
+"The new ddclient version allows you to store all options in the "
+"configuration file instead of passing them in your scripts. Apart from that "
+"ddclient now supports different protocols and services, different ways to "
+"figure out your internet address including gathering it from a firewall "
+"status page."
+msgstr ""
+"Die neue ddclient Version erlaubt es nun alle Optionen in der Konfigurations "
+"Datei zuspeichern, anstatt sie dem Script zu übergeben. Weiterhin "
+"unterstützt die neue Version verschiedene Protokolle und Anbieter, sowie "
+"unterschiedliche Wege Ihre Internet IP Addresse herraus zufinden (z.B.: "
+"Abfragen der Status Seite Ihrer Firewall)."
+
+#. Type: note
+#. Description
+#: ../templates:70
+msgid ""
+"In any case the configuration file /etc/ddclient.conf will be updated to be "
+"a bit more readable and the protocol will be updated to dyndns2. This is "
+"neccessary as dyndns.org switched off support for the dyndns1 protocol on "
+"January 1st 2002."
+msgstr ""
+"Die Konfigurations Datei /etc/ddclient.conf wird durch die  Aktualisierung "
+"ein wenig Lesbarer und das Protokoll wird aktualisiert auf den dyndns2 "
+"Standard. Dies ist notwendig da dyndns.org Ihre unterstützung für das "
+"dyndns1 Protokoll abgeschaltet hat am 1. Jan 2002."
+
+#. Type: note
+#. Description
+#: ../templates:70
+#, fuzzy
+msgid ""
+"If you want to make use of the new options through this frontend please run "
+"\"dpkg-reconfigure ddclient\"."
+msgstr ""
+"Wenn Sie die neuen Optionen benutzen moechten (mit dem Debconf Front-End), "
+"führen Sie bitte folgenden Befehl aus: dpkg-reconfigure ddclient"
+
+#. Type: note
+#. Description
+#: ../templates:87
+msgid "Modified configuration file"
+msgstr "Angepasste Konfigurations Datei"
+
+#. Type: note
+#. Description
+#: ../templates:87
+#, fuzzy
+msgid ""
+"The config file /etc/ddclient.conf on your system does not consist of three "
+"entries. The automatic configuration utility (debconf) cannot handle this. "
+"Maybe you modified the configuration file manually, thus it won't be "
+"modified. If you want a new config file to be created, please run  \"dpkg-"
+"reconfigure ddclient\"."
+msgstr ""
+"Die Konfigurations Datei /etc/ddclient.conf auf Ihrem System besteht nicht "
+"aus drei Einträgen. Das automatische Konfigurations Programm Debconf kann "
+"damit leider nicht umgehen. Sehr wahrscheinlich haben Sie die Konfiguration "
+"manuell angepasst, deshalb werden wir die Konfiguration nicht automatisch "
+"anpassen. Wenn Sie möchten das die Datei erneut erstellt wird, rufen sie "
+"bitte folgenden Befehl auf: dpkg-reconfigure ddclient"
+
+#~ msgid ""
+#~ "Enter the password you use to log into the dynamic DNS service. The value "
+#~ "will not be displayed as you type it."
+#~ msgstr ""
+#~ "Geben Sie das zu Ihrem DynDNS Benutzernamen zugehörige Passwort ein. Die "
+#~ "Tastatureingabe wird nicht auf dem Bildschirm dargestellt."
+
+#~ msgid ""
+#~ "www.dyndns.org, www.easydns.com, www.dslreports.com, www.zoneedit.com, "
+#~ "other"
+#~ msgstr ""
+#~ "www.dyndns.org, www.easydns.com, www.dslreports.com, www.zoneedit.com, "
+#~ "other"
+
+#~ msgid "dyndns2, dslreports1, easydns, hammernode1, zoneedit1, dyndns1"
+#~ msgstr "dyndns2, dslreports1, easydns, hammernode1, zoneedit1, dyndns1"

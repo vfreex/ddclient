@@ -1,0 +1,182 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ddclient\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-02-16 18:56+0100\n"
+"PO-Revision-Date: 2005-03-13 19:11+0800\n"
+"Last-Translator: Asho Yeh <asho@debian.org.tw>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: TAIWAN\n"
+
+#. Type: select
+#: ../templates:3
+msgid "www.dyndns.org"
+msgstr "www.dyndns.org"
+
+#. Type: select
+#: ../templates:3
+msgid "www.easydns.com"
+msgstr "www.easydns.com"
+
+#. Type: select
+#: ../templates:3
+msgid "www.dslreports.com"
+msgstr "www.dslreports.com"
+
+#. Type: select
+#: ../templates:3
+msgid "www.zoneedit.com"
+msgstr "www.zoneedit.com"
+
+#. Type: select
+#: ../templates:3
+msgid "other"
+msgstr "其他"
+
+#. Type: select
+#: ../templates:5
+msgid "Dynamic DNS service provider:"
+msgstr "動態 DNS 服務提供者："
+
+#. Type: select
+#: ../templates:5
+msgid "Please select the dynamic DNS service you are using. If the service you use is not listed, choose \"other\" and you will be asked for the protocol and the server name."
+msgstr "請選擇您使用的動態 DNS 服務。如果使用的服務不在列表，請選擇「其它」，然後會詢問您服務名稱和協定。"
+
+#. Type: string
+#: ../templates:12
+msgid "Dynamic DNS server:"
+msgstr "動態 DNS 伺服器"
+
+#. Type: string
+#: ../templates:12
+msgid "Enter the name of the server which is providing you with dynamic DNS service (example: members.dyndns.org)."
+msgstr "請輸入提供您使用 動態 DNS 服務的伺服器名稱(例如： members.dyndns.org)。"
+
+#. Type: select
+#: ../templates:20
+msgid "Dynamic DNS update protocol:"
+msgstr "動態 DNS 的更新協定："
+
+#. Type: select
+#: ../templates:20
+msgid "Select the dynamic DNS update protocol used by your dynamic DNS service provider."
+msgstr "選擇您的動態 DNS 服務提供者更新 DNS 的協定。"
+
+#. Type: string
+#: ../templates:26
+msgid "DynDNS fully qualified domain names:"
+msgstr "DynDNS 完整領域名稱(FQDN)："
+
+#. Type: string
+#: ../templates:26
+msgid "Enter the list of fully qualified domain names for your host (like \"myname.dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2.dyndns.org\" for two hosts)."
+msgstr "輸入您主機的完整領域名稱(FQDN，如果您只有一台主機，就類似 \"myname.dyndns.org\"，兩台以上就類似 \"myname1.dyndns.org,myname2.dyndns.org\") 。"
+
+#. Type: string
+#: ../templates:33
+msgid "Username for dynamic DNS service:"
+msgstr "動態 DNS 服務的使用者帳號："
+
+#. Type: string
+#: ../templates:33
+msgid "Enter the username you use to log into the dynamic DNS service."
+msgstr "輸入登入動態 DNS 服務的使用者帳號。"
+
+#. Type: password
+#: ../templates:38
+msgid "Password for dynamic DNS service:"
+msgstr "動態 DNS 服務的使用者密碼："
+
+#. Type: password
+#: ../templates:38
+msgid "Enter the password you use to log into the dynamic DNS service."
+msgstr "輸入登入動態 DNS 服務的使用者密碼。"
+
+#. Type: string
+#: ../templates:43
+msgid "Interface used for dynamic DNS service:"
+msgstr "動態 DNS 服務所使用的裝置介面："
+
+#. Type: string
+#: ../templates:43
+msgid "Enter the interface which is used for using dynamic DNS service."
+msgstr "輸入使用動態 DNS 服務的裝置介面："
+
+#. Type: boolean
+#: ../templates:49
+msgid "Run ddclient on PPP connect?"
+msgstr "PPP 連線時執行 ddclient ？"
+
+#. Type: boolean
+#: ../templates:49
+msgid "Enable this if ddclient should be run every time a PPP connection is established."
+msgstr "加入該選項則每次 PPP 建立連線後，ddclient 也會跟著執行。"
+
+#. Type: boolean
+#: ../templates:56
+msgid "Run ddclient as daemon?"
+msgstr "ddclient 以 daemon 模式啟動？"
+
+#. Type: boolean
+#: ../templates:56
+msgid "Please choose whether you want ddclient to be run in daemon mode on system startup."
+msgstr "系統開機時，ddclient 是否要以 daemon 模式啟動？"
+
+#. Type: string
+#: ../templates:63
+msgid "ddclient update interval:"
+msgstr "ddclient 更新頻率："
+
+#. Type: string
+#: ../templates:63
+msgid "Please choose the delay between interface address checks. Values may be given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h\") or in days (e.g. \"1d\")."
+msgstr "請選擇裝置位址檢查的時間間隔。可以秒(例如 \"5s\")\"、以分(例如 \"3m\")、以小時(例如 \"7h\") 或以天(例如 \"1d\")。"
+
+#. Type: note
+#: ../templates:70
+msgid "More powerful configuration"
+msgstr "更多的設定"
+
+#. Type: note
+#: ../templates:70
+msgid "The new ddclient version allows you to store all options in the configuration file instead of passing them in your scripts. Apart from that ddclient now supports different protocols and services, different ways to figure out your internet address including gathering it from a firewall status page."
+msgstr "新版的 ddclient 允許您儲存所有的選項到設定檔，取代已往傳遞參數到 script 中。除此之外，ddclient 現在支援不同的服務協定，以不同的方法來找出您的網路位址，包括從防火牆狀態頁收集資訊。"
+
+#. Type: note
+#: ../templates:70
+msgid "In any case the configuration file /etc/ddclient.conf will be updated to be a bit more readable and the protocol will be updated to dyndns2. This is neccessary as dyndns.org switched off support for the dyndns1 protocol on January 1st 2002."
+msgstr "預設何情況下，/etc/ddclient.conf 設定檔會被轉換成更容易閱讀的版本且協定會更新成 dyndns2。這是因為 dyndns.org 在 2002 年一月一號停用 dyndns1 的協定。"
+
+#. Type: note
+#: ../templates:70
+msgid "If you want to make use of the new options through this frontend please run \"dpkg-reconfigure ddclient\"."
+msgstr "如果您想要透過該介面使用新的設定參數，請執行 \"dpkg-reconfigure ddclient\"。"
+
+#. Type: note
+#: ../templates:87
+msgid "Modified configuration file"
+msgstr "修改設定檔"
+
+#. Type: note
+#: ../templates:87
+msgid "The config file /etc/ddclient.conf on your system does not consist of three entries. The automatic configuration utility (debconf) cannot handle this. Maybe you modified the configuration file manually, thus it won't be modified. If you want a new config file to be created, please run  \"dpkg-reconfigure ddclient\"."
+msgstr "系統的 /etc/ddclient.conf 設定檔不包含三個主要項目以致於自動組態設定工具(debconf)無法處理。您也許先前修改過設定檔才造成無法自動設定。如果您想要建立新的設定檔，請執行 \"dpkg-reconfigure ddclient\"。"
+

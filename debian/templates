@@ -1,151 +1,92 @@
 Template: ddclient/service
 Type: select
-Choices: www.dyndns.org, www.easydns.com, www.dslreports.com, www.zoneedit.com, other
-Choices-de: www.dyndns.org, www.easydns.com, www.dslreports.com, www.zoneedit.com, other
+__Choices: www.dyndns.org, www.easydns.com, www.dslreports.com, www.zoneedit.com, other
 Default: www.dyndns.org
-Description: Choose dynamic DNS service provider
- Please select the dynamic DNS service you are using. If the service you 
- is not listed choose other and you will be asked for the protocol and 
- the server name.
-Description-de: Wählen Sie den dynamischen DNS Service Betreiber
- Bitte wählen Sie nun den dynamischen DNS Service Betreiber den Sie 
- benutzen möchten. Wenn Ihr Betreiber hier nicht aufgeführt ist, 
- wählen Sie bitte "other" und Sie werden nach dem Protocol und
- Servernamen gefragt.
+_Description: Dynamic DNS service provider:
+ Please select the dynamic DNS service you are using. If the service you use is
+ not listed, choose "other" and you will be asked for the protocol and the
+ server name.
 
 Template: ddclient/server
 Type: string
-Description: Dynamic DNS server
- Enter the name of the server which is providing you with dynamic DNS 
+_Description: Dynamic DNS server:
+ Enter the name of the server which is providing you with dynamic DNS
  service (example: members.dyndns.org).
-Description-de: Dynamischer DNS Server
- Geben Sie den namen des dynamischen DNS Servers ein 
- (z.B.: members.dyndns.org).
 
 Template: ddclient/protocol
 Type: select
 Choices: dyndns2, dslreports1, easydns, hammernode1, zoneedit1, dyndns1
-Choices-de: dyndns2, dslreports1, easydns, hammernode1, zoneedit1, dyndns1
 Default: dyndns2
-Description: Dynamic DNS update protocol
- Select the dynamic DNS update protocol used by your dynamic DNS 
- service provider.
-Description-de: Dynamisches DNS Update Protokoll
- Wählen Sie das Dynamisches DNS Update Protokoll aus, das von Ihrem
- dynamischen DNS Server benutzt wird.
+_Description: Dynamic DNS update protocol:
+ Select the dynamic DNS update protocol used by your dynamic DNS service
+ provider.
 
 Template: ddclient/names
 Type: string
-Description: Your DynDNS fully qualified domain names
+_Description: DynDNS fully qualified domain names:
  Enter the list of fully qualified domain names for your host (like
- "myname.dyndns.org" if you have only one host or 
+ "myname.dyndns.org" if you have only one host or
  "myname1.dyndns.org,myname2.dyndns.org" for two hosts).
-Description-de: Ihr DynDNS Domainname
- Geben Sie eine Liste der vollständigen Domainnamen Ihres Rechners
- ein  (z.B.: "myname.dyndns.org" oder wenn Sie mehrere haben 
- "myname1.dyndns.org,myname2.dyndns.org")
 
 Template: ddclient/username
 Type: string
-Description: Username for dynamic DNS service
+_Description: Username for dynamic DNS service:
  Enter the username you use to log into the dynamic DNS service.
-Description-de: Ihr DynDNS Benutzername
- Geben Sie Ihren bei DynDNS verwendeten Benutzernamen ein
 
 Template: ddclient/password
 Type: password
-Description: Password for dynamic DNS service
- Enter the password you use to log into the dynamic DNS service. The value
- will not be displayed as you type it.
-Description-de: Ihr DynDNS Passwort
- Geben Sie das zu Ihrem DynDNS Benutzernamen zugehörige Passwort ein.
- Die Tastatureingabe wird nicht auf dem Bildschirm dargestellt.
+_Description: Password for dynamic DNS service:
+ Enter the password you use to log into the dynamic DNS service.
 
 Template: ddclient/interface
 Type: string
-Description: Interface used for dynamic DNS service
+_Description: Interface used for dynamic DNS service:
  Enter the interface which is used for using dynamic DNS service.
-Description-de: Schnittstelle für den DynDNS Service
- Geben Sie die Schnittstelle an die für den DynDNS Service benutzt
- werden soll (z.B.: eth0, ppp0, ippp0)
 
 Template: ddclient/run_ipup
 Type: boolean
 Default: false
-Description: Run ddclient on ppp connect
- Enable this if ddclient should be run every time a ppp connection is 
+_Description: Run ddclient on PPP connect?
+ Enable this if ddclient should be run every time a PPP connection is
  established.
-Description-de: Ausführen des ddclient's bei Verbindungsaufbau
- Aktivieren Sie diese Funktion, wenn sie bei jedem Verbindungsaufbau
- den ddclient ausführen möchten.
 
 Template: ddclient/run_daemon
 Type: boolean
 Default: false
-Description: Run ddclient as daemon?
- Do you want ddclient to be run in daemon mode on system startup?
-Description-de: Ausführung des ddclient's als Daemon?
- Wollen Sie den ddclient als Daemon ausführen, wenn Ihr System
- gestartet wird?
+_Description: Run ddclient as daemon?
+ Please choose whether you want ddclient to be run in daemon mode on system
+ startup.
 
 Template: ddclient/daemon_interval
 Type: string
 Default: 300
-Description: ddclient update interval
- How long should ddclient wait before checking the interface address again?
- Values may be given in seconds (e.g. "5s"), in minutes (e.g. "3m"), in hours
- (e.g. "7h") or in days (e.g. "1d").
-Description-de: ddclient Update Intervall
- Wie lange soll der ddclient warten bevor er überprüft ob sich die IP Addresse
- geändert hat?
- Werten können wie folgt angegeben werden:
- Sekunden (z.B.: "5s"), Minuten (z.B.: "3m"), Stunden (z.B.: "7h") oder 
- Tage (z.B.: "1d").
+_Description: ddclient update interval:
+ Please choose the delay between interface address checks.
+ Values may be given in seconds (e.g. "5s"), in minutes (e.g. "3m"), in
+ hours (e.g. "7h") or in days (e.g. "1d").
 
 Template: ddclient/newconfigfmt
 Type: note
-Description: More powerful configuration
- The new ddclient version allows you to store all options in the configuration
- file instead of passing them in your scripts. Apart from that ddclient now
- supports different protocols and services, different ways to figure out 
- your internet address including gathering it from a firewall status page.
+_Description: More powerful configuration
+ The new ddclient version allows you to store all options in the
+ configuration file instead of passing them in your scripts. Apart from
+ that ddclient now supports different protocols and services, different
+ ways to figure out your internet address including gathering it from a
+ firewall status page.
  .
- In any case the configuration file /etc/ddclient.conf will be updated 
- to be a bit more readable and the protocol will be updated to dyndns2. 
- This is neccessary as dyndns.org switched off support for the dyndns1
- protocol on January 1st 2002. 
+ In any case the configuration file /etc/ddclient.conf will be updated to
+ be a bit more readable and the protocol will be updated to dyndns2. This
+ is neccessary as dyndns.org switched off support for the dyndns1 protocol
+ on January 1st 2002.
  .
  If you want to make use of the new options through this frontend please
- run dpkg-reconfigure ddclient.
-Description-de: Verbesserte Konfiguration
- Die neue ddclient Version erlaubt es nun alle Optionen in der Konfigurations
- Datei zuspeichern, anstatt sie dem Script zu übergeben. Weiterhin unterstützt
- die neue Version verschiedene Protokolle und Anbieter, sowie unterschiedliche
- Wege Ihre Internet IP Addresse herraus zufinden (z.B.: Abfragen der Status
- Seite Ihrer Firewall).
- .
- Die Konfigurations Datei /etc/ddclient.conf wird durch die  Aktualisierung
- ein wenig Lesbarer und das Protokoll wird aktualisiert auf den dyndns2 
- Standard. Dies ist notwendig da dyndns.org Ihre unterstützung für das
- dyndns1 Protokoll abgeschaltet hat am 1. Jan 2002.
- .
- Wenn Sie die neuen Optionen benutzen moechten (mit dem Debconf Front-End),
- führen Sie bitte folgenden Befehl aus:
- dpkg-reconfigure ddclient
+ run "dpkg-reconfigure ddclient".
 
 Template: ddclient/modifiedconfig
 Type: note
-Description: Modified configuration file
- The config file /etc/ddclient.conf on your system does not consist of three
- entries. The automatic configuration utility debconf cannot handle this.
- Maybe you modified the configuration file manually, so I won't touch it. If
- you want me to create a new config, please run dpkg-reconfigure ddclient.
-Description-de: Angepasste Konfigurations Datei
- Die Konfigurations Datei /etc/ddclient.conf auf Ihrem System besteht nicht
- aus drei Einträgen. Das automatische Konfigurations Programm Debconf kann
- damit leider nicht umgehen.
- Sehr wahrscheinlich haben Sie die Konfiguration manuell angepasst, deshalb
- werden wir die Konfiguration nicht automatisch anpassen.
- Wenn Sie möchten das die Datei erneut erstellt wird, rufen sie bitte folgenden
- Befehl auf:
- dpkg-reconfigure ddclient
+_Description: Modified configuration file
+ The config file /etc/ddclient.conf on your system does not consist of
+ three entries. The automatic configuration utility (debconf) cannot handle
+ this. Maybe you modified the configuration file manually, thus it won't
+ be modified. If you want a new config file to be created, please run 
+ "dpkg-reconfigure ddclient".
