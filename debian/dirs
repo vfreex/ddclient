@@ -1,0 +1,3 @@
+usr/sbin
+var/cache/ddclient
+etc/ppp/ip-up.d

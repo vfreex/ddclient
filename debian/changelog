@@ -1,0 +1,48 @@
+ddclient (3.6.2-2) unstable; urgency=low
+
+  * Changed error message in case of abuse (closes: #136909)
+  * Modified the init.d script to work properly with /bin/sh (closes: #136914)
+
+ -- Felix Kröger <felix.kroeger@gmx.de>  Wed,  6 Mar 2002 00:52:36 +0100
+
+ddclient (3.6.2-1) unstable; urgency=medium
+
+  * New maintainer.
+  * New upstream version.
+    + Fixes problem with web based ip detection (closes: #127775)
+  * Heavily modified debconf interface.
+  * Provides /etc/init.d/ddclient script.
+  * Provides /etc/ppp/ip-up.d/ddclient script.
+  * debian/control: 
+    + Update Standards-Version to 3.5.6 (lintian - no changes needed).
+    + Add versioned depend on debconf >= 0.5.0 (lintian).
+    + Change Build-Depends to Build-Depends-Indep (lintian).
+  * debian/conffiles: Add /etc/init.d/ddclient (lintian).
+  * debian/conffiles: Add /etc/ppp/ip-up.d/ddclient.
+  * fixed sanity check of daemon interval (closes: #127298).
+
+ -- Felix Kröger <felix.kroeger@gmx.de>  Tue, 15 Jan 2002 03:45:51 +0100
+
+ddclient (3.6.0-1) unstable; urgency=high
+
+  * The "everybody talks but nobody does anything" release.
+  * New upstream release. (closes: #87109, #106156)
+  * Moved to /usr/sbin, sample init script now matches. (closes: #85200)
+  * Use note instead of text in template (closes: #106332)
+
+ -- Steve Greenland <stevegr@debian.org>  Thu, 27 Dec 2001 07:57:55 -0600
+
+ddclient (2.3.7-1) unstable; urgency=low
+
+  * Added Build-Depends
+  * New upstream release (closes:#79343)
+  * Change '==' to '=' in config script (closes:#75467)
+ -- Steve Greenland <stevegr@debian.org>  Mon, 11 Dec 2000 11:07:02 -0600
+
+ddclient (2.3.3-1) unstable; urgency=low
+
+  * Initial Release.
+  * Check that ddclient.conf is readable only by user running ddclient.
+  * Move cache file to /var/cache/ddclient
+ -- Steve Greenland <stevegr@debian.org>  Tue, 22 Aug 2000 15:28:59 -0500
+

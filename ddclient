@@ -1,5 +1,4 @@
 #!/usr/bin/perl -w
-#!/usr/local/bin/perl -w
 ######################################################################
 # $Header: /home/paul/src/ddclient/RCS/ddclient,v 3.23 2002/01/03 23:55:12 root Exp $
 #
@@ -21,6 +20,7 @@ $program  =~ s/d$//;
 my $now       = time;
 my $hostname  = hostname();
 my $etc       = ($program =~ /test/i) ? './'   : '/etc/';
+my $cachedir = ($program =~ /test/i) ? './'   : '/var/cache/ddclient/';
 my $savedir   = ($program =~ /test/i) ? 'URL/' : '/tmp/';
 my $msgs      = '';
 my $last_msgs = '';
@@ -151,7 +151,7 @@ my %variables = (
     'global-defaults'    => {
 	'daemon'              => setv(T_DELAY, 0, 0, 1, 0,                    interval('60s')),
 	'file'                => setv(T_FILE,  0, 0, 1, "$etc$program.conf",  undef),
-	'cache'               => setv(T_FILE,  0, 0, 1, "$etc$program.cache", undef),
+	'cache'               => setv(T_FILE,  0, 0, 1, "$cachedir$program.cache", undef),
 	'pid'                 => setv(T_FILE,  0, 0, 1, "",                   undef),
 	'proxy'               => setv(T_FQDNP, 0, 0, 1, '',                   undef),
 	'protocol'            => setv(T_PROTO, 0, 0, 1, 'dyndns2',            undef),
@@ -719,8 +719,8 @@ sub init_config {
 
     $opt{'timeout'}  = 0               if opt('timeout') < 0;
     $opt{'daemon'}   = minimum('daemon')
-      if   define($opt{'daemon'},$globals{'daemon'},0) 
-	&& define($opt{'daemon'},$globals{'daemon'}) < minimum('daemon');
+      if interval(define($opt{'daemon'},$globals{'daemon'},0)) 
+    && interval(define($opt{'daemon'},$globals{'daemon'})) <minimum('daemon');
     
     ## define or modify host options specified on the command-line
     if (exists $opt{'options'} && defined $opt{'options'}) {
@@ -1908,7 +1908,7 @@ sub nic_dyndns2_update {
        '!yours'   => 'The hostname specified exists, but not under the username currently being used',
        '!donator' => 'The offline setting was set, when the user is not a donator',
        '!active'  => 'The hostname specified is in a Custom DNS domain which has not yet been activated.',
-       'abuse',   => 'The hostname specified is blocked for abuse; contact support@dyndns.org to be unblocked',
+       'abuse',   => 'The hostname specified is blocked for abuse; fill in the form at http://support.dyndns.org/abuse.php to be unblocked',
 
        'numhost'  => 'System error: Too many or too few hosts found. Contact support@dyndns.org',
        'dnserr'   => 'System error: DNS error encountered. Contact support@dyndns.org',
