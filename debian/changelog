@@ -1,9 +1,39 @@
+ddclient (3.6.2-3) unstable; urgency=low
+
+  * Acknowledge NMUs (closes: #166911, #156340, #138826, #128897). Thanks
+    Roland, Ralf!
+  * debian/config: don't overwrite user settings with default values
+    (run_ipup, run_daemon) (closes: #210703).
+  * debian/postrm: don't remove /etc/ppp/ip-up.d/ddclient which is conffile
+    (closes: #212864).
+
+ -- Felix KrÃ¶ger <felix.kroeger@gmx.de>  Sun, 26 Sep 2004 20:39:54 +0200
+
+ddclient (3.6.2-2.2) unstable; urgency=low
+
+  * Non-maintainer upload during bug-squashing party.
+  * Made sure there is no execution path where db_stop is not called, so
+    that postinst doesn't hang (closes: #166911).
+
+ -- Roland Mas <lolando@debian.org>  Fri, 14 Mar 2003 23:17:53 +0100
+
+ddclient (3.6.2-2.1) unstable; urgency=low
+
+  * BSP-2002-08
+  * Non-maintainer upload (sponsored by joss@debian.org)
+  * changed /etc/ppp/ip-up.d/ddclient to comply POSIX (Closes: #156340)
+  * added a new 'smc-barricade-alt' firewall description (Closes: #138826)
+  * added german translation to the template file (Closes: #128897)
+  * use 'set -e' in debian/config.
+
+ -- Ralf Heiringhoff <ralf@frosty-geek.net>  Sun,  1 Sep 2002 15:08:18 +0200
+
 ddclient (3.6.2-2) unstable; urgency=low
 
   * Changed error message in case of abuse (closes: #136909)
   * Modified the init.d script to work properly with /bin/sh (closes: #136914)
 
- -- Felix Kröger <felix.kroeger@gmx.de>  Wed,  6 Mar 2002 00:52:36 +0100
+ -- Felix KrÃ¶ger <felix.kroeger@gmx.de>  Wed,  6 Mar 2002 00:52:36 +0100
 
 ddclient (3.6.2-1) unstable; urgency=medium
 
@@ -21,7 +51,7 @@ ddclient (3.6.2-1) unstable; urgency=medium
   * debian/conffiles: Add /etc/ppp/ip-up.d/ddclient.
   * fixed sanity check of daemon interval (closes: #127298).
 
- -- Felix Kröger <felix.kroeger@gmx.de>  Tue, 15 Jan 2002 03:45:51 +0100
+ -- Felix KrÃ¶ger <felix.kroeger@gmx.de>  Tue, 15 Jan 2002 03:45:51 +0100
 
 ddclient (3.6.0-1) unstable; urgency=high
 

@@ -34,8 +34,11 @@ case "$1" in
 	;;
 	
   stop)
+	if [ "$run_daemon" != "true" ]; then
+		exit 0
+	fi
 	echo -n "Stopping $DESC: "
-		start-stop-daemon --stop --quiet --pidfile /var/run/$NAME.pid \
+	start-stop-daemon --stop --quiet --pidfile /var/run/$NAME.pid \
 			--oknodo
 	echo "$NAME."
 	;;

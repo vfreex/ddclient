@@ -18,7 +18,7 @@ fi
 
 # Check, if this script is activated
 if [ -f /etc/default/ddclient ]; then
-  source /etc/default/ddclient
+  . /etc/default/ddclient
   if [ ! $run_ipup = "true" ]; then
     exit 0
   fi

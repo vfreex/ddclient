@@ -92,10 +92,11 @@ daemon_interval="$daemon_interval"
 EOF
       mv $temp /etc/default/ddclient
 	
-      db_stop
 
     fi
   fi
+
+  db_stop
 
     ;;
 

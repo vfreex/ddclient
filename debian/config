@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh
 ## debconf config script for ddclient
 ##
 ## This script runs before copying the files of the package to the correct
@@ -10,6 +10,7 @@
 ## This file is human readable by using "grep '#' <thisfile>"
 #
 
+set -e
 
 # include debconf library
 . /usr/share/debconf/confmodule
@@ -104,14 +105,23 @@ create_new_config()
   db_input critical ddclient/interface || true
   db_go
 
-  # set the default mode ddclient should run in (ip-up | daemon)
+  # set the default mode ddclient should run in (ip-up | daemon),
+  # depending on the entered interface (XpppX or other)
   db_get ddclient/interface
   interface=$RET
   
+  # if it is actually a ppp or related interface
   if [ -z "${interface##*ppp*}" ]; then
-    db_set ddclient/run_ipup true
+    db_fget ddclient/run_ipup seen
+    if [ $RET = "false" ]; then
+      db_set ddclient/run_ipup true
+    fi
+  # if it is an interface of a different type
   else
-    db_set ddclient/run_daemon true
+    db_fget ddclient/run_daemon seen
+    if [ $RET = "false" ]; then
+      db_set ddclient/run_daemon true
+    fi
   fi
   
   # maybe ask the user to override the default values

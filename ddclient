@@ -69,6 +69,11 @@ my %builtinfw = (
 				  'url'  => '/status.htm',
 				  'skip' => 'IP Address',
 			        },
+    'smc-barricade-alt'      => {
+				  'name' => 'SMC Barricade FW (alternate config)',
+				  'url'  => '/status.HTM',
+				  'skip' => 'WAN IP',
+			        },
     'netgear-rt3xx'          => {
 				  'name' => 'Netgear FW',
 				  'url'  => '/mtenSysStatus.html',

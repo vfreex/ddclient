@@ -3,11 +3,9 @@ set -e
 
 if [ $1 = purge ]; then 
     rm -f /etc/ddclient.conf
-	rm -f /etc/default/ddclient
-	rm -f /etc/ppp/ip-up.d/ddclient
+    rm -f /etc/default/ddclient
 fi
 
 #DEBHELPER#
 
 exit 0
-
