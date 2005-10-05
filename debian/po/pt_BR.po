@@ -1,29 +1,26 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
-#
+# Translators, if you are not familiar with the PO format, gettext
+# documentation is worth reading, especially sections dedicated to
+# this format, e.g. by running:
+# info -n '(gettext)PO Files'
+# info -n '(gettext)Header Entry'
+# Some information specific to po-debconf are available at
+# /usr/share/doc/po-debconf/README-trans
+# or http://www.debian.org/intl/l10n/po-debconf/README-trans
+# Developers do not need to manually edit POT or PO files.
+# , fuzzy
+# 
+# 
 msgid ""
-msgstr ""
-"Project-Id-Version: ddclient\n"
+msgstr "pt_BR\n"
+"Project-Id-Version: ddclient 3.6.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-16 18:56+0100\n"
-"PO-Revision-Date: 2005-03-13 19:11+0800\n"
-"Last-Translator: Asho Yeh <asho@debian.org.tw>\n"
-"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"PO-Revision-Date: 2005-03-16 01:54-0300\n"
+"Last-Translator: Felipe Augusto van de Wiel (faw) <felipe@cathedrallabs.org>\n"
+"Language-Team: Portuguese/Brazil <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Chinese\n"
-"X-Poedit-Country: TAIWAN\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: select
 #. Choices
@@ -53,13 +50,13 @@ msgstr "www.zoneedit.com"
 #. Choices
 #: ../ddclient.templates:3
 msgid "other"
-msgstr "其他"
+msgstr "outro"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:5
 msgid "Dynamic DNS service provider:"
-msgstr "動態 DNS 服務提供者："
+msgstr "Provedor de serviço DNS dinâmico:"
 
 #. Type: select
 #. Description
@@ -69,14 +66,15 @@ msgid ""
 "is not listed, choose \"other\" and you will be asked for the protocol and "
 "the server name."
 msgstr ""
-"請選擇您使用的動態 DNS 服務。如果使用的服務不在列表，請選擇「其它」，然後會詢"
-"問您服務名稱和協定。"
+"Por favor selecione o serviço DNS dinâmico que você está usando. Se o "
+"serviço que você usa não está listado, escolha \"outro\" e você será "
+"perguntado pelo protocolo e nome do servidor."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:12
 msgid "Dynamic DNS server:"
-msgstr "動態 DNS 伺服器"
+msgstr "Servidor de DNS dinâmico:"
 
 #. Type: string
 #. Description
@@ -85,13 +83,14 @@ msgid ""
 "Enter the name of the server which is providing you with dynamic DNS service "
 "(example: members.dyndns.org)."
 msgstr ""
-"請輸入提供您使用 動態 DNS 服務的伺服器名稱(例如： members.dyndns.org)。"
+"Entre o nome do servidor que provê o seu serviço de DNS dinâmico "
+"(exemplo: member.dyndns.org)."
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:20
 msgid "Dynamic DNS update protocol:"
-msgstr "動態 DNS 的更新協定："
+msgstr "Protocolo de atualização do DNS dinâmico:"
 
 #. Type: select
 #. Description
@@ -99,13 +98,15 @@ msgstr "動態 DNS 的更新協定："
 msgid ""
 "Select the dynamic DNS update protocol used by your dynamic DNS service "
 "provider."
-msgstr "選擇您的動態 DNS 服務提供者更新 DNS 的協定。"
+msgstr ""
+"Escolha o protocolo de atualização do DNS dinâmico utilizado pelo seu "
+"provedor do serviço de DNS dinâmico."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:26
 msgid "DynDNS fully qualified domain names:"
-msgstr "DynDNS 完整領域名稱(FQDN)："
+msgstr "Nomes de domínio DynDNS totalmente qualificados (FQDN):"
 
 #. Type: string
 #. Description
@@ -115,50 +116,53 @@ msgid ""
 "dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
 "dyndns.org\" for two hosts)."
 msgstr ""
-"輸入您主機的完整領域名稱(FQDN，如果您只有一台主機，就類似 \"myname.dyndns.org"
-"\"，兩台以上就類似 \"myname1.dyndns.org,myname2.dyndns.org\") 。"
+"Entre com a lista de nomes de domínio totalmente qualificados (FQDN) para "
+"sua máquina (como \"meunome.dyndns.org\" se você tem apenas uma máquina or "
+"\"meunome1.dyndns.org, meunome2.dyndns.org\" para duas máquinas)."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:33
 msgid "Username for dynamic DNS service:"
-msgstr "動態 DNS 服務的使用者帳號："
+msgstr "Nome de usuário para o serviço de DNS dinâmico:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:33
 msgid "Enter the username you use to log into the dynamic DNS service."
-msgstr "輸入登入動態 DNS 服務的使用者帳號。"
+msgstr "Entre com o nome do usuário que você utiliza para acessar o serviço "
+"de DNS dinâmico."
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:38
 msgid "Password for dynamic DNS service:"
-msgstr "動態 DNS 服務的使用者密碼："
+msgstr "Senha para o serviço de DNS dinâmico:"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:38
 msgid "Enter the password you use to log into the dynamic DNS service."
-msgstr "輸入登入動態 DNS 服務的使用者密碼。"
+msgstr "Entre com a senha que você utiliza para acessar o serviço de DNS "
+"dinâmico."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:43
 msgid "Interface used for dynamic DNS service:"
-msgstr "動態 DNS 服務所使用的裝置介面："
+msgstr "Interface usada para o serviço de DNS dinâmico:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:43
 msgid "Enter the interface which is used for using dynamic DNS service."
-msgstr "輸入使用動態 DNS 服務的裝置介面："
+msgstr "Entre com a interface que é usada para o serviço de DNS dinâmico."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:49
 msgid "Run ddclient on PPP connect?"
-msgstr "PPP 連線時執行 ddclient ？"
+msgstr "Executar ddclient quando PPP conectar?"
 
 #. Type: boolean
 #. Description
@@ -166,13 +170,15 @@ msgstr "PPP 連線時執行 ddclient ？"
 msgid ""
 "Enable this if ddclient should be run every time a PPP connection is "
 "established."
-msgstr "加入該選項則每次 PPP 建立連線後，ddclient 也會跟著執行。"
+msgstr ""
+"Habilite essa opção se ddclient deve ser executado a cada vez que uma "
+"conexão PPP for estabelecida."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:56
 msgid "Run ddclient as daemon?"
-msgstr "ddclient 以 daemon 模式啟動？"
+msgstr "Executar ddclient como um serviço?"
 
 #. Type: boolean
 #. Description
@@ -180,13 +186,15 @@ msgstr "ddclient 以 daemon 模式啟動？"
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
-msgstr "系統開機時，ddclient 是否要以 daemon 模式啟動？"
+msgstr ""
+"Por favor escolha se você quer que o ddclient seja executado como um serviço "
+"(modo daemon) quando o seu sistema inicia."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:63
 msgid "ddclient update interval:"
-msgstr "ddclient 更新頻率："
+msgstr "intervalo de atualização do ddclient:"
 
 #. Type: string
 #. Description
@@ -196,14 +204,15 @@ msgid ""
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
 "\") or in days (e.g. \"1d\")."
 msgstr ""
-"請選擇裝置位址檢查的時間間隔。可以秒(例如 \"5s\")\"、以分(例如 \"3m\")、以小"
-"時(例如 \"7h\") 或以天(例如 \"1d\")。"
+"Por favor escolha um atraso entre as verificações de endereço da interface. "
+"Valores podem ser informados em segundos (e.x. \"5s\", em minutos "
+"(e.x. \"3m\"), em horas (e.x. \"7h\") or em dia (e.x. \"1d\")."
 
 #. Type: note
 #. Description
 #: ../ddclient.templates:70
 msgid "More powerful configuration"
-msgstr "更多的設定"
+msgstr "Configuração mais poderosa"
 
 #. Type: note
 #. Description
@@ -215,9 +224,11 @@ msgid ""
 "figure out your internet address including gathering it from a firewall "
 "status page."
 msgstr ""
-"新版的 ddclient 允許您儲存所有的選項到設定檔，取代已往傳遞參數到 script 中。"
-"除此之外，ddclient 現在支援不同的服務協定，以不同的方法來找出您的網路位址，包"
-"括從防火牆狀態頁收集資訊。"
+"A nova versão do ddclient permite que você armazene todas as opções no "
+"arquivo de configuração ao invés de informá-las nos seus scripts. Além "
+"disso ddclient agora suporta diferentes protocolos e serviços, diferentes "
+"formas de descobrir seu endereço de internet incluindo obter isso de uma "
+"página de status de firewall."
 
 #. Type: note
 #. Description
@@ -228,8 +239,10 @@ msgid ""
 "neccessary as dyndns.org switched off support for the dyndns1 protocol on "
 "January 1st 2002."
 msgstr ""
-"預設何情況下，/etc/ddclient.conf 設定檔會被轉換成更容易閱讀的版本且協定會更新"
-"成 dyndns2。這是因為 dyndns.org 在 2002 年一月一號停用 dyndns1 的協定。"
+"Em qualquer caso a configuraçào do arquivo /etc/ddclient.conf será atualizado "
+"para ser um pouco mais legível e o protocolo será atualizado para dyndns2. "
+"Isso é necessário pois a dyndns.org desligou o suporte ao protocolo dyndns1 "
+"em 1o. de Janeiro de 2002."
 
 #. Type: note
 #. Description
@@ -238,13 +251,14 @@ msgid ""
 "If you want to make use of the new options through this frontend please run "
 "\"dpkg-reconfigure ddclient\"."
 msgstr ""
-"如果您想要透過該介面使用新的設定參數，請執行 \"dpkg-reconfigure ddclient\"。"
+"Se você quer fazer uso das novas opções através dessa interface por favor "
+"execute \"dpkg-reconfigure ddclient\"."
 
 #. Type: note
 #. Description
 #: ../ddclient.templates:87
 msgid "Modified configuration file"
-msgstr "修改設定檔"
+msgstr "Arquivo de configuraçào modificado"
 
 #. Type: note
 #. Description
@@ -256,6 +270,10 @@ msgid ""
 "modified. If you want a new config file to be created, please run  \"dpkg-"
 "reconfigure ddclient\"."
 msgstr ""
-"系統的 /etc/ddclient.conf 設定檔不包含三個主要項目以致於自動組態設定工具"
-"(debconf)無法處理。您也許先前修改過設定檔才造成無法自動設定。如果您想要建立新"
-"的設定檔，請執行 \"dpkg-reconfigure ddclient\"。"
+"O arquivo de configuração /etc/ddclient.conf no seu sistema não consiste "
+"de três entradas. O utilitário de configuração automática (debconf) não "
+"pode lidar com isso. Talvez você tenha modificado o arquivo de configuração "
+"manualmente, por isso ele não será mudado. Se você deseja que um novo "
+"arquivo de configuração seja criado, por favor execute \"dpkg-reconfigure "
+"ddclient\"."
+

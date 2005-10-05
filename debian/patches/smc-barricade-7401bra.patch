@@ -1,0 +1,22 @@
+Add support for SMC7401BRA:
+
+ddclient support several kind of firewall to retrieve IP address, two of
+them are smc-barricade and smc-barricade-alt, but these both doesn't
+work with an SMC7401BRA.
+
+--- ddclient	2005-05-31 08:34:38.608745856 +0200
++++ /usr/sbin/ddclient	2005-05-31 08:41:09.473325408 +0200
+@@ -74,6 +74,11 @@
+ 				  'url'  => '/status.HTM',
+ 				  'skip' => 'WAN IP',
+ 			        },
++    'smc-barricade-7401bra'  => {
++				  'name' => 'SMC Barricade 7401BRA FW',
++				  'url'  => '/admin/wan1.htm',
++				  'skip' => 'IP Address',
++			        },
+     'netgear-rt3xx'          => {
+ 				  'name' => 'Netgear FW',
+ 				  'url'  => '/mtenSysStatus.html',
+
+

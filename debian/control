@@ -1,13 +1,13 @@
 Source: ddclient
 Section: net
 Priority: extra
-Maintainer: Felix Kröger <felix.kroeger@gmx.de>
+Maintainer: Torsten Landschoff <torsten@debian.org>
 Build-Depends-Indep: debhelper (>= 4.1.16)
-Standards-Version: 3.5.6
+Standards-Version: 3.6.2
 
 Package: ddclient
 Architecture: all
-Depends: perl5, debconf (>= 0.5.0)
+Depends: perl5, ${misc:Depends}
 Description: Update dynamic IP address at DynDNS.org
  A perl based client to update your dynamic IP address at DynDNS.org
  (or other dynamic DNS services such as Hammernode, Zoneedit or

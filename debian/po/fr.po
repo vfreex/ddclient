@@ -27,43 +27,43 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../templates:3
+#: ../ddclient.templates:3
 msgid "www.dyndns.org"
 msgstr "www.dyndns.org"
 
 #. Type: select
 #. Choices
-#: ../templates:3
+#: ../ddclient.templates:3
 msgid "www.easydns.com"
 msgstr "www.easydns.com"
 
 #. Type: select
 #. Choices
-#: ../templates:3
+#: ../ddclient.templates:3
 msgid "www.dslreports.com"
 msgstr "www.dslreports.com"
 
 #. Type: select
 #. Choices
-#: ../templates:3
+#: ../ddclient.templates:3
 msgid "www.zoneedit.com"
 msgstr "www.zoneedit.com"
 
 #. Type: select
 #. Choices
-#: ../templates:3
+#: ../ddclient.templates:3
 msgid "other"
 msgstr "Autre"
 
 #. Type: select
 #. Description
-#: ../templates:5
+#: ../ddclient.templates:5
 msgid "Dynamic DNS service provider:"
 msgstr "Fournisseur de service DNS dynamique :"
 
 #. Type: select
 #. Description
-#: ../templates:5
+#: ../ddclient.templates:5
 msgid ""
 "Please select the dynamic DNS service you are using. If the service you use "
 "is not listed, choose \"other\" and you will be asked for the protocol and "
@@ -75,13 +75,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:12
+#: ../ddclient.templates:12
 msgid "Dynamic DNS server:"
 msgstr "Serveur de DNS dynamique :"
 
 #. Type: string
 #. Description
-#: ../templates:12
+#: ../ddclient.templates:12
 msgid ""
 "Enter the name of the server which is providing you with dynamic DNS service "
 "(example: members.dyndns.org)."
@@ -91,13 +91,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../templates:20
+#: ../ddclient.templates:20
 msgid "Dynamic DNS update protocol:"
 msgstr "Protocole de mise à jour du DNS dynamique :"
 
 #. Type: select
 #. Description
-#: ../templates:20
+#: ../ddclient.templates:20
 msgid ""
 "Select the dynamic DNS update protocol used by your dynamic DNS service "
 "provider."
@@ -107,13 +107,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:26
+#: ../ddclient.templates:26
 msgid "DynDNS fully qualified domain names:"
 msgstr "Noms de domaine de DNS dynamique (complètement qualifiés) :"
 
 #. Type: string
 #. Description
-#: ../templates:26
+#: ../ddclient.templates:26
 msgid ""
 "Enter the list of fully qualified domain names for your host (like \"myname."
 "dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
@@ -125,13 +125,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:33
+#: ../ddclient.templates:33
 msgid "Username for dynamic DNS service:"
 msgstr "Identifiant pour le service de DNS dynamique :"
 
 #. Type: string
 #. Description
-#: ../templates:33
+#: ../ddclient.templates:33
 msgid "Enter the username you use to log into the dynamic DNS service."
 msgstr ""
 "Veuillez indiquez l'identifiant qui sera utilisé pour la connexion au "
@@ -139,13 +139,13 @@ msgstr ""
 
 #. Type: password
 #. Description
-#: ../templates:38
+#: ../ddclient.templates:38
 msgid "Password for dynamic DNS service:"
 msgstr "Mot de passe pour le service de DNS dynamique :"
 
 #. Type: password
 #. Description
-#: ../templates:38
+#: ../ddclient.templates:38
 msgid "Enter the password you use to log into the dynamic DNS service."
 msgstr ""
 "Veuillez indiquez le mot de passe qui sera utilisé pour la connexion au "
@@ -153,26 +153,26 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:43
+#: ../ddclient.templates:43
 msgid "Interface used for dynamic DNS service:"
 msgstr "Interface du service de DNS dynamique :"
 
 #. Type: string
 #. Description
-#: ../templates:43
+#: ../ddclient.templates:43
 msgid "Enter the interface which is used for using dynamic DNS service."
 msgstr ""
 "Veuillez indiquer l'interface utilisée par le service de DNS dynamique."
 
 #. Type: boolean
 #. Description
-#: ../templates:49
+#: ../ddclient.templates:49
 msgid "Run ddclient on PPP connect?"
 msgstr "Faut-il lancer ddclient lors de la connexion PPP ?"
 
 #. Type: boolean
 #. Description
-#: ../templates:49
+#: ../ddclient.templates:49
 msgid ""
 "Enable this if ddclient should be run every time a PPP connection is "
 "established."
@@ -182,13 +182,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:56
+#: ../ddclient.templates:56
 msgid "Run ddclient as daemon?"
 msgstr "Faut-il utiliser ddclient en tant que démon ?"
 
 #. Type: boolean
 #. Description
-#: ../templates:56
+#: ../ddclient.templates:56
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
@@ -198,13 +198,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:63
+#: ../ddclient.templates:63
 msgid "ddclient update interval:"
 msgstr "Intervalle de mise à jour de ddclient :"
 
 #. Type: string
 #. Description
-#: ../templates:63
+#: ../ddclient.templates:63
 msgid ""
 "Please choose the delay between interface address checks. Values may be "
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
@@ -218,13 +218,13 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates:70
+#: ../ddclient.templates:70
 msgid "More powerful configuration"
 msgstr "Mode configuration plus puissant"
 
 #. Type: note
 #. Description
-#: ../templates:70
+#: ../ddclient.templates:70
 msgid ""
 "The new ddclient version allows you to store all options in the "
 "configuration file instead of passing them in your scripts. Apart from that "
@@ -240,7 +240,7 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates:70
+#: ../ddclient.templates:70
 msgid ""
 "In any case the configuration file /etc/ddclient.conf will be updated to be "
 "a bit more readable and the protocol will be updated to dyndns2. This is "
@@ -254,7 +254,7 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates:70
+#: ../ddclient.templates:70
 msgid ""
 "If you want to make use of the new options through this frontend please run "
 "\"dpkg-reconfigure ddclient\"."
@@ -264,13 +264,13 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates:87
+#: ../ddclient.templates:87
 msgid "Modified configuration file"
 msgstr "Le fichier de configuration a été modifié"
 
 #. Type: note
 #. Description
-#: ../templates:87
+#: ../ddclient.templates:87
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
 "entries. The automatic configuration utility (debconf) cannot handle this. "

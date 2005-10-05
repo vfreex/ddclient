@@ -1,3 +1,25 @@
+ddclient (3.6.2-4) unstable; urgency=low
+
+  * Hijack the package from sponsoree.
+  * Acknowledge NMU (closes: #207605, #208470, #208550, #186154). Thanks, 
+    Christian!
+  * Add quilt support for managing patches.
+  * Update debhelper compatibility level to 4.
+  * Include patch by Frans Pop to update DNS info after config changes
+    (closes: #217041).
+  * Bump standards-version to 3.6.2 (no changes).
+  * Apply patch by Laurent Vivier to support SMC barricade 7401BRA
+    (closes: #311341).
+  * Handle debconf via dh_installdebconf, leading to good dependencies
+    (closes: #331794).
+  * Include l10n patches: 
+    + Brazilian Portuguese translation by Felipe Augusto van de Wiel
+      (closes: #299746)
+    + Japanese translation by Kenshi Muto (closes: #307141).
+  * Fix neccessary typo reported by Clytie Siddal (closes: #310186).
+
+ -- Torsten Landschoff <torsten@debian.org>  Wed,  5 Oct 2005 11:22:21 +0200
+
 ddclient (3.6.2-3.1) unstable; urgency=low
 
   * Non-maintainer upload to fix incredibly longstanding switch to

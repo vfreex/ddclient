@@ -16,14 +16,12 @@ msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-16 18:56+0100\n"
-"PO-Revision-Date: 2005-03-13 19:11+0800\n"
-"Last-Translator: Asho Yeh <asho@debian.org.tw>\n"
-"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"PO-Revision-Date: 2005-05-01 15:07+0900\n"
+"Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
+"Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=EUC-JP\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Chinese\n"
-"X-Poedit-Country: TAIWAN\n"
 
 #. Type: select
 #. Choices
@@ -53,13 +51,13 @@ msgstr "www.zoneedit.com"
 #. Choices
 #: ../ddclient.templates:3
 msgid "other"
-msgstr "å…¶ä»–"
+msgstr "¤½¤ÎÂ¾"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:5
 msgid "Dynamic DNS service provider:"
-msgstr "å‹•æ…‹ DNS æœå‹™æä¾›è€…ï¼š"
+msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¥×¥í¥Ğ¥¤¥À:"
 
 #. Type: select
 #. Description
@@ -68,15 +66,13 @@ msgid ""
 "Please select the dynamic DNS service you are using. If the service you use "
 "is not listed, choose \"other\" and you will be asked for the protocol and "
 "the server name."
-msgstr ""
-"è«‹é¸æ“‡æ‚¨ä½¿ç”¨çš„å‹•æ…‹ DNS æœå‹™ã€‚å¦‚æœä½¿ç”¨çš„æœå‹™ä¸åœ¨åˆ—è¡¨ï¼Œè«‹é¸æ“‡ã€Œå…¶å®ƒã€ï¼Œç„¶å¾Œæœƒè©¢"
-"å•æ‚¨æœå‹™åç¨±å’Œå”å®šã€‚"
+msgstr "ÍøÍÑ¤·¤Æ¤¤¤ë Dynamic DNS ¥µ¡¼¥Ó¥¹¤òÁªÂò¤·¤Æ¤¯¤À¤µ¤¤¡£»È¤Ã¤Æ¤¤¤ë¥µ¡¼¥Ó¥¹¤¬¥ê¥¹¥È¤µ¤ì¤Æ¤¤¤Ê¤¤¾ì¹ç¤Ë¤Ï¡¢\"¤½¤ÎÂ¾\" ¤òÁª¤Ö¤È¡¢¥×¥í¥È¥³¥ë¤È¥µ¡¼¥ĞÌ¾¤ò¿Ò¤Í¤é¤ì¤Ş¤¹¡£"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:12
 msgid "Dynamic DNS server:"
-msgstr "å‹•æ…‹ DNS ä¼ºæœå™¨"
+msgstr "Dynamic DNS ¥µ¡¼¥Ğ:"
 
 #. Type: string
 #. Description
@@ -84,14 +80,13 @@ msgstr "å‹•æ…‹ DNS ä¼ºæœå™¨"
 msgid ""
 "Enter the name of the server which is providing you with dynamic DNS service "
 "(example: members.dyndns.org)."
-msgstr ""
-"è«‹è¼¸å…¥æä¾›æ‚¨ä½¿ç”¨ å‹•æ…‹ DNS æœå‹™çš„ä¼ºæœå™¨åç¨±(ä¾‹å¦‚ï¼š members.dyndns.org)ã€‚"
+msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤òÄó¶¡¤·¤Æ¤¤¤ë¥µ¡¼¥Ğ¤ÎÌ¾Á°¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤ (Îã: members.dyndns.org)¡£"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:20
 msgid "Dynamic DNS update protocol:"
-msgstr "å‹•æ…‹ DNS çš„æ›´æ–°å”å®šï¼š"
+msgstr "Dynamic DNS ¤Î¹¹¿·¥×¥í¥È¥³¥ë:"
 
 #. Type: select
 #. Description
@@ -99,13 +94,13 @@ msgstr "å‹•æ…‹ DNS çš„æ›´æ–°å”å®šï¼š"
 msgid ""
 "Select the dynamic DNS update protocol used by your dynamic DNS service "
 "provider."
-msgstr "é¸æ“‡æ‚¨çš„å‹•æ…‹ DNS æœå‹™æä¾›è€…æ›´æ–° DNS çš„å”å®šã€‚"
+msgstr "¤¢¤Ê¤¿¤Î Dynamic DNS ¥µ¡¼¥Ó¥¹¥×¥í¥Ğ¥¤¥À¤Ç»È¤Ã¤Æ¤¤¤ë Dynamic DNS ¤Î¹¹¿·¥×¥í¥È¥³¥ë¤òÁªÂò¤·¤Æ¤¯¤À¤µ¤¤¡£"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:26
 msgid "DynDNS fully qualified domain names:"
-msgstr "DynDNS å®Œæ•´é ˜åŸŸåç¨±(FQDN)ï¼š"
+msgstr "DynDNS ¤Î´°Á´½¤¾ş¥É¥á¥¤¥óÌ¾:"
 
 #. Type: string
 #. Description
@@ -114,51 +109,49 @@ msgid ""
 "Enter the list of fully qualified domain names for your host (like \"myname."
 "dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
 "dyndns.org\" for two hosts)."
-msgstr ""
-"è¼¸å…¥æ‚¨ä¸»æ©Ÿçš„å®Œæ•´é ˜åŸŸåç¨±(FQDNï¼Œå¦‚æœæ‚¨åªæœ‰ä¸€å°ä¸»æ©Ÿï¼Œå°±é¡ä¼¼ \"myname.dyndns.org"
-"\"ï¼Œå…©å°ä»¥ä¸Šå°±é¡ä¼¼ \"myname1.dyndns.org,myname2.dyndns.org\") ã€‚"
+msgstr "¤¢¤Ê¤¿¤Î¥Û¥¹¥È¤Î´°Á´½¤¾ş¥É¥á¥¤¥óÌ¾¤Î¥ê¥¹¥È¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤ (¤â¤· 1 ¥Û¥¹¥È¤Î¤ß¤Ê¤é \"myname.dyndns.org\"¡¢2 ¥Û¥¹¥È¤Ê¤é \"myname1.dyndns.org,myname2.dyndns.org\" ¤Ê¤É)¡£"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:33
 msgid "Username for dynamic DNS service:"
-msgstr "å‹•æ…‹ DNS æœå‹™çš„ä½¿ç”¨è€…å¸³è™Ÿï¼š"
+msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Î¥æ¡¼¥¶Ì¾:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:33
 msgid "Enter the username you use to log into the dynamic DNS service."
-msgstr "è¼¸å…¥ç™»å…¥å‹•æ…‹ DNS æœå‹™çš„ä½¿ç”¨è€…å¸³è™Ÿã€‚"
+msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Î¥í¥°¥¤¥ó¤Ë»È¤¦¥æ¡¼¥¶Ì¾¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:38
 msgid "Password for dynamic DNS service:"
-msgstr "å‹•æ…‹ DNS æœå‹™çš„ä½¿ç”¨è€…å¯†ç¢¼ï¼š"
+msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Î¥Ñ¥¹¥ï¡¼¥É:"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:38
 msgid "Enter the password you use to log into the dynamic DNS service."
-msgstr "è¼¸å…¥ç™»å…¥å‹•æ…‹ DNS æœå‹™çš„ä½¿ç”¨è€…å¯†ç¢¼ã€‚"
+msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Î¥í¥°¥¤¥ó¤Ë»È¤¦¥Ñ¥¹¥ï¡¼¥É¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:43
 msgid "Interface used for dynamic DNS service:"
-msgstr "å‹•æ…‹ DNS æœå‹™æ‰€ä½¿ç”¨çš„è£ç½®ä»‹é¢ï¼š"
+msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Ë»È¤¦¥¤¥ó¥¿¡¼¥Õ¥§¥¤¥¹:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:43
 msgid "Enter the interface which is used for using dynamic DNS service."
-msgstr "è¼¸å…¥ä½¿ç”¨å‹•æ…‹ DNS æœå‹™çš„è£ç½®ä»‹é¢ï¼š"
+msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Ë»È¤¦¥¤¥ó¥¿¡¼¥Õ¥§¥¤¥¹¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£"
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:49
 msgid "Run ddclient on PPP connect?"
-msgstr "PPP é€£ç·šæ™‚åŸ·è¡Œ ddclient ï¼Ÿ"
+msgstr "PPP ÀÜÂ³¾å¤Ç ddclient ¤ò¼Â¹Ô¤·¤Ş¤¹¤«?"
 
 #. Type: boolean
 #. Description
@@ -166,13 +159,13 @@ msgstr "PPP é€£ç·šæ™‚åŸ·è¡Œ ddclient ï¼Ÿ"
 msgid ""
 "Enable this if ddclient should be run every time a PPP connection is "
 "established."
-msgstr "åŠ å…¥è©²é¸é …å‰‡æ¯æ¬¡ PPP å»ºç«‹é€£ç·šå¾Œï¼Œddclient ä¹Ÿæœƒè·Ÿè‘—åŸ·è¡Œã€‚"
+msgstr "ddclient ¤ò PPP ÀÜÂ³¤¬³ÎÎ©¤·¤¿¤È¤­¤ËËè²ó¼Â¹Ô¤·¤¿¤¤¤È¤­¤Ë¤Ï¡¢¡Ö¤Ï¤¤¡×¤òÁª¤ó¤Ç¤¯¤À¤µ¤¤¡£"
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:56
 msgid "Run ddclient as daemon?"
-msgstr "ddclient ä»¥ daemon æ¨¡å¼å•Ÿå‹•ï¼Ÿ"
+msgstr "ddclient ¤ò¥Ç¡¼¥â¥ó¤È¤·¤Æ¼Â¹Ô¤·¤Ş¤¹¤«?"
 
 #. Type: boolean
 #. Description
@@ -180,13 +173,13 @@ msgstr "ddclient ä»¥ daemon æ¨¡å¼å•Ÿå‹•ï¼Ÿ"
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
-msgstr "ç³»çµ±é–‹æ©Ÿæ™‚ï¼Œddclient æ˜¯å¦è¦ä»¥ daemon æ¨¡å¼å•Ÿå‹•ï¼Ÿ"
+msgstr "ddclient ¤ò¥·¥¹¥Æ¥à¤Î¥¹¥¿¡¼¥È¥¢¥Ã¥×»ş¤Ë¥Ç¡¼¥â¥ó¥â¡¼¥É¤Ç¼Â¹Ô¤¹¤ë¤«¤É¤¦¤«Áª¤ó¤Ç¤¯¤À¤µ¤¤¡£"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:63
 msgid "ddclient update interval:"
-msgstr "ddclient æ›´æ–°é »ç‡ï¼š"
+msgstr "ddclient ¤Î¹¹¿·´Ö³Ö:"
 
 #. Type: string
 #. Description
@@ -195,15 +188,13 @@ msgid ""
 "Please choose the delay between interface address checks. Values may be "
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
 "\") or in days (e.g. \"1d\")."
-msgstr ""
-"è«‹é¸æ“‡è£ç½®ä½å€æª¢æŸ¥çš„æ™‚é–“é–“éš”ã€‚å¯ä»¥ç§’(ä¾‹å¦‚ \"5s\")\"ã€ä»¥åˆ†(ä¾‹å¦‚ \"3m\")ã€ä»¥å°"
-"æ™‚(ä¾‹å¦‚ \"7h\") æˆ–ä»¥å¤©(ä¾‹å¦‚ \"1d\")ã€‚"
+msgstr "¥¤¥ó¥¿¡¼¥Õ¥§¥¤¥¹¥¢¥É¥ì¥¹¥Á¥§¥Ã¥¯¤ÎÂÔ¤Á´Ö³Ö¤òÁª¤ó¤Ç¤¯¤À¤µ¤¤¡£ÃÍ¤ÏÉÃ (Îã \"5s\")¡¢Ê¬ (Îã \"3m\")¡¢»ş (Îã \"7h\")¡¢¤¢¤ë¤¤¤ÏÆü (Îã \"1d\") ¤Ç»ØÄê¤Ç¤­¤Ş¤¹¡£"
 
 #. Type: note
 #. Description
 #: ../ddclient.templates:70
 msgid "More powerful configuration"
-msgstr "æ›´å¤šçš„è¨­å®š"
+msgstr "¤è¤ê¶¯ÎÏ¤ÊÀßÄê"
 
 #. Type: note
 #. Description
@@ -214,10 +205,7 @@ msgid ""
 "ddclient now supports different protocols and services, different ways to "
 "figure out your internet address including gathering it from a firewall "
 "status page."
-msgstr ""
-"æ–°ç‰ˆçš„ ddclient å…è¨±æ‚¨å„²å­˜æ‰€æœ‰çš„é¸é …åˆ°è¨­å®šæª”ï¼Œå–ä»£å·²å¾€å‚³éåƒæ•¸åˆ° script ä¸­ã€‚"
-"é™¤æ­¤ä¹‹å¤–ï¼Œddclient ç¾åœ¨æ”¯æ´ä¸åŒçš„æœå‹™å”å®šï¼Œä»¥ä¸åŒçš„æ–¹æ³•ä¾†æ‰¾å‡ºæ‚¨çš„ç¶²è·¯ä½å€ï¼ŒåŒ…"
-"æ‹¬å¾é˜²ç«ç‰†ç‹€æ…‹é æ”¶é›†è³‡è¨Šã€‚"
+msgstr "¿·¤·¤¤ ddclient ¥Ğ¡¼¥¸¥ç¥ó¤Ï¤¹¤Ù¤Æ¤Î¥ª¥×¥·¥ç¥ó¤ò¡¢¥¹¥¯¥ê¥×¥È¤Ë°ú¤­ÅÏ¤¹Âå¤ï¤ê¤Ë¡¢ÀßÄê¥Õ¥¡¥¤¥ë¤Ë³ÊÇ¼¤¹¤ë¤³¤È¤òµö²Ä¤·¤Ş¤¹¡£ddclient ¤¬°Û¤Ê¤ë¥×¥í¥È¥³¥ë¤È¥µ¡¼¥Ó¥¹¤ò¸½ºß¥µ¥İ¡¼¥È¤·¤Æ¤¤¤ë¤³¤È¤È¤ÏÊÌ¤È¤·¤Æ¡¢¥Õ¥¡¥¤¥¢¥¦¥©¡¼¥ë¤Î¾õ¶·¥Ú¡¼¥¸¤«¤é¤Î¿äÂ¬¤ò´Ş¤à¡¢¥¤¥ó¥¿¡¼¥Í¥Ã¥È¥¢¥É¥ì¥¹¤ò·×»»¤¹¤ë°Û¤Ê¤ëÊıË¡¤¬¤¢¤ê¤Ş¤¹¡£"
 
 #. Type: note
 #. Description
@@ -227,9 +215,7 @@ msgid ""
 "a bit more readable and the protocol will be updated to dyndns2. This is "
 "neccessary as dyndns.org switched off support for the dyndns1 protocol on "
 "January 1st 2002."
-msgstr ""
-"é è¨­ä½•æƒ…æ³ä¸‹ï¼Œ/etc/ddclient.conf è¨­å®šæª”æœƒè¢«è½‰æ›æˆæ›´å®¹æ˜“é–±è®€çš„ç‰ˆæœ¬ä¸”å”å®šæœƒæ›´æ–°"
-"æˆ dyndns2ã€‚é€™æ˜¯å› ç‚º dyndns.org åœ¨ 2002 å¹´ä¸€æœˆä¸€è™Ÿåœç”¨ dyndns1 çš„å”å®šã€‚"
+msgstr "¤É¤Î¤è¤¦¤Ê¾ì¹ç¤Ç¤â¡¢ÀßÄê¥Õ¥¡¥¤¥ë /etc/ddclient.conf ¤Ï¾¯¤·ÆÉ¤ß¤ä¤¹¤¯¤Ê¤ê¡¢¥×¥í¥È¥³¥ë¤Ï dyndns2 ¤Ë¹¹¿·¤µ¤ì¤Ş¤¹¡£¤³¤ì¤Ï 2002 Ç¯ 1 ·î 1 Æü¤Ë dyndns.org ¤¬dyndns1 ¥×¥í¥È¥³¥ë¤Î¥µ¥İ¡¼¥È¤òÄä»ß¤·¤¿¤¿¤á¤ËÉ¬Í×¤Ç¤¹¡£"
 
 #. Type: note
 #. Description
@@ -237,14 +223,13 @@ msgstr ""
 msgid ""
 "If you want to make use of the new options through this frontend please run "
 "\"dpkg-reconfigure ddclient\"."
-msgstr ""
-"å¦‚æœæ‚¨æƒ³è¦é€éè©²ä»‹é¢ä½¿ç”¨æ–°çš„è¨­å®šåƒæ•¸ï¼Œè«‹åŸ·è¡Œ \"dpkg-reconfigure ddclient\"ã€‚"
+msgstr "¤³¤Î¥Õ¥í¥ó¥È¥¨¥ó¥É·ĞÍ³¤Ç¿·¤·¤¤¥ª¥×¥·¥ç¥ó¤ò»È¤¦¤è¤¦¤Ë¤·¤¿¤¤¤Î¤Ç¤¢¤ì¤Ğ¡¢\"dpkg-reconfigure ddclient\" ¤ò¼Â¹Ô¤·¤Æ¤¯¤À¤µ¤¤¡£"
 
 #. Type: note
 #. Description
 #: ../ddclient.templates:87
 msgid "Modified configuration file"
-msgstr "ä¿®æ”¹è¨­å®šæª”"
+msgstr "ÊÑ¹¹¤µ¤ì¤¿ÀßÄê¥Õ¥¡¥¤¥ë"
 
 #. Type: note
 #. Description
@@ -255,7 +240,4 @@ msgid ""
 "Maybe you modified the configuration file manually, thus it won't be "
 "modified. If you want a new config file to be created, please run  \"dpkg-"
 "reconfigure ddclient\"."
-msgstr ""
-"ç³»çµ±çš„ /etc/ddclient.conf è¨­å®šæª”ä¸åŒ…å«ä¸‰å€‹ä¸»è¦é …ç›®ä»¥è‡´æ–¼è‡ªå‹•çµ„æ…‹è¨­å®šå·¥å…·"
-"(debconf)ç„¡æ³•è™•ç†ã€‚æ‚¨ä¹Ÿè¨±å…ˆå‰ä¿®æ”¹éè¨­å®šæª”æ‰é€ æˆç„¡æ³•è‡ªå‹•è¨­å®šã€‚å¦‚æœæ‚¨æƒ³è¦å»ºç«‹æ–°"
-"çš„è¨­å®šæª”ï¼Œè«‹åŸ·è¡Œ \"dpkg-reconfigure ddclient\"ã€‚"
+msgstr "¤¢¤Ê¤¿¤Î¥·¥¹¥Æ¥à¤ÎÀßÄê¥Õ¥¡¥¤¥ë /etc/ddclient.conf ¤Ï¡¢3 ¥¨¥ó¥È¥ê¤Ç¹½À®¤µ¤ì¤Æ¤¤¤Ş¤»¤ó¡£¼«Æ°ÀßÄê¥æ¡¼¥Æ¥£¥ê¥Æ¥£ (debconf) ¤Ï¤³¤ì¤ò¼è¤ê°·¤¨¤Ş¤»¤ó¡£¤ª¤½¤é¤¯¡¢ÀßÄê¥Õ¥¡¥¤¥ë¤ò¼êÆ°½¤Àµ¤·¤¿¤¿¤á¤ËÊÑ¹¹¤Ç¤­¤Ê¤¯¤Ê¤Ã¤Æ¤·¤Ş¤Ã¤¿¤Î¤Ç¤·¤ç¤¦¡£¿·¤·¤¤ÀßÄê¥Õ¥¡¥¤¥ë¤òºîÀ®¤·¤¿¤¤¤Î¤Ç¤¢¤ì¤Ğ¡¢\"dpkg-reconfigure ddclient\" ¤ò¼Â¹Ô¤·¤Æ¤¯¤À¤µ¤¤¡£"

@@ -76,7 +76,7 @@ _Description: More powerful configuration
  .
  In any case the configuration file /etc/ddclient.conf will be updated to
  be a bit more readable and the protocol will be updated to dyndns2. This
- is neccessary as dyndns.org switched off support for the dyndns1 protocol
+ is necessary as dyndns.org switched off support for the dyndns1 protocol
  on January 1st 2002.
  .
  If you want to make use of the new options through this frontend please
