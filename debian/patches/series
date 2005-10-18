@@ -1,2 +1,6 @@
+daemon_interval.diff
 update-new-config.patch -p0
 smc-barricade-7401bra.patch -p0
+maxinterval.diff
+ip-up_run-parts.diff
+sample_path.diff

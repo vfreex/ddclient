@@ -23,7 +23,7 @@ if [ -f /etc/default/ddclient ]; then
     exit 0
   fi
   # Check, if this is the interface used for DynDNS (there could be other pppds
-  eval `sed -n 's/\(if=[^ 	,]*\)$/\1/p' /etc/ddclient.conf`
+  eval `sed -n 's/\(if=[^ 	,]*\)/\1/p' /etc/ddclient.conf`
   if [ ! $if = $PPP_IFACE ]; then
     exit 0
   fi

@@ -8,6 +8,7 @@ Standards-Version: 3.6.2
 Package: ddclient
 Architecture: all
 Depends: perl5, ${misc:Depends}
+Provides: dyndns-client
 Description: Update dynamic IP address at DynDNS.org
  A perl based client to update your dynamic IP address at DynDNS.org
  (or other dynamic DNS services such as Hammernode, Zoneedit or

@@ -43,7 +43,8 @@ case "$1" in
     db_get ddclient/server   		&& server="$RET"
     db_get ddclient/names    		&& names="$RET"
     db_get ddclient/username 		&& username="$RET"
-    db_get ddclient/password 		&& password="$RET"
+    db_get ddclient/password \
+      && password=$(echo "$RET"|sed -e "s/'/\\\\'/g")
     db_get ddclient/interface 		&& interface="$RET"
 
 
@@ -60,7 +61,7 @@ protocol=$protocol
 use=if, if=$interface
 server=$server
 login=$username
-password=$password
+password='$password'
 $names
 EOF
     mv $config /etc/ddclient.conf

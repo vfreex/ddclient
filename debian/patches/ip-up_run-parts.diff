@@ -1,0 +1,13 @@
+Index: ddclient-3.6.2/sample-etc_ppp_ip-up.local
+===================================================================
+--- ddclient-3.6.2.orig/sample-etc_ppp_ip-up.local	2002-01-04 00:56:34.000000000 +0100
++++ ddclient-3.6.2/sample-etc_ppp_ip-up.local	2005-10-18 23:28:58.000000000 +0200
+@@ -34,7 +34,7 @@
+ 		;;
+ *)		(
+ 			sleep 5
+-			ddclient -daemon=0 -syslog -use=if -if=$1 >/dev/null 2>&1
++			ddclient -daemon=0 -syslog -use=if -if=$IP >/dev/null 2>&1
+ 		) &
+ 		;;
+ esac

@@ -1,3 +1,20 @@
+ddclient (3.6.2-5) unstable; urgency=low
+
+  * ddclient (init_config): Added support for intervals passed via 
+    daemon option (daemon_interval.diff).
+  * Changed default value of max-interval to 30d (closes: #129370).
+    This should also fix the high CPU usage on old machines trying to 
+    update all the time (closes: #157717, #292703).
+  * Fixed quoting of complicated passwords (closes: #138139, #280736).
+  * Allow comments in the "if=" config line (closes: #171614).
+  * Use $IP instead of $1 in sample ip-up script so it works from 
+    ip-up.d (closes: #127661).
+  * Apply german translation fixes by Jens Seidel (closes: #314109).
+  * Fix ddclient path in sample files (closes: #130113).
+  * debian/control: Add Provides: dyndns-client (closes: #139081).
+
+ -- Torsten Landschoff <torsten@debian.org>  Tue, 18 Oct 2005 22:54:26 +0200
+
 ddclient (3.6.2-4) unstable; urgency=low
 
   * Hijack the package from sponsoree.

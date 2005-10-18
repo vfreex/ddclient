@@ -1,0 +1,13 @@
+Index: ddclient-3.6.2/ddclient
+===================================================================
+--- ddclient-3.6.2.orig/ddclient	2005-10-18 22:45:23.000000000 +0200
++++ ddclient-3.6.2/ddclient	2005-10-18 22:51:14.000000000 +0200
+@@ -709,6 +709,8 @@
+ sub init_config {
+     %opt = %saved_opt;
+ 
++    $opt{'daemon'}=interval($opt{'daemon'}) if defined $opt{'daemon'};
++
+     ## 
+     $opt{'quiet'}   = 0 if   opt('verbose');
+ 
