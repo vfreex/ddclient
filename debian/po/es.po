@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-16 18:56+0100\n"
+"Report-Msgid-Bugs-To: torsten@debian.org\n"
+"POT-Creation-Date: 2005-10-26 20:36+0200\n"
 "PO-Revision-Date: 2003-03-24 00:00+0000\n"
 "Last-Translator:  Vicente H. <vherrerv@supercable.es>\n"
 "Language-Team: Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -252,10 +252,11 @@ msgstr ""
 #. Type: note
 #. Description
 #: ../ddclient.templates:70
+#, fuzzy
 msgid ""
 "In any case the configuration file /etc/ddclient.conf will be updated to be "
 "a bit more readable and the protocol will be updated to dyndns2. This is "
-"neccessary as dyndns.org switched off support for the dyndns1 protocol on "
+"necessary as dyndns.org switched off support for the dyndns1 protocol on "
 "January 1st 2002."
 msgstr ""
 "En cualquier caso el archivo de configuración /etc/ddclient.conf será "

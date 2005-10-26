@@ -11,16 +11,18 @@
 # 
 # 
 msgid ""
-msgstr "pt_BR\n"
+msgstr ""
 "Project-Id-Version: ddclient 3.6.2\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-16 18:56+0100\n"
+"Report-Msgid-Bugs-To: torsten@debian.org\n"
+"POT-Creation-Date: 2005-10-26 20:36+0200\n"
 "PO-Revision-Date: 2005-03-16 01:54-0300\n"
-"Last-Translator: Felipe Augusto van de Wiel (faw) <felipe@cathedrallabs.org>\n"
+"Last-Translator: Felipe Augusto van de Wiel (faw) <felipe@cathedrallabs."
+"org>\n"
 "Language-Team: Portuguese/Brazil <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+"pt_BR\n"
 
 #. Type: select
 #. Choices
@@ -83,8 +85,8 @@ msgid ""
 "Enter the name of the server which is providing you with dynamic DNS service "
 "(example: members.dyndns.org)."
 msgstr ""
-"Entre o nome do servidor que provê o seu serviço de DNS dinâmico "
-"(exemplo: member.dyndns.org)."
+"Entre o nome do servidor que provê o seu serviço de DNS dinâmico (exemplo: "
+"member.dyndns.org)."
 
 #. Type: select
 #. Description
@@ -130,8 +132,9 @@ msgstr "Nome de usuário para o serviço de DNS dinâmico:"
 #. Description
 #: ../ddclient.templates:33
 msgid "Enter the username you use to log into the dynamic DNS service."
-msgstr "Entre com o nome do usuário que você utiliza para acessar o serviço "
-"de DNS dinâmico."
+msgstr ""
+"Entre com o nome do usuário que você utiliza para acessar o serviço de DNS "
+"dinâmico."
 
 #. Type: password
 #. Description
@@ -143,8 +146,8 @@ msgstr "Senha para o serviço de DNS dinâmico:"
 #. Description
 #: ../ddclient.templates:38
 msgid "Enter the password you use to log into the dynamic DNS service."
-msgstr "Entre com a senha que você utiliza para acessar o serviço de DNS "
-"dinâmico."
+msgstr ""
+"Entre com a senha que você utiliza para acessar o serviço de DNS dinâmico."
 
 #. Type: string
 #. Description
@@ -205,8 +208,8 @@ msgid ""
 "\") or in days (e.g. \"1d\")."
 msgstr ""
 "Por favor escolha um atraso entre as verificações de endereço da interface. "
-"Valores podem ser informados em segundos (e.x. \"5s\", em minutos "
-"(e.x. \"3m\"), em horas (e.x. \"7h\") or em dia (e.x. \"1d\")."
+"Valores podem ser informados em segundos (e.x. \"5s\", em minutos (e.x. \"3m"
+"\"), em horas (e.x. \"7h\") or em dia (e.x. \"1d\")."
 
 #. Type: note
 #. Description
@@ -225,24 +228,25 @@ msgid ""
 "status page."
 msgstr ""
 "A nova versão do ddclient permite que você armazene todas as opções no "
-"arquivo de configuração ao invés de informá-las nos seus scripts. Além "
-"disso ddclient agora suporta diferentes protocolos e serviços, diferentes "
-"formas de descobrir seu endereço de internet incluindo obter isso de uma "
-"página de status de firewall."
+"arquivo de configuração ao invés de informá-las nos seus scripts. Além disso "
+"ddclient agora suporta diferentes protocolos e serviços, diferentes formas "
+"de descobrir seu endereço de internet incluindo obter isso de uma página de "
+"status de firewall."
 
 #. Type: note
 #. Description
 #: ../ddclient.templates:70
+#, fuzzy
 msgid ""
 "In any case the configuration file /etc/ddclient.conf will be updated to be "
 "a bit more readable and the protocol will be updated to dyndns2. This is "
-"neccessary as dyndns.org switched off support for the dyndns1 protocol on "
+"necessary as dyndns.org switched off support for the dyndns1 protocol on "
 "January 1st 2002."
 msgstr ""
-"Em qualquer caso a configuraçào do arquivo /etc/ddclient.conf será atualizado "
-"para ser um pouco mais legível e o protocolo será atualizado para dyndns2. "
-"Isso é necessário pois a dyndns.org desligou o suporte ao protocolo dyndns1 "
-"em 1o. de Janeiro de 2002."
+"Em qualquer caso a configuraçào do arquivo /etc/ddclient.conf será "
+"atualizado para ser um pouco mais legível e o protocolo será atualizado para "
+"dyndns2. Isso é necessário pois a dyndns.org desligou o suporte ao protocolo "
+"dyndns1 em 1o. de Janeiro de 2002."
 
 #. Type: note
 #. Description
@@ -270,10 +274,9 @@ msgid ""
 "modified. If you want a new config file to be created, please run  \"dpkg-"
 "reconfigure ddclient\"."
 msgstr ""
-"O arquivo de configuração /etc/ddclient.conf no seu sistema não consiste "
-"de três entradas. O utilitário de configuração automática (debconf) não "
-"pode lidar com isso. Talvez você tenha modificado o arquivo de configuração "
+"O arquivo de configuração /etc/ddclient.conf no seu sistema não consiste de "
+"três entradas. O utilitário de configuração automática (debconf) não pode "
+"lidar com isso. Talvez você tenha modificado o arquivo de configuração "
 "manualmente, por isso ele não será mudado. Se você deseja que um novo "
 "arquivo de configuração seja criado, por favor execute \"dpkg-reconfigure "
 "ddclient\"."
-

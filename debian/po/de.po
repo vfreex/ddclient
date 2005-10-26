@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-16 18:56+0100\n"
+"Report-Msgid-Bugs-To: torsten@debian.org\n"
+"POT-Creation-Date: 2005-10-26 20:36+0200\n"
 "PO-Revision-Date: 2002-09-01 00:00+0000\n"
 "Last-Translator:  Felix Kröger <felix.kroeger@gmx.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -218,10 +218,9 @@ msgid ""
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
 "\") or in days (e.g. \"1d\")."
 msgstr ""
-"Wie lange soll der ddclient warten bevor er überprüft ob sich die IP "
-"Adresse geändert hat? Werten können wie folgt angegeben werden: Sekunden (z."
-"B.: \"5s\"), Minuten (z.B.: \"3m\"), Stunden (z.B.: \"7h\") oder Tage (z.B.: "
-"\"1d\")."
+"Wie lange soll der ddclient warten bevor er überprüft ob sich die IP Adresse "
+"geändert hat? Werten können wie folgt angegeben werden: Sekunden (z.B.: \"5s"
+"\"), Minuten (z.B.: \"3m\"), Stunden (z.B.: \"7h\") oder Tage (z.B.: \"1d\")."
 
 #. Type: note
 #. Description
@@ -248,10 +247,11 @@ msgstr ""
 #. Type: note
 #. Description
 #: ../ddclient.templates:70
+#, fuzzy
 msgid ""
 "In any case the configuration file /etc/ddclient.conf will be updated to be "
 "a bit more readable and the protocol will be updated to dyndns2. This is "
-"neccessary as dyndns.org switched off support for the dyndns1 protocol on "
+"necessary as dyndns.org switched off support for the dyndns1 protocol on "
 "January 1st 2002."
 msgstr ""
 "Die Konfigurations Datei /etc/ddclient.conf wird durch die  Aktualisierung "

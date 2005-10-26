@@ -1,22 +1,14 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-16 18:56+0100\n"
+"Report-Msgid-Bugs-To: torsten@debian.org\n"
+"POT-Creation-Date: 2005-10-26 20:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,43 +18,43 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../templates:3
+#: ../ddclient.templates:3
 msgid "www.dyndns.org"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../templates:3
+#: ../ddclient.templates:3
 msgid "www.easydns.com"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../templates:3
+#: ../ddclient.templates:3
 msgid "www.dslreports.com"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../templates:3
+#: ../ddclient.templates:3
 msgid "www.zoneedit.com"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../templates:3
+#: ../ddclient.templates:3
 msgid "other"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../templates:5
+#: ../ddclient.templates:5
 msgid "Dynamic DNS service provider:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../templates:5
+#: ../ddclient.templates:5
 msgid ""
 "Please select the dynamic DNS service you are using. If the service you use "
 "is not listed, choose \"other\" and you will be asked for the protocol and "
@@ -71,13 +63,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:12
+#: ../ddclient.templates:12
 msgid "Dynamic DNS server:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:12
+#: ../ddclient.templates:12
 msgid ""
 "Enter the name of the server which is providing you with dynamic DNS service "
 "(example: members.dyndns.org)."
@@ -85,13 +77,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../templates:20
+#: ../ddclient.templates:20
 msgid "Dynamic DNS update protocol:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../templates:20
+#: ../ddclient.templates:20
 msgid ""
 "Select the dynamic DNS update protocol used by your dynamic DNS service "
 "provider."
@@ -99,13 +91,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:26
+#: ../ddclient.templates:26
 msgid "DynDNS fully qualified domain names:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:26
+#: ../ddclient.templates:26
 msgid ""
 "Enter the list of fully qualified domain names for your host (like \"myname."
 "dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
@@ -114,49 +106,49 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:33
+#: ../ddclient.templates:33
 msgid "Username for dynamic DNS service:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:33
+#: ../ddclient.templates:33
 msgid "Enter the username you use to log into the dynamic DNS service."
 msgstr ""
 
 #. Type: password
 #. Description
-#: ../templates:38
+#: ../ddclient.templates:38
 msgid "Password for dynamic DNS service:"
 msgstr ""
 
 #. Type: password
 #. Description
-#: ../templates:38
+#: ../ddclient.templates:38
 msgid "Enter the password you use to log into the dynamic DNS service."
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:43
+#: ../ddclient.templates:43
 msgid "Interface used for dynamic DNS service:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:43
+#: ../ddclient.templates:43
 msgid "Enter the interface which is used for using dynamic DNS service."
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:49
+#: ../ddclient.templates:49
 msgid "Run ddclient on PPP connect?"
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:49
+#: ../ddclient.templates:49
 msgid ""
 "Enable this if ddclient should be run every time a PPP connection is "
 "established."
@@ -164,13 +156,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:56
+#: ../ddclient.templates:56
 msgid "Run ddclient as daemon?"
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../templates:56
+#: ../ddclient.templates:56
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
@@ -178,13 +170,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:63
+#: ../ddclient.templates:63
 msgid "ddclient update interval:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../templates:63
+#: ../ddclient.templates:63
 msgid ""
 "Please choose the delay between interface address checks. Values may be "
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
@@ -193,13 +185,13 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates:70
+#: ../ddclient.templates:70
 msgid "More powerful configuration"
 msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates:70
+#: ../ddclient.templates:70
 msgid ""
 "The new ddclient version allows you to store all options in the "
 "configuration file instead of passing them in your scripts. Apart from that "
@@ -210,17 +202,17 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates:70
+#: ../ddclient.templates:70
 msgid ""
 "In any case the configuration file /etc/ddclient.conf will be updated to be "
 "a bit more readable and the protocol will be updated to dyndns2. This is "
-"neccessary as dyndns.org switched off support for the dyndns1 protocol on "
+"necessary as dyndns.org switched off support for the dyndns1 protocol on "
 "January 1st 2002."
 msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates:70
+#: ../ddclient.templates:70
 msgid ""
 "If you want to make use of the new options through this frontend please run "
 "\"dpkg-reconfigure ddclient\"."
@@ -228,13 +220,13 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates:87
+#: ../ddclient.templates:87
 msgid "Modified configuration file"
 msgstr ""
 
 #. Type: note
 #. Description
-#: ../templates:87
+#: ../ddclient.templates:87
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
 "entries. The automatic configuration utility (debconf) cannot handle this. "

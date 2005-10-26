@@ -24,6 +24,7 @@ unapply-patches:
 clean:	unapply-patches
 	dh_testdir
 	dh_testroot
+	debconf-updatepo
 	rm -f build-stamp
 	rm -Rf .pc		# Remove quilt metadata
 

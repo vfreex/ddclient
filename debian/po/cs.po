@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-16 18:56+0100\n"
+"Report-Msgid-Bugs-To: torsten@debian.org\n"
+"POT-Creation-Date: 2005-10-26 20:36+0200\n"
 "PO-Revision-Date: 2005-03-11 09:26+0100\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-10n-czech@debian.org>\n"
@@ -84,8 +84,8 @@ msgid ""
 "Enter the name of the server which is providing you with dynamic DNS service "
 "(example: members.dyndns.org)."
 msgstr ""
-"Zadejte jméno serveru, který vám poskytuje slu¾bu dunamického DNS "
-"(napøíklad members.dyndns.org)."
+"Zadejte jméno serveru, který vám poskytuje slu¾bu dunamického DNS (napøíklad "
+"members.dyndns.org)."
 
 #. Type: select
 #. Description
@@ -118,8 +118,8 @@ msgid ""
 "dyndns.org\" for two hosts)."
 msgstr ""
 "Zadejte seznam plnì kvalifikovaných jmen va¹eho poèítaèe (tøeba \"jmeno."
-"dyndns.org\" v pøípadì jednoho jména nebo \"jmeno1.dyndns.org,"
-"jmeno2.dyndns.org\" pro dva názvy)."
+"dyndns.org\" v pøípadì jednoho jména nebo \"jmeno1.dyndns.org,jmeno2.dyndns."
+"org\" pro dva názvy)."
 
 #. Type: string
 #. Description
@@ -159,8 +159,8 @@ msgstr "Rozhraní pou¾ívané pro dynamické DNS:"
 #: ../ddclient.templates:43
 msgid "Enter the interface which is used for using dynamic DNS service."
 msgstr ""
-"Zadejte sí»ové rozhraní, které pou¾íváte pro pøipojení ke slu¾bì "
-"dynamického DNS."
+"Zadejte sí»ové rozhraní, které pou¾íváte pro pøipojení ke slu¾bì dynamického "
+"DNS."
 
 #. Type: boolean
 #. Description
@@ -175,8 +175,8 @@ msgid ""
 "Enable this if ddclient should be run every time a PPP connection is "
 "established."
 msgstr ""
-"Jestli¾e chcete, aby se ddclient spustil poka¾dé, kdy¾ navá¾ete PPP "
-"spojení, odpovìzte kladnì."
+"Jestli¾e chcete, aby se ddclient spustil poka¾dé, kdy¾ navá¾ete PPP spojení, "
+"odpovìzte kladnì."
 
 #. Type: boolean
 #. Description
@@ -235,15 +235,16 @@ msgstr ""
 #. Type: note
 #. Description
 #: ../ddclient.templates:70
+#, fuzzy
 msgid ""
 "In any case the configuration file /etc/ddclient.conf will be updated to be "
 "a bit more readable and the protocol will be updated to dyndns2. This is "
-"neccessary as dyndns.org switched off support for the dyndns1 protocol on "
+"necessary as dyndns.org switched off support for the dyndns1 protocol on "
 "January 1st 2002."
 msgstr ""
-"V ka¾dém pøípadì bude konfiguraèní soubor /etc/ddclient.conf upraven k "
-"lep¹í èitelnosti a protokol bude aktualizován na dyndns2. To je nezbytné, "
-"proto¾e dyndns.org ukonèil podporu protokolu dyndns1 k 1. lednu 2002."
+"V ka¾dém pøípadì bude konfiguraèní soubor /etc/ddclient.conf upraven k lep¹í "
+"èitelnosti a protokol bude aktualizován na dyndns2. To je nezbytné, proto¾e "
+"dyndns.org ukonèil podporu protokolu dyndns1 k 1. lednu 2002."
 
 #. Type: note
 #. Description
@@ -252,8 +253,8 @@ msgid ""
 "If you want to make use of the new options through this frontend please run "
 "\"dpkg-reconfigure ddclient\"."
 msgstr ""
-"Chcete-li nastavit nové mo¾nosti skrze toto rozhraní, spus»te pøíkaz "
-"\"dpkg-reconfigure ddclient\"."
+"Chcete-li nastavit nové mo¾nosti skrze toto rozhraní, spus»te pøíkaz \"dpkg-"
+"reconfigure ddclient\"."
 
 #. Type: note
 #. Description
