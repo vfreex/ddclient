@@ -1,0 +1,15 @@
+Index: ddclient-3.6.7/ddclient
+===================================================================
+--- ddclient-3.6.7.orig/ddclient	2006-04-05 01:49:27.000000000 +0200
++++ ddclient-3.6.7/ddclient	2006-04-05 01:50:23.000000000 +0200
+@@ -904,8 +904,8 @@
+ 
+     $opt{'timeout'}  = 0               if opt('timeout') < 0;
+     $opt{'daemon'}   = minimum('daemon')
+-      if   define($opt{'daemon'},$globals{'daemon'},0) 
+-	&& define($opt{'daemon'},$globals{'daemon'}) < minimum('daemon');
++      if   interval(define($opt{'daemon'},$globals{'daemon'},0))
++	&& interval(define($opt{'daemon'},$globals{'daemon'})) < minimum('daemon');
+     
+     ## define or modify host options specified on the command-line
+     if (exists $opt{'options'} && defined $opt{'options'}) {

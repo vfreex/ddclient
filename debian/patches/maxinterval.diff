@@ -1,13 +1,13 @@
-Index: ddclient-3.6.2/ddclient
+Index: ddclient-3.6.7/ddclient
 ===================================================================
---- ddclient-3.6.2.orig/ddclient	2005-10-18 22:54:02.000000000 +0200
-+++ ddclient-3.6.2/ddclient	2005-10-18 22:56:32.000000000 +0200
-@@ -207,7 +207,7 @@
+--- ddclient-3.6.7.orig/ddclient	2006-04-05 01:41:23.000000000 +0200
++++ ddclient-3.6.7/ddclient	2006-04-05 01:47:50.000000000 +0200
+@@ -281,7 +281,7 @@
  	'atime'               => setv(T_NUMBER, 0, 1, 0, 0,                   undef),
  	'status'              => setv(T_ANY,    0, 1, 0, '',                  undef),
- 	'min-interval'        => setv(T_DELAY,  0, 0, 1, 0,                   interval('30s')),
--	'max-interval'        => setv(T_DELAY,  0, 0, 1, 0,                   interval('15d')),
-+	'max-interval'        => setv(T_DELAY,  0, 0, 1, 0,                   interval('30d')),
- 	'min-error-interval'  => setv(T_DELAY,  0, 0, 1, 0,                   interval('5m')),
+ 	'min-interval'        => setv(T_DELAY,  0, 0, 1, interval('30s'),     0),
+-	'max-interval'        => setv(T_DELAY,  0, 0, 1, interval('15d'),     0),
++	'max-interval'        => setv(T_DELAY,  0, 0, 1, interval('30d'),     0),
+ 	'min-error-interval'  => setv(T_DELAY,  0, 0, 1, interval('5m'),      0),
  
  	'warned-min-interval'       => setv(T_ANY,    0, 1, 0, 0,             undef),

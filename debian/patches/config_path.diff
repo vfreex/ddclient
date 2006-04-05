@@ -1,0 +1,13 @@
+Index: ddclient-3.6.7/ddclient
+===================================================================
+--- ddclient-3.6.7.orig/ddclient	2006-04-05 02:01:47.000000000 +0200
++++ ddclient-3.6.7/ddclient	2006-04-05 02:05:51.000000000 +0200
+@@ -21,7 +21,7 @@
+ $program  =~ s/d$//;
+ my $now       = time;
+ my $hostname  = hostname();
+-my $etc       = ($program =~ /test/i) ? './'   : '/etc/ddclient/';
++my $etc       = ($program =~ /test/i) ? './'   : '/etc/';
+ my $cachedir  = ($program =~ /test/i) ? './'   : '/var/cache/ddclient/';
+ my $savedir   = ($program =~ /test/i) ? 'URL/' : '/tmp/';
+ my $msgs      = '';

@@ -1,8 +1,8 @@
-Index: ddclient-3.6.2/ddclient
+Index: ddclient-3.6.7/ddclient
 ===================================================================
---- ddclient-3.6.2.orig/ddclient	2005-10-18 22:45:23.000000000 +0200
-+++ ddclient-3.6.2/ddclient	2005-10-18 22:51:14.000000000 +0200
-@@ -709,6 +709,8 @@
+--- ddclient-3.6.7.orig/ddclient	2006-04-05 01:38:15.000000000 +0200
++++ ddclient-3.6.7/ddclient	2006-04-05 01:39:25.000000000 +0200
+@@ -877,6 +877,8 @@
  sub init_config {
      %opt = %saved_opt;
  

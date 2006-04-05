@@ -1,0 +1,13 @@
+Index: ddclient-3.6.7/ddclient
+===================================================================
+--- ddclient-3.6.7.orig/ddclient	2006-04-05 01:50:23.000000000 +0200
++++ ddclient-3.6.7/ddclient	2006-04-05 01:51:41.000000000 +0200
+@@ -2109,7 +2109,7 @@
+        '!yours'   => 'The hostname specified exists, but not under the username currently being used',
+        '!donator' => 'The offline setting was set, when the user is not a donator',
+        '!active'  => 'The hostname specified is in a Custom DNS domain which has not yet been activated.',
+-       'abuse',   => 'The hostname specified is blocked for abuse; contact support@dyndns.org to be unblocked',
++       'abuse',   => 'The hostname specified is blocked for abuse; fill in the form at http://support.dyndns.org/abuse.php to be unblocked',
+ 
+        'numhost'  => 'System error: Too many or too few hosts found. Contact support@dyndns.org',
+        'dnserr'   => 'System error: DNS error encountered. Contact support@dyndns.org',

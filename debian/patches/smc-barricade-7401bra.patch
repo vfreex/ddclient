@@ -4,11 +4,13 @@ ddclient support several kind of firewall to retrieve IP address, two of
 them are smc-barricade and smc-barricade-alt, but these both doesn't
 work with an SMC7401BRA.
 
---- ddclient	2005-05-31 08:34:38.608745856 +0200
-+++ /usr/sbin/ddclient	2005-05-31 08:41:09.473325408 +0200
-@@ -74,6 +74,11 @@
- 				  'url'  => '/status.HTM',
- 				  'skip' => 'WAN IP',
+Index: ddclient
+===================================================================
+--- ddclient.orig	2006-04-05 01:39:37.000000000 +0200
++++ ddclient	2006-04-05 01:39:47.000000000 +0200
+@@ -73,6 +73,11 @@
+ 				  'url'  => '/status.htm',
+ 				  'skip' => 'IP Address',
  			        },
 +    'smc-barricade-7401bra'  => {
 +				  'name' => 'SMC Barricade 7401BRA FW',
@@ -18,5 +20,3 @@ work with an SMC7401BRA.
      'netgear-rt3xx'          => {
  				  'name' => 'Netgear FW',
  				  'url'  => '/mtenSysStatus.html',
-
-

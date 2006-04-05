@@ -1,0 +1,22 @@
+--- ddclient-3.6.7.orig/ddclient
++++ ddclient-3.6.7/ddclient
+@@ -891,8 +896,8 @@
+ 
+     $opt{'timeout'}  = 0               if opt('timeout') < 0;
+     $opt{'daemon'}   = minimum('daemon')
+-      if   define($opt{'daemon'},$globals{'daemon'},0) 
+-	&& define($opt{'daemon'},$globals{'daemon'}) < minimum('daemon');
++      if interval(define($opt{'daemon'},$globals{'daemon'},0)) 
++    && interval(define($opt{'daemon'},$globals{'daemon'})) <minimum('daemon');
+     
+     ## define or modify host options specified on the command-line
+     if (exists $opt{'options'} && defined $opt{'options'}) {
+@@ -2089,7 +2094,7 @@
+        '!yours'   => 'The hostname specified exists, but not under the username currently being used',
+        '!donator' => 'The offline setting was set, when the user is not a donator',
+        '!active'  => 'The hostname specified is in a Custom DNS domain which has not yet been activated.',
+-       'abuse',   => 'The hostname specified is blocked for abuse; contact support@dyndns.org to be unblocked',
++       'abuse',   => 'The hostname specified is blocked for abuse; fill in the form at http://support.dyndns.org/abuse.php to be unblocked',
+ 
+        'numhost'  => 'System error: Too many or too few hosts found. Contact support@dyndns.org',
+        'dnserr'   => 'System error: DNS error encountered. Contact support@dyndns.org',
