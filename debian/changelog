@@ -1,3 +1,14 @@
+ddclient (3.6.7-2) unstable; urgency=low
+
+  * Pass timeout to IO::Socket when opening the server connection to 
+    avoid ddclient hangs (closes: #362724).
+  * Apply vietnamese translation patch (closes: #310192).
+  * debian/ddclient.init: Fix restart command to give sensible output. Also 
+    change stop behaviour to check that the daemon has stopped to remove 
+    the silly "sleep 1" command (closes: #340143).
+
+ -- Torsten Landschoff <torsten@debian.org>  Sat, 15 Apr 2006 12:37:49 +0200
+
 ddclient (3.6.7-1) unstable; urgency=low
 
   * New upstream release (closes: #279542).

@@ -1,0 +1,13 @@
+Index: ddclient-3.6.7/ddclient
+===================================================================
+--- ddclient-3.6.7.orig/ddclient	2006-04-15 12:27:28.000000000 +0200
++++ ddclient-3.6.7/ddclient	2006-04-15 12:29:11.000000000 +0200
+@@ -1599,7 +1599,7 @@
+ 	debug("skipped network connection");
+ 	verbose("SENDING:", $request);
+ 	
+-    } elsif (! defined($sd = IO::Socket::INET->new(PeerAddr => $peer, PeerPort => $port, Proto => 'tcp', MultiHomed => 1))) {
++    } elsif (! defined($sd = IO::Socket::INET->new(PeerAddr => $peer, PeerPort => $port, Proto => 'tcp', MultiHomed => 1, Timeout => opt('timeout')))) {
+ 	warning("cannot connect to $peer:$port socket: $@");
+ 	
+     } else {
