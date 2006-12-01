@@ -2,8 +2,8 @@ Source: ddclient
 Section: net
 Priority: extra
 Maintainer: Torsten Landschoff <torsten@debian.org>
-Build-Depends-Indep: debhelper (>= 4.1.16), po-debconf
-Standards-Version: 3.6.2
+Build-Depends: debhelper (>= 4.1.16), po-debconf
+Standards-Version: 3.7.2
 
 Package: ddclient
 Architecture: all

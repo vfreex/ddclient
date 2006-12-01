@@ -1,7 +1,7 @@
-Index: ddclient-3.6.2/sample-etc_ppp_ip-up.local
+Index: ddclient-3.7.0/sample-etc_ppp_ip-up.local
 ===================================================================
---- ddclient-3.6.2.orig/sample-etc_ppp_ip-up.local	2002-01-04 00:56:34.000000000 +0100
-+++ ddclient-3.6.2/sample-etc_ppp_ip-up.local	2005-10-18 23:28:58.000000000 +0200
+--- ddclient-3.7.0.orig/sample-etc_ppp_ip-up.local	2006-06-14 21:59:40.000000000 +0200
++++ ddclient-3.7.0/sample-etc_ppp_ip-up.local	2006-12-01 23:22:37.101901586 +0100
 @@ -34,7 +34,7 @@
  		;;
  *)		(

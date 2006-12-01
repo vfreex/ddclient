@@ -65,23 +65,6 @@ _Description: ddclient update interval:
  Values may be given in seconds (e.g. "5s"), in minutes (e.g. "3m"), in
  hours (e.g. "7h") or in days (e.g. "1d").
 
-Template: ddclient/newconfigfmt
-Type: note
-_Description: More powerful configuration
- The new ddclient version allows you to store all options in the
- configuration file instead of passing them in your scripts. Apart from
- that ddclient now supports different protocols and services, different
- ways to figure out your internet address including gathering it from a
- firewall status page.
- .
- In any case the configuration file /etc/ddclient.conf will be updated to
- be a bit more readable and the protocol will be updated to dyndns2. This
- is necessary as dyndns.org switched off support for the dyndns1 protocol
- on January 1st 2002.
- .
- If you want to make use of the new options through this frontend please
- run "dpkg-reconfigure ddclient".
-
 Template: ddclient/modifiedconfig
 Type: note
 _Description: Modified configuration file

@@ -1,3 +1,16 @@
+ddclient (3.7.0-1) unstable; urgency=low
+
+  * New upstream release.
+    + Removed patch to enable socket timeout, applied upstream already.
+  * Bumped Standards-Version to 3.7.2, no relevant changes (lintian).
+  * Fix build dependencies to use Build-Depends instead of 
+    Build-Depends-Indep (lintian).
+  * Remove a low-priority note and raise the priority of a debconf note
+    used as an error message (closes: #388883).
+  * debian/ddclient.init: Add initial LSB section (lintian).
+
+ -- Torsten Landschoff <torsten@debian.org>  Fri,  1 Dec 2006 23:21:33 +0100
+
 ddclient (3.6.7-2) unstable; urgency=low
 
   * Pass timeout to IO::Socket when opening the server connection to 

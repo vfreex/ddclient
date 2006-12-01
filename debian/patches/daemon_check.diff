@@ -1,8 +1,8 @@
-Index: ddclient-3.6.7/ddclient
+Index: ddclient-3.7.0/ddclient
 ===================================================================
---- ddclient-3.6.7.orig/ddclient	2006-04-05 01:49:27.000000000 +0200
-+++ ddclient-3.6.7/ddclient	2006-04-05 01:50:23.000000000 +0200
-@@ -904,8 +904,8 @@
+--- ddclient-3.7.0.orig/ddclient	2006-12-01 23:22:37.023913484 +0100
++++ ddclient-3.7.0/ddclient	2006-12-01 23:25:03.977494794 +0100
+@@ -993,8 +993,8 @@
  
      $opt{'timeout'}  = 0               if opt('timeout') < 0;
      $opt{'daemon'}   = minimum('daemon')

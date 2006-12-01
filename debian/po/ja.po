@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: torsten@debian.org\n"
-"POT-Creation-Date: 2005-10-26 20:36+0200\n"
+"POT-Creation-Date: 2006-12-01 23:44+0100\n"
 "PO-Revision-Date: 2005-05-01 15:07+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -25,43 +25,43 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:3
+#: ../ddclient.templates:1001
 msgid "www.dyndns.org"
 msgstr "www.dyndns.org"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:3
+#: ../ddclient.templates:1001
 msgid "www.easydns.com"
 msgstr "www.easydns.com"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:3
+#: ../ddclient.templates:1001
 msgid "www.dslreports.com"
 msgstr "www.dslreports.com"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:3
+#: ../ddclient.templates:1001
 msgid "www.zoneedit.com"
 msgstr "www.zoneedit.com"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:3
+#: ../ddclient.templates:1001
 msgid "other"
 msgstr "その他"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:5
+#: ../ddclient.templates:1002
 msgid "Dynamic DNS service provider:"
 msgstr "Dynamic DNS サービスプロバイダ:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:5
+#: ../ddclient.templates:1002
 msgid ""
 "Please select the dynamic DNS service you are using. If the service you use "
 "is not listed, choose \"other\" and you will be asked for the protocol and "
@@ -73,13 +73,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:12
+#: ../ddclient.templates:2001
 msgid "Dynamic DNS server:"
 msgstr "Dynamic DNS サーバ:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:12
+#: ../ddclient.templates:2001
 msgid ""
 "Enter the name of the server which is providing you with dynamic DNS service "
 "(example: members.dyndns.org)."
@@ -89,13 +89,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:20
+#: ../ddclient.templates:3001
 msgid "Dynamic DNS update protocol:"
 msgstr "Dynamic DNS の更新プロトコル:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:20
+#: ../ddclient.templates:3001
 msgid ""
 "Select the dynamic DNS update protocol used by your dynamic DNS service "
 "provider."
@@ -105,13 +105,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:26
+#: ../ddclient.templates:4001
 msgid "DynDNS fully qualified domain names:"
 msgstr "DynDNS の完全修飾ドメイン名:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:26
+#: ../ddclient.templates:4001
 msgid ""
 "Enter the list of fully qualified domain names for your host (like \"myname."
 "dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
@@ -123,49 +123,49 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:33
+#: ../ddclient.templates:5001
 msgid "Username for dynamic DNS service:"
 msgstr "Dynamic DNS サービスのユーザ名:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:33
+#: ../ddclient.templates:5001
 msgid "Enter the username you use to log into the dynamic DNS service."
 msgstr "Dynamic DNS サービスのログインに使うユーザ名を入力してください。"
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:38
+#: ../ddclient.templates:6001
 msgid "Password for dynamic DNS service:"
 msgstr "Dynamic DNS サービスのパスワード:"
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:38
+#: ../ddclient.templates:6001
 msgid "Enter the password you use to log into the dynamic DNS service."
 msgstr "Dynamic DNS サービスのログインに使うパスワードを入力してください。"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:43
+#: ../ddclient.templates:7001
 msgid "Interface used for dynamic DNS service:"
 msgstr "Dynamic DNS サービスに使うインターフェイス:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:43
+#: ../ddclient.templates:7001
 msgid "Enter the interface which is used for using dynamic DNS service."
 msgstr "Dynamic DNS サービスに使うインターフェイスを入力してください。"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:49
+#: ../ddclient.templates:8001
 msgid "Run ddclient on PPP connect?"
 msgstr "PPP 接続上で ddclient を実行しますか?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:49
+#: ../ddclient.templates:8001
 msgid ""
 "Enable this if ddclient should be run every time a PPP connection is "
 "established."
@@ -175,13 +175,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:56
+#: ../ddclient.templates:9001
 msgid "Run ddclient as daemon?"
 msgstr "ddclient をデーモンとして実行しますか?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:56
+#: ../ddclient.templates:9001
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
@@ -191,13 +191,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:63
+#: ../ddclient.templates:10001
 msgid "ddclient update interval:"
 msgstr "ddclient の更新間隔:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:63
+#: ../ddclient.templates:10001
 msgid ""
 "Please choose the delay between interface address checks. Values may be "
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
@@ -208,58 +208,13 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../ddclient.templates:70
-msgid "More powerful configuration"
-msgstr "より強力な設定"
-
-#. Type: note
-#. Description
-#: ../ddclient.templates:70
-msgid ""
-"The new ddclient version allows you to store all options in the "
-"configuration file instead of passing them in your scripts. Apart from that "
-"ddclient now supports different protocols and services, different ways to "
-"figure out your internet address including gathering it from a firewall "
-"status page."
-msgstr ""
-"新しい ddclient バージョンはすべてのオプションを、スクリプトに引き渡す代わり"
-"に、設定ファイルに格納することを許可します。ddclient が異なるプロトコルとサー"
-"ビスを現在サポートしていることとは別として、ファイアウォールの状況ページから"
-"の推測を含む、インターネットアドレスを計算する異なる方法があります。"
-
-#. Type: note
-#. Description
-#: ../ddclient.templates:70
-#, fuzzy
-msgid ""
-"In any case the configuration file /etc/ddclient.conf will be updated to be "
-"a bit more readable and the protocol will be updated to dyndns2. This is "
-"necessary as dyndns.org switched off support for the dyndns1 protocol on "
-"January 1st 2002."
-msgstr ""
-"どのような場合でも、設定ファイル /etc/ddclient.conf は少し読みやすくなり、プ"
-"ロトコルは dyndns2 に更新されます。これは 2002 年 1 月 1 日に dyndns.org が"
-"dyndns1 プロトコルのサポートを停止したために必要です。"
-
-#. Type: note
-#. Description
-#: ../ddclient.templates:70
-msgid ""
-"If you want to make use of the new options through this frontend please run "
-"\"dpkg-reconfigure ddclient\"."
-msgstr ""
-"このフロントエンド経由で新しいオプションを使うようにしたいのであれば、\"dpkg-"
-"reconfigure ddclient\" を実行してください。"
-
-#. Type: note
-#. Description
-#: ../ddclient.templates:87
+#: ../ddclient.templates:11001
 msgid "Modified configuration file"
 msgstr "変更された設定ファイル"
 
 #. Type: note
 #. Description
-#: ../ddclient.templates:87
+#: ../ddclient.templates:11001
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
 "entries. The automatic configuration utility (debconf) cannot handle this. "
@@ -272,3 +227,37 @@ msgstr ""
 "設定ファイルを手動修正したために変更できなくなってしまったのでしょう。新しい"
 "設定ファイルを作成したいのであれば、\"dpkg-reconfigure ddclient\" を実行して"
 "ください。"
+
+#~ msgid "More powerful configuration"
+#~ msgstr "より強力な設定"
+
+#~ msgid ""
+#~ "The new ddclient version allows you to store all options in the "
+#~ "configuration file instead of passing them in your scripts. Apart from "
+#~ "that ddclient now supports different protocols and services, different "
+#~ "ways to figure out your internet address including gathering it from a "
+#~ "firewall status page."
+#~ msgstr ""
+#~ "新しい ddclient バージョンはすべてのオプションを、スクリプトに引き渡す代わ"
+#~ "りに、設定ファイルに格納することを許可します。ddclient が異なるプロトコル"
+#~ "とサービスを現在サポートしていることとは別として、ファイアウォールの状況"
+#~ "ページからの推測を含む、インターネットアドレスを計算する異なる方法がありま"
+#~ "す。"
+
+#, fuzzy
+#~ msgid ""
+#~ "In any case the configuration file /etc/ddclient.conf will be updated to "
+#~ "be a bit more readable and the protocol will be updated to dyndns2. This "
+#~ "is necessary as dyndns.org switched off support for the dyndns1 protocol "
+#~ "on January 1st 2002."
+#~ msgstr ""
+#~ "どのような場合でも、設定ファイル /etc/ddclient.conf は少し読みやすくなり、"
+#~ "プロトコルは dyndns2 に更新されます。これは 2002 年 1 月 1 日に dyndns."
+#~ "org がdyndns1 プロトコルのサポートを停止したために必要です。"
+
+#~ msgid ""
+#~ "If you want to make use of the new options through this frontend please "
+#~ "run \"dpkg-reconfigure ddclient\"."
+#~ msgstr ""
+#~ "このフロントエンド経由で新しいオプションを使うようにしたいのであれば、"
+#~ "\"dpkg-reconfigure ddclient\" を実行してください。"

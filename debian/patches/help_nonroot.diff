@@ -1,8 +1,8 @@
-Index: ddclient-3.6.7/ddclient
+Index: ddclient-3.7.0/ddclient
 ===================================================================
---- ddclient-3.6.7.orig/ddclient	2006-04-05 01:51:55.000000000 +0200
-+++ ddclient-3.6.7/ddclient	2006-04-05 01:53:59.000000000 +0200
-@@ -475,6 +475,12 @@
+--- ddclient-3.7.0.orig/ddclient	2006-12-01 23:22:37.083904332 +0100
++++ ddclient-3.7.0/ddclient	2006-12-01 23:24:46.118219338 +0100
+@@ -553,6 +553,12 @@
  
  test_geturl(opt('geturl')) if opt('geturl');
  
@@ -15,7 +15,7 @@ Index: ddclient-3.6.7/ddclient
  ## read config file because 'daemon' mode may be defined there.
  read_config(define($opt{'file'}, default('file')), \%config, \%globals);
  init_config();
-@@ -1020,16 +1026,14 @@
+@@ -1109,16 +1115,14 @@
  	    $config{$h}{'cacheable'} = [ @{$services{$proto}{'cacheable'}} ];
  	}
      }
@@ -34,7 +34,7 @@ Index: ddclient-3.6.7/ddclient
      my $msg = '';
      if (@_) {
  	my $format = shift;
-@@ -1039,7 +1043,7 @@
+@@ -1128,7 +1132,7 @@
      }
      printf STDERR "%s%s\n", $msg, $opt_usage;
      sendmail();

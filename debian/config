@@ -53,7 +53,7 @@ warn_config_broken()
 {
 # show the message that the current configuration is not ok
 db_fset ddclient/modifiedconfig seen false
-db_input medium ddclient/modifiedconfig || true
+db_input high ddclient/modifiedconfig || true
 db_go
 }
 
@@ -155,11 +155,6 @@ if [ "$1" = "configure" ]; then
 
   # if we are upgrading from an old version:
   if dpkg --compare-versions "$2" lt-nl 3.6.2-1; then
-    # show the message that the configuration has changed
-    db_fset ddclient/newconfigfmt seen false
-    db_input medium ddclient/newconfigfmt || true
-    db_go
-    
     # if the existing /etc/ddclient.conf consists of three words:
     if [ "`wc -w </etc/ddclient.conf`" -eq 3 ]; then
       # read old config and exit
@@ -169,7 +164,7 @@ if [ "$1" = "configure" ]; then
     else
       # show warning that the current config is broken and exit
       warn_config_broken
-      exit 0
+      exit 1
     fi
     
   # if we are not upgrading:
@@ -178,12 +173,8 @@ if [ "$1" = "configure" ]; then
 	exit 0
   fi
   
-# if the first parameter is "reconfigure":
 elif [ "$1" = "reconfigure" ] ; then
 
-  # create new config
   create_new_config
-
-  # remove the existing configuration files
   rm -f /etc/ddclient.conf /etc/default/ddclient
 fi

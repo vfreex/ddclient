@@ -1,6 +1,6 @@
 #!/bin/sh
 ######################################################################
-## $Header: /cvsroot/ddclient/ddclient/sample-etc_ppp_ip-up.local,v 1.2 2004/12/03 07:30:44 wimpunk Exp $
+## $Id: sample-etc_ppp_ip-up.local 10 2006-06-14 19:59:31Z wimpunk $
 ######################################################################
 ## 
 ## On my host, pppd invokes this script with args:

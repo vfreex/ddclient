@@ -3,9 +3,9 @@ This patch by Frans Pop to fixes this problem reported as  Debian bug
 #217041. 
 Index: ddclient
 ===================================================================
---- ddclient.orig	2006-04-05 01:39:25.000000000 +0200
-+++ ddclient	2006-04-05 01:39:37.000000000 +0200
-@@ -1876,6 +1876,13 @@
+--- ddclient.orig	2006-12-01 23:22:36.938926449 +0100
++++ ddclient	2006-12-01 23:25:12.987120319 +0100
+@@ -1998,6 +1998,13 @@
      } elsif (defined($sub) && &$sub($host)) {
  	$update = 1;
  
