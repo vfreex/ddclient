@@ -1,210 +1,26 @@
-.\"                                      Hey, EMACS: -*- nroff -*-
-.\" Copyright 2000, 2001 by Steve Greenland. You may modify and distribute
-.\" this document for any purpose as long as this copyright notice
-.\" remains intact.
+.\"     Title: ddclient
+.\"    Author: 
+.\" Generator: DocBook XSL Stylesheets v1.71.0 <http://docbook.sf.net/>
+.\"      Date: 01/20/2007
+.\"    Manual: 
+.\"    Source: 
 .\"
-.\" First parameter, NAME, should be all caps
-.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
-.\" other parameters are allowed: see man(7), man(1)
-.TH DDCLIENT 8 "December, 2001"
-.\" Please adjust this date whenever revising the manpage.
-.SH NAME
-ddclient \- program to update IP address at DynDNS.org
-.SH SYNOPSIS
-.B ddclient
-.RI [ options ] " files" ...
-.br
-.SH DESCRIPTION
-This manual page documents briefly the
-.B ddclient
-command.
-This manual page was written for the Debian GNU/Linux distribution
-because the original program does not have a manual page.
-Note that this has 
-.B not
-been updated for the 3.x release, and is grossly out of date. You're much
-better off reading the output of 
-.I ddclient --help
+.TH "DDCLIENT" "8" "01/20/2007" "" ""
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+ddclient \- Update IP addresses at dynamic DNS services
+.SH "SYNOPSIS"
+.HP 9
+\fBddclient\fR {\-help}
+.HP 9
+\fBddclient\fR [\-daemon\ \fIinterval\fR] [\-proxy\ \fIhost\fR] [\-server\ \fIhost\fR] [\-protocol\ \fItype\fR] [\-file\ \fIconfigfile\fR] [\-cache\ \fIcachefile\fR] [\-pid\ \fIpidfile\fR] [\-use\ \fImechanism\fR] {\-if\ \fIinterface\fR | \-ip\ \fIipaddress\fR | \-web\ {\fIprovider\fR\ |\ \fIurl\fR} | \-fw\ \fIfirewall\fR | \-cmd\ \fIcommand\fR}
+.SH "DESCRIPTION"
 .PP
-.B ddclient
-updates your IP address at the dynamics DNS service DynDNS.org. It may
-be run interactively, or automatically by whatever program obtains and
-maintains your IP address (e.g. dhcpcd, pump) if that program supports
-running another when the IP address is changed.
-.SH OPTIONS
-.TP
-.BI -proxy\  host
-use 
-.I host
-as the HTTP proxy.
-.TP
-.BI -server\  host
-update DNS information on 
-.I host
-(default: members.dyndns.org).
-.TP
-.BI -file\  path
-load configuration information from 
-.I path
-(default: /etc/ddclient.conf).
-.TP
-.BI -cache\  path
-record address used in 
-.I path
-(default: /var/cache/ddclient/ddclient.cache).
-.TP
-.BI -login\  user
-login as 
-.IR user .
-.TP
-.BI -password\  secret
-use password 
-.IR secret .
-.TP
-.BI -host\  host
-update DNS information for 
-.IR host .
-.TP
-.BI -ip\  address
-set the IP address to 
-.IR address .
-.TP
-.BI -mx\  address
-set the mail exchanger to 
-.IR address .
-.TP
-.BI -[no]backupmx
-enable backup mail exchanger.
-.TP
-.BI -[no]wildcard
-enable wildcard DNS matches.
-.TP
-.BI -[no]static
-update a static DNS entry, not a dynamic one.
-.TP
-.BI -persist\  days
-avoid unnecessary updates unless 
-.I days
-days have elapsed (default: 15).
-.TP
-.BI -[no]retry
-record failed updates so they may be retried with -refresh (default: noretry).
-.TP
-.BI -[no]force
-force an update even if the update may be unnecessary (default: noforce).
-.TP
-.BI -timeout\  max
-wait at most 
-.I max
-seconds for the host to respond (default: 120).
-.TP
-.BI -[no]refresh
-update hosts and addresses listed in the cache file. (default: norefresh).
-.TP
-.BI -[no]debug
-print (no) debugging information (default: nodebug).
-.TP
-.BI -[no]exec
-do (not) execute; just show what would be done (default: exec).
-.TP
-.BI -[no]verbose
-print (no) verbose information (default: noverbose).
-.TP
-.BI -[no]quiet
-print (no) messages for unnecessary updates (default: noquiet).
-.TP
-.BI -help
-this message.
-.SH EXAMPLES
+ddclient is a little program to update IP addresses managed using dynamic DNS providers such as DynDNS.org.
 .PP
-.B ddclient -ip 192.168.1.1 -retry
-.IP \(bu
-set the ip address of all dyndns hosts listed in the
-/etc/ddclient.conf to 192.168.1.1
-.IP \(bu
-mark failures so they may be retried with -refresh
-.PP
-.B ddclient -ip 192.168.1.1 -host somehost.dyndns.org
-.IP \(bu
-set the address of somehost.dyndns.org to 192.168.1.1
-.IP \(bu
-use the login and password specified for this host in the
-configuration file
-.PP
-.B ddclient -ip 192.168.1.1 -host statichost.dyndns.org -static
-.IP \(bu
-set the address of statichost.dyndns.org to 192.168.1.1 in the static
-DNS database
-.IP \(bu
-use the login and password specified for this host in the
-configuration file
-.PP
-.B ddclient -refresh -host somehost.dyndns.org
-.IP \(bu
-refresh only the address of somehost.dyndns.org
-.IP \(bu
-use the login and password specified for this host in the
-configuration file
-.PP
-.B ddclient -refresh -force -retry
-.IP \(bu
-refresh all dyndns hosts listed in the /etc/ddclient.conf
-.IP \(bu
-force an update even if it may be unneccessary
-.IP \(bu
-mark failed updates for retrying later (failed updates are those that
-fail due to connectivity errors)
-.IP \(bu
-use the login and password specified for this host in the
-configuration file
-.PP
-This command could be used twice a month to make sure the host does
-not become stale.
-.PP
-.B ddclient -refresh -retry
-.IP \(bu
-refresh all dyndns hosts listed in the /etc/ddclient.conf that could
-not be updated (hosts that do not require update will be skipped)
-.IP \(bu
-mark failed updates for retrying later (failed updates are those that
-fail due to connectivity errors)
-.IP \(bu
-use the login and password specified for this host in the
-configuration file
-.PP
-This command could be used twice a month to make sure the host does
-not become stale.
-
-.SH CONFIGURATION
-The configuration file 
-.B /etc/ddclient.conf
-is used to specify the default behaviour of 
-.B ddclient.
-The default Debian install create the bare-minimum working
-configuration; see
-.B /usr/share/doc/ddclient/examples/sample-etc_ddclient.conf
-for the full range of what is possible.
-.SH SECURITY
-The username and password for your DynDNS accounts may stored in the
-configuration file, and therefore should not be readable except by the
-owner. To help remind you,
-.B ddclient
-will refuse to run if the configuration file is readable by group or
-other. If you are using the program interactively, you can specify the
-user and password on the command line and need not put anything in the
-configuration file. Obviously, the password should be unique to DynDNS
-and not used for any other purpose.
-.SH FILES
-.PP
-.I /etc/ddclient.conf
-.PP
-.I /var/cache/ddclient/ddclient.cache 
-.SH DEBIAN SPECIFIC
-The example scripts for common DHCP daemons are available in
-/usr/share/doc/ddclient/examples.
-.SH AUTHOR
-.B ddclient
-was written by Paul Burry <paul@burry.net>. 
-This manual page was written by Steve Greenland <stevegr@debian.org>,
-for the Debian GNU/Linux system (but may be used, modified, and distributed
-by others).
+For usage information please run
+\fBddclient \-help\fR
+until this manpage is finished.

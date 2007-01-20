@@ -1,0 +1,93 @@
+=== opt ====
+opt{cache}                           : <undefined>
+opt{cmd}                             : <undefined>
+opt{cmd-skip}                        : <undefined>
+opt{daemon}                          : <undefined>
+opt{debug}                           : 1
+opt{exec}                            : <undefined>
+opt{facility}                        : <undefined>
+opt{file}                            : <undefined>
+opt{force}                           : <undefined>
+opt{fw}                              : <undefined>
+opt{fw-login}                        : <undefined>
+opt{fw-password}                     : <undefined>
+opt{fw-skip}                         : <undefined>
+opt{geturl}                          : <undefined>
+opt{help}                            : <undefined>
+opt{host}                            : <undefined>
+opt{if}                              : <undefined>
+opt{if-skip}                         : <undefined>
+opt{ip}                              : <undefined>
+opt{login}                           : <undefined>
+opt{mail}                            : <undefined>
+opt{mail-failure}                    : <undefined>
+opt{max-interval}                    : 2592000
+opt{min-error-interval}              : 300
+opt{min-interval}                    : 30
+opt{options}                         : <undefined>
+opt{password}                        : <undefined>
+opt{pid}                             : <undefined>
+opt{priority}                        : <undefined>
+opt{protocol}                        : <undefined>
+opt{proxy}                           : <undefined>
+opt{query}                           : <undefined>
+opt{quiet}                           : 0
+opt{retry}                           : <undefined>
+opt{server}                          : <undefined>
+opt{ssl}                             : <undefined>
+opt{syslog}                          : <undefined>
+opt{test}                            : <undefined>
+opt{timeout}                         : <undefined>
+opt{use}                             : <undefined>
+opt{verbose}                         : 1
+opt{web}                             : <undefined>
+opt{web-skip}                        : <undefined>
+=== globals ====
+globals{debug}                       : 1
+globals{if}                          : eth1
+globals{login}                       : bluehorn
+globals{password}                    : faeW0hoe
+globals{pid}                         : /var/run/ddclient.pid
+globals{protocol}                    : dyndns2
+globals{quiet}                       : 0
+globals{server}                      : members.dyndns.org
+globals{ssl}                         : 1
+globals{use}                         : if
+globals{verbose}                     : 1
+=== config ====
+config{ddclientdev.homelinux.net}{atime} : 0
+config{ddclientdev.homelinux.net}{backupmx} : 0
+config{ddclientdev.homelinux.net}{cacheable} : ARRAY(0x8665d8c)
+config{ddclientdev.homelinux.net}{custom} : 0
+config{ddclientdev.homelinux.net}{host} : ddclientdev.homelinux.net
+config{ddclientdev.homelinux.net}{ip} : <undefined>
+config{ddclientdev.homelinux.net}{login} : bluehorn
+config{ddclientdev.homelinux.net}{max-interval} : 2592000
+config{ddclientdev.homelinux.net}{min-error-interval} : 300
+config{ddclientdev.homelinux.net}{min-interval} : 30
+config{ddclientdev.homelinux.net}{mtime} : 0
+config{ddclientdev.homelinux.net}{mx} : 
+config{ddclientdev.homelinux.net}{password} : faeW0hoe
+config{ddclientdev.homelinux.net}{protocol} : dyndns2
+config{ddclientdev.homelinux.net}{server} : members.dyndns.org
+config{ddclientdev.homelinux.net}{static} : 0
+config{ddclientdev.homelinux.net}{status} : 
+config{ddclientdev.homelinux.net}{warned-min-error-interval} : 0
+config{ddclientdev.homelinux.net}{warned-min-interval} : 0
+config{ddclientdev.homelinux.net}{wildcard} : 0
+config{ddclientdev.homelinux.net}{wtime} : 30
+=== cache ====
+DEBUG:    get_ip: using if, eth1 reports 192.168.2.3
+INFO:     forcing updating ddclientdev.homelinux.net because no cached entry exists.
+DEBUG:    
+DEBUG:     nic_dyndns2_update -------------------
+INFO:     setting IP address to 192.168.2.3 for ddclientdev.homelinux.net
+UPDATE:   updating ddclientdev.homelinux.net
+DEBUG:    proxy  = 
+DEBUG:    url    = http://members.dyndns.org/nic/update?system=dyndns&hostname=ddclientdev.homelinux.net&myip=192.168.2.3
+DEBUG:    server = members.dyndns.org
+DEBUG:    opt(fw = 
+DEBUG:    glo fw unset
+CONNECT:  members.dyndns.org
+WARNING:  cannot connect to members.dyndns.org:443 socket: IO::Socket::SSL: Timeout IO::Socket::INET configuration failederror:00000000:lib(0):func(0):reason(0)
+FAILED:   updating ddclientdev.homelinux.net: Could not connect to members.dyndns.org.

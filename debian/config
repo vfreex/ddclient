@@ -12,10 +12,7 @@
 
 set -e
 
-# include debconf library
 . /usr/share/debconf/confmodule
-
-# check if we use the right debconf version
 db_version 2.0 || { echo "ddclient.config: \
   need DebConf 2.0 or later"; exit 1; }
 			  
@@ -51,10 +48,9 @@ read_old_config()
 #----------------------------------------------------------------------------
 warn_config_broken()
 {
-# show the message that the current configuration is not ok
-db_fset ddclient/modifiedconfig seen false
-db_input high ddclient/modifiedconfig || true
-db_go
+  db_fset ddclient/modifiedconfig seen false
+  db_input high ddclient/modifiedconfig || true
+  db_go
 }
 
 
@@ -139,38 +135,25 @@ create_new_config()
 
 
  
-#
-#*****************************************************************************
-# start of the main script
-#*****************************************************************************
-# if the first parameter is "configure":
 if [ "$1" = "configure" ]; then
 
-  # if /etc/ddclient.conf does not exist:
   if [ ! -f /etc/ddclient.conf ]; then
-    # create a new config and exit succesfully
 	create_new_config
 	exit 0
   fi
 
-  # if we are upgrading from an old version:
   if dpkg --compare-versions "$2" lt-nl 3.6.2-1; then
     # if the existing /etc/ddclient.conf consists of three words:
     if [ "`wc -w </etc/ddclient.conf`" -eq 3 ]; then
-      # read old config and exit
       read_old_config
-	  exit 0
-    # if the existing /etc/ddclient.conf does not consist of three words:
+      exit 0
     else
-      # show warning that the current config is broken and exit
       warn_config_broken
       exit 1
     fi
     
-  # if we are not upgrading:
   else
-    # exit successfully
-	exit 0
+    exit 0
   fi
   
 elif [ "$1" = "reconfigure" ] ; then

@@ -1,0 +1,23 @@
+=pod
+
+=head1 NAME
+
+ddclient -- Update IP addresses at dynamic DNS services
+
+=head1 SYNOPSIS
+
+ddclient B<-help>
+
+ddclient [B<-daemon> interval] [B<-proxy> host] [B<-server> host]
+[B<-protocol> type] [B<-file> configfile] [B<-cache> cachefile] 
+[B<-pid> pidfile] [B<-use> mechanism] [B<-if> interface|B<-ip> ipaddress|
+B<-web> provider|url]
+
+=head1 DESCRIPTION
+
+ddclient is a little program to update IP addresses managed
+using dynamic DNS providers such as DynDNS.org.
+
+For usage information please run ddclient -help.
+
+=cut

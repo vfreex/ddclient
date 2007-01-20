@@ -10,3 +10,5 @@ ip-up_run-parts.diff
 help_nonroot.diff
 cisco_fw.diff
 config_path.diff
+silence_undefined.diff
+checked_ssl_load.diff

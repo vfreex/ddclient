@@ -2,12 +2,13 @@ Source: ddclient
 Section: net
 Priority: extra
 Maintainer: Torsten Landschoff <torsten@debian.org>
-Build-Depends: debhelper (>= 4.1.16), po-debconf
+Build-Depends: debhelper (>= 4.1.16), po-debconf, xmlto
 Standards-Version: 3.7.2
 
 Package: ddclient
 Architecture: all
 Depends: perl5, ${misc:Depends}
+Recommends: libio-socket-ssl-perl
 Provides: dyndns-client
 Description: Update dynamic IP address at DynDNS.org
  A perl based client to update your dynamic IP address at DynDNS.org

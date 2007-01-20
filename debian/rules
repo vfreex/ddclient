@@ -44,13 +44,15 @@ install: build
 	install -o root -g root -m 755 debian/ip-up \
 	  $(DESTDIR)/etc/ppp/ip-up.d/ddclient
 	
+%.8 : %.xml
+	xmlto -o $(@D) man $<
 
 # Build architecture-independent files here.
 binary-indep: build install
 # We have nothing to do by default.
 
 # Build architecture-dependent files here.
-binary-arch: build install
+binary-arch: build install debian/ddclient.8
 #	dh_testversion
 	dh_testdir
 	dh_testroot

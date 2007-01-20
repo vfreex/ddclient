@@ -1,3 +1,21 @@
+ddclient (3.7.0-2) unstable; urgency=low
+
+  * Silence a warning about an uninitialized value (closes: #334437).
+  * SSL support: 
+    + Add a Recommends for libio-socket-ssl-perl, which is required for 
+      SSL support.
+    + Generated a helpful error message if IO::Socket::SSL is not available
+      at runtime.
+    + Add README.Debian with some explanation about SSL support.
+  * debian/ddclient.init: Fix start-stop-daemon invocation to not use the 
+    --exec option which does not work for scripts. Previously this could
+    lead to starting multiple ddclient instances (closes: #185368).
+  * debian/ddclient.8: Replace with place holder, as the manpage is 
+    seriously outdated (closes: #195115). 
+    + Add Build-Depends on xmlto, which is used to generate the manpage.
+
+ -- Torsten Landschoff <torsten@debian.org>  Sat, 20 Jan 2007 10:59:55 +0100
+
 ddclient (3.7.0-1) unstable; urgency=low
 
   * New upstream release.

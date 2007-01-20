@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient 3.6.2\n"
 "Report-Msgid-Bugs-To: torsten@debian.org\n"
-"POT-Creation-Date: 2006-12-01 23:44+0100\n"
+"POT-Creation-Date: 2007-01-20 17:57+0100\n"
 "PO-Revision-Date: 2005-03-16 01:54-0300\n"
 "Last-Translator: Felipe Augusto van de Wiel (faw) <felipe@cathedrallabs."
 "org>\n"
@@ -164,6 +164,7 @@ msgstr "Entre com a interface que é usada para o serviço de DNS dinâmico."
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
+#, fuzzy
 msgid "Run ddclient on PPP connect?"
 msgstr "Executar ddclient quando PPP conectar?"
 
