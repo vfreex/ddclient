@@ -163,7 +163,6 @@ msgstr "Hãy nhập giao diện được dùng khi truy cập dịch vụ DNS đ
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
-#, fuzzy
 msgid "Run ddclient on PPP connect?"
 msgstr "Chạy trình ddclient khi kết nối qua PPP không?"
 

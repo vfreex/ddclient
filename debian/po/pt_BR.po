@@ -7,7 +7,6 @@
 # /usr/share/doc/po-debconf/README-trans
 # or http://www.debian.org/intl/l10n/po-debconf/README-trans
 # Developers do not need to manually edit POT or PO files.
-# , fuzzy
 # 
 # 
 msgid ""
@@ -164,7 +163,6 @@ msgstr "Entre com a interface que é usada para o serviço de DNS dinâmico."
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
-#, fuzzy
 msgid "Run ddclient on PPP connect?"
 msgstr "Executar ddclient quando PPP conectar?"
 

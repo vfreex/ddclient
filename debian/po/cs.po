@@ -16,11 +16,11 @@ msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: torsten@debian.org\n"
 "POT-Creation-Date: 2007-01-20 17:57+0100\n"
-"PO-Revision-Date: 2005-03-11 09:26+0100\n"
+"PO-Revision-Date: 2006-09-24 16:17+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
-"Language-Team: Czech <debian-10n-czech@debian.org>\n"
+"Language-Team: Czech <debian-10n-czech@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
@@ -51,13 +51,13 @@ msgstr "www.zoneedit.com"
 #. Choices
 #: ../ddclient.templates:1001
 msgid "other"
-msgstr "jinı"
+msgstr "jinÃ½"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:1002
 msgid "Dynamic DNS service provider:"
-msgstr "Poskytovatel dynamického DNS:"
+msgstr "Poskytovatel dynamickÃ©ho DNS:"
 
 #. Type: select
 #. Description
@@ -67,15 +67,15 @@ msgid ""
 "is not listed, choose \"other\" and you will be asked for the protocol and "
 "the server name."
 msgstr ""
-"Vyberte, kterou slu¾bu dynamického DNS pou¾íváte. Pokud zde vámi pou¾ívanı "
-"poskytovatel není, zvolte \"jinı\" a budete dotázáni na protokol a jméno "
+"Vyberte, kterou sluÅ¾bu dynamickÃ©ho DNS pouÅ¾Ã­vÃ¡te. Pokud zde vÃ¡mi pouÅ¾Ã­vanÃ½ "
+"poskytovatel nenÃ­, zvolte \"jinÃ½\" a budete dotÃ¡zÃ¡ni na protokol a jmÃ©no "
 "serveru."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:2001
 msgid "Dynamic DNS server:"
-msgstr "Server dynamického DNS:"
+msgstr "Server dynamickÃ©ho DNS:"
 
 #. Type: string
 #. Description
@@ -84,14 +84,14 @@ msgid ""
 "Enter the name of the server which is providing you with dynamic DNS service "
 "(example: members.dyndns.org)."
 msgstr ""
-"Zadejte jméno serveru, kterı vám poskytuje slu¾bu dunamického DNS (napøíklad "
+"Zadejte jmÃ©no serveru, kterÃ½ vÃ¡m poskytuje sluÅ¾bu dynamickÃ©ho DNS (napÅ™Ã­klad "
 "members.dyndns.org)."
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:3001
 msgid "Dynamic DNS update protocol:"
-msgstr "Protokol pro aktualizaci dynamického DNS:"
+msgstr "Protokol pro aktualizaci dynamickÃ©ho DNS:"
 
 #. Type: select
 #. Description
@@ -100,14 +100,14 @@ msgid ""
 "Select the dynamic DNS update protocol used by your dynamic DNS service "
 "provider."
 msgstr ""
-"Vyberte protokol pro aktualizaci dynamického DNS, kterı pou¾ívá vá¹ "
-"poskytovatel dynamického DNS."
+"Vyberte protokol pro aktualizaci dynamickÃ©ho DNS, kterÃ½ pouÅ¾Ã­vÃ¡ vÃ¡Å¡ "
+"poskytovatel dynamickÃ©ho DNS."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:4001
 msgid "DynDNS fully qualified domain names:"
-msgstr "Plnì kvalifikovaná doménová jména DynDNS:"
+msgstr "PlnÄ› kvalifikovanÃ¡ domÃ©novÃ¡ jmÃ©na DynDNS:"
 
 #. Type: string
 #. Description
@@ -117,57 +117,56 @@ msgid ""
 "dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
 "dyndns.org\" for two hosts)."
 msgstr ""
-"Zadejte seznam plnì kvalifikovanıch jmen va¹eho poèítaèe (tøeba \"jmeno."
-"dyndns.org\" v pøípadì jednoho jména nebo \"jmeno1.dyndns.org,jmeno2.dyndns."
-"org\" pro dva názvy)."
+"Zadejte seznam plnÄ› kvalifikovanÃ½ch jmen vaÅ¡eho poÄÃ­taÄe (tÅ™eba \"jmeno."
+"dyndns.org\" v pÅ™Ã­padÄ› jednoho jmÃ©na nebo \"jmeno1.dyndns.org,jmeno2.dyndns."
+"org\" pro dva nÃ¡zvy)."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
 msgid "Username for dynamic DNS service:"
-msgstr "U¾ivatelské jméno pro dynamické DNS:"
+msgstr "UÅ¾ivatelskÃ© jmÃ©no pro dynamickÃ© DNS:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
 msgid "Enter the username you use to log into the dynamic DNS service."
 msgstr ""
-"Zadejte u¾ivatelské jméno, které pou¾íváte pro pøihlá¹ení ke slu¾bì "
-"dynamického DNS."
+"Zadejte uÅ¾ivatelskÃ© jmÃ©no, kterÃ© pouÅ¾Ã­vÃ¡te pro pÅ™ihlÃ¡Å¡enÃ­ ke sluÅ¾bÄ› "
+"dynamickÃ©ho DNS."
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:6001
 msgid "Password for dynamic DNS service:"
-msgstr "Heslo pro dynamické DNS:"
+msgstr "Heslo pro dynamickÃ© DNS:"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:6001
 msgid "Enter the password you use to log into the dynamic DNS service."
 msgstr ""
-"Zadejte heslo, které pou¾íváte pro pøihlá¹ení ke slu¾bì dynamického DNS."
+"Zadejte heslo, kterÃ© pouÅ¾Ã­vÃ¡te pro pÅ™ihlÃ¡Å¡enÃ­ ke sluÅ¾bÄ› dynamickÃ©ho DNS."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
 msgid "Interface used for dynamic DNS service:"
-msgstr "Rozhraní pou¾ívané pro dynamické DNS:"
+msgstr "RozhranÃ­ pouÅ¾Ã­vanÃ© pro dynamickÃ© DNS:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
 msgid "Enter the interface which is used for using dynamic DNS service."
 msgstr ""
-"Zadejte sí»ové rozhraní, které pou¾íváte pro pøipojení ke slu¾bì dynamického "
+"Zadejte sÃ­Å¥ovÃ© rozhranÃ­, kterÃ© pouÅ¾Ã­vÃ¡te pro pÅ™ipojenÃ­ ke sluÅ¾bÄ› dynamickÃ©ho "
 "DNS."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
-#, fuzzy
 msgid "Run ddclient on PPP connect?"
-msgstr "Spustit ddclient pøi PPP spojení?"
+msgstr "Spustit ddclient pÅ™i PPP spojenÃ­?"
 
 #. Type: boolean
 #. Description
@@ -176,8 +175,8 @@ msgid ""
 "Enable this if ddclient should be run every time a PPP connection is "
 "established."
 msgstr ""
-"Jestli¾e chcete, aby se ddclient spustil poka¾dé, kdy¾ navá¾ete PPP spojení, "
-"odpovìzte kladnì."
+"JestliÅ¾e chcete, aby se ddclient spustil pokaÅ¾dÃ©, kdyÅ¾ navÃ¡Å¾ete PPP spojenÃ­, "
+"odpovÄ›zte kladnÄ›."
 
 #. Type: boolean
 #. Description
@@ -192,7 +191,7 @@ msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
 msgstr ""
-"Vyberte, zda chcete ddclient spou¹tìt pøi zavádìní systému v re¾imu daemona."
+"Vyberte, zda chcete ddclient spouÅ¡tÄ›t pÅ™i zavÃ¡dÄ›nÃ­ systÃ©mu v reÅ¾imu daemona."
 
 #. Type: string
 #. Description
@@ -208,15 +207,15 @@ msgid ""
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
 "\") or in days (e.g. \"1d\")."
 msgstr ""
-"Zadejte interval mezi kontrolami adresy rozhraní. Hodnoty mù¾ete zadat v "
-"sekundách (napø. \"5s\"), minutách (\"3m\"), hodinách (\"7h\") nebo dnech "
-"(napø. \"1d\")."
+"Zadejte interval mezi kontrolami adresy rozhranÃ­. Hodnoty mÅ¯Å¾ete zadat v "
+"sekundÃ¡ch (napÅ™. \"5s\"), minutÃ¡ch (\"3m\"), hodinÃ¡ch (\"7h\") nebo dnech "
+"(napÅ™. \"1d\")."
 
 #. Type: note
 #. Description
 #: ../ddclient.templates:11001
 msgid "Modified configuration file"
-msgstr "Upravenı konfiguraèní soubor"
+msgstr "UpravenÃ½ konfiguraÄnÃ­ soubor"
 
 #. Type: note
 #. Description
@@ -228,14 +227,14 @@ msgid ""
 "modified. If you want a new config file to be created, please run  \"dpkg-"
 "reconfigure ddclient\"."
 msgstr ""
-"Konfiguraèní soubor /etc/ddclient.conf se ve va¹em systému neskládá ze tøí "
-"záznamù, co¾ nástroj pro automatické nastavení (debconf) nezvládne. "
-"Pravdìpodobnì jste soubor zmìnili ruènì a tedy do nìj nebudu zasahovat. "
-"Chcete-li vytvoøit novı konfiguraèní soubor, spus»te \"dpkg-reconfigure "
+"KonfiguraÄnÃ­ soubor /etc/ddclient.conf se ve vaÅ¡em systÃ©mu nesklÃ¡dÃ¡ ze tÅ™Ã­ "
+"zÃ¡znamÅ¯, coÅ¾ nÃ¡stroj pro automatickÃ© nastavenÃ­ (debconf) nezvlÃ¡dne. "
+"PravdÄ›podobnÄ› jste soubor zmÄ›nili ruÄnÄ› a tedy do nÄ›j nebudu zasahovat. "
+"Chcete-li vytvoÅ™it novÃ½ konfiguraÄnÃ­ soubor, spusÅ¥te \"dpkg-reconfigure "
 "ddclient\"."
 
 #~ msgid "More powerful configuration"
-#~ msgstr "Mocnìj¹í nastavení"
+#~ msgstr "MocnÄ›jÅ¡Ã­ nastavenÃ­"
 
 #~ msgid ""
 #~ "The new ddclient version allows you to store all options in the "
@@ -244,26 +243,25 @@ msgstr ""
 #~ "ways to figure out your internet address including gathering it from a "
 #~ "firewall status page."
 #~ msgstr ""
-#~ "Nová verze ddclienta umo¾òuje ulo¾it v¹echny volby v konfiguraèním "
-#~ "souboru (místo pouhého pøedávání tìchto parametrù pøíslu¹nım skriptùm). "
-#~ "Kromì toho nyní ddclient zvládá rùzné protokoly a slu¾by a také rùzné "
-#~ "zpùsoby zji¹tìní va¹í internetové adresy (napøíklad ze stavové stránky "
+#~ "NovÃ¡ verze ddclienta umoÅ¾Åˆuje uloÅ¾it vÅ¡echny volby v konfiguraÄnÃ­m "
+#~ "souboru (mÃ­sto pouhÃ©ho pÅ™edÃ¡vÃ¡nÃ­ tÄ›chto parametrÅ¯ pÅ™Ã­sluÅ¡nÃ½m skriptÅ¯m). "
+#~ "KromÄ› toho nynÃ­ ddclient zvlÃ¡dÃ¡ rÅ¯znÃ© protokoly a sluÅ¾by a takÃ© rÅ¯znÃ© "
+#~ "zpÅ¯soby zjiÅ¡tÄ›nÃ­ vaÅ¡Ã­ internetovÃ© adresy (napÅ™Ã­klad ze stavovÃ© strÃ¡nky "
 #~ "firewallu)."
 
-#, fuzzy
 #~ msgid ""
 #~ "In any case the configuration file /etc/ddclient.conf will be updated to "
 #~ "be a bit more readable and the protocol will be updated to dyndns2. This "
 #~ "is necessary as dyndns.org switched off support for the dyndns1 protocol "
 #~ "on January 1st 2002."
 #~ msgstr ""
-#~ "V ka¾dém pøípadì bude konfiguraèní soubor /etc/ddclient.conf upraven k "
-#~ "lep¹í èitelnosti a protokol bude aktualizován na dyndns2. To je nezbytné, "
-#~ "proto¾e dyndns.org ukonèil podporu protokolu dyndns1 k 1. lednu 2002."
+#~ "V kaÅ¾dÃ©m pÅ™Ã­padÄ› bude konfiguraÄnÃ­ soubor /etc/ddclient.conf upraven k "
+#~ "lepÅ¡Ã­ Äitelnosti a protokol bude aktualizovÃ¡n na dyndns2. To je nezbytnÃ©, "
+#~ "protoÅ¾e dyndns.org ukonÄil podporu protokolu dyndns1 k 1. lednu 2002."
 
 #~ msgid ""
 #~ "If you want to make use of the new options through this frontend please "
 #~ "run \"dpkg-reconfigure ddclient\"."
 #~ msgstr ""
-#~ "Chcete-li nastavit nové mo¾nosti skrze toto rozhraní, spus»te pøíkaz "
+#~ "Chcete-li nastavit novÃ© moÅ¾nosti skrze toto rozhranÃ­, spusÅ¥te pÅ™Ã­kaz "
 #~ "\"dpkg-reconfigure ddclient\"."

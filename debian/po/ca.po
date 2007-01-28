@@ -1,26 +1,20 @@
 #
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
+# Catalan translation for ddclient package.
+# Copyright (C) 2006 Torsten Landschoff.
+# This file is distributed under the same license as the ddclient package.
 #
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
+# JordÃ  Polo <jorda@ettin.org>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ddclient\n"
+"Project-Id-Version: 3.6.7\n"
 "Report-Msgid-Bugs-To: torsten@debian.org\n"
 "POT-Creation-Date: 2007-01-20 17:57+0100\n"
-"PO-Revision-Date: 2005-05-01 15:07+0900\n"
-"Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
-"Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
+"PO-Revision-Date: 2006-06-16 21:23+0200\n"
+"Last-Translator: JordÃ  Polo <jorda@ettin.org>\n"
+"Language-Team: CatalÃ  <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-JP\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
@@ -51,13 +45,13 @@ msgstr "www.zoneedit.com"
 #. Choices
 #: ../ddclient.templates:1001
 msgid "other"
-msgstr "¤½¤ÎÂ¾"
+msgstr "un altre"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:1002
 msgid "Dynamic DNS service provider:"
-msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¥×¥í¥Ð¥¤¥À:"
+msgstr "ProveÃ¯dor del servei de DNS dinÃ mic:"
 
 #. Type: select
 #. Description
@@ -67,15 +61,15 @@ msgid ""
 "is not listed, choose \"other\" and you will be asked for the protocol and "
 "the server name."
 msgstr ""
-"ÍøÍÑ¤·¤Æ¤¤¤ë Dynamic DNS ¥µ¡¼¥Ó¥¹¤òÁªÂò¤·¤Æ¤¯¤À¤µ¤¤¡£»È¤Ã¤Æ¤¤¤ë¥µ¡¼¥Ó¥¹¤¬¥ê¥¹"
-"¥È¤µ¤ì¤Æ¤¤¤Ê¤¤¾ì¹ç¤Ë¤Ï¡¢\"¤½¤ÎÂ¾\" ¤òÁª¤Ö¤È¡¢¥×¥í¥È¥³¥ë¤È¥µ¡¼¥ÐÌ¾¤ò¿Ò¤Í¤é¤ì¤Þ"
-"¤¹¡£"
+"Si us plau, seleccioneu el servei de DNS dinÃ mic que estigueu utilitzant. Si "
+"el servei no apareix a la llista, trieu \"un altre\" i indiqueu a "
+"continuaciÃ³ el protocol i el nom del servidor."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:2001
 msgid "Dynamic DNS server:"
-msgstr "Dynamic DNS ¥µ¡¼¥Ð:"
+msgstr "Servidor DNS dinÃ mic:"
 
 #. Type: string
 #. Description
@@ -84,14 +78,14 @@ msgid ""
 "Enter the name of the server which is providing you with dynamic DNS service "
 "(example: members.dyndns.org)."
 msgstr ""
-"Dynamic DNS ¥µ¡¼¥Ó¥¹¤òÄó¶¡¤·¤Æ¤¤¤ë¥µ¡¼¥Ð¤ÎÌ¾Á°¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤ (Îã: "
-"members.dyndns.org)¡£"
+"IntroduÃ¯u el nom del servidor on tingueu el servei de DNS dinÃ mic (p.ex.: "
+"members.dyndns.org)."
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:3001
 msgid "Dynamic DNS update protocol:"
-msgstr "Dynamic DNS ¤Î¹¹¿·¥×¥í¥È¥³¥ë:"
+msgstr "Protocol d'actualitzaciÃ³ del DNS dinÃ mic:"
 
 #. Type: select
 #. Description
@@ -100,14 +94,14 @@ msgid ""
 "Select the dynamic DNS update protocol used by your dynamic DNS service "
 "provider."
 msgstr ""
-"¤¢¤Ê¤¿¤Î Dynamic DNS ¥µ¡¼¥Ó¥¹¥×¥í¥Ð¥¤¥À¤Ç»È¤Ã¤Æ¤¤¤ë Dynamic DNS ¤Î¹¹¿·¥×¥í¥È"
-"¥³¥ë¤òÁªÂò¤·¤Æ¤¯¤À¤µ¤¤¡£"
+"Seleccioneu el protocol d'actualitzaciÃ³ utilitzat pel vostre proveÃ¯dor de "
+"DNS dinÃ mic."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:4001
 msgid "DynDNS fully qualified domain names:"
-msgstr "DynDNS ¤Î´°Á´½¤¾þ¥É¥á¥¤¥óÌ¾:"
+msgstr "Nom de domini DynDNS complet:"
 
 #. Type: string
 #. Description
@@ -117,51 +111,53 @@ msgid ""
 "dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
 "dyndns.org\" for two hosts)."
 msgstr ""
-"¤¢¤Ê¤¿¤Î¥Û¥¹¥È¤Î´°Á´½¤¾þ¥É¥á¥¤¥óÌ¾¤Î¥ê¥¹¥È¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤ (¤â¤· 1 ¥Û¥¹¥È¤Î"
-"¤ß¤Ê¤é \"myname.dyndns.org\"¡¢2 ¥Û¥¹¥È¤Ê¤é \"myname1.dyndns.org,myname2."
-"dyndns.org\" ¤Ê¤É)¡£"
+"IntroduÃ¯u la llista de dominis complets de la vostra mÃ quina (p.ex. \"nom."
+"dyndns.org\" si en teniu nomÃ©s un, o \"nom1.dyndns.org,nom2.dyndns.org\" si "
+"en teniu dos)."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
 msgid "Username for dynamic DNS service:"
-msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Î¥æ¡¼¥¶Ì¾:"
+msgstr "Nom d'usuari del servei de DNS dinÃ mic:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
 msgid "Enter the username you use to log into the dynamic DNS service."
-msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Î¥í¥°¥¤¥ó¤Ë»È¤¦¥æ¡¼¥¶Ì¾¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£"
+msgstr ""
+"IntroduÃ¯u el nom d'usuari que utilitzeu per entrar al servei de DNS dinÃ mic."
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:6001
 msgid "Password for dynamic DNS service:"
-msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Î¥Ñ¥¹¥ï¡¼¥É:"
+msgstr "Contrasenya del servei de DNS dinÃ mic:"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:6001
 msgid "Enter the password you use to log into the dynamic DNS service."
-msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Î¥í¥°¥¤¥ó¤Ë»È¤¦¥Ñ¥¹¥ï¡¼¥É¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£"
+msgstr ""
+"IntroduÃ¯u la contrasenya que utilitzeu per entrar al servei de DNS dinÃ mic."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
 msgid "Interface used for dynamic DNS service:"
-msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Ë»È¤¦¥¤¥ó¥¿¡¼¥Õ¥§¥¤¥¹:"
+msgstr "InterfÃ­cie utilitzada pel servei de DNS dinÃ mic:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
 msgid "Enter the interface which is used for using dynamic DNS service."
-msgstr "Dynamic DNS ¥µ¡¼¥Ó¥¹¤Ë»È¤¦¥¤¥ó¥¿¡¼¥Õ¥§¥¤¥¹¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£"
+msgstr "IntroduÃ¯u la interfÃ­cie de xarxa utilitzada pel servei de DNS dinÃ mic."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
 msgid "Run ddclient on PPP connect?"
-msgstr "PPP ÀÜÂ³¾å¤Ç ddclient ¤ò¼Â¹Ô¤·¤Þ¤¹¤«?"
+msgstr "Voleu executar ddclient en establir la connexiÃ³ PPP?"
 
 #. Type: boolean
 #. Description
@@ -170,14 +166,14 @@ msgid ""
 "Enable this if ddclient should be run every time a PPP connection is "
 "established."
 msgstr ""
-"ddclient ¤ò PPP ÀÜÂ³¤¬³ÎÎ©¤·¤¿¤È¤­¤ËËè²ó¼Â¹Ô¤·¤¿¤¤¤È¤­¤Ë¤Ï¡¢¡Ö¤Ï¤¤¡×¤òÁª¤ó¤Ç"
-"¤¯¤À¤µ¤¤¡£"
+"Activeu aquesta opciÃ³ si el client s'ha d'executar cada vegada que "
+"s'estableix una connexiÃ³ PPP."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:9001
 msgid "Run ddclient as daemon?"
-msgstr "ddclient ¤ò¥Ç¡¼¥â¥ó¤È¤·¤Æ¼Â¹Ô¤·¤Þ¤¹¤«?"
+msgstr "Executar ddclient com a dimoni?"
 
 #. Type: boolean
 #. Description
@@ -186,14 +182,14 @@ msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
 msgstr ""
-"ddclient ¤ò¥·¥¹¥Æ¥à¤Î¥¹¥¿¡¼¥È¥¢¥Ã¥×»þ¤Ë¥Ç¡¼¥â¥ó¥â¡¼¥É¤Ç¼Â¹Ô¤¹¤ë¤«¤É¤¦¤«Áª¤ó¤Ç"
-"¤¯¤À¤µ¤¤¡£"
+"Si us plau, indiqueu si voleu que ddclient s'executi com a dimoni en "
+"arrencar el sistema."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:10001
 msgid "ddclient update interval:"
-msgstr "ddclient ¤Î¹¹¿·´Ö³Ö:"
+msgstr "Interval d'actualitzaciÃ³ de ddclient:"
 
 #. Type: string
 #. Description
@@ -203,14 +199,15 @@ msgid ""
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
 "\") or in days (e.g. \"1d\")."
 msgstr ""
-"¥¤¥ó¥¿¡¼¥Õ¥§¥¤¥¹¥¢¥É¥ì¥¹¥Á¥§¥Ã¥¯¤ÎÂÔ¤Á´Ö³Ö¤òÁª¤ó¤Ç¤¯¤À¤µ¤¤¡£ÃÍ¤ÏÉÃ (Îã \"5s"
-"\")¡¢Ê¬ (Îã \"3m\")¡¢»þ (Îã \"7h\")¡¢¤¢¤ë¤¤¤ÏÆü (Îã \"1d\") ¤Ç»ØÄê¤Ç¤­¤Þ¤¹¡£"
+"Si us plau, trieu el retard entre comprovacions de l'adreÃ§a. Els valors es "
+"poden donar en segons (p.ex. \"5s\"), en minuts (p.ex. \"3m\"), en hores (p."
+"ex. \"7h\"), o en dies (p.ex. \"1d\")."
 
 #. Type: note
 #. Description
 #: ../ddclient.templates:11001
 msgid "Modified configuration file"
-msgstr "ÊÑ¹¹¤µ¤ì¤¿ÀßÄê¥Õ¥¡¥¤¥ë"
+msgstr "Fitxer de configuraciÃ³ modificat"
 
 #. Type: note
 #. Description
@@ -222,14 +219,14 @@ msgid ""
 "modified. If you want a new config file to be created, please run  \"dpkg-"
 "reconfigure ddclient\"."
 msgstr ""
-"¤¢¤Ê¤¿¤Î¥·¥¹¥Æ¥à¤ÎÀßÄê¥Õ¥¡¥¤¥ë /etc/ddclient.conf ¤Ï¡¢3 ¥¨¥ó¥È¥ê¤Ç¹½À®¤µ¤ì¤Æ"
-"¤¤¤Þ¤»¤ó¡£¼«Æ°ÀßÄê¥æ¡¼¥Æ¥£¥ê¥Æ¥£ (debconf) ¤Ï¤³¤ì¤ò¼è¤ê°·¤¨¤Þ¤»¤ó¡£¤ª¤½¤é¤¯¡¢"
-"ÀßÄê¥Õ¥¡¥¤¥ë¤ò¼êÆ°½¤Àµ¤·¤¿¤¿¤á¤ËÊÑ¹¹¤Ç¤­¤Ê¤¯¤Ê¤Ã¤Æ¤·¤Þ¤Ã¤¿¤Î¤Ç¤·¤ç¤¦¡£¿·¤·¤¤"
-"ÀßÄê¥Õ¥¡¥¤¥ë¤òºîÀ®¤·¤¿¤¤¤Î¤Ç¤¢¤ì¤Ð¡¢\"dpkg-reconfigure ddclient\" ¤ò¼Â¹Ô¤·¤Æ"
-"¤¯¤À¤µ¤¤¡£"
+"El fitxer de configuraciÃ³ /etc/ddclient.conf del vostre sistema no contÃ© "
+"tres entrades. L'eina automÃ tica de configuraciÃ³ (debconf) no pot tractar "
+"aixÃ². Potser el fitxer de configuraciÃ³ s'ha editat manualment i per tant no "
+"es modificarÃ . Si desitgeu crear un nou fitxer de configuraciÃ³, si us plau "
+"executeu \"dpkg-reconfigure ddclient\"."
 
 #~ msgid "More powerful configuration"
-#~ msgstr "¤è¤ê¶¯ÎÏ¤ÊÀßÄê"
+#~ msgstr "ConfiguraciÃ³ mÃ©s avanÃ§ada"
 
 #~ msgid ""
 #~ "The new ddclient version allows you to store all options in the "
@@ -238,26 +235,26 @@ msgstr ""
 #~ "ways to figure out your internet address including gathering it from a "
 #~ "firewall status page."
 #~ msgstr ""
-#~ "¿·¤·¤¤ ddclient ¥Ð¡¼¥¸¥ç¥ó¤Ï¤¹¤Ù¤Æ¤Î¥ª¥×¥·¥ç¥ó¤ò¡¢¥¹¥¯¥ê¥×¥È¤Ë°ú¤­ÅÏ¤¹Âå¤ï"
-#~ "¤ê¤Ë¡¢ÀßÄê¥Õ¥¡¥¤¥ë¤Ë³ÊÇ¼¤¹¤ë¤³¤È¤òµö²Ä¤·¤Þ¤¹¡£ddclient ¤¬°Û¤Ê¤ë¥×¥í¥È¥³¥ë"
-#~ "¤È¥µ¡¼¥Ó¥¹¤ò¸½ºß¥µ¥Ý¡¼¥È¤·¤Æ¤¤¤ë¤³¤È¤È¤ÏÊÌ¤È¤·¤Æ¡¢¥Õ¥¡¥¤¥¢¥¦¥©¡¼¥ë¤Î¾õ¶·"
-#~ "¥Ú¡¼¥¸¤«¤é¤Î¿äÂ¬¤ò´Þ¤à¡¢¥¤¥ó¥¿¡¼¥Í¥Ã¥È¥¢¥É¥ì¥¹¤ò·×»»¤¹¤ë°Û¤Ê¤ëÊýË¡¤¬¤¢¤ê¤Þ"
-#~ "¤¹¡£"
+#~ "La nova versiÃ³ de ddclient permet emmagatzemar totes les opcions al "
+#~ "fitxer de configuraciÃ³ en comptes de passar els parÃ metres als scripts. A "
+#~ "mÃ©s d'aixÃ², ddclient ara permet diferents protocols, serveis, i mÃ¨todes "
+#~ "alternatius per descobrir quina Ã©s la vostra adreÃ§a, incloent la "
+#~ "possibilitat d'obtenir-la a partir de la pÃ gina d'estat del tallafoc."
 
-#, fuzzy
 #~ msgid ""
 #~ "In any case the configuration file /etc/ddclient.conf will be updated to "
 #~ "be a bit more readable and the protocol will be updated to dyndns2. This "
 #~ "is necessary as dyndns.org switched off support for the dyndns1 protocol "
 #~ "on January 1st 2002."
 #~ msgstr ""
-#~ "¤É¤Î¤è¤¦¤Ê¾ì¹ç¤Ç¤â¡¢ÀßÄê¥Õ¥¡¥¤¥ë /etc/ddclient.conf ¤Ï¾¯¤·ÆÉ¤ß¤ä¤¹¤¯¤Ê¤ê¡¢"
-#~ "¥×¥í¥È¥³¥ë¤Ï dyndns2 ¤Ë¹¹¿·¤µ¤ì¤Þ¤¹¡£¤³¤ì¤Ï 2002 Ç¯ 1 ·î 1 Æü¤Ë dyndns."
-#~ "org ¤¬dyndns1 ¥×¥í¥È¥³¥ë¤Î¥µ¥Ý¡¼¥È¤òÄä»ß¤·¤¿¤¿¤á¤ËÉ¬Í×¤Ç¤¹¡£"
+#~ "En qualsevol cas, el fitxer de configuraciÃ³ /etc/ddclient.conf serÃ  "
+#~ "actualitzat per fer-lo una mica mÃ©s llegible i es canviarÃ  el protocol a "
+#~ "dyndyns2. AixÃ² Ã©s necessari ja que dyndns.org va deixar de suportar "
+#~ "dyndns1 l'1 de gener de 2002."
 
 #~ msgid ""
 #~ "If you want to make use of the new options through this frontend please "
 #~ "run \"dpkg-reconfigure ddclient\"."
 #~ msgstr ""
-#~ "¤³¤Î¥Õ¥í¥ó¥È¥¨¥ó¥É·ÐÍ³¤Ç¿·¤·¤¤¥ª¥×¥·¥ç¥ó¤ò»È¤¦¤è¤¦¤Ë¤·¤¿¤¤¤Î¤Ç¤¢¤ì¤Ð¡¢"
-#~ "\"dpkg-reconfigure ddclient\" ¤ò¼Â¹Ô¤·¤Æ¤¯¤À¤µ¤¤¡£"
+#~ "Si voleu utilitzar les noves opcions mitjanÃ§ant aquesta mateixa "
+#~ "interfÃ­cie, executeu \"dpkg-reconfigure ddclient\"."

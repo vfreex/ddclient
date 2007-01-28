@@ -168,7 +168,6 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
-#, fuzzy
 msgid "Run ddclient on PPP connect?"
 msgstr "Faut-il lancer ddclient lors de la connexion PPP ?"
 

@@ -1,26 +1,17 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
+# Portuguese translation of ddclient debconf messages.
+# This file is distributed under the same license as the ddclient package.
+# Ricardo Silva <ardoric@gmail.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ddclient\n"
+"Project-Id-Version: ddclient 3.6.7-2\n"
 "Report-Msgid-Bugs-To: torsten@debian.org\n"
 "POT-Creation-Date: 2007-01-20 17:57+0100\n"
-"PO-Revision-Date: 2005-05-01 15:07+0900\n"
-"Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
-"Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
+"PO-Revision-Date: 2006-09-25 23:09+0100\n"
+"Last-Translator: Ricardo Silva <ardoric@gmail.com>\n"
+"Language-Team: Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-JP\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
@@ -51,13 +42,13 @@ msgstr "www.zoneedit.com"
 #. Choices
 #: ../ddclient.templates:1001
 msgid "other"
-msgstr "その他"
+msgstr "outro"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:1002
 msgid "Dynamic DNS service provider:"
-msgstr "Dynamic DNS サービスプロバイダ:"
+msgstr "Provedor do servi巽o de DNS din但mico:"
 
 #. Type: select
 #. Description
@@ -67,15 +58,15 @@ msgid ""
 "is not listed, choose \"other\" and you will be asked for the protocol and "
 "the server name."
 msgstr ""
-"利用している Dynamic DNS サービスを選択してください。使っているサービスがリス"
-"トされていない場合には、\"その他\" を選ぶと、プロトコルとサーバ名を尋ねられま"
-"す。"
+"Por favor escolha o servi巽o de DNS din但mico que est叩 a usar. Se o servi巽o "
+"que usa n達o est叩 listado, escolha \"outro\" e ser-lhe-叩 perguntado pelo "
+"protocolo e pelo nome do servidor."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:2001
 msgid "Dynamic DNS server:"
-msgstr "Dynamic DNS サーバ:"
+msgstr "Servidor de DNS din但mico:"
 
 #. Type: string
 #. Description
@@ -84,14 +75,14 @@ msgid ""
 "Enter the name of the server which is providing you with dynamic DNS service "
 "(example: members.dyndns.org)."
 msgstr ""
-"Dynamic DNS サービスを提供しているサーバの名前を入力してください (例: "
-"members.dyndns.org)。"
+"Introduza o nome do servidor que providencia o servi巽o de DNS din但mico "
+"(exemplo: members.dyndns.org)."
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:3001
 msgid "Dynamic DNS update protocol:"
-msgstr "Dynamic DNS の更新プロトコル:"
+msgstr "Protocolo de actualiza巽達o do DNS din但mico:"
 
 #. Type: select
 #. Description
@@ -100,14 +91,14 @@ msgid ""
 "Select the dynamic DNS update protocol used by your dynamic DNS service "
 "provider."
 msgstr ""
-"あなたの Dynamic DNS サービスプロバイダで使っている Dynamic DNS の更新プロト"
-"コルを選択してください。"
+"Escola o protocolo de actualiza巽達o de DNS din但mico usado pelo seu provedor "
+"do servi巽o de DNS din但mico."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:4001
 msgid "DynDNS fully qualified domain names:"
-msgstr "DynDNS の完全修飾ドメイン名:"
+msgstr "Dom鱈nios DynDNS de nome qualificado:"
 
 #. Type: string
 #. Description
@@ -117,51 +108,51 @@ msgid ""
 "dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
 "dyndns.org\" for two hosts)."
 msgstr ""
-"あなたのホストの完全修飾ドメイン名のリストを入力してください (もし 1 ホストの"
-"みなら \"myname.dyndns.org\"、2 ホストなら \"myname1.dyndns.org,myname2."
-"dyndns.org\" など)。"
+"Introduza a lista de dom鱈nios de nome qualificado para a sua m叩quina "
+"(exemplo \"meu_nome.dyndns.org\" se tem apenas uma m叩quina ou \"meu_nome1."
+"dyndns.org,meu_nome2.dyndns.org\" para duas m叩quinas)."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
 msgid "Username for dynamic DNS service:"
-msgstr "Dynamic DNS サービスのユーザ名:"
+msgstr "Nome de utilizador para o servi巽o de DNS din但mico:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
 msgid "Enter the username you use to log into the dynamic DNS service."
-msgstr "Dynamic DNS サービスのログインに使うユーザ名を入力してください。"
+msgstr "Introduza o nome que usa para se ligar ao servi巽o de DNS din但mico."
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:6001
 msgid "Password for dynamic DNS service:"
-msgstr "Dynamic DNS サービスのパスワード:"
+msgstr "Senha para o servi巽o de DNS din但mico:"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:6001
 msgid "Enter the password you use to log into the dynamic DNS service."
-msgstr "Dynamic DNS サービスのログインに使うパスワードを入力してください。"
+msgstr "Introduza a senha que usa para se ligar ao servi巽o de DNS din但mico."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
 msgid "Interface used for dynamic DNS service:"
-msgstr "Dynamic DNS サービスに使うインターフェイス:"
+msgstr "Interface usada para o servi巽o de DNS din但mico:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
 msgid "Enter the interface which is used for using dynamic DNS service."
-msgstr "Dynamic DNS サービスに使うインターフェイスを入力してください。"
+msgstr "Introduza a interface que 辿 usada para o servi巽o de DNS din但mico."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
 msgid "Run ddclient on PPP connect?"
-msgstr "PPP 接続上で ddclient を実行しますか?"
+msgstr "Correr o ddclient quando se liga o PPP?"
 
 #. Type: boolean
 #. Description
@@ -170,14 +161,14 @@ msgid ""
 "Enable this if ddclient should be run every time a PPP connection is "
 "established."
 msgstr ""
-"ddclient を PPP 接続が確立したときに毎回実行したいときには、「はい」を選んで"
-"ください。"
+"Active isto se o ddclient deve ser corrido sempre que uma liga巽達o PPP 辿 "
+"estabelecida."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:9001
 msgid "Run ddclient as daemon?"
-msgstr "ddclient をデーモンとして実行しますか?"
+msgstr "Correr o ddclient como daemon?"
 
 #. Type: boolean
 #. Description
@@ -186,14 +177,14 @@ msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
 msgstr ""
-"ddclient をシステムのスタートアップ時にデーモンモードで実行するかどうか選んで"
-"ください。"
+"Por favor escolha se quer que o ddclient seja corrido em modo daemon quando "
+"se arranca o sistema."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:10001
 msgid "ddclient update interval:"
-msgstr "ddclient の更新間隔:"
+msgstr "intervalo de actualiza巽探es do ddclient:"
 
 #. Type: string
 #. Description
@@ -203,14 +194,15 @@ msgid ""
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
 "\") or in days (e.g. \"1d\")."
 msgstr ""
-"インターフェイスアドレスチェックの待ち間隔を選んでください。値は秒 (例 \"5s"
-"\")、分 (例 \"3m\")、時 (例 \"7h\")、あるいは日 (例 \"1d\") で指定できます。"
+"Por favor escolha o intervalo entre verifica巽探es do endere巽o da interface. "
+"Os valores podem ser dados em segundos (ex. \"5s\"), em minutos (ex. \"3m"
+"\"), em horas (ex. \"7h\") ou em dias (ex. \"1d\")."
 
 #. Type: note
 #. Description
 #: ../ddclient.templates:11001
 msgid "Modified configuration file"
-msgstr "変更された設定ファイル"
+msgstr "Ficheiro de configura巽達o modificado"
 
 #. Type: note
 #. Description
@@ -222,14 +214,14 @@ msgid ""
 "modified. If you want a new config file to be created, please run  \"dpkg-"
 "reconfigure ddclient\"."
 msgstr ""
-"あなたのシステムの設定ファイル /etc/ddclient.conf は、3 エントリで構成されて"
-"いません。自動設定ユーティリティ (debconf) はこれを取り扱えません。おそらく、"
-"設定ファイルを手動修正したために変更できなくなってしまったのでしょう。新しい"
-"設定ファイルを作成したいのであれば、\"dpkg-reconfigure ddclient\" を実行して"
-"ください。"
+"O ficheiro de configura巽達o /etc/ddclient.conf no seu sistema n達o 辿 "
+"constitu鱈do por tr棚s entradas. O utilit叩rio de configura巽達o autom叩tica "
+"(debconf) n達o sabe tratar disto. Talvez voc棚 tenha modificado o ficheiro "
+"manualmente, e portanto n達o ser叩 modificado. Se deseja que um novo ficheiro "
+"de configura巽達o seja criado, por favor corra \"dpkg-reconfigura ddclient\"."
 
 #~ msgid "More powerful configuration"
-#~ msgstr "より強力な設定"
+#~ msgstr "Configura巽達o mais poderosa"
 
 #~ msgid ""
 #~ "The new ddclient version allows you to store all options in the "
@@ -238,26 +230,26 @@ msgstr ""
 #~ "ways to figure out your internet address including gathering it from a "
 #~ "firewall status page."
 #~ msgstr ""
-#~ "新しい ddclient バージョンはすべてのオプションを、スクリプトに引き渡す代わ"
-#~ "りに、設定ファイルに格納することを許可します。ddclient が異なるプロトコル"
-#~ "とサービスを現在サポートしていることとは別として、ファイアウォールの状況"
-#~ "ページからの推測を含む、インターネットアドレスを計算する異なる方法がありま"
-#~ "す。"
+#~ "A nova vers達o do ddclient permite-lhe guardar todas as op巽探es no ficheiro "
+#~ "de configura巽達o em vez de os passar nos seus scripts. Al辿m disso o "
+#~ "ddclient agora tamb辿m suporta diferentes protocolos e servi巽os, maneiras "
+#~ "diferentes de descobrir o seu endere巽o incluindo obt棚-lo de uma p叩gina de "
+#~ "estado de uma firewall."
 
-#, fuzzy
 #~ msgid ""
 #~ "In any case the configuration file /etc/ddclient.conf will be updated to "
 #~ "be a bit more readable and the protocol will be updated to dyndns2. This "
 #~ "is necessary as dyndns.org switched off support for the dyndns1 protocol "
 #~ "on January 1st 2002."
 #~ msgstr ""
-#~ "どのような場合でも、設定ファイル /etc/ddclient.conf は少し読みやすくなり、"
-#~ "プロトコルは dyndns2 に更新されます。これは 2002 年 1 月 1 日に dyndns."
-#~ "org がdyndns1 プロトコルのサポートを停止したために必要です。"
+#~ "De qualquer maneira o ficheiro de configura巽達o /etc/ddclient.conf ser叩 "
+#~ "actualizado para ser um pouco mais leg鱈vel e o protocolo ser叩 actualizado "
+#~ "para dyndns2. Isto 辿 necess叩rio uma vez que a dyndns.org desligou o "
+#~ "suporte para o protocolo dyndns1 em 1 Jan 2002."
 
 #~ msgid ""
 #~ "If you want to make use of the new options through this frontend please "
 #~ "run \"dpkg-reconfigure ddclient\"."
 #~ msgstr ""
-#~ "このフロントエンド経由で新しいオプションを使うようにしたいのであれば、"
-#~ "\"dpkg-reconfigure ddclient\" を実行してください。"
+#~ "Se deseja usar as novas op巽探es atrav辿s desta frontend por favor corra "
+#~ "\"dpkg-reconfigure ddclient\"."
