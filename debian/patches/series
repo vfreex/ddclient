@@ -1,14 +1,4 @@
-cachedir.diff
-daemon_interval.diff
-update-new-config.patch -p0
-smc-barricade-7401bra.patch -p0
 smc-barricade-fw-alt.diff
-daemon_check.diff
-abuse_msg.diff
-maxinterval.diff
 ip-up_run-parts.diff
-help_nonroot.diff
-cisco_fw.diff
 config_path.diff
-silence_undefined.diff
-checked_ssl_load.diff
+maxinterval.diff

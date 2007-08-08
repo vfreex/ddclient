@@ -1,12 +1,15 @@
 #!/usr/bin/perl -w
 #!/usr/local/bin/perl -w
 ######################################################################
-# $Id: ddclient 10 2006-06-14 19:59:31Z wimpunk $
+# $Id: ddclient 78 2007-08-07 06:35:55Z wimpunk $
 #
 # DDCLIENT - a Perl client for updating DynDNS information
 #
 # Author: Paul Burry (paul+ddclient@burry.ca)
 # ddclient-developers: see https://sourceforge.net/project/memberlist.php?group_id=116817
+#
+# website: http://ddclient.sf.net
+#
 ######################################################################
 require 5.004;
 use strict;
@@ -14,7 +17,7 @@ use Getopt::Long;
 use Sys::Hostname;
 use IO::Socket;
 
-my $version  = "3.7.0";
+my $version  = "3.7.3";
 my $programd  = $0; 
 $programd =~ s%^.*/%%;
 my $program   = $programd;
@@ -22,6 +25,7 @@ $program  =~ s/d$//;
 my $now       = time;
 my $hostname  = hostname();
 my $etc       = ($program =~ /test/i) ? './'   : '/etc/ddclient/';
+my $cachedir  = ($program =~ /test/i) ? './'   : '/var/cache/ddclient/';
 my $savedir   = ($program =~ /test/i) ? 'URL/' : '/tmp/';
 my $msgs      = '';
 my $last_msgs = '';
@@ -53,7 +57,8 @@ sub T_POSTS	{'postscript'};
 
 ## strategies for obtaining an ip address.
 my %builtinweb = (
-   'dyndns'       => { 'url' => 'http://checkip.dyndns.org/', 'skip' => 'Current IP Address', },
+   'dyndns'       => { 'url' => 'http://checkip.dyndns.org/', 'skip' =>
+   'Current IP Address:', },
    'dnspark'      => { 'url' => 'http://ipdetect.dnspark.com/', 'skip' => 'Current Address:', },
 );
 my %builtinfw = (
@@ -70,6 +75,11 @@ my %builtinfw = (
     'smc-barricade'          => {
 				  'name' => 'SMC Barricade FW',
 				  'url'  => '/status.htm',
+				  'skip' => 'IP Address',
+			        },
+    'smc-barricade-7401bra'  => {
+				  'name' => 'SMC Barricade 7401BRA FW',
+				  'url'  => '/admin/wan1.htm',
 				  'skip' => 'IP Address',
 			        },
     'netgear-rt3xx'          => {
@@ -155,7 +165,7 @@ my %builtinfw = (
     '3com-oc-remote812'      => {
     				  'name' => '3com OfficeConnect Remote 812',
                                   'url'  => '/callEvent',
-                                  'skip' => '.*IP address in use',     
+                                  'skip' => '.*LOCAL',
                                 },
     'e-tech'		     => {
 				  'name' => 'E-tech Router',
@@ -171,7 +181,6 @@ my %builtinfw = (
 				  'name' => 'Vigor 2200 USB',
 				  'url'  => '/doc/online.sht',
 				  'skip' => 'PPPoA',
-#				  'skip' => 'PPPoA</font></td><td><font face="Verdana, Arial, Helvetica" size=2 color="#009900"> ',
 			      },
     'dlink-614'            => {
 				  'name' => 'D-Link DI-614+',
@@ -296,7 +305,7 @@ my %variables = (
     'global-defaults'    => {
 	'daemon'              => setv(T_DELAY, 0, 0, 1, 0,                    interval('60s')),
 	'file'                => setv(T_FILE,  0, 0, 1, "$etc$program.conf",  undef),
-	'cache'               => setv(T_FILE,  0, 0, 1, "$etc$program.cache", undef),
+	'cache'               => setv(T_FILE,  0, 0, 1, "$cachedir$program.cache", undef),
 	'pid'                 => setv(T_FILE,  0, 0, 1, "",                   undef),
 	'proxy'               => setv(T_FQDNP, 0, 0, 1, '',                   undef),
 	'protocol'            => setv(T_PROTO, 0, 0, 1, 'dyndns2',            undef),
@@ -346,7 +355,7 @@ my %variables = (
 	'atime'               => setv(T_NUMBER, 0, 1, 0, 0,                   undef),
 	'status'              => setv(T_ANY,    0, 1, 0, '',                  undef),
 	'min-interval'        => setv(T_DELAY,  0, 0, 1, interval('30s'),     0),
-	'max-interval'        => setv(T_DELAY,  0, 0, 1, interval('15d'),     0),
+	'max-interval'        => setv(T_DELAY,  0, 0, 1, interval('25d'),     0),
 	'min-error-interval'  => setv(T_DELAY,  0, 0, 1, interval('5m'),      0),
 
 	'warned-min-interval'       => setv(T_ANY,    0, 1, 0, 0,             undef),
@@ -354,6 +363,11 @@ my %variables = (
     },
     'dyndns-common-defaults'       => {
 	'static'              => setv(T_BOOL,   0, 1, 1, 0,                   undef),
+	'wildcard'            => setv(T_BOOL,   0, 1, 1, 0,                   undef),
+	'mx'	              => setv(T_OFQDN,  0, 1, 1, '',                  undef),
+	'backupmx'            => setv(T_BOOL,   0, 1, 1, 0,                   undef),
+    },
+    'easydns-common-defaults'       => {
 	'wildcard'            => setv(T_BOOL,   0, 1, 1, 0,                   undef),
 	'mx'	              => setv(T_OFQDN,  0, 1, 1, '',                  undef),
 	'backupmx'            => setv(T_BOOL,   0, 1, 1, 0,                   undef),
@@ -418,7 +432,7 @@ my %services = (
 	'update'     => \&nic_zoneedit1_update,
 	'examples'   => \&nic_zoneedit1_examples,
 	'variables'  => merge(
-			  { 'server'       => setv(T_FQDNP,  1, 0, 1, 'www.zoneedit.com', undef)          },
+			  { 'server'       => setv(T_FQDNP,  1, 0, 1, 'dynamic.zoneedit.com', undef)          },
 			  { 'min-interval' => setv(T_DELAY,  0, 0, 1, interval('5m'), 0),},
  			  $variables{'service-common-defaults'},
 		        ),
@@ -430,6 +444,7 @@ my %services = (
 	'variables'  => merge(
 			  { 'server'       => setv(T_FQDNP,  1, 0, 1, 'members.easydns.com', undef)          },
 			  { 'min-interval' => setv(T_DELAY,  0, 0, 1, interval('5m'), 0),},
+			  $variables{'easydns-common-defaults'},
  			  $variables{'service-common-defaults'},
 		        ),
     },
@@ -530,7 +545,7 @@ my @opt = (
     nic_examples(),
     "$program version $version, ",
     "  originally written by Paul Burry, paul+ddclient\@burry.ca",
-    "  maintained by WimPunk"
+    "  project now maintained on http://ddclient.sourceforge.net"
 );
 
 ## process args
@@ -541,6 +556,12 @@ my %saved_opt = %opt;
 $result = 'OK';
 
 test_geturl(opt('geturl')) if opt('geturl');
+
+## process help option
+if (opt('help')) {
+    *STDERR = *STDOUT;
+    usage(0);
+}
 
 ## read config file because 'daemon' mode may be defined there.
 read_config(define($opt{'file'}, default('file')), \%config, \%globals);
@@ -593,7 +614,7 @@ do {
     usage("invalid argument '-use %s'; possible values are:\n%s", $opt{'use'}, join("\n",ip_strategies_usage()))
       unless exists $ip_strategies{lc opt('use')};
     
-    $daemon = define($opt{'daemon'}, $globals{'daemon'});
+    $daemon = $opt{'daemon'};
     $daemon = 0 if opt('force');
 
     ## obtain the IP address to use.
@@ -979,9 +1000,13 @@ sub init_config {
     $opt{'min-error-interval'} = max(interval(opt('min-error-interval')), interval(default('min-error-interval')));
 
     $opt{'timeout'}  = 0               if opt('timeout') < 0;
-    $opt{'daemon'}   = minimum('daemon')
-      if   define($opt{'daemon'},$globals{'daemon'},0) 
-	&& define($opt{'daemon'},$globals{'daemon'}) < minimum('daemon');
+
+    ## only set $opt{'daemon'} if it has been explicitly passed in
+    if (define($opt{'daemon'},$globals{'daemon'},0)) {
+        $opt{'daemon'} = interval(opt('daemon'));
+        $opt{'daemon'} = minimum('daemon')
+          if ($opt{'daemon'} < minimum('daemon'));
+    }
     
     ## define or modify host options specified on the command-line
     if (exists $opt{'options'} && defined $opt{'options'}) {
@@ -1096,16 +1121,14 @@ sub init_config {
 	    $config{$h}{'cacheable'} = [ @{$services{$proto}{'cacheable'}} ];
 	}
     }
-    if (opt('help')) {
-	*STDERR = *STDOUT;
-	usage();
-    }
 }
 
 ######################################################################
 ## usage
 ######################################################################
 sub usage {
+    my $exitcode = 1;
+    $exitcode = shift if @_ != 0; # use first arg if given
     my $msg = '';
     if (@_) {
 	my $format = shift;
@@ -1115,7 +1138,7 @@ sub usage {
     }
     printf STDERR "%s%s\n", $msg, $opt_usage;
     sendmail();
-    exit 1;
+    exit $exitcode;
 }
 
 ######################################################################
@@ -1349,7 +1372,7 @@ sub logger {
 sub sendmail {
     my $recipients = opt('mail');
 
-    if (opt('mail-failure') && ($result ne 'OK')) {
+    if (opt('mail-failure') && ($result ne 'OK' && $result != 0)) {
 	$recipients = opt('mail-failure');
     }
     if ($msgs && $recipients && $msgs ne $last_msgs) {
@@ -1580,7 +1603,7 @@ sub check_value {
 	return undef if $value eq "";
 
     } elsif ($type eq T_IF) {
-	return undef if $value !~ /^[a-z0-9:_-]+$/;
+	return undef if $value !~ /^[a-z0-9:._-]+$/;
 
     } elsif ($type eq T_PROG) {
 	return undef if $value eq "";
@@ -1621,6 +1644,20 @@ sub encode_base64 ($;$) {
     $res;
 }
 ######################################################################
+## load_ssl_support
+######################################################################
+sub load_ssl_support {
+    my $ssl_loaded = eval {require IO::Socket::SSL};
+    unless ($ssl_loaded) {
+        fatal(<<"EOM");
+Error loading the Perl module IO::Socket::SSL needed for SSL connect.
+On Debian, the package libio-socket-ssl-perl must be installed.
+EOM
+    }
+    import  IO::Socket::SSL;
+    { no warnings; $IO::Socket::SSL::DEBUG = 0; }
+}
+######################################################################
 ## geturl
 ######################################################################
 sub geturl {
@@ -1642,16 +1679,14 @@ sub geturl {
     $url    =~ s%^[^/]*/%%;
  
     debug("server = $server");
-    debug("opt(fw = ",opt('fw'));
-    debug("glo fw = $globals{'fw'}");
+    opt('fw') && debug("opt(fw = ",opt('fw'),")");
+    $globals{'fw'} && debug("glo fw = $globals{'fw'}"); 
     #if ( $globals{'ssl'} and $server ne $globals{'fw'} ) {
     ## always omit SSL for connections to local router
     if ( $globals{'ssl'} and (caller(1))[3] ne 'main::get_ip' ) {
         $use_ssl      = 1;
         $default_port = 443;
-        require IO::Socket::SSL;
-        import  IO::Socket::SSL;
-        { no warnings; $IO::Socket::SSL::DEBUG = 0; }
+		load_ssl_support;
     } else {
         $use_ssl      = 0;
         $default_port = 80;
@@ -1806,7 +1841,7 @@ sub get_ip {
 	# Protect special HTML characters (like '?')
 	$queryif =~ s/([\?&= ])/sprintf("%%%02x",ord($1))/ge;
 
-	$url   = "http://${arg}/level/1/exec/show/ip/interface/brief/${queryif}/CR";
+	$url   = "http://".opt('fw')."/level/1/exec/show/ip/interface/brief/${queryif}/CR";
 	$reply = geturl('', $url, opt('fw-login'), opt('fw-password')) || '';
 	$arg   = $url;
 
@@ -1993,6 +2028,13 @@ sub nic_updateable {
 	}
 
     } elsif (defined($sub) && &$sub($host)) {
+	$update = 1;
+
+    } elsif (($cache{$host}{'static'} ne $config{$host}{'static'}) ||
+	     ($cache{$host}{'wildcard'} ne $config{$host}{'wildcard'}) ||
+	     ($cache{$host}{'mx'} ne $config{$host}{'mx'}) ||
+	     ($cache{$host}{'backupmx'} ne $config{$host}{'backupmx'})) {
+	info("updating %s because host settings have been changed.", $host);
 	$update = 1;
 
     } else {
@@ -2211,7 +2253,7 @@ sub nic_dyndns2_update {
        '!yours'   => 'The hostname specified exists, but not under the username currently being used',
        '!donator' => 'The offline setting was set, when the user is not a donator',
        '!active'  => 'The hostname specified is in a Custom DNS domain which has not yet been activated.',
-       'abuse',   => 'The hostname specified is blocked for abuse; contact support@dyndns.org to be unblocked',
+       'abuse',   => 'The hostname specified is blocked for abuse; fill in the form at http://support.dyndns.org/abuse.php to be unblocked',
 
        'numhost'  => 'System error: Too many or too few hosts found. Contact support@dyndns.org',
        'dnserr'   => 'System error: DNS error encountered. Contact support@dyndns.org',
@@ -2739,14 +2781,14 @@ sub nic_easydns_update {
 	info("setting IP address to %s for %s", $ip, $hosts);
 	verbose("UPDATE:","updating %s", $hosts);
 
-	#'http://members.easydns.com:80/dyn/ez-ipupdate.php?action=edit&myip=10.20.30.40&host_id=test.burry.ca&'
+	#'http://members.easydns.com/dyn/dyndns.php?hostname=test.burry.ca&myip=10.20.30.40&wildcard=ON'
 
 	my $url;
-	$url   = "http://$config{$h}{'server'}/dyn/ez-ipupdate.php?action=edit";
-	$url  .= "&host_id=$hosts";
+	$url   = "http://$config{$h}{'server'}/dyn/dyndns.php?";
+	$url  .= "hostname=$hosts";
 	$url  .= "&myip=";
 	$url  .= $ip            if $ip;
-	$url  .= "&wildcard=" . ynu($config{$h}{'wildcard'}, 'YES', 'NO', 'NO') if defined $config{$h}{'wildcard'};
+	$url  .= "&wildcard=" . ynu($config{$h}{'wildcard'}, 'ON', 'OFF', 'OFF') if defined $config{$h}{'wildcard'};
 
 	if ($config{$h}{'mx'}) {
 	    $url .= "&mx=$config{$h}{'mx'}";
@@ -2833,7 +2875,7 @@ o 'dnspark'
 
 The 'dnspark' protocol is used by DNS service offered by www.dnspark.com.
 
-Configuration variables applicable to the 'easydns' protocol are:
+Configuration variables applicable to the 'dnspark' protocol are:
   protocol=dnspark             ## 
   server=fqdn.of.service       ## defaults to www.dnspark.com
   backupmx=no|yes              ## indicates that DNSPark should be the secondary MX 
@@ -2974,7 +3016,7 @@ o 'namecheap'
 
 The 'namecheap' protocol is used by DNS service offered by www.namecheap.com.
 
-Configuration variables applicable to the 'easydns' protocol are:
+Configuration variables applicable to the 'namecheap' protocol are:
   protocol=namecheap           ## 
   server=fqdn.of.service       ## defaults to dynamicdns.park-your-domain.com
   login=service-login          ## login name and password  registered with the service
@@ -3013,8 +3055,8 @@ sub nic_namecheap_update {
 
         my $url;
         $url   = "http://$config{$h}{'server'}/update";
-        $url  .= "?host=$config{$h}{'login'}";
-        $url  .= "&domain=$h";
+        $url  .= "?host=$h";
+        $url  .= "&domain=$config{$h}{'login'}";
         $url  .= "&password=$config{$h}{'password'}";
         $url  .= "&ip=";
         $url  .= $ip if $ip;
@@ -3128,5 +3170,3 @@ sub nic_sitelutions_update {
 
 
 __END__
-
-

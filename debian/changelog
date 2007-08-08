@@ -1,3 +1,21 @@
+ddclient (3.7.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Disable patches that were adopted upstream:
+    + cachedir.diff: Cache files are now stored in /var/cache anyway.
+    + daemon_interval.diff, daemon_check.diff: Handling of the -daemon option
+      was fixed upstream.
+    + update-new-config.patch: Upstream checks for config changes now as 
+      well.
+    + smc-barricade-7401bra.patch: New router type adopted upstream.
+    + abuse_msg.diff: Upstream fixed the unblock pointer for dyndns abuse.
+    + help_nonroot.diff: Help option now works for non-root users.
+    + cisco_fw.diff: URL for ip information fixed upstream.
+    + silence_undefined.diff: No more warning about undefined variables.
+    + checked_ssl_load.diff: Successful inclusion of SSL library now checked.
+
+ -- Torsten Landschoff <torsten@debian.org>  Wed, 08 Aug 2007 21:00:54 +0200
+
 ddclient (3.7.0-3) unstable; urgency=low
 
   [ Christian Perrier <bubulle@debian.org> ]

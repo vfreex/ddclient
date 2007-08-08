@@ -18,7 +18,7 @@ IMPORTANT:	The installation location for the ddclient script has changed from
 
 Dynamic DNS services currently supported include:
 
-DynDNS.org  - See http://www.dyndns.org for details on obtaining a free account.
+DynDNS.com  - See http://www.dyndns.com for details on obtaining a free account.
 Hammernode  - See http://www.hn.org for details on obtaining a free account.
 Zoneedit    - See http://www.zoneedit.com for details.
 EasyDNS     - See http://www.easydns.com for details.
@@ -34,7 +34,7 @@ Comments, suggestions and requests: use the forums on
 	http://sourceforge.net/projects/ddclient/
 
 The code was originally written by Paul Burry and is now hosted and maintained  
-through sf.net.  Please check out http://ddclient.sf.net and the project page.
+through sourceforge.net. Please check out http://ddclient.sf.net
 
 -------------------------------------------------------------------------------
 REQUIREMENTS:
@@ -170,4 +170,4 @@ Alternatively, you may just configure ddclient to operate as a daemon
 and monitor your ethernet interface.
 
 -------------------------------------------------------------------------------
-$Id: README 10 2006-06-14 19:59:31Z wimpunk $
+$Id: README 75 2007-07-31 07:05:20Z wimpunk $

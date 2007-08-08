@@ -1,6 +1,6 @@
 ######################################################################
 ## ddclient is an IP address updater for www.dyndns.org
-## $Id: sample-etc_cron.d_ddclient 10 2006-06-14 19:59:31Z wimpunk $
+## $Id: sample-etc_cron.d_ddclient 8 2006-06-14 19:51:39Z wimpunk $
 ######################################################################
 ## minute         0-59
 ## hour           0-23
