@@ -1,3 +1,14 @@
+ddclient (3.7.3-2) unstable; urgency=low
+
+  * Apply changes suggested by Marco Rodrigues (thanks, Marco):
+    + Upgrade debian/compat to debhelper 5 (no adaptation needed)
+    + Add README.ssl to debian/docs (great oversight :)
+    + Add missing sample-* files to debian/examples.
+  * Fix patch for ip-up sample script (which used an IP as interface 
+    name because my misreading of a bug report - shame on me).
+
+ -- Torsten Landschoff <torsten@debian.org>  Tue, 14 Aug 2007 22:51:19 +0200
+
 ddclient (3.7.3-1) unstable; urgency=low
 
   * New upstream release.
