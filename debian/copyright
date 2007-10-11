@@ -1,13 +1,13 @@
 This package was originally debianized by Steve Greenland
 <stevegr@debian.org> in March and August of 2000.
 
-It was downloaded from http://burry.ca:4141/ddclient/ddclient-3.6.2.tar.gz
+It was downloaded from http://ddclient.sf.net
 
-Upstream Author: Paul Burry <paul+ddclient@burry.dyndns.org>
+Upstream Author: Paul Burry <paul@burry.ca>
 
 Copyright:
 
-ddclient - update client for www.dyndns.org accounts
+ddclient - update client for www.dyndns.com accounts
 
 Copyright (C) 1999,2000  Paul Burry (pburry@canada.com)
 

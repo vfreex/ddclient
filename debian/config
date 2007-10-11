@@ -15,7 +15,7 @@ set -e
 . /usr/share/debconf/confmodule
 db_version 2.0 || { echo "ddclient.config: \
   need DebConf 2.0 or later"; exit 1; }
-			  
+
 
 #----------------------------------------------------------------------------
 # read_old_config() - read the configuration from the old config file
@@ -23,7 +23,7 @@ db_version 2.0 || { echo "ddclient.config: \
 read_old_config()
 {
   # read out the existing config file
-  read host username password </etc/ddclient.conf 
+  read host username password </etc/ddclient.conf
 
   # put the old values into the database
   db_set ddclient/host $host
@@ -32,7 +32,7 @@ read_old_config()
   db_set ddclient/names $host
 
   # set reasonable defaults for the new config options
-  db_set ddclient/service www.dyndns.org
+  db_set ddclient/service www.dyndns.com
   db_set ddclient/server members.dyndns.org
   db_set ddclient/protocol dyndns2
 
@@ -64,7 +64,7 @@ create_new_config()
   db_go
   db_get ddclient/service
   case "$RET" in
-    www.dyndns.org)
+    www.dyndns.com)
       server=members.dyndns.org
       protocol=dyndns2
       ;;
@@ -105,7 +105,7 @@ create_new_config()
   # depending on the entered interface (XpppX or other)
   db_get ddclient/interface
   interface=$RET
-  
+
   # if it is actually a ppp or related interface
   if [ -z "${interface##*ppp*}" ]; then
     db_fget ddclient/run_ipup seen
@@ -119,12 +119,12 @@ create_new_config()
       db_set ddclient/run_daemon true
     fi
   fi
-  
+
   # maybe ask the user to override the default values
   db_input medium ddclient/run_ipup || true
   db_input medium ddclient/run_daemon || true
   db_go
-  
+
   # if ddclient should run in daemon mode we ask for the update interval
   db_get ddclient/run_daemon
   if [ $RET = "true" ]; then
@@ -134,7 +134,7 @@ create_new_config()
 }
 
 
- 
+
 if [ "$1" = "configure" ]; then
 
   if [ ! -f /etc/ddclient.conf ]; then
@@ -151,11 +151,11 @@ if [ "$1" = "configure" ]; then
       warn_config_broken
       exit 1
     fi
-    
+
   else
     exit 0
   fi
-  
+
 elif [ "$1" = "reconfigure" ] ; then
 
   create_new_config

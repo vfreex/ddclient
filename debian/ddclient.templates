@@ -1,7 +1,7 @@
 Template: ddclient/service
 Type: select
-__Choices: www.dyndns.org, www.easydns.com, www.dslreports.com, www.zoneedit.com, other
-Default: www.dyndns.org
+__Choices: www.dyndns.com, www.easydns.com, www.dslreports.com, www.zoneedit.com, other
+Default: www.dyndns.com
 _Description: Dynamic DNS service provider:
  Please select the dynamic DNS service you are using. If the service you use is
  not listed, choose "other" and you will be asked for the protocol and the
@@ -71,5 +71,5 @@ _Description: Modified configuration file
  The config file /etc/ddclient.conf on your system does not consist of
  three entries. The automatic configuration utility (debconf) cannot handle
  this. Maybe you modified the configuration file manually, thus it won't
- be modified. If you want a new config file to be created, please run 
+ be modified. If you want a new config file to be created, please run
  "dpkg-reconfigure ddclient".

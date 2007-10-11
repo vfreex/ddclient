@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.6.7\n"
-"Report-Msgid-Bugs-To: torsten@debian.org\n"
-"POT-Creation-Date: 2007-01-20 17:57+0100\n"
+"Report-Msgid-Bugs-To: ubuntu-motu@lists.ubuntu.com\n"
+"POT-Creation-Date: 2007-08-17 01:08+0100\n"
 "PO-Revision-Date: 2006-06-16 21:23+0200\n"
 "Last-Translator: Jordà Polo <jorda@ettin.org>\n"
 "Language-Team: Català <debian-l10n-catalan@lists.debian.org>\n"
@@ -20,8 +20,8 @@ msgstr ""
 #. Type: select
 #. Choices
 #: ../ddclient.templates:1001
-msgid "www.dyndns.org"
-msgstr "www.dyndns.org"
+msgid "www.dyndns.com"
+msgstr "www.dyndns.com"
 
 #. Type: select
 #. Choices
@@ -212,11 +212,18 @@ msgstr "Fitxer de configuració modificat"
 #. Type: note
 #. Description
 #: ../ddclient.templates:11001
+#, fuzzy
+#| msgid ""
+#| "The config file /etc/ddclient.conf on your system does not consist of "
+#| "three entries. The automatic configuration utility (debconf) cannot "
+#| "handle this. Maybe you modified the configuration file manually, thus it "
+#| "won't be modified. If you want a new config file to be created, please "
+#| "run  \"dpkg-reconfigure ddclient\"."
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
 "entries. The automatic configuration utility (debconf) cannot handle this. "
 "Maybe you modified the configuration file manually, thus it won't be "
-"modified. If you want a new config file to be created, please run  \"dpkg-"
+"modified. If you want a new config file to be created, please run \"dpkg-"
 "reconfigure ddclient\"."
 msgstr ""
 "El fitxer de configuració /etc/ddclient.conf del vostre sistema no conté "
@@ -244,12 +251,12 @@ msgstr ""
 #~ msgid ""
 #~ "In any case the configuration file /etc/ddclient.conf will be updated to "
 #~ "be a bit more readable and the protocol will be updated to dyndns2. This "
-#~ "is necessary as dyndns.org switched off support for the dyndns1 protocol "
+#~ "is necessary as dyndns.com switched off support for the dyndns1 protocol "
 #~ "on January 1st 2002."
 #~ msgstr ""
 #~ "En qualsevol cas, el fitxer de configuració /etc/ddclient.conf serà "
 #~ "actualitzat per fer-lo una mica més llegible i es canviarà el protocol a "
-#~ "dyndyns2. Això és necessari ja que dyndns.org va deixar de suportar "
+#~ "dyndyns2. Això és necessari ja que dyndns.com va deixar de suportar "
 #~ "dyndns1 l'1 de gener de 2002."
 
 #~ msgid ""

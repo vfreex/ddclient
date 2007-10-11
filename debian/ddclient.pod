@@ -16,7 +16,7 @@ B<-web> provider|url]
 =head1 DESCRIPTION
 
 ddclient is a little program to update IP addresses managed
-using dynamic DNS providers such as DynDNS.org.
+using dynamic DNS providers such as DynDNS.com.
 
 For usage information please run ddclient -help.
 

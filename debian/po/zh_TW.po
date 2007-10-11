@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
-"Report-Msgid-Bugs-To: torsten@debian.org\n"
-"POT-Creation-Date: 2007-01-20 17:57+0100\n"
+"Report-Msgid-Bugs-To: ubuntu-motu@lists.ubuntu.com\n"
+"POT-Creation-Date: 2007-08-17 01:08+0100\n"
 "PO-Revision-Date: 2005-03-13 19:11+0800\n"
 "Last-Translator: Asho Yeh <asho@debian.org.tw>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
@@ -28,8 +28,8 @@ msgstr ""
 #. Type: select
 #. Choices
 #: ../ddclient.templates:1001
-msgid "www.dyndns.org"
-msgstr "www.dyndns.org"
+msgid "www.dyndns.com"
+msgstr "www.dyndns.com"
 
 #. Type: select
 #. Choices
@@ -208,11 +208,18 @@ msgstr "修改設定檔"
 #. Type: note
 #. Description
 #: ../ddclient.templates:11001
+#, fuzzy
+#| msgid ""
+#| "The config file /etc/ddclient.conf on your system does not consist of "
+#| "three entries. The automatic configuration utility (debconf) cannot "
+#| "handle this. Maybe you modified the configuration file manually, thus it "
+#| "won't be modified. If you want a new config file to be created, please "
+#| "run  \"dpkg-reconfigure ddclient\"."
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
 "entries. The automatic configuration utility (debconf) cannot handle this. "
 "Maybe you modified the configuration file manually, thus it won't be "
-"modified. If you want a new config file to be created, please run  \"dpkg-"
+"modified. If you want a new config file to be created, please run \"dpkg-"
 "reconfigure ddclient\"."
 msgstr ""
 "系統的 /etc/ddclient.conf 設定檔不包含三個主要項目以致於自動組態設定工具"
@@ -237,11 +244,11 @@ msgstr ""
 #~ msgid ""
 #~ "In any case the configuration file /etc/ddclient.conf will be updated to "
 #~ "be a bit more readable and the protocol will be updated to dyndns2. This "
-#~ "is necessary as dyndns.org switched off support for the dyndns1 protocol "
+#~ "is necessary as dyndns.com switched off support for the dyndns1 protocol "
 #~ "on January 1st 2002."
 #~ msgstr ""
 #~ "預設何情況下，/etc/ddclient.conf 設定檔會被轉換成更容易閱讀的版本且協定會"
-#~ "更新成 dyndns2。這是因為 dyndns.org 在 2002 年一月一號停用 dyndns1 的協"
+#~ "更新成 dyndns2。這是因為 dyndns.com 在 2002 年一月一號停用 dyndns1 的協"
 #~ "定。"
 
 #~ msgid ""

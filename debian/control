@@ -2,16 +2,17 @@ Source: ddclient
 Section: net
 Priority: extra
 Maintainer: Torsten Landschoff <torsten@debian.org>
-Build-Depends: debhelper (>= 4.1.16), po-debconf, xmlto, quilt
+Uploaders: Marco Rodrigues <gothicx@sapo.pt>
+Build-Depends: debhelper (>= 5), po-debconf, xmlto, quilt
 Standards-Version: 3.7.2
 
 Package: ddclient
 Architecture: all
-Depends: perl5, ${misc:Depends}, lsb-base (>= 3.0-6), initscripts (>= 2.86.ds1-26)
+Depends: perl5, ${misc:Depends}, lsb-base (>= 3.1), initscripts (>= 2.86)
 Recommends: libio-socket-ssl-perl
 Provides: dyndns-client
-Description: Update dynamic IP address at DynDNS.org
- A perl based client to update your dynamic IP address at DynDNS.org
+Description: Update dynamic IP address at DynDNS.com
+ A perl based client to update your dynamic IP address at DynDNS.com
  (or other dynamic DNS services such as Hammernode, Zoneedit or
  EasyDNS), thus allowing you and others to use a fixed hostname
  (myhost.dyndns.org) to access your machine. This client supports both
@@ -19,5 +20,5 @@ Description: Update dynamic IP address at DynDNS.org
  host. It caches the
  address, and only attempts the update if the address actually changes.
  .
- For more information on DynDNS.org, see http://www.dyndns.org/.
+ For more information on DynDNS.com, see http://www.dyndns.com
 

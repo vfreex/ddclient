@@ -1,12 +1,12 @@
 # Vietnamese Translation for ddclient.
 # Copyright © 2005 Free Software Foundation, Inc.
 # Clytie Siddall <clytie@riverland.net.au>, 2005.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: ddclient 3.6.2-3.1\n"
-"Report-Msgid-Bugs-To: torsten@debian.org\n"
-"POT-Creation-Date: 2007-01-20 17:57+0100\n"
+"Report-Msgid-Bugs-To: ubuntu-motu@lists.ubuntu.com\n"
+"POT-Creation-Date: 2007-08-17 01:08+0100\n"
 "PO-Revision-Date: 2005-05-22 20:48+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
@@ -18,8 +18,8 @@ msgstr ""
 #. Type: select
 #. Choices
 #: ../ddclient.templates:1001
-msgid "www.dyndns.org"
-msgstr "www.dyndns.org"
+msgid "www.dyndns.com"
+msgstr "www.dyndns.com"
 
 #. Type: select
 #. Choices
@@ -219,11 +219,18 @@ msgstr "Tập tin cấu hình đã sửa đổi"
 #. Type: note
 #. Description
 #: ../ddclient.templates:11001
+#, fuzzy
+#| msgid ""
+#| "The config file /etc/ddclient.conf on your system does not consist of "
+#| "three entries. The automatic configuration utility (debconf) cannot "
+#| "handle this. Maybe you modified the configuration file manually, thus it "
+#| "won't be modified. If you want a new config file to be created, please "
+#| "run  \"dpkg-reconfigure ddclient\"."
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
 "entries. The automatic configuration utility (debconf) cannot handle this. "
 "Maybe you modified the configuration file manually, thus it won't be "
-"modified. If you want a new config file to be created, please run  \"dpkg-"
+"modified. If you want a new config file to be created, please run \"dpkg-"
 "reconfigure ddclient\"."
 msgstr ""
 "Tập tin cấu hình /etc/ddclient.conf trong hệ thống bạn không chứa ba mục "
@@ -253,12 +260,12 @@ msgstr ""
 #~ msgid ""
 #~ "In any case the configuration file /etc/ddclient.conf will be updated to "
 #~ "be a bit more readable and the protocol will be updated to dyndns2. This "
-#~ "is necessary as dyndns.org switched off support for the dyndns1 protocol "
+#~ "is necessary as dyndns.com switched off support for the dyndns1 protocol "
 #~ "on January 1st 2002."
 #~ msgstr ""
 #~ "Trong bất cứ trường hợp nào, sẽ cập nhật tập tin cấu hình /etc/ddclient."
 #~ "conf để có nhiều khả năng đọc hơn, và sẽ cập nhật giao thức lên dyndns2. "
-#~ "Cần phải làm như thế vì dyndns.org tắt hỗ trợ cho giao thức dyndns1 vào "
+#~ "Cần phải làm như thế vì dyndns.com tắt hỗ trợ cho giao thức dyndns1 vào "
 #~ "ngày 1, tháng Giêng, năm 2002."
 
 #~ msgid ""

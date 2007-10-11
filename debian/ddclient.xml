@@ -43,7 +43,7 @@
   <refsect1>
     <title>DESCRIPTION</title> 
     <para>&ddclient; is a little program to update IP addresses managed 
-    using dynamic DNS providers such as DynDNS.org.</para>
+    using dynamic DNS providers such as DynDNS.com.</para>
     <para>For usage information please run 
     <userinput>ddclient -help</userinput> until this manpage is finished.</para>
   </refsect1>
