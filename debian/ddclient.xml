@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
  "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
-  <!ENTITY ddclient "ddclient"> 
+  <!ENTITY ddclient "ddclient">
 ]>
 <refentry>
   <refmeta>
@@ -41,10 +41,15 @@
     </cmdsynopsis>
   </refsynopsisdiv>
   <refsect1>
-    <title>DESCRIPTION</title> 
-    <para>&ddclient; is a little program to update IP addresses managed 
-    using dynamic DNS providers such as DynDNS.com.</para>
-    <para>For usage information please run 
+    <title>DESCRIPTION</title>
+    <para>A perl based client to update your dynamic IP address at DynDNS.com
+          (or other dynamic DNS services such as Hammernode, Zoneedit or
+          EasyDNS), thus allowing you and others to use a fixed hostname
+          (myhost.dyndns.org) to access your machine. This client supports both
+          the dynamic and (near) static services, MX setting, and alternative
+          host. It caches the address, and only attempts the update if the address
+          actually changes.</para>
+    <para>For usage information please run
     <userinput>ddclient -help</userinput> until this manpage is finished.</para>
   </refsect1>
 </refentry>

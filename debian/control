@@ -5,20 +5,18 @@ Maintainer: Torsten Landschoff <torsten@debian.org>
 Uploaders: Marco Rodrigues <gothicx@sapo.pt>
 Build-Depends: debhelper (>= 5), po-debconf, xmlto, quilt
 Standards-Version: 3.7.2
+Homepage: http://ddclient.sf.net
 
 Package: ddclient
 Architecture: all
 Depends: perl5, ${misc:Depends}, lsb-base (>= 3.1), initscripts (>= 2.86)
 Recommends: libio-socket-ssl-perl
 Provides: dyndns-client
-Description: Update dynamic IP address at DynDNS.com
+Description: Update IP addresses at dynamic DNS services
  A perl based client to update your dynamic IP address at DynDNS.com
  (or other dynamic DNS services such as Hammernode, Zoneedit or
  EasyDNS), thus allowing you and others to use a fixed hostname
  (myhost.dyndns.org) to access your machine. This client supports both
  the dynamic and (near) static services, MX setting, and alternative
- host. It caches the
- address, and only attempts the update if the address actually changes.
- .
- For more information on DynDNS.com, see http://www.dyndns.com
-
+ host. It caches the address, and only attempts the update if the
+ address actually changes.

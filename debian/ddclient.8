@@ -1,9 +1,9 @@
 .\"     Title: ddclient
-.\"    Author: 
+.\"    Author:
 .\" Generator: DocBook XSL Stylesheets v1.72.0 <http://docbook.sf.net/>
 .\"      Date: 08/08/2007
-.\"    Manual: 
-.\"    Source: 
+.\"    Manual:
+.\"    Source:
 .\"
 .TH "DDCLIENT" "8" "08/08/2007" "" ""
 .\" disable hyphenation
@@ -19,7 +19,7 @@ ddclient \- Update IP addresses at dynamic DNS services
 \fBddclient\fR [\-daemon\ \fIinterval\fR] [\-proxy\ \fIhost\fR] [\-server\ \fIhost\fR] [\-protocol\ \fItype\fR] [\-file\ \fIconfigfile\fR] [\-cache\ \fIcachefile\fR] [\-pid\ \fIpidfile\fR] [\-use\ \fImechanism\fR] {\-if\ \fIinterface\fR | \-ip\ \fIipaddress\fR | \-web\ {\fIprovider\fR\ |\ \fIurl\fR} | \-fw\ \fIfirewall\fR | \-cmd\ \fIcommand\fR}
 .SH "DESCRIPTION"
 .PP
-ddclient is a little program to update IP addresses managed using dynamic DNS providers such as DynDNS.com.
+A perl based client to update your dynamic IP address at DynDNS.com (or other dynamic DNS services such as Hammernode, Zoneedit or EasyDNS), thus allowing you and others to use a fixed hostname (myhost.dyndns.org) to access your machine. This client supports both the dynamic and (near) static services, MX setting, and alternative host. It caches the address, and only attempts the update if the address actually changes.
 .PP
 For usage information please run
 \fBddclient \-help\fR

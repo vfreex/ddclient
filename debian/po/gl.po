@@ -211,13 +211,6 @@ msgstr "Ficheiro de configuración modificado"
 #. Type: note
 #. Description
 #: ../ddclient.templates:11001
-#, fuzzy
-#| msgid ""
-#| "The config file /etc/ddclient.conf on your system does not consist of "
-#| "three entries. The automatic configuration utility (debconf) cannot "
-#| "handle this. Maybe you modified the configuration file manually, thus it "
-#| "won't be modified. If you want a new config file to be created, please "
-#| "run  \"dpkg-reconfigure ddclient\"."
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
 "entries. The automatic configuration utility (debconf) cannot handle this. "

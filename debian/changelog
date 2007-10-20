@@ -1,3 +1,16 @@
+ddclient (3.7.3-4) unstable; urgency=low
+
+  * Add nl.po translation (Closes: #413889).
+  * Fixed typo in debian/po/pt.po in dpkg-configure translation.
+  * Fixed all translation files to remove fuzzy error (Closes: #447222).
+  * Remove README.Debian, because README.ssl explains the same.
+  * Update old debian/copyright to the newest one.
+  * Add Homepage field to the control file.
+  * Update program descripton at the following files:
+    - control, ddclient.pod, ddclient.8 and ddclient.xml.
+
+ -- Marco Rodrigues <gothicx@sapo.pt>  Sat, 20 Oct 2007 14:47:09 +0100
+
 ddclient (3.7.3-3) unstable; urgency=low
 
   * Changed some files inside debian/ to match DynDNS.com.

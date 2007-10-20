@@ -1,18 +1,26 @@
-# Translation of ddclient debconf templates to German
-# Copyright (C) Felix Kröger <felix.kroeger@gmx.de> 2002.
-# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2006, 2007.
-# This file is distributed under the same license as the ddclient package.
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ddclient 3.7.0-2\n"
+"Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ubuntu-motu@lists.ubuntu.com\n"
 "POT-Creation-Date: 2007-08-17 01:08+0100\n"
-"PO-Revision-Date: 2007-01-22 21:19+0100\n"
-"Last-Translator:  Helge Kreutzmann <debian@helgefjell.de>\n"
-"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"PO-Revision-Date: 2007-03-03 22:50+0100\n"
+"Last-Translator: Bart Cornelis <cobaco@skolelinux.no>\n"
+"Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
@@ -43,13 +51,13 @@ msgstr "www.zoneedit.com"
 #. Choices
 #: ../ddclient.templates:1001
 msgid "other"
-msgstr "anderer"
+msgstr "anders"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:1002
 msgid "Dynamic DNS service provider:"
-msgstr "Dynamischer DNS-Dienst-Betreiber:"
+msgstr "Dynamische-DNS-provider:"
 
 #. Type: select
 #. Description
@@ -59,15 +67,15 @@ msgid ""
 "is not listed, choose \"other\" and you will be asked for the protocol and "
 "the server name."
 msgstr ""
-"Bitte wählen Sie nun den dynamischen DNS-Service-Betreiber, den Sie benutzen "
-"möchten. Wenn Ihr Betreiber hier nicht aufgeführt ist, wählen Sie bitte "
-"»anderer« und Sie werden nach dem Protokoll und Servernamen gefragt."
+"Welke dynamische-DNS dienst gebruikt u? Als de dienst niet weergegeven is "
+"kies dan 'anders', waarna u zult gevraagd worden om het protocol en de "
+"servernaam op te geven."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:2001
 msgid "Dynamic DNS server:"
-msgstr "Dynamischer DNS-Server:"
+msgstr "Dynamische-DNS-server"
 
 #. Type: string
 #. Description
@@ -76,14 +84,14 @@ msgid ""
 "Enter the name of the server which is providing you with dynamic DNS service "
 "(example: members.dyndns.org)."
 msgstr ""
-"Geben Sie den Namen des Servers an, der Sie mit dynamischen-DNS-Diensten "
-"versorgt (Beispiel: members.dyndns)."
+"Wat is de naam van de server die uw dynamsiche-DNS dienst voorziet (bv.  "
+"members.dyndns.org)."
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:3001
 msgid "Dynamic DNS update protocol:"
-msgstr "Dynamisches DNS-Aktualisierungs-Protokoll:"
+msgstr "Protocol voor bijwerken van de dynamische-DNS:"
 
 #. Type: select
 #. Description
@@ -92,14 +100,13 @@ msgid ""
 "Select the dynamic DNS update protocol used by your dynamic DNS service "
 "provider."
 msgstr ""
-"Wählen Sie das dynamisches DNS-Aktualisierungs-Protokoll aus, das von Ihrem "
-"dynamischen DNS-Diensteanbieter benutzt wird."
+"Selecteer het door uw dynamische-DNS-provider gebruikte bijwerkingsprotocol."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:4001
 msgid "DynDNS fully qualified domain names:"
-msgstr "DynDNS vollständiger Domainname:"
+msgstr "DynDNS volledig gekwalificeerde domein namen (FQDN):"
 
 #. Type: string
 #. Description
@@ -109,55 +116,53 @@ msgid ""
 "dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
 "dyndns.org\" for two hosts)."
 msgstr ""
-"Geben Sie eine Liste von vollständigen Domainnamen Ihres Rechners ein (z.B.: "
-"»meinname.dyndns.org« falls Sie nur einen Host haben oder für zwei Hosts "
-"»meinname1.dyndns.org,meinname2.dyndns.org«)."
+"Hier voert u de lijst van volledig gekwalificeerde domeinnamen (FQDN's) voor "
+"uw computer in (zoals bv. 'myname.dyndns.org' als u slechts 1 computer heeft "
+"of 'myname1.dyndns.org,myname2.dyndns.org' voor 2 computers)."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
 msgid "Username for dynamic DNS service:"
-msgstr "Benutzername für den dynamischen DNS-Dienst:"
+msgstr "Gebruikersnaam voor de dynamische-DNS-dienst:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
 msgid "Enter the username you use to log into the dynamic DNS service."
-msgstr "Geben Sie Ihren bei DynDNS verwendeten Benutzernamen ein."
+msgstr ""
+"Geef hier de gebruikersnaam op om in te loggen op de dynamische-DNS-dienst."
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:6001
 msgid "Password for dynamic DNS service:"
-msgstr "Passwort für den dynamischen DNS-Dienst:"
+msgstr "Wachtwoord voor de dynamische-DNS-dienst:"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:6001
 msgid "Enter the password you use to log into the dynamic DNS service."
 msgstr ""
-"Geben Sie dass Passwort ein, das Sie zum Anmelden am dynamischen DNS-Dienst "
-"verwenden."
+"Geef hier het wachtwoord op om in te loggen op de dynamische-DNS-dienst."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
 msgid "Interface used for dynamic DNS service:"
-msgstr "Schnittstelle für den dynamischen DNS-Dienst:"
+msgstr "Door de dynamische-DNS-dienst te gebruiken interface:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
 msgid "Enter the interface which is used for using dynamic DNS service."
-msgstr ""
-"Geben Sie die Schnittstelle, an die für den dynamischen DNS-Dienst benutzt "
-"wird."
+msgstr "Geef de interface aan die gebruikt maakt van de dynamische-DNS-dienst."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
 msgid "Run ddclient on PPP connect?"
-msgstr "Ausführen des ddclients bei PPP-Verbindungsaufbau?"
+msgstr "Wilt u ddclient uitvoeren bij het maken van PPP-verbindingen?"
 
 #. Type: boolean
 #. Description
@@ -166,14 +171,14 @@ msgid ""
 "Enable this if ddclient should be run every time a PPP connection is "
 "established."
 msgstr ""
-"Aktivieren Sie diese Funktion, wenn Sie bei jedem PPP-Verbindungsaufbau den "
-"ddclient ausführen möchten."
+"Activeer dit indien ddclient uitgevoerd moet worden telkens wanneer een PPP-"
+"verbinding gemaakt wordt."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:9001
 msgid "Run ddclient as daemon?"
-msgstr "Ausführung des ddclients als Daemon?"
+msgstr "Wilt u ddclient als achtergronddienst uitvoeren?"
 
 #. Type: boolean
 #. Description
@@ -182,14 +187,14 @@ msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
 msgstr ""
-"Bitte wählen Sie aus, ob der ddclient als Daemon ausgeführt werden soll, "
-"wenn Ihr System gestartet wird."
+"Hier kiest u of u ddclient als achtergronddienst wilt draaien bij het "
+"opstarten van het systeem."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:10001
 msgid "ddclient update interval:"
-msgstr "ddclient Aktualisierungs-Intervall:"
+msgstr "ddclient-bijwerkinsinterval:"
 
 #. Type: string
 #. Description
@@ -199,19 +204,26 @@ msgid ""
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
 "\") or in days (e.g. \"1d\")."
 msgstr ""
-"Bitte wählen Sie die Wartezeit zwischen Schnittstellen-Adressüberprüfungen "
-"aus. Werten können in Sekunden (z.B.: »5s«), Minuten (z.B.: »3m«), Stunden "
-"(z.B.: »7h«) oder Tagen (z.B.: »1d«) angegeben werden."
+"Hoe lang dient gewacht te worden tussen elke twee interface-adreschecks? "
+"Waardes mogen opgegeven worden in seconden (bv. '5s'), in minuten (bv. "
+"'3m'), in uren (bv. '7h'), of in dagen (bv. '1d'). "
 
 #. Type: note
 #. Description
 #: ../ddclient.templates:11001
 msgid "Modified configuration file"
-msgstr "Angepasste Konfigurations-Datei"
+msgstr "Configuratiebestand is aangepast"
 
 #. Type: note
 #. Description
 #: ../ddclient.templates:11001
+#, fuzzy
+#| msgid ""
+#| "The config file /etc/ddclient.conf on your system does not consist of "
+#| "three entries. The automatic configuration utility (debconf) cannot "
+#| "handle this. Maybe you modified the configuration file manually, thus it "
+#| "won't be modified. If you want a new config file to be created, please "
+#| "run  \"dpkg-reconfigure ddclient\"."
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
 "entries. The automatic configuration utility (debconf) cannot handle this. "
@@ -219,9 +231,9 @@ msgid ""
 "modified. If you want a new config file to be created, please run \"dpkg-"
 "reconfigure ddclient\"."
 msgstr ""
-"Die Konfigurationsdatei /etc/ddclient.conf auf Ihrem System besteht nicht "
-"aus drei Einträgen. Das automatische Konfigurationsprogramm Debconf kann "
-"damit leider nicht umgehen. Vielleicht haben Sie die Konfiguration manuell "
-"angepasst, deshalb wird die Konfiguration nicht automatisch geändert. Wenn "
-"Sie möchten, das die Datei erneut erstellt wird, rufen Sie bitte folgenden "
-"Befehl auf: dpkg-reconfigure ddclient"
+"Het configuratiebesstand /etc/ddclient.conf op uw systeem bestaat niet uit 3 "
+"ingangen. Het automatische configuratiehulpprogramma (debconf) kan hier niet "
+"mee overweg, daar dit mogelijk betekent dat u uw configuratiebestand "
+"handmatig aangepast heeft. Het configuratiebestand wordt niet aangepast. Als "
+"u een nieuw configuratiebestand wilt aanmaken kan dit via het commando 'dpkg-"
+"reconfigure ddclient'."
