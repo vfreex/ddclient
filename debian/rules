@@ -48,11 +48,7 @@ install: build
 	xmlto -o $(@D) man $<
 
 # Build architecture-independent files here.
-binary-indep: build install
-# We have nothing to do by default.
-
-# Build architecture-dependent files here.
-binary-arch: build install debian/ddclient.8
+binary-indep: build install debian/ddclient.8
 #	dh_testversion
 	dh_testdir
 	dh_testroot
@@ -72,6 +68,10 @@ binary-arch: build install debian/ddclient.8
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb
+
+# Build architecture-dependent files here.
+binary-arch: build install
+# We have nothing to do by default.
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install
