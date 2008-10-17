@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ddclient\n"
+"Report-Msgid-Bugs-To: ubuntu-motu@lists.ubuntu.com\n"
+"POT-Creation-Date: 2007-08-17 01:08+0100\n"
+"PO-Revision-Date: 2008-07-30 20:40+0100\n"
+"Last-Translator: Martin Bagge <brother@bsnet.se>\n"
+"Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: Sweden\n"
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:1001
+msgid "www.dyndns.com"
+msgstr "www.dyndns.com"
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:1001
+msgid "www.easydns.com"
+msgstr "www.easydns.com"
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:1001
+msgid "www.dslreports.com"
+msgstr "www.dslreports.com"
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:1001
+msgid "www.zoneedit.com"
+msgstr "www.zoneedit.com"
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:1001
+msgid "other"
+msgstr "Annan"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:1002
+msgid "Dynamic DNS service provider:"
+msgstr "Leverantör av dynamisk DNS:"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:1002
+msgid ""
+"Please select the dynamic DNS service you are using. If the service you use "
+"is not listed, choose \"other\" and you will be asked for the protocol and "
+"the server name."
+msgstr ""
+"Välj vilken leverantör av dynamisk DNS du använder. Om den leverantör du "
+"använder inte finns i listan väljer du \"annan\" och får då fylla i en del "
+"uppgifter manuellt."
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:2001
+msgid "Dynamic DNS server:"
+msgstr "Dynamisk DNS-server:"
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:2001
+msgid ""
+"Enter the name of the server which is providing you with dynamic DNS service "
+"(example: members.dyndns.org)."
+msgstr ""
+"Ange namnet på den server som förser dig med dynamisk DNS (exempelvis "
+"members.dyndns.org)."
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:3001
+msgid "Dynamic DNS update protocol:"
+msgstr "Protokoll för uppdateringar av dynamisk DNS:"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:3001
+msgid ""
+"Select the dynamic DNS update protocol used by your dynamic DNS service "
+"provider."
+msgstr "Välj protokoll för uppdatering som din leverantör använder."
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:4001
+msgid "DynDNS fully qualified domain names:"
+msgstr "DynDNS, komplett domännamn:"
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:4001
+msgid ""
+"Enter the list of fully qualified domain names for your host (like \"myname."
+"dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
+"dyndns.org\" for two hosts)."
+msgstr ""
+"Ange det kompletta domämnnamnet för din värd (ex. \"mittnamn.dyndns.org\" om "
+"du bara har ett namn och \"mittnamn1.dyndns.org,mittnamn2.dyndns.org\" för "
+"två namn)."
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:5001
+msgid "Username for dynamic DNS service:"
+msgstr "Användarnamn för dynamisk DNS:"
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:5001
+msgid "Enter the username you use to log into the dynamic DNS service."
+msgstr "Ange användarnamnet för att logga in i den dynamiska DNS-tjänsten."
+
+#. Type: password
+#. Description
+#: ../ddclient.templates:6001
+msgid "Password for dynamic DNS service:"
+msgstr "Lösenord för dynamisk DNS:"
+
+#. Type: password
+#. Description
+#: ../ddclient.templates:6001
+msgid "Enter the password you use to log into the dynamic DNS service."
+msgstr "Ange lösenordet för att logga in i den dynamiska DNS-tjänsten."
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:7001
+msgid "Interface used for dynamic DNS service:"
+msgstr "Gränssnitt för dynamisk DNS-tjänst:"
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:7001
+msgid "Enter the interface which is used for using dynamic DNS service."
+msgstr "Ange gränssnittet som ska användas för den dynamisk DNS-tjänsten."
+
+#. Type: boolean
+#. Description
+#: ../ddclient.templates:8001
+msgid "Run ddclient on PPP connect?"
+msgstr "Starta ddclient vid PPP-anslutning?"
+
+#. Type: boolean
+#. Description
+#: ../ddclient.templates:8001
+msgid ""
+"Enable this if ddclient should be run every time a PPP connection is "
+"established."
+msgstr ""
+"Välj denna om ddclient ska starta varje gång en PPP-anslutning upprättas."
+
+#. Type: boolean
+#. Description
+#: ../ddclient.templates:9001
+msgid "Run ddclient as daemon?"
+msgstr "Starta ddclient som demon?"
+
+#. Type: boolean
+#. Description
+#: ../ddclient.templates:9001
+msgid ""
+"Please choose whether you want ddclient to be run in daemon mode on system "
+"startup."
+msgstr "Välj denna om ddclient ska startas som demon när systemet startar."
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:10001
+msgid "ddclient update interval:"
+msgstr "Fördröjning mellan uppdateringar:"
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:10001
+msgid ""
+"Please choose the delay between interface address checks. Values may be "
+"given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
+"\") or in days (e.g. \"1d\")."
+msgstr ""
+"Ange fördröjningen mellan uppdateringen av adresser. Värdet kan anges i "
+"sekunder (\"5s\"), minuter (\"3m\"), timmar (\"7h\") eller i dagar (\"1d\")."
+
+#. Type: note
+#. Description
+#: ../ddclient.templates:11001
+msgid "Modified configuration file"
+msgstr "Förändrad inställningsfil"
+
+#. Type: note
+#. Description
+#: ../ddclient.templates:11001
+msgid ""
+"The config file /etc/ddclient.conf on your system does not consist of three "
+"entries. The automatic configuration utility (debconf) cannot handle this. "
+"Maybe you modified the configuration file manually, thus it won't be "
+"modified. If you want a new config file to be created, please run \"dpkg-"
+"reconfigure ddclient\"."
+msgstr ""
+"Inställningsfilen /etc/ddclient.conf består inte av tre delar. Den "
+"automatiska inställningen (debconf) kan därför inte köras. Eventuellt så har "
+"du redigerat inställningsfilen manuellt därför kommer den inte att "
+"uppdateras. Om du vill ha en ny inställningsfil kör \"dpkg-reconfigure "
+"ddclient\"."

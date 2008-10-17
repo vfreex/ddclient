@@ -1,0 +1,198 @@
+# Olexandr Kravchuk
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: ubuntu-motu@lists.ubuntu.com\n"
+"POT-Creation-Date: 2007-08-17 01:08+0100\n"
+"PO-Revision-Date: 2008-10-12 15:29+0300\n"
+"Last-Translator: Olexandr Kravchuk <sashko.debian@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:1001
+msgid "www.dyndns.com"
+msgstr "www.dyndns.com"
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:1001
+msgid "www.easydns.com"
+msgstr "www.easydns.com"
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:1001
+msgid "www.dslreports.com"
+msgstr "www.dslreports.com"
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:1001
+msgid "www.zoneedit.com"
+msgstr "www.zoneedit.com"
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:1001
+msgid "other"
+msgstr "інші"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:1002
+msgid "Dynamic DNS service provider:"
+msgstr "Динамічний провайдер DNS:"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:1002
+msgid ""
+"Please select the dynamic DNS service you are using. If the service you use "
+"is not listed, choose \"other\" and you will be asked for the protocol and "
+"the server name."
+msgstr "Будь ласка, вкажіть, який сервіс динамічних DNS ви використовуєте. Якщо використовуваного вами сервісу немає у даному переліку, оберіть\"інший\", і тоді вам буде запропоновано ввести його адресу та протокол."
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:2001
+msgid "Dynamic DNS server:"
+msgstr "Динамічний сервер DNS:"
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:2001
+msgid ""
+"Enter the name of the server which is providing you with dynamic DNS service "
+"(example: members.dyndns.org)."
+msgstr "Введіть ім'я домена, яке вам надає сервіс данмічних DNS(наприклад, glory-to-ukraine.dyndns.org)."
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:3001
+msgid "Dynamic DNS update protocol:"
+msgstr "Динамічний протокол оновлення DNS:"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:3001
+msgid ""
+"Select the dynamic DNS update protocol used by your dynamic DNS service "
+"provider."
+msgstr "Оберіть протокол оновлення динамічного DNS, який використовується провайдером даного сервісу."
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:4001
+msgid "DynDNS fully qualified domain names:"
+msgstr "Повноцінні доменні імена DynDNS:"
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:4001
+msgid ""
+"Enter the list of fully qualified domain names for your host (like \"myname."
+"dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
+"dyndns.org\" for two hosts)."
+msgstr "Введіть перелік повних доменних імен. які використовує ваш хост(наприклад, \"glory-to-ukraine.dyndns.org\", якщо ви використовуєте лише один хост, або ж \"glory-to-ukraine.dyndns.org,support-georgia.dyndns.org\",якщо два або більше)."
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:5001
+msgid "Username for dynamic DNS service:"
+msgstr "Ім'я користувача для сервісу динамічного DNS:"
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:5001
+msgid "Enter the username you use to log into the dynamic DNS service."
+msgstr "Введіть ім'я користувача, яке використовуватиметься для сервісу динамічного DNS:"
+
+#. Type: password
+#. Description
+#: ../ddclient.templates:6001
+msgid "Password for dynamic DNS service:"
+msgstr "Пароль для сервісу динамічного DNS:"
+
+#. Type: password
+#. Description
+#: ../ddclient.templates:6001
+msgid "Enter the password you use to log into the dynamic DNS service."
+msgstr "Введіть пароль, який використовуватиметься для сервісу динамічного DNS:"
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:7001
+msgid "Interface used for dynamic DNS service:"
+msgstr "Інтерфейс для сервісу динамічного DNS:"
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:7001
+msgid "Enter the interface which is used for using dynamic DNS service."
+msgstr "Введіть інтерфейс, який використовуватиметься для сервісу динамічного DNS:"
+
+#. Type: boolean
+#. Description
+#: ../ddclient.templates:8001
+msgid "Run ddclient on PPP connect?"
+msgstr "Запускати ddclient після встановлення з'єднання PPP?"
+
+#. Type: boolean
+#. Description
+#: ../ddclient.templates:8001
+msgid ""
+"Enable this if ddclient should be run every time a PPP connection is "
+"established."
+msgstr "Увімкніть цю опцію, якщо бажаєте, щоб ddclient запускався щоразу після встановлення з'єднання PPP."
+
+#. Type: boolean
+#. Description
+#: ../ddclient.templates:9001
+msgid "Run ddclient as daemon?"
+msgstr "Запускати ddclient, як демон?"
+
+#. Type: boolean
+#. Description
+#: ../ddclient.templates:9001
+msgid ""
+"Please choose whether you want ddclient to be run in daemon mode on system "
+"startup."
+msgstr "Увімкніть цю опцію, якщо бажаєте, щоб ddclient запускався у режимі демонаодразу ж після старту системи."
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:10001
+msgid "ddclient update interval:"
+msgstr "Інтервал оновлення ddclient"
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:10001
+msgid ""
+"Please choose the delay between interface address checks. Values may be "
+"given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
+"\") or in days (e.g. \"1d\")."
+msgstr "Будь ласка, вкажіть затримку між перевірками адрес. Значення можебути вказаним у секундах (наприклад, \"5s\"), у хвилинах (наприклад, \"3m\"), у годинах (наприклад, \"7h\"), або ж у днях (наприклад, \"1d\")."
+
+#. Type: note
+#. Description
+#: ../ddclient.templates:11001
+msgid "Modified configuration file"
+msgstr "Модифікований конфігураційний файл"
+
+#. Type: note
+#. Description
+#: ../ddclient.templates:11001
+msgid ""
+"The config file /etc/ddclient.conf on your system does not consist of three "
+"entries. The automatic configuration utility (debconf) cannot handle this. "
+"Maybe you modified the configuration file manually, thus it won't be "
+"modified. If you want a new config file to be created, please run \"dpkg-"
+"reconfigure ddclient\"."
+msgstr "Конфігураційний файл /etc/ddclient.conf відсутній на вашій системі немістить трьох записів. Утиліта для автоматичної конфігурації (debconf) не може використати його. Можливо, ви змінювали його вручну...Якщо бажаєте створити новий, виконайте команду \"dpkg-reconfigure ddclient\"."
