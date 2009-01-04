@@ -1,0 +1,23 @@
+Index: ddclient-3.7.3/ddclient
+===================================================================
+--- ddclient-3.7.3.orig/ddclient	2009-01-04 21:51:24.975756620 +0100
++++ ddclient-3.7.3/ddclient	2009-01-04 21:51:56.407749712 +0100
+@@ -494,7 +494,7 @@
+ my @opt = (
+     "usage: ${program} [options]",
+     "options are:",
+-    [ "daemon",      "=s", "-daemon delay         : run as a daemon" ],
++    [ "daemon",      "=s", "-daemon delay         : run as a daemon, specify delay as an interval." ],
+     [ "proxy",       "=s", "-proxy host           : use 'host' as the HTTP proxy" ],
+     [ "server",      "=s", "-server host          : update DNS information on 'host'" ],
+     [ "protocol",    "=s", "-protocol type        : update protocol used" ],
+@@ -1933,7 +1933,8 @@
+ 
+ specifies that ${program} should operate as a daemon, checking the
+ eth0 interface for an IP address change every 5 minutes and use the
+-'dyndns2' protocol by default.
++'dyndns2' protocol by default. The daemon interval can be specified
++as seconds (600s), minutes (5m), hours (1h) or days (1d).
+ 
+ Host definitions look like:
+   [name=value [,name=value]*]* a.host.domain [,b.host.domain] [login] [password]

@@ -40,8 +40,9 @@ _Description: Password for dynamic DNS service:
 
 Template: ddclient/interface
 Type: string
-_Description: Interface used for dynamic DNS service:
- Enter the interface which is used for using dynamic DNS service.
+_Description: Network interface used for dynamic DNS service:
+ Enter the name of the network interface (eth0/wlan0/ppp0/...) to use for 
+ dynamic DNS service.
 
 Template: ddclient/run_ipup
 Type: boolean

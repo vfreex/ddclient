@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
-"Report-Msgid-Bugs-To: ubuntu-motu@lists.ubuntu.com\n"
-"POT-Creation-Date: 2007-08-17 01:08+0100\n"
+"Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
+"POT-Creation-Date: 2009-01-04 22:11+0100\n"
 "PO-Revision-Date: 2006-09-24 16:17+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-10n-czech@lists.debian.org>\n"
@@ -151,13 +151,19 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
-msgid "Interface used for dynamic DNS service:"
+#, fuzzy
+#| msgid "Interface used for dynamic DNS service:"
+msgid "Network interface used for dynamic DNS service:"
 msgstr "Rozhraní používané pro dynamické DNS:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
-msgid "Enter the interface which is used for using dynamic DNS service."
+#, fuzzy
+#| msgid "Enter the interface which is used for using dynamic DNS service."
+msgid ""
+"Enter the name of the network interface (eth0/wlan0/ppp0/...) to use for  "
+"dynamic DNS service."
 msgstr ""
 "Zadejte síťové rozhraní, které používáte pro připojení ke službě dynamického "
 "DNS."

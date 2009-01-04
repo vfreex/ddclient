@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
-"Report-Msgid-Bugs-To: ubuntu-motu@lists.ubuntu.com\n"
-"POT-Creation-Date: 2007-08-17 01:08+0100\n"
+"Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
+"POT-Creation-Date: 2009-01-04 22:11+0100\n"
 "PO-Revision-Date: 2008-05-06 09:03+0200\n"
 "Last-Translator: Esko Arajärvi <edu@iki.fi>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
@@ -139,13 +139,19 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
-msgid "Interface used for dynamic DNS service:"
+#, fuzzy
+#| msgid "Interface used for dynamic DNS service:"
+msgid "Network interface used for dynamic DNS service:"
 msgstr "Dynaamisen DNS-palvelun liitäntä:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
-msgid "Enter the interface which is used for using dynamic DNS service."
+#, fuzzy
+#| msgid "Enter the interface which is used for using dynamic DNS service."
+msgid ""
+"Enter the name of the network interface (eth0/wlan0/ppp0/...) to use for  "
+"dynamic DNS service."
 msgstr "Anna verkkoliitäntä, jossa dynaamista DNS-palvelua käytetään."
 
 #. Type: boolean

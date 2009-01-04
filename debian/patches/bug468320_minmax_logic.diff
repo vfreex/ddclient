@@ -1,0 +1,17 @@
+This patch fixes the logic that restricts the min and max interval settings.
+It makes sure that the internal values are the absolute max and min values.
+Patch provided by Chris Carr, see http://bugs.debian.org/468320
+
+Index: ddclient-3.7.3/ddclient
+===================================================================
+--- ddclient-3.7.3.orig/ddclient	2009-01-04 22:06:59.210757449 +0100
++++ ddclient-3.7.3/ddclient	2009-01-04 22:07:33.843760250 +0100
+@@ -1000,7 +1000,7 @@
+     $opt{'use'} = 'web' if !define($opt{'use'}) && defined($opt{'web'});
+ 
+     ## sanity check
+-    $opt{'max-interval'}       = max(interval(opt('max-interval')), interval(default('max-interval')));
++    $opt{'max-interval'}       = min(interval(opt('max-interval')), interval(default('max-interval')));
+     $opt{'min-interval'}       = max(interval(opt('min-interval')), interval(default('min-interval')));
+     $opt{'min-error-interval'} = max(interval(opt('min-error-interval')), interval(default('min-error-interval')));
+ 

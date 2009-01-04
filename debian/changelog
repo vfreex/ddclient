@@ -1,3 +1,16 @@
+ddclient (3.7.3-5) unstable; urgency=low
+
+  * Acknowledge uploads by the l10n team. Thanks, guys!
+  * Adjust wording for ddclient/interface option (closes: #230768).
+  * debian/patches/daemon_doc.diff: Document that the daemon option 
+    takes any interval (closes: #206272). Taken from upstream SVN, 
+    revision 90.
+  * Patch bug468320_minmax_logic.diff: Include the patch provided
+    by Chris Carr to fix the sanity check on max-interval
+    (closes: #468320).
+
+ -- Torsten Landschoff <torsten@debian.org>  Sun, 04 Jan 2009 22:11:08 +0100
+
 ddclient (3.7.3-4.2) unstable; urgency=low
 
   * Non-maintainer upload.

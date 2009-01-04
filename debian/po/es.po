@@ -31,8 +31,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
-"Report-Msgid-Bugs-To: ubuntu-motu@lists.ubuntu.com\n"
-"POT-Creation-Date: 2007-08-17 01:08+0100\n"
+"Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
+"POT-Creation-Date: 2009-01-04 22:11+0100\n"
 "PO-Revision-Date: 2007-01-23 01:07+0100\n"
 "Last-Translator: Javier Fernandez-Sanguino <jfs@debian.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -135,8 +135,8 @@ msgid ""
 "dyndns.org\" for two hosts)."
 msgstr ""
 "Introduzca la lista de los dominios completos para su equipo (como «minombre."
-"dyndns.org» si sólo tiene un sistema o «minombre1.dyndns.org,minombre2."
-"dyndns.org» si tiene dos)."
+"dyndns.org» si sólo tiene un sistema o «minombre1.dyndns.org,minombre2.dyndns."
+"org» si tiene dos)."
 
 #. Type: string
 #. Description
@@ -169,13 +169,19 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
-msgid "Interface used for dynamic DNS service:"
+#, fuzzy
+#| msgid "Interface used for dynamic DNS service:"
+msgid "Network interface used for dynamic DNS service:"
 msgstr "Interfaz usada por el servicio de DNS dinámico:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
-msgid "Enter the interface which is used for using dynamic DNS service."
+#, fuzzy
+#| msgid "Enter the interface which is used for using dynamic DNS service."
+msgid ""
+"Enter the name of the network interface (eth0/wlan0/ppp0/...) to use for  "
+"dynamic DNS service."
 msgstr ""
 "Introduzca la interfaz que se utiliza para el servicio de DNS dinámico (p."
 "ej.: eth0, ppp0, ipp0)"
@@ -227,8 +233,8 @@ msgid ""
 "\") or in days (e.g. \"1d\")."
 msgstr ""
 "Indique el intervalo de tiempo entre las comprobaciones de la dirección de "
-"la interfaz. Los valores pueden darse en segundos (p.ej. «5s»), en minutos "
-"(p.ej. «3m»), en horas (p.ej. «7h») o en días (p.ej. «1d»)."
+"la interfaz. Los valores pueden darse en segundos (p.ej. «5s»), en minutos (p."
+"ej. «3m»), en horas (p.ej. «7h») o en días (p.ej. «1d»)."
 
 #. Type: note
 #. Description
