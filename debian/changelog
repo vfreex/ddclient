@@ -1,3 +1,17 @@
+ddclient (3.7.3-6) unstable; urgency=low
+
+  * debian/control:
+    + Bump Standards-Version to 3.8.0 (no changes).
+    + Change priority from extra to optional.
+  * debian/ddclient.init:
+    + Change Default-Stop: to 1 (Closes: #493469).
+  * debian/rules:
+    + Call dh_installinit with -- start 20 2 3 4 5 . stop 20 1 .
+  * debian/copyright:
+    + Change license path from GPL to GPL-2.
+ 
+ -- Marco Rodrigues <gothicx@sapo.pt>  Fri, 23 Jan 2009 20:17:46 +0000
+
 ddclient (3.7.3-5) unstable; urgency=low
 
   * Acknowledge uploads by the l10n team. Thanks, guys!
