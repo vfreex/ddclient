@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient-eu\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-01-04 22:11+0100\n"
+"POT-Creation-Date: 2009-02-18 21:19+0000\n"
 "PO-Revision-Date: 2008-05-13 23:20+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Euskara <debian-l10n-basque@lists.debian.org>\n"
@@ -18,43 +18,19 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:1001
-msgid "www.dyndns.com"
-msgstr "www.dyndns.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
-msgid "www.easydns.com"
-msgstr "www.easydns.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
-msgid "www.dslreports.com"
-msgstr "www.dslreports.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
-msgid "www.zoneedit.com"
-msgstr "www.zoneedit.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
+#: ../ddclient.templates:2001
 msgid "other"
 msgstr "besteak"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:1002
+#: ../ddclient.templates:2002
 msgid "Dynamic DNS service provider:"
 msgstr "DNS dinamiko zerbitzu hornitzailea:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:1002
+#: ../ddclient.templates:2002
 msgid ""
 "Please select the dynamic DNS service you are using. If the service you use "
 "is not listed, choose \"other\" and you will be asked for the protocol and "
@@ -66,49 +42,62 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:2001
+#: ../ddclient.templates:3001
 msgid "Dynamic DNS server:"
 msgstr "DNS dinamiko zerbitzaria:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:2001
+#: ../ddclient.templates:3001
+#, fuzzy
+#| msgid ""
+#| "Enter the name of the server which is providing you with dynamic DNS "
+#| "service (example: members.dyndns.org)."
 msgid ""
-"Enter the name of the server which is providing you with dynamic DNS service "
-"(example: members.dyndns.org)."
+"Please enter the name of the server which is providing you with dynamic DNS "
+"service (example: members.dyndns.org)."
 msgstr ""
 "Idatzi DNS dinamiko zerbitzuaz hornitzen dizun zerbitzariaren izena "
 "(adibidez: members.dyndns.org)."
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:3001
+#: ../ddclient.templates:4001
 msgid "Dynamic DNS update protocol:"
 msgstr "DNS dinamiko eguneraketa protokoloa:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:3001
+#: ../ddclient.templates:4001
+#, fuzzy
+#| msgid ""
+#| "Select the dynamic DNS update protocol used by your dynamic DNS service "
+#| "provider."
 msgid ""
-"Select the dynamic DNS update protocol used by your dynamic DNS service "
-"provider."
+"Please select the dynamic DNS update protocol used by your dynamic DNS "
+"service provider."
 msgstr ""
 "Hautatu zure DNS zerbitzu hornitzaileak erabiltzen duen DNS dinamiko "
 "eguneraketa protokoloa."
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:4001
+#: ../ddclient.templates:5001
 msgid "DynDNS fully qualified domain names:"
 msgstr "DynDNS guztiz kualifikaturiko domeinu izena:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:4001
+#: ../ddclient.templates:5001
+#, fuzzy
+#| msgid ""
+#| "Enter the list of fully qualified domain names for your host (like "
+#| "\"myname.dyndns.org\" if you have only one host or \"myname1.dyndns.org,"
+#| "myname2.dyndns.org\" for two hosts)."
 msgid ""
-"Enter the list of fully qualified domain names for your host (like \"myname."
-"dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
-"dyndns.org\" for two hosts)."
+"Please enter the list of fully qualified domain names for the local host(s) "
+"(for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns."
+"org,myname2.dyndns.org\" for two hosts)."
 msgstr ""
 "Idatzi zure ostalarirako guztiz kualifikaturiko domeinu izenen zerrenda "
 "(\"nireizena. dyndns.org\" antzeko zerbait ostalari bakar bat baduzu edo "
@@ -116,34 +105,38 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:5001
+#: ../ddclient.templates:6001
 msgid "Username for dynamic DNS service:"
 msgstr "DNS dinamiko zerbitzurako erabiltzailea:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:5001
-msgid "Enter the username you use to log into the dynamic DNS service."
+#: ../ddclient.templates:6001
+#, fuzzy
+#| msgid "Enter the username you use to log into the dynamic DNS service."
+msgid "Please enter the username to use with the dynamic DNS service."
 msgstr ""
 "Idatzi DNS dinamiko zerbitzuan saioa hasteko erabiltzen duzun erabiltzaile-"
 "izena."
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:6001
+#: ../ddclient.templates:7001
 msgid "Password for dynamic DNS service:"
 msgstr "DNS dinamiko zerbitzuaren pasahitza:"
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:6001
-msgid "Enter the password you use to log into the dynamic DNS service."
+#: ../ddclient.templates:7001
+#, fuzzy
+#| msgid "Enter the password you use to log into the dynamic DNS service."
+msgid "Please enter the password to use with the dynamic DNS service."
 msgstr ""
 "Idatzi DNS dinamiko zerbitzuan saioa hasteko erabiltzen duzun pasahitza."
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:7001
+#: ../ddclient.templates:8001
 #, fuzzy
 #| msgid "Interface used for dynamic DNS service:"
 msgid "Network interface used for dynamic DNS service:"
@@ -151,39 +144,43 @@ msgstr "DNS dinamiko zerbitzuak erabiltzen duen interfazea:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:7001
+#: ../ddclient.templates:8001
 #, fuzzy
 #| msgid "Enter the interface which is used for using dynamic DNS service."
 msgid ""
-"Enter the name of the network interface (eth0/wlan0/ppp0/...) to use for  "
-"dynamic DNS service."
+"Please enter the name of the network interface (eth0/wlan0/ppp0/...) to use "
+"for dynamic DNS service."
 msgstr "Idatzi DNS dinamiko zerbitzuak erabiltzen duen interfazea."
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:8001
+#: ../ddclient.templates:9001
 msgid "Run ddclient on PPP connect?"
 msgstr "PPP konektatzean ddclient exekutatu?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:8001
+#: ../ddclient.templates:9001
+#, fuzzy
+#| msgid ""
+#| "Enable this if ddclient should be run every time a PPP connection is "
+#| "established."
 msgid ""
-"Enable this if ddclient should be run every time a PPP connection is "
-"established."
+"You should enable this option if ddclient should be run every time a PPP "
+"connection is established."
 msgstr ""
 "Hau gaitu ddclient exekutatu behar bada PPP konexio bat sortzen den "
 "bakoitzean."
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:9001
+#: ../ddclient.templates:10001
 msgid "Run ddclient as daemon?"
 msgstr "Exekutatu ddclient deabru gisa?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:9001
+#: ../ddclient.templates:10001
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
@@ -193,13 +190,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:10001
-msgid "ddclient update interval:"
-msgstr "ddclient eguneraketa tartea:"
+#: ../ddclient.templates:11001
+msgid "Interval between ddclient runs:"
+msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:10001
+#: ../ddclient.templates:11001
 msgid ""
 "Please choose the delay between interface address checks. Values may be "
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
@@ -209,24 +206,51 @@ msgstr ""
 "segundutan (adib. \"5s\"), minututan (adib. \"3m\"), orduetan (adib. \"7h\") "
 "edo egunetan (adib. \"1d\") eman behar dira."
 
-#. Type: note
+#. Type: error
 #. Description
-#: ../ddclient.templates:11001
+#: ../ddclient.templates:12001
 msgid "Modified configuration file"
 msgstr "Eraldatutako konfigurazio fitxategia"
 
-#. Type: note
+#. Type: error
 #. Description
-#: ../ddclient.templates:11001
+#: ../ddclient.templates:12001
+#, fuzzy
+#| msgid ""
+#| "The config file /etc/ddclient.conf on your system does not consist of "
+#| "three entries. The automatic configuration utility (debconf) cannot "
+#| "handle this. Maybe you modified the configuration file manually, thus it "
+#| "won't be modified. If you want a new config file to be created, please "
+#| "run \"dpkg-reconfigure ddclient\"."
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
-"entries. The automatic configuration utility (debconf) cannot handle this. "
-"Maybe you modified the configuration file manually, thus it won't be "
-"modified. If you want a new config file to be created, please run \"dpkg-"
-"reconfigure ddclient\"."
+"entries. The automatic configuration utility cannot handle this situation."
 msgstr ""
 "Zure sistemako /etc/ddclient.conf konfigurazio fitxategia ez da hiru "
 "sarreraz osatzen. Konfigurazio lanabesa automatikoak (debconf) ezin du hori "
 "kudeatu. Agian zuk konfigurazio fitxategia eskuz eraldatu duzu, baina hau ez "
 "zen eraldatu beharko. Konfigurazio fitxategi berri bat sortzea nahi baduzu "
 "\"dpkg-reconfigure ddclient\" exekutatu."
+
+#. Type: error
+#. Description
+#: ../ddclient.templates:12001
+msgid ""
+"If you have edited the configuration file manually, it won't be modified. If "
+"you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
+msgstr ""
+
+#~ msgid "www.dyndns.com"
+#~ msgstr "www.dyndns.com"
+
+#~ msgid "www.easydns.com"
+#~ msgstr "www.easydns.com"
+
+#~ msgid "www.dslreports.com"
+#~ msgstr "www.dslreports.com"
+
+#~ msgid "www.zoneedit.com"
+#~ msgstr "www.zoneedit.com"
+
+#~ msgid "ddclient update interval:"
+#~ msgstr "ddclient eguneraketa tartea:"

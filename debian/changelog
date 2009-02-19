@@ -1,3 +1,32 @@
+ddclient (3.8.0-1) unstable; urgency=low
+
+  * New upstream version.
+    + Remove daemon_doc patch. Applied upstream.
+    + Fix zoneedit.com hostname (Closes: #484166).
+  * Debconf templates and debian/control reviewed by the debian-l10n-
+    english team as part of the Smith review project. (Closes: #513082).
+  * [Debconf translation updates]
+    + Add Slovak (Closes: #514385).
+    + Add Galician (Closes: #513621).
+    + Add Bokmål, Norwegian (Closes: #515179).
+    + Update Portuguese (Closes: #515529).
+    + Update Spanish (Closes: #515202).
+    + Update Catalan (Closes: #514637).
+    + Update Czech (Closes: #513714).
+    + Update German (Closes: #514361).
+    + Update French (Closes: #514093).
+    + Update Italian (Closes: #515014).
+    + Update Swedish (Closes: #513648).
+    + Update Russian (Closes: #514894).
+    + Update Japanese (Closes: #513806).
+    + Update Vietnamese (Closes: #513578).
+  * Add watch file.
+  * debian/copyright:
+    + Correct author copyright year to 2001. Upstream COPYRIGHT file,
+      have it mentioned there, so it should be the correct one.
+
+ -- Marco Rodrigues <gothicx@sapo.pt>  Thu, 19 Feb 2009 19:53:41 +0000
+
 ddclient (3.7.3-6) unstable; urgency=low
 
   * debian/control:

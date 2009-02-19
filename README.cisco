@@ -1,4 +1,4 @@
-$Id: README.cisco 8 2006-06-14 19:51:39Z wimpunk $
+$Id: README.cisco 98 2008-06-13 20:26:56Z wimpunk $
 Method 1 ------------------------------------------------------
 
 The following config will allow the Linux machine (10.1.1.2) to read

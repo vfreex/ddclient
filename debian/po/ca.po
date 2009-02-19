@@ -1,232 +1,227 @@
 #
 # Catalan translation for ddclient package.
-# Copyright (C) 2006 Torsten Landschoff.
+# Copyright © 2009 Torsten Landschoff.
 # This file is distributed under the same license as the ddclient package.
 #
-# Jordà Polo <jorda@ettin.org>, 2006.
+# Jordà Polo <jorda@ettin.org>, 2006, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 3.6.7\n"
+"Project-Id-Version: 3.7.3-6\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-01-04 22:11+0100\n"
-"PO-Revision-Date: 2006-06-16 21:23+0200\n"
+"POT-Creation-Date: 2009-02-18 21:19+0000\n"
+"PO-Revision-Date: 2009-02-07 22:16+0100\n"
 "Last-Translator: Jordà Polo <jorda@ettin.org>\n"
-"Language-Team: Català <debian-l10n-catalan@lists.debian.org>\n"
+"Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:1001
-msgid "www.dyndns.com"
-msgstr "www.dyndns.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
-msgid "www.easydns.com"
-msgstr "www.easydns.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
-msgid "www.dslreports.com"
-msgstr "www.dslreports.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
-msgid "www.zoneedit.com"
-msgstr "www.zoneedit.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
+#: ../ddclient.templates:2001
 msgid "other"
 msgstr "un altre"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:1002
+#: ../ddclient.templates:2002
 msgid "Dynamic DNS service provider:"
 msgstr "Proveïdor del servei de DNS dinàmic:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:1002
+#: ../ddclient.templates:2002
 msgid ""
 "Please select the dynamic DNS service you are using. If the service you use "
 "is not listed, choose \"other\" and you will be asked for the protocol and "
 "the server name."
 msgstr ""
-"Si us plau, seleccioneu el servei de DNS dinàmic que estigueu utilitzant. Si "
-"el servei no apareix a la llista, trieu \"un altre\" i indiqueu a "
-"continuació el protocol i el nom del servidor."
+"Seleccioneu el servei de DNS dinàmic que estigueu utilitzant. Si el servei "
+"no apareix a la llista, trieu «un altre» i indiqueu a continuació el protocol "
+"i el nom del servidor."
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:2001
+#: ../ddclient.templates:3001
 msgid "Dynamic DNS server:"
-msgstr "Servidor DNS dinàmic:"
+msgstr "Servidor de DNS dinàmic:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:2001
+#: ../ddclient.templates:3001
 msgid ""
-"Enter the name of the server which is providing you with dynamic DNS service "
-"(example: members.dyndns.org)."
+"Please enter the name of the server which is providing you with dynamic DNS "
+"service (example: members.dyndns.org)."
 msgstr ""
-"Introduïu el nom del servidor on tingueu el servei de DNS dinàmic (p.ex.: "
+"Introduïu el nom del servidor on tingueu el servei de DNS dinàmic (p.ex. "
 "members.dyndns.org)."
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:3001
+#: ../ddclient.templates:4001
 msgid "Dynamic DNS update protocol:"
 msgstr "Protocol d'actualització del DNS dinàmic:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:3001
+#: ../ddclient.templates:4001
 msgid ""
-"Select the dynamic DNS update protocol used by your dynamic DNS service "
-"provider."
+"Please select the dynamic DNS update protocol used by your dynamic DNS "
+"service provider."
 msgstr ""
-"Seleccioneu el protocol d'actualització utilitzat pel vostre proveïdor de "
+"Seleccioneu el protocol d'actualització que utilitzi el vostre proveïdor de "
 "DNS dinàmic."
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:4001
+#: ../ddclient.templates:5001
 msgid "DynDNS fully qualified domain names:"
-msgstr "Nom de domini DynDNS complet:"
-
-#. Type: string
-#. Description
-#: ../ddclient.templates:4001
-msgid ""
-"Enter the list of fully qualified domain names for your host (like \"myname."
-"dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
-"dyndns.org\" for two hosts)."
-msgstr ""
-"Introduïu la llista de dominis complets de la vostra màquina (p.ex. \"nom."
-"dyndns.org\" si en teniu només un, o \"nom1.dyndns.org,nom2.dyndns.org\" si "
-"en teniu dos)."
+msgstr "Noms complets dels dominis DynDNS:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
+msgid ""
+"Please enter the list of fully qualified domain names for the local host(s) "
+"(for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns."
+"org,myname2.dyndns.org\" for two hosts)."
+msgstr ""
+"Introduïu la llista de noms de domini complets de la vostra màquina (p.ex. "
+"«nom.dyndns.org» si en teniu només un, o «nom1.dyndns.org,nom2.dyndns.org» si "
+"en teniu dos)."
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:6001
 msgid "Username for dynamic DNS service:"
 msgstr "Nom d'usuari del servei de DNS dinàmic:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:5001
-msgid "Enter the username you use to log into the dynamic DNS service."
+#: ../ddclient.templates:6001
+msgid "Please enter the username to use with the dynamic DNS service."
 msgstr ""
 "Introduïu el nom d'usuari que utilitzeu per entrar al servei de DNS dinàmic."
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:6001
+#: ../ddclient.templates:7001
 msgid "Password for dynamic DNS service:"
 msgstr "Contrasenya del servei de DNS dinàmic:"
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:6001
-msgid "Enter the password you use to log into the dynamic DNS service."
+#: ../ddclient.templates:7001
+msgid "Please enter the password to use with the dynamic DNS service."
 msgstr ""
 "Introduïu la contrasenya que utilitzeu per entrar al servei de DNS dinàmic."
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:7001
-#, fuzzy
-#| msgid "Interface used for dynamic DNS service:"
+#: ../ddclient.templates:8001
 msgid "Network interface used for dynamic DNS service:"
-msgstr "Interfície utilitzada pel servei de DNS dinàmic:"
+msgstr "Interfície de xarxa utilitzada per al servei de DNS dinàmic:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:7001
-#, fuzzy
-#| msgid "Enter the interface which is used for using dynamic DNS service."
+#: ../ddclient.templates:8001
 msgid ""
-"Enter the name of the network interface (eth0/wlan0/ppp0/...) to use for  "
-"dynamic DNS service."
-msgstr "Introduïu la interfície de xarxa utilitzada pel servei de DNS dinàmic."
+"Please enter the name of the network interface (eth0/wlan0/ppp0/...) to use "
+"for dynamic DNS service."
+msgstr ""
+"Introduïu la interfície de xarxa (eth0/wlan0/ppp0/...) utilitzada per al "
+"servei de DNS dinàmic."
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:8001
+#: ../ddclient.templates:9001
 msgid "Run ddclient on PPP connect?"
 msgstr "Voleu executar ddclient en establir la connexió PPP?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:8001
+#: ../ddclient.templates:9001
 msgid ""
-"Enable this if ddclient should be run every time a PPP connection is "
-"established."
+"You should enable this option if ddclient should be run every time a PPP "
+"connection is established."
 msgstr ""
-"Activeu aquesta opció si el client s'ha d'executar cada vegada que "
-"s'estableix una connexió PPP."
+"Hauríeu d'activar aquesta opció si voleu executar el ddclient cada vegada "
+"que s'estableixi una connexió PPP."
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:9001
+#: ../ddclient.templates:10001
 msgid "Run ddclient as daemon?"
-msgstr "Executar ddclient com a dimoni?"
+msgstr "Voleu executar el ddclient com a dimoni?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:9001
+#: ../ddclient.templates:10001
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
 msgstr ""
-"Si us plau, indiqueu si voleu que ddclient s'executi com a dimoni en "
-"arrencar el sistema."
+"Indiqueu si voleu que el ddclient s'executi com a dimoni en arrencar el "
+"sistema."
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:10001
-msgid "ddclient update interval:"
-msgstr "Interval d'actualització de ddclient:"
+#: ../ddclient.templates:11001
+msgid "Interval between ddclient runs:"
+msgstr "Interval entre les execucions del ddclient:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:10001
+#: ../ddclient.templates:11001
 msgid ""
 "Please choose the delay between interface address checks. Values may be "
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
 "\") or in days (e.g. \"1d\")."
 msgstr ""
-"Si us plau, trieu el retard entre comprovacions de l'adreça. Els valors es "
-"poden donar en segons (p.ex. \"5s\"), en minuts (p.ex. \"3m\"), en hores (p."
-"ex. \"7h\"), o en dies (p.ex. \"1d\")."
+"Trieu el retard entre les comprovacions de l'adreça de la interfície. Els "
+"valors es poden especificar en segons (p.ex. «5s»), en minuts (p.ex. «3m»), en "
+"hores (p.ex. «7h»), o en dies (p.ex. «1d»)."
 
-#. Type: note
+#. Type: error
 #. Description
-#: ../ddclient.templates:11001
+#: ../ddclient.templates:12001
 msgid "Modified configuration file"
-msgstr "Fitxer de configuració modificat"
+msgstr "S'ha editat el fitxer de configuració"
 
-#. Type: note
+#. Type: error
 #. Description
-#: ../ddclient.templates:11001
+#: ../ddclient.templates:12001
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
-"entries. The automatic configuration utility (debconf) cannot handle this. "
-"Maybe you modified the configuration file manually, thus it won't be "
-"modified. If you want a new config file to be created, please run \"dpkg-"
-"reconfigure ddclient\"."
+"entries. The automatic configuration utility cannot handle this situation."
 msgstr ""
-"El fitxer de configuració /etc/ddclient.conf del vostre sistema no conté "
-"tres entrades. L'eina automàtica de configuració (debconf) no pot tractar "
-"això. Potser el fitxer de configuració s'ha editat manualment i per tant no "
-"es modificarà. Si desitgeu crear un nou fitxer de configuració, si us plau "
-"executeu \"dpkg-reconfigure ddclient\"."
+"El fitxer de configuració /etc/ddclient.conf d'aquest sistema no conté tres "
+"entrades. L'eina de configuració automàtica (debconf) no pot gestionar "
+"correctament aquesta situació."
+
+#. Type: error
+#. Description
+#: ../ddclient.templates:12001
+msgid ""
+"If you have edited the configuration file manually, it won't be modified. If "
+"you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
+msgstr ""
+"No es modificarà el fitxer de configuració si ja l'havíeu editat manualment. "
+"Si desitgeu generar un nou fitxer de configuració, executeu «dpkg-reconfigure "
+"ddclient»."
+
+#~ msgid "www.dyndns.com"
+#~ msgstr "www.dyndns.com"
+
+#~ msgid "www.easydns.com"
+#~ msgstr "www.easydns.com"
+
+#~ msgid "www.dslreports.com"
+#~ msgstr "www.dslreports.com"
+
+#~ msgid "www.zoneedit.com"
+#~ msgstr "www.zoneedit.com"
+
+#~ msgid "ddclient update interval:"
+#~ msgstr "Interval d'actualització de ddclient:"

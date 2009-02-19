@@ -2,11 +2,11 @@ This patch fixes the logic that restricts the min and max interval settings.
 It makes sure that the internal values are the absolute max and min values.
 Patch provided by Chris Carr, see http://bugs.debian.org/468320
 
-Index: ddclient-3.7.3/ddclient
+Index: ddclient-3.8.0/ddclient
 ===================================================================
---- ddclient-3.7.3.orig/ddclient	2009-01-04 22:06:59.210757449 +0100
-+++ ddclient-3.7.3/ddclient	2009-01-04 22:07:33.843760250 +0100
-@@ -1000,7 +1000,7 @@
+--- ddclient-3.8.0.orig/ddclient	2009-02-18 20:30:17.000000000 +0000
++++ ddclient-3.8.0/ddclient	2009-02-18 20:30:17.000000000 +0000
+@@ -1060,7 +1060,7 @@
      $opt{'use'} = 'web' if !define($opt{'use'}) && defined($opt{'web'});
  
      ## sanity check

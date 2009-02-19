@@ -1,240 +1,209 @@
 # Vietnamese Translation for ddclient.
-# Copyright © 2005 Free Software Foundation, Inc.
-# Clytie Siddall <clytie@riverland.net.au>, 2005.
+# Copyright © 2009 Free Software Foundation, Inc.
+# Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ddclient 3.6.2-3.1\n"
+"Project-Id-Version: ddclient 3.7.3-6\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-01-04 22:11+0100\n"
-"PO-Revision-Date: 2005-05-22 20:48+0930\n"
+"POT-Creation-Date: 2009-02-18 21:19+0000\n"
+"PO-Revision-Date: 2009-01-30 23:03+1030\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
-"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
+"Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: LocFactoryEditor 1.8\n"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:1001
-msgid "www.dyndns.com"
-msgstr "www.dyndns.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
-msgid "www.easydns.com"
-msgstr "www.easydns.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
-msgid "www.dslreports.com"
-msgstr "www.dslreports.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
-msgid "www.zoneedit.com"
-msgstr "www.zoneedit.com"
-
-#. Type: select
-#. Choices
-#: ../ddclient.templates:1001
+#: ../ddclient.templates:2001
 msgid "other"
 msgstr "khác"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:1002
+#: ../ddclient.templates:2002
 msgid "Dynamic DNS service provider:"
 msgstr "Nhà cung cấp dịch vụ DNS động:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:1002
+#: ../ddclient.templates:2002
 msgid ""
 "Please select the dynamic DNS service you are using. If the service you use "
 "is not listed, choose \"other\" and you will be asked for the protocol and "
 "the server name."
 msgstr ""
-"Hãy chọn dịch vụ DNS động bạn đang dùng. Nếu nó không phải trong danh sách "
-"này thì hãy chọn «khác» và trình cấu hình sẽ yêu cầu bạn nhập giao thức và "
-"tên máy chủ."
+"Hãy chọn dịch vụ DNS động nào bạn đang dùng. Không có trong danh sách thì "
+"chọn mục « khác » và bạn sẽ được nhắc nhập giao thức và tên máy phục vụ."
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:2001
+#: ../ddclient.templates:3001
 msgid "Dynamic DNS server:"
-msgstr "Máy chủ DNS động:"
+msgstr "Máy phục vụ DNS động:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:2001
+#: ../ddclient.templates:3001
 msgid ""
-"Enter the name of the server which is providing you with dynamic DNS service "
-"(example: members.dyndns.org)."
+"Please enter the name of the server which is providing you with dynamic DNS "
+"service (example: members.dyndns.org)."
 msgstr ""
-"Hãy nhập tên của máy chủ có cung cấp dịch DNS động cho bạn (thí dụ: members."
-"dyndns.org [các_thành_viên.DNS-động.tổ_chức])."
+"Hãy nhập tên của máy phục vụ có cung cấp cho bạn dịch DNS động (ví dụ: "
+"members.dyndns.org)."
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:3001
+#: ../ddclient.templates:4001
 msgid "Dynamic DNS update protocol:"
 msgstr "Giao thức cập nhật DNS động:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:3001
+#: ../ddclient.templates:4001
 msgid ""
-"Select the dynamic DNS update protocol used by your dynamic DNS service "
-"provider."
+"Please select the dynamic DNS update protocol used by your dynamic DNS "
+"service provider."
 msgstr ""
-"Hãy chọn giao thức cập nhật DNS động được dùng bởi nhà cung cấp dịch DNS "
-"động của bạn."
+"Hãy chọn giao thức cập nhật DNS động dùng bởi nhà cung cấp dịch DNS động của "
+"bạn."
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:4001
+#: ../ddclient.templates:5001
 msgid "DynDNS fully qualified domain names:"
 msgstr "Các tên miền có khả năng đầy đủ DynDNS:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:4001
+#: ../ddclient.templates:5001
 msgid ""
-"Enter the list of fully qualified domain names for your host (like \"myname."
-"dyndns.org\" if you have only one host or \"myname1.dyndns.org,myname2."
-"dyndns.org\" for two hosts)."
+"Please enter the list of fully qualified domain names for the local host(s) "
+"(for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns."
+"org,myname2.dyndns.org\" for two hosts)."
 msgstr ""
-"Hãy nhập danh sách các tên miền có khả năng đây đủ cho máy của bạn, v.d.:\n"
-"tên_tôi.dyndns.org\n"
-"nếu bạn chỉ có một máy riêng lẻ, hoặc:\n"
-"tên_tôi1.dyndns.org,tên_tôi2.dyndns.org\n"
-"cho hai máy.\n"
-"\n"
-"[Chú thích dịch: tên miền có khả năng đầy đủ: FQDN - Fully Qualified Domain "
-"Name là tên hoàn thành của một máy nào đó, mà phải kết thức bằng miền mức độ "
-"đỉnh (tld - top level domain) như .com, .net, .org, .gov, .edu. Tên miền có "
-"khả năng đầy đủ có thể là vắn hay dài, nhưng mà phải là tên hoàn thành của "
-"máy. Thí dú:\n"
-"www.miền.com\n"
-"mail.miền.net.vn\n"
-"máy2.miền.edu.au]"
+"Hãy nhập danh sách các tên miền có khả năng đây đủ cho (các) máy cục bộ (v."
+"d. « tên_mình.dyndns.org » cho một máy hoặc « tên_mình1.dyndns.org,tên_mình2."
+"dyndns.org » cho hai máy)."
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:5001
+#: ../ddclient.templates:6001
 msgid "Username for dynamic DNS service:"
 msgstr "Tên người dùng cho dịch vụ DNS động:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:5001
-msgid "Enter the username you use to log into the dynamic DNS service."
-msgstr "Hãy nhập tên người dùng mà bạn sử dụng để đăng nhập dịch vụ DNS động."
+#: ../ddclient.templates:6001
+msgid "Please enter the username to use with the dynamic DNS service."
+msgstr "Hãy nhập tên người dùng cần dùng với dịch vụ DNS động."
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:6001
+#: ../ddclient.templates:7001
 msgid "Password for dynamic DNS service:"
 msgstr "Mật khẩu cho dịch vụ DNS động:"
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:6001
-msgid "Enter the password you use to log into the dynamic DNS service."
-msgstr "Hãy nhập mật khẩu mà bạn sử dụng để đăng nhập dịch vụ DNS động."
+#: ../ddclient.templates:7001
+msgid "Please enter the password to use with the dynamic DNS service."
+msgstr "Hãy nhập mật khẩu cần dùng với dịch vụ DNS động."
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:7001
-#, fuzzy
-#| msgid "Interface used for dynamic DNS service:"
+#: ../ddclient.templates:8001
 msgid "Network interface used for dynamic DNS service:"
-msgstr "Giao diện được dùng cho dịch vụ DNS động:"
+msgstr "Giao diện mạng dùng cho dịch vụ DNS động:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:7001
-#, fuzzy
-#| msgid "Enter the interface which is used for using dynamic DNS service."
-msgid ""
-"Enter the name of the network interface (eth0/wlan0/ppp0/...) to use for  "
-"dynamic DNS service."
-msgstr "Hãy nhập giao diện được dùng khi truy cập dịch vụ DNS động."
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:8001
-msgid "Run ddclient on PPP connect?"
-msgstr "Chạy trình ddclient khi kết nối qua PPP không?"
-
-#. Type: boolean
-#. Description
 #: ../ddclient.templates:8001
 msgid ""
-"Enable this if ddclient should be run every time a PPP connection is "
-"established."
+"Please enter the name of the network interface (eth0/wlan0/ppp0/...) to use "
+"for dynamic DNS service."
 msgstr ""
-"Hãy hiệu lực tùy chọn này nếu cần phải chạy trình ddclient (khách dd) mọi "
-"lúc kết nối dùng PPP."
+"Hãy nhập tên của giao diện mạng (eth0/wlan0/ppp0/...) cần dùng cho dịch vụ "
+"DNS động."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:9001
+msgid "Run ddclient on PPP connect?"
+msgstr "Kết nối PPP thì chạy ddclient không?"
+
+#. Type: boolean
+#. Description
+#: ../ddclient.templates:9001
+msgid ""
+"You should enable this option if ddclient should be run every time a PPP "
+"connection is established."
+msgstr ""
+"Có nên bật tùy chọn này nếu ứng dụng khách ddclient nên chạy mỗi lần một kết "
+"nối PPP được thiết lập."
+
+#. Type: boolean
+#. Description
+#: ../ddclient.templates:10001
 msgid "Run ddclient as daemon?"
-msgstr "Chạy trình ddclient trong nền không?"
+msgstr "Chạy ddclient trong nền không?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:9001
+#: ../ddclient.templates:10001
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
 msgstr ""
-"Hãy chọn nếu bạn muốn chạy trình ddclient trong chế độ nền (dæmon) khi khởi "
-"động hệ thống, hay không."
+"Hãy chọn nếu bạn muốn chạy ứng dụng khách ddclient trong chế độ nền (dæmon) "
+"khi khởi động hệ thống, hay không."
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:10001
-msgid "ddclient update interval:"
-msgstr "thời gian cập nhật ddclient:"
+#: ../ddclient.templates:11001
+msgid "Interval between ddclient runs:"
+msgstr "Khoảng giữa hai lần chạy ddclient:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:10001
+#: ../ddclient.templates:11001
 msgid ""
 "Please choose the delay between interface address checks. Values may be "
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
 "\") or in days (e.g. \"1d\")."
 msgstr ""
-"Hãy chọn thời gian giữa hai lần kiểm địa chỉ giao diện, theo giây (seconds: "
-"v.d. «5s»), theo phút (minutes: v.d. «3m»), theo giờ (hours: v.d. «7h») hay "
-"theo ngày (days: v.d. «1d»)."
+"Hãy chọn khoảng thời gian giữa hai lần kiểm tra địa chỉ giao diện. Giá trị "
+"đưa ra theo (cột thứ ba là ví dụ):\n"
+" • giây\ts\t5s\n"
+" • phút\tm\t3m\n"
+" • giờ\th\t7h\n"
+" • ngày\td\t1d."
 
-#. Type: note
+#. Type: error
 #. Description
-#: ../ddclient.templates:11001
+#: ../ddclient.templates:12001
 msgid "Modified configuration file"
-msgstr "Tập tin cấu hình đã sửa đổi"
+msgstr "Tập tin cấu hình bị sửa đổi"
 
-#. Type: note
+#. Type: error
 #. Description
-#: ../ddclient.templates:11001
+#: ../ddclient.templates:12001
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
-"entries. The automatic configuration utility (debconf) cannot handle this. "
-"Maybe you modified the configuration file manually, thus it won't be "
-"modified. If you want a new config file to be created, please run \"dpkg-"
-"reconfigure ddclient\"."
+"entries. The automatic configuration utility cannot handle this situation."
 msgstr ""
-"Tập tin cấu hình /etc/ddclient.conf trong hệ thống bạn không chứa ba mục "
-"nhập. Thế tiện ích cấu hình tự động (debconf) không thể quản lý nó. Có lẽ "
-"bạn đã tự sửa đổi tập tin cấu hình ấy: thì nó sẽ không được sửa đổi nữa "
-"trong khi cấu hình. Nếu bạn muốn tạo một tập tin cấu hình mới thì hãy chạy "
-"lệnh:\n"
-"dpkg-reconfigure ddclient"
+"Tập tin cấu hình « /etc/ddclient.conf » trên hệ thống này không chứa ba mục "
+"nhập. Tiện ích tự động cấu hình không thể quyết định trường hợp này."
+
+#. Type: error
+#. Description
+#: ../ddclient.templates:12001
+msgid ""
+"If you have edited the configuration file manually, it won't be modified. If "
+"you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
+msgstr ""
+"Nếu bạn đã tự chỉnh sửa tập tin cấu hình này, nó sẽ không được sửa đổi. Để "
+"tạo một tập tin cấu hình mới, chạy câu lệnh « dpkg-reconfigure ddclient »."

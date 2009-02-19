@@ -21,7 +21,7 @@
 #                    can be used on many types of firewalls
 ### END INIT INFO
 # 
-# $Id: sample-etc_rc.d_init.d_ddclient.lsb 8 2006-06-14 19:51:39Z wimpunk $
+# $Id: sample-etc_rc.d_init.d_ddclient.lsb 98 2008-06-13 20:26:56Z wimpunk $
 #
 ###
 

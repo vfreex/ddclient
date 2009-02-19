@@ -1,4 +1,4 @@
-$Id: README.ssl 76 2007-07-31 07:06:48Z wimpunk $
+$Id: README.ssl 98 2008-06-13 20:26:56Z wimpunk $
 
 Since 3.7.0, ddclient support ssl-updates
 To use ssl, put "ssl=yes" in your configuration and make sure

@@ -2,5 +2,4 @@ smc-barricade-fw-alt.diff
 ip-up_run-parts.diff
 config_path.diff
 maxinterval.diff
-daemon_doc.diff
 bug468320_minmax_logic.diff
