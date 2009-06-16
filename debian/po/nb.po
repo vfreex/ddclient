@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-01-30 07:04+0100\n"
+"POT-Creation-Date: 2009-06-16 08:11+0200\n"
 "PO-Revision-Date: 2009-02-14 13:08+0100\n"
 "Last-Translator: Bjørn Steensrud <bsteensr@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -53,8 +53,8 @@ msgid ""
 "Please enter the name of the server which is providing you with dynamic DNS "
 "service (example: members.dyndns.org)."
 msgstr ""
-"Oppgi navnet på tjeneren som skaffer deg dynamisk DNS-tjeneste "
-"(eksempel: members.dyndns.org)"
+"Oppgi navnet på tjeneren som skaffer deg dynamisk DNS-tjeneste (eksempel: "
+"members.dyndns.org)"
 
 #. Type: select
 #. Description
@@ -85,9 +85,9 @@ msgid ""
 "(for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns."
 "org,myname2.dyndns.org\" for two hosts)."
 msgstr ""
-"Oppgi lista over fullstendige domenenavn for de(n) lokale verten(e) "
-"(f.eks. «mittnavn.dyndns.org» for bare én vert eller «mittnavn1.dyndns.org "
-" mittnavn2.dyndns.org» for to verter.)"
+"Oppgi lista over fullstendige domenenavn for de(n) lokale verten(e) (f.eks. "
+"«mittnavn.dyndns.org» for bare én vert eller «mittnavn1.dyndns.org  mittnavn2."
+"dyndns.org» for to verter.)"
 
 #. Type: string
 #. Description
@@ -113,31 +113,46 @@ msgstr "Passord for dynamisk DNS-tjeneste:"
 msgid "Please enter the password to use with the dynamic DNS service."
 msgstr "Oppgi passordet som skal brukes med den dynamiske DNS-tjenesten."
 
-#. Type: string
+#. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
+msgid "Find public IP using checkip.dyndns.com?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../ddclient.templates:8001
+msgid ""
+"Please choose whether ddclient should try to find the IP address of this "
+"machine via the DynDNS web interface.  This is recommended for machines that "
+"are using Network Address Translation."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:9001
 msgid "Network interface used for dynamic DNS service:"
 msgstr "Nettverksgrensesnitt som skal brukes for dynamisk DNS-tjeneste:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:8001
+#: ../ddclient.templates:9001
 msgid ""
 "Please enter the name of the network interface (eth0/wlan0/ppp0/...) to use "
 "for dynamic DNS service."
 msgstr ""
-"Oppgi navnet på nettverksgrensesnittet (eth0/wlan0/ppp0/ …) som skal "
-"brukes for dynamisk DNS-tjeneste."
+"Oppgi navnet på nettverksgrensesnittet (eth0/wlan0/ppp0/ …) som skal brukes "
+"for dynamisk DNS-tjeneste."
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:9001
+#: ../ddclient.templates:10001
 msgid "Run ddclient on PPP connect?"
 msgstr "Skal ddclient kjøres når PPP kobles opp?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:9001
+#: ../ddclient.templates:10001
 msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
 "connection is established."
@@ -147,13 +162,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:10001
+#: ../ddclient.templates:11001
 msgid "Run ddclient as daemon?"
 msgstr "Skal ddclient kjøres som en daemon?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:10001
+#: ../ddclient.templates:11001
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
@@ -162,13 +177,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:11001
+#: ../ddclient.templates:12001
 msgid "Interval between ddclient runs:"
 msgstr "Intervall mellom ddclient-kjøringer:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:11001
+#: ../ddclient.templates:12001
 msgid ""
 "Please choose the delay between interface address checks. Values may be "
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
@@ -180,29 +195,87 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:12001
+#: ../ddclient.templates:13001
 msgid "Modified configuration file"
 msgstr "Endret oppsettsfil"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:12001
+#: ../ddclient.templates:13001
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
 "entries. The automatic configuration utility cannot handle this situation."
 msgstr ""
 "Oppsettsfila /etc/ddclient.conf på dette systemet består ikke av tre "
-"oppføringer.  Verktøyet for automatisk oppsett klarer ikke å håndtere "
-"denne situasjonen."
+"oppføringer.  Verktøyet for automatisk oppsett klarer ikke å håndtere denne "
+"situasjonen."
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:12001
+#: ../ddclient.templates:13001
 msgid ""
 "If you have edited the configuration file manually, it won't be modified. If "
 "you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
 msgstr ""
-"Hvis oppsettsfila er redigert manuelt blir den ikke endret. Hvis du "
-"trenger en ny oppsettsfil, så kjør «dpkg-reconfigure ddclient»."
+"Hvis oppsettsfila er redigert manuelt blir den ikke endret. Hvis du trenger "
+"en ny oppsettsfil, så kjør «dpkg-reconfigure ddclient»."
 
+#. Type: select
+#. Description
+#: ../ddclient.templates:14001
+msgid "Selection method for updated names:"
+msgstr ""
 
+#. Type: select
+#. Description
+#: ../ddclient.templates:14001
+msgid ""
+"You'll have to select which host names to update using ddclient.  You can "
+"select host names to update from a list (taken from your DynDNS account) or "
+"enter them manually."
+msgstr ""
+
+#. Type: multiselect
+#. Description
+#: ../ddclient.templates:15001
+msgid "Host names to keep updated:"
+msgstr ""
+
+#. Type: multiselect
+#. Description
+#: ../ddclient.templates:15001
+msgid ""
+"The list of host names managed via your DynDNS account has been downloaded. "
+"Please choose the one(s) for which ddclient should be used to keep IP "
+"address records up to date."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../ddclient.templates:16001
+msgid "Empty host list"
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../ddclient.templates:16001
+msgid ""
+"The list of host names managed under your account is empty when retrieved "
+"from the dynamic DNS service website."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../ddclient.templates:16001
+msgid ""
+"You may have provided an incorrect username or password, or the online "
+"account may have no host names configured."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../ddclient.templates:16001
+msgid ""
+"Please check your account to be sure you have host names configured, then "
+"run \"dpkg-reconfigure ddclient\" to input your username and password again."
+msgstr ""

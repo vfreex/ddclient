@@ -1,3 +1,13 @@
+ddclient (3.8.0-2) experimental; urgency=low
+
+  * Apply patch from Dan McCombs to ease usage of DynDNS services
+    (closes: #513626).
+    + This also partially fixes #285007 as it uses a web interface
+      to determine the own IP address (but only when configuring for
+      DynDNS.com services). This must be fixed for others as well.
+
+ -- Torsten Landschoff <torsten@debian.org>  Tue, 16 Jun 2009 08:09:26 +0200
+
 ddclient (3.8.0-1) unstable; urgency=low
 
   * New upstream version.

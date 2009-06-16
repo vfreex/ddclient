@@ -95,27 +95,53 @@ create_new_config()
   fi
 
   # ask the user about the dynamic DNS names, account and interface
-  db_input critical ddclient/names || true
   db_input critical ddclient/username || true
   db_input critical ddclient/password || true
-  db_input critical ddclient/interface || true
+  db_get ddclient/service
+  # if the chosen service is dyndns, ask some extra questions.  otherwise, set them to false
+  if [ "$RET" = "www.dyndns.com" ]; then
+  	db_input critical ddclient/checkip || true
+	if [ -f /usr/bin/wget ]; then
+		db_input critical ddclient/fetchhosts || true
+	else
+		db_fset ddclient/fetchhosts seen true
+		db_set ddclient/fetchhosts Manually
+	fi
+  else
+  	db_fset ddclient/checkip seen true
+	db_fset ddclient/fetchhosts seen true
+	db_set ddclient/checkip false
+	db_set ddclient/fetchhosts Manually
+  fi
+  db_go
+  db_get ddclient/checkip
+  # ask the traditional questions if the dyndns questions weren't answered true
+  if [ "$RET" = "false" ]; then
+	db_input critical ddclient/interface || true
+  fi
+  db_get ddclient/fetchhosts
+  if [ "$RET" = "Manually" ]; then
+  	db_input critical ddclient/names || true
+  fi
   db_go
 
   # set the default mode ddclient should run in (ip-up | daemon),
   # depending on the entered interface (XpppX or other)
   db_get ddclient/interface
   interface=$RET
+  db_get ddclient/checkip
+  checkip=$RET
 
-  # if it is actually a ppp or related interface
-  if [ -z "${interface##*ppp*}" ]; then
+  # if it is actually a ppp or related interface, and we're not using checkip
+  if [ "$checkip" != "true"  ] && [ -z "${interface##*ppp*}" ]; then
     db_fget ddclient/run_ipup seen
-    if [ $RET = "false" ]; then
+    if [ "$RET" = "false" ]; then
       db_set ddclient/run_ipup true
     fi
   # if it is an interface of a different type
   else
     db_fget ddclient/run_daemon seen
-    if [ $RET = "false" ]; then
+    if [ "$RET" = "false" ]; then
       db_set ddclient/run_daemon true
     fi
   fi
@@ -127,7 +153,7 @@ create_new_config()
 
   # if ddclient should run in daemon mode we ask for the update interval
   db_get ddclient/run_daemon
-  if [ $RET = "true" ]; then
+  if [ "$RET" = "true" ]; then
     db_input medium ddclient/daemon_interval || true
     db_go
   fi
