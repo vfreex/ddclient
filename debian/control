@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Torsten Landschoff <torsten@debian.org>
 Uploaders: Marco Rodrigues <gothicx@sapo.pt>
 Build-Depends: debhelper (>= 5), po-debconf, xmlto, quilt
-Standards-Version: 3.8.0
+Standards-Version: 3.8.1
 Homepage: http://ddclient.sf.net
 
 Package: ddclient

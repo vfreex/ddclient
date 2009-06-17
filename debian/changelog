@@ -1,3 +1,19 @@
+ddclient (3.8.0-3) unstable; urgency=low
+
+  * Add upstream changeset 110 as patch which fixes the abuse message
+    (closes: #531594).
+  * Use dh_installppp for installing our ip-up script (closes: #212862).
+  * debian/control: Increase Standards-Version to 3.8.1 (checked against
+    upgrading-checklist, no changes required).
+  * Fix handling of backslashes in password (every other character should 
+    already be fine, at least in 8 bit charsets) by escaping all backslashes
+    with another backslash in the configuration file (closes: #516282).
+  * Apply Basque translation update (closes: #516548).
+  * Apply Spanish translation update (closes: #517766).
+  * Merge Galician translation update (closes: #517515).
+
+ -- Torsten Landschoff <torsten@debian.org>  Wed, 17 Jun 2009 21:49:48 +0200
+
 ddclient (3.8.0-2) experimental; urgency=low
 
   * Apply patch from Dan McCombs to ease usage of DynDNS services

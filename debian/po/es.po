@@ -1,14 +1,11 @@
 # ddclient translation to spanish
-# Copyright (C) 2003, 2007, 2009 Software in the Public Interest
 # This file is distributed under the same license as the ddclient package.
 #
 # Changes:
 # - Initial translation
 #       Vicente H. <vherrerv@supercable.es>, 2003
-#
-# - Updates
+# - Translation update
 #       Javier Fernandez-Sanguino, 2007
-#       Francisco Javier Cuadrado <fcocuadrado@gmail.com>, 2009
 #
 #  Traductores, si no conoce el formato PO, merece la pena leer la
 #  documentación de gettext, especialmente las secciones dedicadas a este
@@ -33,10 +30,10 @@
 # traducción de Debian al español (<debian-l10n-spanish@lists.debian.org>)
 msgid ""
 msgstr ""
-"Project-Id-Version: ddclient 3.7.3-6\n"
+"Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2009-06-16 08:11+0200\n"
-"PO-Revision-Date: 2009-02-14 19:27+0100\n"
+"PO-Revision-Date: 2009-03-01 22:27+0100\n"
 "Last-Translator: Javier Fernandez-Sanguino <jfs@debian.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -113,7 +110,7 @@ msgid ""
 "(for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns."
 "org,myname2.dyndns.org\" for two hosts)."
 msgstr ""
-"Introduzca la lista de los dominios completos para los sistemas locales "
+"Introduzca la lista de los dominios completos para su equipo/s local/es "
 "(como «minombre.dyndns.org» si sólo tiene un sistema o «minombre1.dyndns.org,"
 "minombre2.dyndns.org» si tiene dos)."
 
@@ -163,7 +160,7 @@ msgstr ""
 #. Description
 #: ../ddclient.templates:9001
 msgid "Network interface used for dynamic DNS service:"
-msgstr "Interfaz de red usada por el servicio de DNS dinámico:"
+msgstr "Interfaz de red a utilizar para el servicio de DNS dinámico:"
 
 #. Type: string
 #. Description
@@ -172,8 +169,8 @@ msgid ""
 "Please enter the name of the network interface (eth0/wlan0/ppp0/...) to use "
 "for dynamic DNS service."
 msgstr ""
-"Introduzca la interfaz de red que se utiliza para el servicio de DNS "
-"dinámico (p. ej.: eth0, ppp0, ipp0)"
+"Introduzca la interfaz de red que se debe utilizar para el servicio de DNS "
+"dinámico (p.ej.: eth0, wlan0, ppp0)"
 
 #. Type: boolean
 #. Description
@@ -188,8 +185,8 @@ msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
 "connection is established."
 msgstr ""
-"Si habilita esta opción se ejecutará «ddclient» cada vez que establezca una "
-"conexión PPP."
+"Debería habilitar esta opción si desea que se ejecute «ddclient» cada vez que "
+"establezca una conexión PPP."
 
 #. Type: boolean
 #. Description
@@ -211,7 +208,7 @@ msgstr ""
 #. Description
 #: ../ddclient.templates:12001
 msgid "Interval between ddclient runs:"
-msgstr "Intervalo de tiempo entre las ejecuciones de ddclient:"
+msgstr "Intervalo entre las ejecuciones de ddclient:"
 
 #. Type: string
 #. Description
@@ -239,8 +236,8 @@ msgid ""
 "entries. The automatic configuration utility cannot handle this situation."
 msgstr ""
 "El archivo de configuración «/etc/ddclient.conf» no está formado por tres "
-"entradas. La herramienta de configuración automática (debconf) no puede "
-"manejar esta situación."
+"entradas. La herramienta de configuración automática no puede manejar esta "
+"situación."
 
 #. Type: error
 #. Description
@@ -249,9 +246,9 @@ msgid ""
 "If you have edited the configuration file manually, it won't be modified. If "
 "you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
 msgstr ""
-"Si ha editado manualmente el archivo de configuración, no se modificará. Si "
-"necesita un archivo de configuración nuevo, ejecute «dpkg-reconfigure "
-"ddclient»."
+"No se modificará el fichero de configuración si lo editó manualmente. Si "
+"usted quiere que se cree un nuevo archivo de configuración debe ejecutar "
+"«dpkg-reconfigure ddclient»."
 
 #. Type: select
 #. Description

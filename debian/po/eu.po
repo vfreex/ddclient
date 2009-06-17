@@ -1,14 +1,14 @@
-# translation of ddclient-eu.po to Euskara
+# translation of eu.po to Euskara
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Piarres Beobide <pi@beobide.net>, 2008.
+# Piarres Beobide <pi@beobide.net>, 2008, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: ddclient-eu\n"
+"Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2009-06-16 08:11+0200\n"
-"PO-Revision-Date: 2008-05-13 23:20+0200\n"
+"PO-Revision-Date: 2009-02-22 10:07+0100\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Euskara <debian-l10n-basque@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -49,10 +49,6 @@ msgstr "DNS dinamiko zerbitzaria:"
 #. Type: string
 #. Description
 #: ../ddclient.templates:3001
-#, fuzzy
-#| msgid ""
-#| "Enter the name of the server which is providing you with dynamic DNS "
-#| "service (example: members.dyndns.org)."
 msgid ""
 "Please enter the name of the server which is providing you with dynamic DNS "
 "service (example: members.dyndns.org)."
@@ -69,10 +65,6 @@ msgstr "DNS dinamiko eguneraketa protokoloa:"
 #. Type: select
 #. Description
 #: ../ddclient.templates:4001
-#, fuzzy
-#| msgid ""
-#| "Select the dynamic DNS update protocol used by your dynamic DNS service "
-#| "provider."
 msgid ""
 "Please select the dynamic DNS update protocol used by your dynamic DNS "
 "service provider."
@@ -89,11 +81,6 @@ msgstr "DynDNS guztiz kualifikaturiko domeinu izena:"
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
-#, fuzzy
-#| msgid ""
-#| "Enter the list of fully qualified domain names for your host (like "
-#| "\"myname.dyndns.org\" if you have only one host or \"myname1.dyndns.org,"
-#| "myname2.dyndns.org\" for two hosts)."
 msgid ""
 "Please enter the list of fully qualified domain names for the local host(s) "
 "(for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns."
@@ -112,12 +99,9 @@ msgstr "DNS dinamiko zerbitzurako erabiltzailea:"
 #. Type: string
 #. Description
 #: ../ddclient.templates:6001
-#, fuzzy
-#| msgid "Enter the username you use to log into the dynamic DNS service."
 msgid "Please enter the username to use with the dynamic DNS service."
 msgstr ""
-"Idatzi DNS dinamiko zerbitzuan saioa hasteko erabiltzen duzun erabiltzaile-"
-"izena."
+"Idatzi DNS dinamiko zerbitzuarekin erabili behar den erabiltzaile-izena."
 
 #. Type: password
 #. Description
@@ -128,11 +112,8 @@ msgstr "DNS dinamiko zerbitzuaren pasahitza:"
 #. Type: password
 #. Description
 #: ../ddclient.templates:7001
-#, fuzzy
-#| msgid "Enter the password you use to log into the dynamic DNS service."
 msgid "Please enter the password to use with the dynamic DNS service."
-msgstr ""
-"Idatzi DNS dinamiko zerbitzuan saioa hasteko erabiltzen duzun pasahitza."
+msgstr "Idatzi DNS dinamiko zerbitzuarekin erabili behar den pasahitza."
 
 #. Type: boolean
 #. Description
@@ -152,20 +133,18 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:9001
-#, fuzzy
-#| msgid "Interface used for dynamic DNS service:"
 msgid "Network interface used for dynamic DNS service:"
-msgstr "DNS dinamiko zerbitzuak erabiltzen duen interfazea:"
+msgstr "DNS dinamiko zerbitzuarentzat erabiltzen den sare interfazea:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:9001
-#, fuzzy
-#| msgid "Enter the interface which is used for using dynamic DNS service."
 msgid ""
 "Please enter the name of the network interface (eth0/wlan0/ppp0/...) to use "
 "for dynamic DNS service."
-msgstr "Idatzi DNS dinamiko zerbitzuak erabiltzen duen interfazea."
+msgstr ""
+"Mesedez idatzi DNS dinamiko zerbitzuak erabiltzen duen interfazea (eth0/"
+"wlan0/ppp0/...)."
 
 #. Type: boolean
 #. Description
@@ -176,16 +155,12 @@ msgstr "PPP konektatzean ddclient exekutatu?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:10001
-#, fuzzy
-#| msgid ""
-#| "Enable this if ddclient should be run every time a PPP connection is "
-#| "established."
 msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
 "connection is established."
 msgstr ""
-"Hau gaitu ddclient exekutatu behar bada PPP konexio bat sortzen den "
-"bakoitzean."
+"Aukera hau gaitu PPP konexio bat sortzen den bakoitzean ddclient exekutatu "
+"behar bada."
 
 #. Type: boolean
 #. Description
@@ -207,7 +182,7 @@ msgstr ""
 #. Description
 #: ../ddclient.templates:12001
 msgid "Interval between ddclient runs:"
-msgstr ""
+msgstr "Bi ddclient exekuzio arteko tartea:"
 
 #. Type: string
 #. Description
@@ -230,22 +205,13 @@ msgstr "Eraldatutako konfigurazio fitxategia"
 #. Type: error
 #. Description
 #: ../ddclient.templates:13001
-#, fuzzy
-#| msgid ""
-#| "The config file /etc/ddclient.conf on your system does not consist of "
-#| "three entries. The automatic configuration utility (debconf) cannot "
-#| "handle this. Maybe you modified the configuration file manually, thus it "
-#| "won't be modified. If you want a new config file to be created, please "
-#| "run \"dpkg-reconfigure ddclient\"."
 msgid ""
 "The config file /etc/ddclient.conf on your system does not consist of three "
 "entries. The automatic configuration utility cannot handle this situation."
 msgstr ""
 "Zure sistemako /etc/ddclient.conf konfigurazio fitxategia ez da hiru "
-"sarreraz osatzen. Konfigurazio lanabesa automatikoak (debconf) ezin du hori "
-"kudeatu. Agian zuk konfigurazio fitxategia eskuz eraldatu duzu, baina hau ez "
-"zen eraldatu beharko. Konfigurazio fitxategi berri bat sortzea nahi baduzu "
-"\"dpkg-reconfigure ddclient\" exekutatu."
+"sarreraz osatzen. Konfigurazio automatiko lanabesak ezin du egoera hau "
+"kudeatu."
 
 #. Type: error
 #. Description
@@ -254,6 +220,9 @@ msgid ""
 "If you have edited the configuration file manually, it won't be modified. If "
 "you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
 msgstr ""
+"Konfigurazio fitxategia eskuz editatu baduzu, ezingo da eraldatu. "
+"Konfigurazio fitxategi beri bat sortu behar baduzu \"dpkg-reconfigure "
+"ddclient\" exekutatu."
 
 #. Type: select
 #. Description
@@ -314,18 +283,3 @@ msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
 msgstr ""
-
-#~ msgid "www.dyndns.com"
-#~ msgstr "www.dyndns.com"
-
-#~ msgid "www.easydns.com"
-#~ msgstr "www.easydns.com"
-
-#~ msgid "www.dslreports.com"
-#~ msgstr "www.dslreports.com"
-
-#~ msgid "www.zoneedit.com"
-#~ msgstr "www.zoneedit.com"
-
-#~ msgid "ddclient update interval:"
-#~ msgstr "ddclient eguneraketa tartea:"
