@@ -1,3 +1,22 @@
+ddclient (3.8.0-4) unstable; urgency=low
+
+  * Support translating the choices of the ddclient/fetchhosts debconf
+    template via patch by Christian Perrier (closes: #533741).
+  * Merge updated russian translation by Yuri Kozlov (closes: #533675).
+  * Update Swedish translation by Martin Bagge (closes: #534247).
+  * Update Czech translation by Miroslav Kure (closes: #534960).
+  * Pass pidfile path via ddclient command line instead of configuring it in
+    the configuration file (closes: #534974).
+  * debian/control: Add Vcs-* entries for current location of the master 
+    Bazaar repository for ddclient as requested by Savvas Radevic.
+  * debian/control: Update Standards-Version to 3.8.2 [lintian]. No changes.
+  * debian/postinst: Do not use full path when running wget [lintian].
+    + Added some notes how this has to be fixed, especially checking if 
+      wget is really installed.
+  * Update German translation provided by Helge Kreutzmann (closes: #535995).
+
+ -- Torsten Landschoff <torsten@debian.org>  Tue, 07 Jul 2009 08:39:07 +0200
+
 ddclient (3.8.0-3) unstable; urgency=low
 
   * Add upstream changeset 110 as patch which fixes the abuse message

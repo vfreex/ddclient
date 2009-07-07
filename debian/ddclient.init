@@ -29,8 +29,8 @@ if [ -r /etc/default/ddclient ]; then
   . /etc/default/ddclient
 fi
 
-OPTIONS="-daemon $daemon_interval -syslog"
 PIDFILE=/var/run/$NAME.pid
+OPTIONS="-daemon $daemon_interval -syslog -pid $PIDFILE"
 
 # Load the VERBOSE setting and other rcS variables
 . /lib/init/vars.sh

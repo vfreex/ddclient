@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-06-16 08:11+0200\n"
+"POT-Creation-Date: 2009-06-21 15:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -199,14 +199,26 @@ msgid ""
 msgstr ""
 
 #. Type: select
-#. Description
+#. Choices
 #: ../ddclient.templates:14001
+msgid "From list"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:14001
+msgid "Manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
 msgid "Selection method for updated names:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:14002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "

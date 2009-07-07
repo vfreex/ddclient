@@ -97,7 +97,7 @@ _Description: Modified configuration file
 Template: ddclient/fetchhosts
 Type: select
 Default: From list
-Choices: From list, Manually
+__Choices: From list, Manually
 _Description: Selection method for updated names:
  You'll have to select which host names to update using ddclient.  You can
  select host names to update from a list (taken from your DynDNS account)

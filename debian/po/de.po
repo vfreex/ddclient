@@ -1,5 +1,5 @@
 # Translation of ddclient debconf templates to German
-# Copyright (C) Felix Kröger <felix.kroeger@gmx.de> 2002.
+# Copyright (C) Felix KrÃ¶ger <felix.kroeger@gmx.de> 2002.
 # Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2006, 2007, 2009.
 # This file is distributed under the same license as the ddclient package.
 #
@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient 3.7.3-6\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-06-16 08:11+0200\n"
-"PO-Revision-Date: 2009-02-02 21:50+0100\n"
+"POT-Creation-Date: 2009-06-21 15:02+0200\n"
+"PO-Revision-Date: 2009-07-06 19:30+0200\n"
 "Last-Translator:  Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -35,15 +35,16 @@ msgid ""
 "is not listed, choose \"other\" and you will be asked for the protocol and "
 "the server name."
 msgstr ""
-"Bitte wählen Sie nun den Betreiber des dynamischen DNS-Dienstes, den Sie "
-"benutzen möchten. Falls Ihr Betreiber hier nicht aufgeführt ist, wählen Sie "
-"bitte »anderer« und Sie werden nach dem Protokoll und Servernamen gefragt."
+"Bitte wÃ¤hlen Sie nun den Betreiber des dynamischen DNS-Dienstes, den Sie "
+"benutzen mÃ¶chten. Falls Ihr Betreiber hier nicht aufgefÃ¼hrt ist, wÃ¤hlen "
+"Sie bitte Â»andererÂ« und Sie werden nach dem Protokoll und Servernamen "
+"gefragt."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:3001
 msgid "Dynamic DNS server:"
-msgstr "Dynamischer DNS-Dienst:"
+msgstr "Dynamischer DNS-Server:"
 
 #. Type: string
 #. Description
@@ -53,7 +54,7 @@ msgid ""
 "service (example: members.dyndns.org)."
 msgstr ""
 "Bitte geben Sie den Namen des Servers an, der Ihnen dynamische DNS-Dienste "
-"anbietet (Beispiel: members.dyndns.org)."
+"bereitstellt (Beispiel: members.dyndns.org)."
 
 #. Type: select
 #. Description
@@ -68,14 +69,14 @@ msgid ""
 "Please select the dynamic DNS update protocol used by your dynamic DNS "
 "service provider."
 msgstr ""
-"Bitte wählen Sie das Protokoll für die dynamischen DNS-Aktualisierung aus, "
+"Bitte wÃ¤hlen Sie das Protokoll fÃ¼r die dynamischen DNS-Aktualisierung aus, "
 "das von Ihrem Anbieter des dynamischen DNS-Dienstes verwandt wird."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
 msgid "DynDNS fully qualified domain names:"
-msgstr "DynDNS vollständiger (engl. fully qualified) Domainname:"
+msgstr "DynDNS vollstÃ¤ndige (engl. fully qualified) Domainnamen:"
 
 #. Type: string
 #. Description
@@ -85,15 +86,15 @@ msgid ""
 "(for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns."
 "org,myname2.dyndns.org\" for two hosts)."
 msgstr ""
-"Bitte geben Sie die Liste der vollständigen Domainnamen für die/den lokalen "
-"Rechner ein (z.B.: »meinname.dyndns.org« bei nur einem Rechner oder für zwei "
-"Rechner »meinname1.dyndns.org,meinname2.dyndns.org«)."
+"Bitte geben Sie die Liste der vollstÃ¤ndigen Domainnamen fÃ¼r den/die "
+"lokalen Rechner ein (z.B.: Â»meinname.dyndns.orgÂ« bei nur einem Rechner oder "
+"fÃ¼r zwei Rechner Â»meinname1.dyndns.org,meinname2.dyndns.orgÂ«)."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:6001
 msgid "Username for dynamic DNS service:"
-msgstr "Benutzername für den dynamischen DNS-Dienst:"
+msgstr "Benutzername fÃ¼r den dynamischen DNS-Dienst:"
 
 #. Type: string
 #. Description
@@ -107,21 +108,21 @@ msgstr ""
 #. Description
 #: ../ddclient.templates:7001
 msgid "Password for dynamic DNS service:"
-msgstr "Passwort für den dynamischen DNS-Dienst:"
+msgstr "Passwort fÃ¼r den dynamischen DNS-Dienst:"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:7001
 msgid "Please enter the password to use with the dynamic DNS service."
 msgstr ""
-"Bitte geben Sie dass Passwort ein, das mit dem dynamischen DNS-Dienst "
+"Bitte geben Sie das Passwort ein, das mit dem dynamischen DNS-Dienst "
 "verwandt werden soll."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
 msgid "Find public IP using checkip.dyndns.com?"
-msgstr ""
+msgstr "Ã–ffentliche IP mittels checkip.dyndns.com ermitteln?"
 
 #. Type: boolean
 #. Description
@@ -131,12 +132,15 @@ msgid ""
 "machine via the DynDNS web interface.  This is recommended for machines that "
 "are using Network Address Translation."
 msgstr ""
+"Bitte wÃ¤hlen Sie aus, ob der Ddclient versuchen soll, die IP-Adresse dieser "
+"Maschine mittels der DynDNS-Webschnittstelle zu ermitteln. Dies wird fÃ¼r "
+"Maschinen empfohlen, die Â»Network Address TranslationÂ« verwenden."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:9001
 msgid "Network interface used for dynamic DNS service:"
-msgstr "Netz-Schnittstelle für den dynamischen DNS-Dienst:"
+msgstr "Netz-Schnittstelle fÃ¼r den dynamischen DNS-Dienst:"
 
 #. Type: string
 #. Description
@@ -146,13 +150,13 @@ msgid ""
 "for dynamic DNS service."
 msgstr ""
 "Bitte geben Sie den Namen der Netz-Schnittstelle (eth0/wlan0/ppp0/...) an, "
-"der für den dynamischen DNS-Dienst benutzt werden soll."
+"der fÃ¼r den dynamischen DNS-Dienst benutzt werden soll."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:10001
 msgid "Run ddclient on PPP connect?"
-msgstr "Ddclient nach Aufbau der PPP-Verbindung ausführen?"
+msgstr "Ddclient nach Aufbau der PPP-Verbindung ausfÃ¼hren?"
 
 #. Type: boolean
 #. Description
@@ -162,7 +166,7 @@ msgid ""
 "connection is established."
 msgstr ""
 "Sie sollten diese Option aktivieren, falls ddclient nach jedem Aufbau einer "
-"PPP-Verbindung ausgeführt werden soll."
+"PPP-Verbindung ausgefÃ¼hrt werden soll."
 
 #. Type: boolean
 #. Description
@@ -177,14 +181,14 @@ msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
 msgstr ""
-"Bitte wählen Sie aus, ob der ddclient nach dem Start Ihres Systems als "
+"Bitte wÃ¤hlen Sie aus, ob der ddclient nach dem Start Ihres Systems als "
 "Daemon laufen soll."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:12001
 msgid "Interval between ddclient runs:"
-msgstr "Intervall zwischen Läufen von Ddclient:"
+msgstr "Intervall zwischen LÃ¤ufen von Ddclient:"
 
 #. Type: string
 #. Description
@@ -194,15 +198,16 @@ msgid ""
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
 "\") or in days (e.g. \"1d\")."
 msgstr ""
-"Bitte wählen Sie die Wartezeit zwischen Schnittstellen-Adressüberprüfungen "
-"aus. Werte können in Sekunden (z.B.: »5s«), Minuten (z.B.: »3m«), Stunden (z."
-"B.: »7h«) oder Tagen (z.B.: »1d«) angegeben werden."
+"Bitte wÃ¤hlen Sie die Wartezeit zwischen Schnittstellen-"
+"AdressÃ¼berprÃ¼fungen aus. Werte kÃ¶nnen in Sekunden (z.B.: Â»5sÂ«), Minuten "
+"(z.B.: Â»3mÂ«), Stunden (z.B.: Â»7hÂ«) oder Tagen (z.B.: Â»1dÂ«) angegeben "
+"werden."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:13001
 msgid "Modified configuration file"
-msgstr "Konfigurationsdatei verändert"
+msgstr "Konfigurationsdatei verÃ¤ndert"
 
 #. Type: error
 #. Description
@@ -212,7 +217,7 @@ msgid ""
 "entries. The automatic configuration utility cannot handle this situation."
 msgstr ""
 "Die Konfigurationsdatei /etc/ddclient.conf auf Ihrem System besteht nicht "
-"aus drei Einträgen. Das automatische Konfigurationsprogramm kann damit "
+"aus drei EintrÃ¤gen. Das automatische Konfigurationsprogramm kann damit "
 "leider nicht umgehen."
 
 #. Type: error
@@ -222,30 +227,45 @@ msgid ""
 "If you have edited the configuration file manually, it won't be modified. If "
 "you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
 msgstr ""
-"Falls Sie diese Datei manuell bearbeitet haben, wird sie nicht verändert. "
-"Falls Sie eine neue Konfigurationsdatei benötigen, führen Sie »dpkg-"
-"reconfigure ddclient« aus."
+"Falls Sie diese Datei manuell bearbeitet haben, wird sie nicht verÃ¤ndert. "
+"Falls Sie eine neue Konfigurationsdatei benÃ¶tigen, fÃ¼hren Sie Â»dpkg-"
+"reconfigure ddclientÂ« aus."
 
 #. Type: select
-#. Description
+#. Choices
 #: ../ddclient.templates:14001
-msgid "Selection method for updated names:"
+msgid "From list"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:14001
+msgid "Manually"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:14002
+msgid "Selection method for updated names:"
+msgstr "Auswahlmethode fÃ¼r aktualisierte Namen:"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
 "enter them manually."
 msgstr ""
+"Sie mÃ¼ssen auswÃ¤hlen, welche Rechnernamen mit Ddclient aktualisiert werden "
+"sollen. Sie kÃ¶nnen Rechnernamen aus einer Liste (entnommen Ihrem DynDNS-"
+"Konto) auswÃ¤hlen oder diese manuell eingeben."
 
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:15001
 msgid "Host names to keep updated:"
-msgstr ""
+msgstr "Aktuell zu haltende Rechnernamen:"
 
 #. Type: multiselect
 #. Description
@@ -255,12 +275,15 @@ msgid ""
 "Please choose the one(s) for which ddclient should be used to keep IP "
 "address records up to date."
 msgstr ""
+"Die Liste der mittels DynDNS verwalteten Rechnernamen wurde heruntergeladen. "
+"Bitte wÃ¤hlen Sie den/die EintrÃ¤ge aus, fÃ¼r die Ddclient die IP-"
+"AdressdatensÃ¤tze aktuell halten soll."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:16001
 msgid "Empty host list"
-msgstr ""
+msgstr "Leere Rechnerliste"
 
 #. Type: error
 #. Description
@@ -269,6 +292,8 @@ msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
 msgstr ""
+"Die Liste der mit Ihrem Konto verwalteten Rechnernamen ist leer, wenn sie "
+"von der Website des dynamischen DNS-Dienstes heruntergeladen wird."
 
 #. Type: error
 #. Description
@@ -277,6 +302,9 @@ msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
 msgstr ""
+"Es kÃ¶nnte sein, dass Sie keinen korrekten Benutzernamen oder kein korrektes "
+"Passwort angegeben haben oder im Online-Konto keine Rechnernamen "
+"konfiguriert worden sind."
 
 #. Type: error
 #. Description
@@ -285,3 +313,6 @@ msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
 msgstr ""
+"Bitte Ã¼berprÃ¼fen Sie Ihr Konto, um sicherzustellen, dass Sie Rechnernamen "
+"konfiguriert haben. FÃ¼hren Sie danach Â»dpkg-reconfigure ddclientÂ« aus, um "
+"erneut Ihren Benutzernamen und Ihr Passwort einzugeben."

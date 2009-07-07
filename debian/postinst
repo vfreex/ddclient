@@ -50,7 +50,9 @@ case "$1" in
 		# get the dyndns host list
 		db_get ddclient/username	&& username="$RET"
 		db_get ddclient/password	&& password="$RET"
-		hostslist=`/usr/bin/wget http://$username:$password@update.dyndns.com/text/gethostlist -q -O - | awk -F \: '{print $2, $4}' | sed -e "N;s/ \n/,/g" | sed -e "s/,/, /g"`
+                # FIXME: factor this out into a function
+                # FIXME: protect against wget not installed
+		hostslist=`wget http://$username:$password@update.dyndns.com/text/gethostlist -q -O - | awk -F \: '{print $2, $4}' | sed -e "N;s/ \n/,/g" | sed -e "s/,/, /g"`
 		
 		# add the list to our multichoice template, then prompt the user
 		db_subst ddclient/hostslist choices $hostslist
@@ -95,7 +97,6 @@ case "$1" in
 #
 # /etc/ddclient.conf
 
-pid=/var/run/ddclient.pid
 protocol=$protocol
 $interface
 server=$server

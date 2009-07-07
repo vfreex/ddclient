@@ -6,10 +6,10 @@
 # Yuri Kozlov <yuray@komyakino.ru>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: ddclient new\n"
+"Project-Id-Version: ddclient 3.8.0-3\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-06-16 08:11+0200\n"
-"PO-Revision-Date: 2009-01-30 20:06+0300\n"
+"POT-Creation-Date: 2009-06-21 15:02+0200\n"
+"PO-Revision-Date: 2009-06-19 21:25+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -121,7 +121,7 @@ msgstr "Введите пароль, используемый для входа 
 #. Description
 #: ../ddclient.templates:8001
 msgid "Find public IP using checkip.dyndns.com?"
-msgstr ""
+msgstr "Определять публичный IP с помощью checkip.dyndns.com?"
 
 #. Type: boolean
 #. Description
@@ -131,6 +131,9 @@ msgid ""
 "machine via the DynDNS web interface.  This is recommended for machines that "
 "are using Network Address Translation."
 msgstr ""
+"Выберите, должен ли ddclient пытаться определить IP-адрес вашего компьютера "
+"через веб-интерфейс DynDNS. Рекомендуется для компьютеров, использующих "
+"трансляцию сетевых адресов (NAT)."
 
 #. Type: string
 #. Description
@@ -226,25 +229,40 @@ msgstr ""
 "ddclient\"."
 
 #. Type: select
-#. Description
+#. Choices
 #: ../ddclient.templates:14001
-msgid "Selection method for updated names:"
+msgid "From list"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:14001
+msgid "Manually"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:14002
+msgid "Selection method for updated names:"
+msgstr "Способ ввода обновляемых имён:"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
 "enter them manually."
 msgstr ""
+"Вам нужно указать какие имена хостов должны обновляться через ddclient. Вы "
+"можете выбрать имена обновляемых хостов из списка (берётся из вашей учётной "
+"записи в DynDNS) или ввести их вручную."
 
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:15001
 msgid "Host names to keep updated:"
-msgstr ""
+msgstr "Обновляемые имена хостов:"
 
 #. Type: multiselect
 #. Description
@@ -254,12 +272,15 @@ msgid ""
 "Please choose the one(s) for which ddclient should be used to keep IP "
 "address records up to date."
 msgstr ""
+"Список имён хостов, управляемых из учётной записи DynDNS, получен. Выберите "
+"для какого(их) из них ddclient должен поддерживать в актуальном состоянии "
+"запись об IP-адресе."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:16001
 msgid "Empty host list"
-msgstr ""
+msgstr "Список хостов пуст"
 
 #. Type: error
 #. Description
@@ -268,6 +289,8 @@ msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
 msgstr ""
+"Получен пустой список имён хостов, задаваемых в вашей учётной записи, от "
+"службы динамического DNS."
 
 #. Type: error
 #. Description
@@ -276,6 +299,8 @@ msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
 msgstr ""
+"Вы могли указать неправильное имя или пароль, или в учётной записи не "
+"настроено ни одного имени хоста."
 
 #. Type: error
 #. Description
@@ -284,3 +309,6 @@ msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
 msgstr ""
+"Проверьте, что в вашей учётной записи настроены имена хостов, а затем "
+"запустите \"dpkg-reconfigure ddclient\", чтобы ввести имя и пароль к службе "
+"ещё раз."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient 3.7.3-6\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-06-16 08:11+0200\n"
+"POT-Creation-Date: 2009-06-21 15:02+0200\n"
 "PO-Revision-Date: 2009-01-30 08:25+0100\n"
 "Last-Translator: Vincenzo Campanella <vinz65@gmail.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -225,14 +225,26 @@ msgstr ""
 "«dpkg-reconfigure ddclient»."
 
 #. Type: select
-#. Description
+#. Choices
 #: ../ddclient.templates:14001
+msgid "From list"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:14001
+msgid "Manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
 msgid "Selection method for updated names:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:14002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "

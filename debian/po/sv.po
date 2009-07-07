@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-06-16 08:11+0200\n"
-"PO-Revision-Date: 2009-01-31 02:27+0100\n"
+"POT-Creation-Date: 2009-06-21 15:02+0200\n"
+"PO-Revision-Date: 2009-06-22 21:48+0100\n"
 "Last-Translator: Martin Bagge <brother@bsnet.se>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -118,7 +118,7 @@ msgstr "Ange lösenordet som ska användas för den dynamiska DNS-tjänsten."
 #. Description
 #: ../ddclient.templates:8001
 msgid "Find public IP using checkip.dyndns.com?"
-msgstr ""
+msgstr "Vill du nyttja checkip.dyndns.com för att hitta ditt publika IP?"
 
 #. Type: boolean
 #. Description
@@ -128,6 +128,9 @@ msgid ""
 "machine via the DynDNS web interface.  This is recommended for machines that "
 "are using Network Address Translation."
 msgstr ""
+"Ange om ddclient ska försöka hitta IP-adressen för den här maskinen via "
+"webbgränssnittet för DynDNS. Detta är den rekomenderade proceduren för "
+"maskiner som använder Network Address Translation (NAT)."
 
 #. Type: string
 #. Description
@@ -219,25 +222,40 @@ msgstr ""
 "Om du behöver en ny inställningsfil kör \"dpkg-reconfigure ddclient\"."
 
 #. Type: select
-#. Description
+#. Choices
 #: ../ddclient.templates:14001
-msgid "Selection method for updated names:"
+msgid "From list"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:14001
+msgid "Manually"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:14002
+msgid "Selection method for updated names:"
+msgstr "Välj metod för uppdatering av namn:"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
 "enter them manually."
 msgstr ""
+"Du måste välja vilka värdnamn som ska uppdateras av ddclient. Du kan välja "
+"från en lista (som hämtas från ditt DynDNS-konto) med värdnamn eller ange "
+"dem manuellt."
 
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:15001
 msgid "Host names to keep updated:"
-msgstr ""
+msgstr "Värdnamn som ska hållas uppdaterat/uppdaterade:"
 
 #. Type: multiselect
 #. Description
@@ -247,12 +265,14 @@ msgid ""
 "Please choose the one(s) for which ddclient should be used to keep IP "
 "address records up to date."
 msgstr ""
+"Listan med värdnamn som hanterav av ditt DynDNS-konto har hämtats. Välj den "
+"eller de som ddclient ska hålla IP-adressen uppdaterad för."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:16001
 msgid "Empty host list"
-msgstr ""
+msgstr "Tom värdlista"
 
 #. Type: error
 #. Description
@@ -261,6 +281,8 @@ msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
 msgstr ""
+"Listan med värdnamn som hanteras i ditt konto var tom när den hämtades från "
+"webbsidan för tjänsten som tillhandahåller dynamisk DNS."
 
 #. Type: error
 #. Description
@@ -269,6 +291,8 @@ msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
 msgstr ""
+"Antingen så har du angivit felaktiga inloggningsuppgifter eller så finns det "
+"inga värdnamn i inställningarna ännu."
 
 #. Type: error
 #. Description
@@ -277,6 +301,9 @@ msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
 msgstr ""
+"Kontrollera ditt konto för att säkerställa att det finns värdnamn att nyttja "
+"och kör sedan \"dpkg-reconfigure ddclient\" och ange dina "
+"inloggningsuppgifter på nytt."
 
 #~ msgid "www.dyndns.com"
 #~ msgstr "www.dyndns.com"
