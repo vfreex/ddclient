@@ -1,3 +1,11 @@
+ddclient (3.8.0-5) unstable; urgency=low
+
+  * debian/ddclient.init: Add $syslog to Required-Start/Stop dependencies
+    (closes: #541392).
+  * Apply finish translation update (closes: #543225).
+
+ -- Torsten Landschoff <torsten@debian.org>  Sun, 23 Aug 2009 16:34:55 +0200
+
 ddclient (3.8.0-4) unstable; urgency=low
 
   * Support translating the choices of the ddclient/fetchhosts debconf

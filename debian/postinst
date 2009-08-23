@@ -32,6 +32,32 @@ quote_backslashes() {
 #
 
 
+# Retrieve the list of DynDNS hosts of the user's account from the DynDNS
+# server and let the user select which hosts to update.
+retrieve_dyndns_hostlist() {
+  db_get ddclient/username	&& username="$RET"
+  db_get ddclient/password	&& password="$RET"
+
+  # FIXME: protect against wget not installed
+  hostslist=`wget http://$username:$password@update.dyndns.com/text/gethostlist -q -O - | awk -F \: '{print $2, $4}' | sed -e "N;s/ \n/,/g" | sed -e "s/,/, /g"`
+
+  # add the list to our multichoice template, then prompt the user
+  db_subst ddclient/hostslist choices $hostslist
+  db_input critical ddclient/hostslist || true
+  db_go
+
+  # set names using the host list to write it to the config file later
+  db_get ddclient/hostslist
+  hostslist=`echo "$RET" | sed -e "s/, /,/g"`
+  db_set ddclient/names "$hostslist"
+
+  # if the hostslist was blank, let the user know some possible reasons
+  if [ -z $hostslist ]; then
+    db_input high ddclient/blankhostslist
+    db_go
+  fi
+}
+
 case "$1" in
   configure)
 	
@@ -42,33 +68,11 @@ case "$1" in
   db_version 2.0 || { echo "ddclient.config: \
     need DebConf 2.0 or later"; exit 1; }
 
-  # if /etc/ddclient.conf does not exist:
   if [ ! -f /etc/ddclient.conf ]; then
   	# check if we should fetch the hostlist for a dyndns account
 	db_get ddclient/fetchhosts
 	if [ "$RET" = "From list" ]; then
-		# get the dyndns host list
-		db_get ddclient/username	&& username="$RET"
-		db_get ddclient/password	&& password="$RET"
-                # FIXME: factor this out into a function
-                # FIXME: protect against wget not installed
-		hostslist=`wget http://$username:$password@update.dyndns.com/text/gethostlist -q -O - | awk -F \: '{print $2, $4}' | sed -e "N;s/ \n/,/g" | sed -e "s/,/, /g"`
-		
-		# add the list to our multichoice template, then prompt the user
-		db_subst ddclient/hostslist choices $hostslist
-		db_input critical ddclient/hostslist || true
-		db_go
-	
-		# set names using the host list to write it to the config file later
-		db_get ddclient/hostslist
-		hostslist=`echo "$RET" | sed -e "s/, /,/g"`
-		db_set ddclient/names "$hostslist"
-
-		# if the hostslist was blank, let the user know some possible reasons
-		if [ -z $hostslist ]; then
-			db_input high ddclient/blankhostslist
-			db_go
-		fi
+	    retrieve_dyndns_hostlist
 	fi
 
     # get the values from the debconf database
