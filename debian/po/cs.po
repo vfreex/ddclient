@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2009-06-21 15:02+0200\n"
-"PO-Revision-Date: 2009-06-28 16:29+0200\n"
+"PO-Revision-Date: 2009-09-13 08:51+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-10n-czech@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -237,13 +237,13 @@ msgstr ""
 #. Choices
 #: ../ddclient.templates:14001
 msgid "From list"
-msgstr ""
+msgstr "Ze seznamu"
 
 #. Type: select
 #. Choices
 #: ../ddclient.templates:14001
 msgid "Manually"
-msgstr ""
+msgstr "Ručně"
 
 #. Type: select
 #. Description

@@ -1,10 +1,8 @@
 #! /bin/sh
-## postinst script for ddclient
-##
-## see: dh_installdeb(1)
-
 
 set -e
+
+#SCRIPTSCOMMON#
 
 # Usage: y=`quote_backslashes "$x"`
 # Quotes each backslash in $x with another backslash, outputs result.
@@ -12,25 +10,14 @@ quote_backslashes() {
   echo -n "$1" | sed 's,\\,\\\\,g'
 }
 
-
-## summary of how this script can be called:
-##        * <postinst> `configure' <most-recently-configured-version>
-##        * <old-postinst> `abort-upgrade' <new version>
-##        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
-##          <new-version>
-##        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
-##          <failed-install-package> <version> `removing'
-##          <conflicting-package> <version>
-## for details, see /usr/doc/packaging-manual/
-##
-## quoting from the policy:
-##     Any necessary prompting should almost always be confined to the
-##     post-installation script, and should be protected with a conditional
-##     so that unnecessary prompting doesn't happen if a package's
-##     installation fails and the `postinst' is called with `abort-upgrade',
-##     `abort-remove' or `abort-deconfigure'.
-#
-
+# Usage: hosts=`download_hostlist USER PASSWORD`
+# Retrieves the DynDNS hosts of given user
+download_hostlist() {
+  local username=$0 password=$1
+  # FIXME: protect against wget not installed
+  wget http://$username:$password@update.dyndns.com/text/gethostlist -q -O -\
+    | awk -F \: '{print $2, $4}' | sed -e "N;s/ \n/,/g" | sed -e "s/,/, /g"
+}
 
 # Retrieve the list of DynDNS hosts of the user's account from the DynDNS
 # server and let the user select which hosts to update.
@@ -38,8 +25,7 @@ retrieve_dyndns_hostlist() {
   db_get ddclient/username	&& username="$RET"
   db_get ddclient/password	&& password="$RET"
 
-  # FIXME: protect against wget not installed
-  hostslist=`wget http://$username:$password@update.dyndns.com/text/gethostlist -q -O - | awk -F \: '{print $2, $4}' | sed -e "N;s/ \n/,/g" | sed -e "s/,/, /g"`
+  hostslist=`download_hostlist $username $password`
 
   # add the list to our multichoice template, then prompt the user
   db_subst ddclient/hostslist choices $hostslist
@@ -59,14 +45,9 @@ retrieve_dyndns_hostlist() {
 }
 
 case "$1" in
-  configure)
+configure)
 	
-  # include debconf library
-  . /usr/share/debconf/confmodule
-  
-  # check if we use the right debconf version
-  db_version 2.0 || { echo "ddclient.config: \
-    need DebConf 2.0 or later"; exit 1; }
+  load_debconf2  
 
   if [ ! -f /etc/ddclient.conf ]; then
   	# check if we should fetch the hostlist for a dyndns account

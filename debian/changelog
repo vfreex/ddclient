@@ -1,3 +1,23 @@
+ddclient (3.8.0-6) unstable; urgency=low
+
+  * Fix pending l10n issues. Debconf translations:
+    + Japanese (Kenshi Muto).  Closes: #551084
+    + Slovak (Ivan Masár).  Closes: #551037
+    + Czech (Miroslav Kure).  Closes: #546409
+    + German (Helge Kreutzmann).  Closes: #537520
+    + Swedish (Martin Bagge).  Closes: #536807
+    + Russian (Yuri Kozlov).  Closes: #536564
+    + French (Christian Perrier).  Closes: #535436
+    + Finnish (Esko Arajärvi).  Closes: #551376
+    + Portuguese (Miguel Figueiredo).  Closes: #551493
+    + Brazilian Portuguese (Flamarion Jorge).  Closes: #551943
+    + Italian (Vincenzo Campanella). Closes: #553042
+  
+  * Introduce ddclient.scripts-common with common functions for 
+    postinst and config scripts.
+  
+ -- Torsten Landschoff <torsten@debian.org>  Mon, 02 Nov 2009 00:19:11 +0100
+
 ddclient (3.8.0-5) unstable; urgency=low
 
   * debian/ddclient.init: Add $syslog to Required-Start/Stop dependencies

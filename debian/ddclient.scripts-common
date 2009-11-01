@@ -1,0 +1,11 @@
+# -*- sh -*-
+# This file can be included with #SCRIPTSCOMMON#
+
+# Fire up debconf and ensure it is at least version 2.0
+load_debconf2() {
+   . /usr/share/debconf/confmodule
+   if ! db_version 2.0; then
+      echo >&2 "$0: need DebConf 2.0 or later"
+      exit 1
+   fi
+}

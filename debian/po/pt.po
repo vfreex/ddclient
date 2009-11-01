@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ddclient 3.6.7-2\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2009-06-21 15:02+0200\n"
-"PO-Revision-Date: 2009-02-16 07:46+0000\n"
+"PO-Revision-Date: 2009-10-18 16:58+0100\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgid ""
 "the server name."
 msgstr ""
 "Por favor escolha o serviço de DNS dinâmico que está a usar. Se o serviço "
-"que usa não está listado, escolha \"outro\" e ser-lhe-á perguntado pelo "
+"que utiliza não está listado, escolha \"outro\" e ser-lhe-á perguntado pelo "
 "protocolo e pelo nome do servidor."
 
 #. Type: string
@@ -52,8 +52,8 @@ msgid ""
 "Please enter the name of the server which is providing you with dynamic DNS "
 "service (example: members.dyndns.org)."
 msgstr ""
-"Introduza o nome do servidor que lhe disponibiliza o serviço de DNS dinâmico "
-"(exemplo: members.dyndns.org)."
+"Por favor introduza o nome do servidor que lhe disponibiliza o serviço de DNS "
+"dinâmico (exemplo: members.dyndns.org)."
 
 #. Type: select
 #. Description
@@ -75,7 +75,7 @@ msgstr ""
 #. Description
 #: ../ddclient.templates:5001
 msgid "DynDNS fully qualified domain names:"
-msgstr "Domínios DynDNS de nome qualificado:"
+msgstr "Nomes de domínio qualificados DynDNS:"
 
 #. Type: string
 #. Description
@@ -107,20 +107,21 @@ msgstr ""
 #. Description
 #: ../ddclient.templates:7001
 msgid "Password for dynamic DNS service:"
-msgstr "Senha para o serviço de DNS dinâmico:"
+msgstr "Palavra-passe para o serviço de DNS dinâmico:"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:7001
 msgid "Please enter the password to use with the dynamic DNS service."
 msgstr ""
-"Por favor introduza a senha que usa para se ligar ao serviço de DNS dinâmico."
+"Por favor introduza a palavra-passe que utiliza para se ligar ao serviço de "
+"DNS dinâmico."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
 msgid "Find public IP using checkip.dyndns.com?"
-msgstr ""
+msgstr "Procurar o IP público utilizando checkip.dyndns.com?"
 
 #. Type: boolean
 #. Description
@@ -130,6 +131,9 @@ msgid ""
 "machine via the DynDNS web interface.  This is recommended for machines that "
 "are using Network Address Translation."
 msgstr ""
+"Por favor escolha se o ddclient deve tentar encontrar o endereço IP desta "
+"máquina através do interface web do DynDNS.  Isto é recomendado para máquinas "
+"que estão a utilizar Network Address Translation."
 
 #. Type: string
 #. Description
@@ -160,7 +164,7 @@ msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
 "connection is established."
 msgstr ""
-"Deve activar esa opção se o ddclient deve ser corrido sempre que uma ligação "
+"Deve activar essa opção se o ddclient deve ser chamado sempre que uma ligação "
 "PPP for estabelecida."
 
 #. Type: boolean
@@ -176,8 +180,8 @@ msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
 msgstr ""
-"Por favor escolha se quer que o ddclient seja corrido em modo daemon quando "
-"se arranca o sistema."
+"Por favor escolha se quer que o ddclient corra em modo daemon no arranque do "
+"sistema."
 
 #. Type: string
 #. Description
@@ -221,27 +225,27 @@ msgid ""
 "If you have edited the configuration file manually, it won't be modified. If "
 "you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
 msgstr ""
-"Se editou manualmente o ficheiro de configuração, não será modificado. Se "
-"necessitar de um novo ficheiro de configuração, corra \"dpkg-reconfigure "
+"Se editou manualmente o ficheiro de configuração, este não será modificado. "
+"Se necessitar de um novo ficheiro de configuração, corra \"dpkg-reconfigure "
 "ddclient\"."
 
 #. Type: select
 #. Choices
 #: ../ddclient.templates:14001
 msgid "From list"
-msgstr ""
+msgstr "A partir da lista"
 
 #. Type: select
 #. Choices
 #: ../ddclient.templates:14001
 msgid "Manually"
-msgstr ""
+msgstr "Manualmente"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:14002
 msgid "Selection method for updated names:"
-msgstr ""
+msgstr "Método de escolha para para nomes actualizados:"
 
 #. Type: select
 #. Description
@@ -251,12 +255,15 @@ msgid ""
 "select host names to update from a list (taken from your DynDNS account) or "
 "enter them manually."
 msgstr ""
+"Terá de escolher quais os nomes das máquinas a actualizar utilizando o "
+"ddclient.  Pode escolher os nomes das máquinas a actualizar a partir de uma "
+"lista (tirada a partir da sua conta DynDNS) ou introduza-os manualmente."
 
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:15001
 msgid "Host names to keep updated:"
-msgstr ""
+msgstr "Nomes das máquinas a manter actualizadas:"
 
 #. Type: multiselect
 #. Description
@@ -266,12 +273,15 @@ msgid ""
 "Please choose the one(s) for which ddclient should be used to keep IP "
 "address records up to date."
 msgstr ""
+"Foi descarregada a lista de nomes de máquinas geridas através da sua conta "
+"DynDNS. Por favor escolha a(s) máquina(s) para a(s) qual(is) o ddclient irá "
+"ser usado para manter os registos de endereços IP actualizados."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:16001
 msgid "Empty host list"
-msgstr ""
+msgstr "Lista de máquinas vazia"
 
 #. Type: error
 #. Description
@@ -280,6 +290,8 @@ msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
 msgstr ""
+"A lista de nomes de máquinas gerida sob a sua conta estava vazia quando foi "
+"obtida a partir do site do serviço de DNS dinâmico."
 
 #. Type: error
 #. Description
@@ -288,6 +300,8 @@ msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
 msgstr ""
+"Pode ter fornecido um nome de utilizador ou palavra-passe incorrectos, ou a "
+"conta online poderá não estar configurada com nomes de máquinas."
 
 #. Type: error
 #. Description
@@ -296,6 +310,9 @@ msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
 msgstr ""
+"Por favor verifique a sua conta para se certificar que tem configurado nomes "
+"de máquinas, e depois corra \"dpkg-reconfigure ddclient\" para introduzir "
+"novamente o seu nome de utilizador e palavra-passe."
 
 #~ msgid "www.dyndns.com"
 #~ msgstr "www.dyndns.com"

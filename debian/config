@@ -12,10 +12,9 @@
 
 set -e
 
-. /usr/share/debconf/confmodule
-db_version 2.0 || { echo "ddclient.config: \
-  need DebConf 2.0 or later"; exit 1; }
+#SCRIPTSCOMMON#
 
+load_debconf2
 
 #----------------------------------------------------------------------------
 # read_old_config() - read the configuration from the old config file

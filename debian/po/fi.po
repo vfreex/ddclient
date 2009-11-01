@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2009-06-21 15:02+0200\n"
-"PO-Revision-Date: 2009-08-23 13:45+0300\n"
+"PO-Revision-Date: 2009-10-17 23:14+0300\n"
 "Last-Translator: Esko Arajärvi <edu@iki.fi>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Finnish\n"
 "X-Poedit-Country: FINLAND\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Type: select
@@ -119,7 +119,7 @@ msgstr ""
 #. Description
 #: ../ddclient.templates:8001
 msgid "Find public IP using checkip.dyndns.com?"
-msgstr ""
+msgstr "Etsitäänkö julkinen IP käyttäen palvelua checkip.dyndns.com?"
 
 #. Type: boolean
 #. Description
@@ -129,6 +129,9 @@ msgid ""
 "machine via the DynDNS web interface.  This is recommended for machines that "
 "are using Network Address Translation."
 msgstr ""
+"Valitse tulisiko ddclientin yrittää selvittää koneen IP-osoite DynDNS:n "
+"verkkokäyttöliittymän avulla. Tämän valitseminen on suositeltavaa koneilla, "
+"jotka käyttävät verkko-osoitteiden muunnosta (NAT)."
 
 #. Type: string
 #. Description
@@ -226,19 +229,19 @@ msgstr ""
 #. Choices
 #: ../ddclient.templates:14001
 msgid "From list"
-msgstr ""
+msgstr "Listalta"
 
 #. Type: select
 #. Choices
 #: ../ddclient.templates:14001
 msgid "Manually"
-msgstr ""
+msgstr "Käsin"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:14002
 msgid "Selection method for updated names:"
-msgstr ""
+msgstr "Valitse nimien päivitystapa:"
 
 #. Type: select
 #. Description
@@ -248,12 +251,15 @@ msgid ""
 "select host names to update from a list (taken from your DynDNS account) or "
 "enter them manually."
 msgstr ""
+"Sinun täytyy valita mitkä verkkonimet päivitetään ddclientin avulla. Voit "
+"valita verkkonimet listalta (joka haetaan DynDNS-tililtä) tai syöttää ne "
+"käsin."
 
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:15001
 msgid "Host names to keep updated:"
-msgstr ""
+msgstr "Päivitettävät verkkonimet:"
 
 #. Type: multiselect
 #. Description
@@ -263,12 +269,14 @@ msgid ""
 "Please choose the one(s) for which ddclient should be used to keep IP "
 "address records up to date."
 msgstr ""
+"DynDNS-tililtä haettiin lista hallinnoitavista verkkonimistä. Valitse ne, "
+"joiden IP-osoitteet ddclientin tulisi pitää ajan tasalla."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:16001
 msgid "Empty host list"
-msgstr ""
+msgstr "Tyhjä verkkonimilista"
 
 #. Type: error
 #. Description
@@ -277,6 +285,8 @@ msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
 msgstr ""
+"DynDNS-verkkosivulta haettu lista tilisi kautta hallinnoitavista "
+"verkkonimistä oli tyhjä."
 
 #. Type: error
 #. Description
@@ -285,6 +295,8 @@ msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
 msgstr ""
+"Olet saattanut antaa väärän käyttäjätunnuksen tai salasanan, tai tililläsi "
+"ei ehkä ole yhtään verkkonimeä asetettuna."
 
 #. Type: error
 #. Description
@@ -293,3 +305,6 @@ msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
 msgstr ""
+"Tarkista tili varmistaaksesi, että verkkonimiä on asetettuina ja aja sen "
+"jälkeen komento ”dpkg-reconfigure ddclient” antaaksesi käyttäjätunnuksen, "
+"ja salasanan uudelleen."

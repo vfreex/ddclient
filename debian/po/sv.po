@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2009-06-21 15:02+0200\n"
-"PO-Revision-Date: 2009-06-22 21:48+0100\n"
+"PO-Revision-Date: 2009-07-13 19:47+0100\n"
 "Last-Translator: Martin Bagge <brother@bsnet.se>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -225,13 +225,13 @@ msgstr ""
 #. Choices
 #: ../ddclient.templates:14001
 msgid "From list"
-msgstr ""
+msgstr "Från lista"
 
 #. Type: select
 #. Choices
 #: ../ddclient.templates:14001
 msgid "Manually"
-msgstr ""
+msgstr "Manuellt"
 
 #. Type: select
 #. Description
