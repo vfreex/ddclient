@@ -39,7 +39,7 @@ retrieve_dyndns_hostlist() {
 
   # if the hostslist was blank, let the user know some possible reasons
   if [ -z $hostslist ]; then
-    db_input high ddclient/blankhostslist
+    db_input high ddclient/blankhostslist || true
     db_go
   fi
 }
@@ -47,7 +47,7 @@ retrieve_dyndns_hostlist() {
 case "$1" in
 configure)
 	
-  load_debconf2  
+  load_debconf2 "$@"
 
   if [ ! -f /etc/ddclient.conf ]; then
   	# check if we should fetch the hostlist for a dyndns account

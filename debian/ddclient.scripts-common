@@ -2,6 +2,9 @@
 # This file can be included with #SCRIPTSCOMMON#
 
 # Fire up debconf and ensure it is at least version 2.0
+# Usage: load_debconf2 "$@"  - needed as debconf will exec the current script,
+# passing the current shell parameters. So we must lift these into the shell
+# function. Missing this caused bug #555151.
 load_debconf2() {
    . /usr/share/debconf/confmodule
    if ! db_version 2.0; then

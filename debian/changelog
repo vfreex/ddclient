@@ -1,3 +1,16 @@
+ddclient (3.8.0-7) unstable; urgency=low
+
+  [ Stefano Zacchiroli ]
+  * postinst: ignore debconf errors about blankhostslist, thus enabling
+    installation with non-interactive mode. Patch by Jonathan Niehof.
+    (Closes: #533888)
+  
+  [ Torsten Landschoff ]
+  * debian/{postinst,config}: Load debconf correctly, passing the same shell
+    parameters again (closes: #555151). Kudos to Jonathan Niehof for finding.
+
+ -- Torsten Landschoff <torsten@debian.org>  Tue, 24 Nov 2009 17:45:53 +0100
+
 ddclient (3.8.0-6) unstable; urgency=low
 
   * Fix pending l10n issues. Debconf translations:

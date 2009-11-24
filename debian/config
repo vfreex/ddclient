@@ -14,7 +14,7 @@ set -e
 
 #SCRIPTSCOMMON#
 
-load_debconf2
+load_debconf2 "$@"
 
 #----------------------------------------------------------------------------
 # read_old_config() - read the configuration from the old config file
