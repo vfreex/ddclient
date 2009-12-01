@@ -1,3 +1,12 @@
+ddclient (3.8.0-8) unstable; urgency=low
+
+  * Convert to new source format "3.0 (quilt)".
+  * debian/control: Bump Standards-Version (no changes required). 
+  * ddclient: Do not leak the cache content into the global configuration.
+    Thanks to Ingo Schwarze for the patch (closes: #527848).
+
+ -- Torsten Landschoff <torsten@debian.org>  Tue, 01 Dec 2009 08:05:19 +0100
+
 ddclient (3.8.0-7) unstable; urgency=low
 
   [ Stefano Zacchiroli ]

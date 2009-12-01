@@ -5,28 +5,19 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-export QUILT_PATCHES=debian/patches
-
 # set installation directory
 DESTDIR=$(shell pwd)/debian/ddclient
 
 build: build-stamp
-build-stamp:	apply-patches
+build-stamp:
 	dh_testdir
 	touch build-stamp
 
-apply-patches:
-	-quilt push -a
-
-unapply-patches:
-	-quilt pop -a
-
-clean:	unapply-patches
+clean:
 	dh_testdir
 	dh_testroot
 	debconf-updatepo
 	rm -f build-stamp
-	rm -Rf .pc		# Remove quilt metadata
 
 	# Add here commands to clean up after the build process.
 	# Nothing is created or destroyed except the debian stuff
