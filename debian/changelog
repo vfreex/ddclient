@@ -1,3 +1,12 @@
+ddclient (3.8.0-9) unstable; urgency=low
+
+  * Update Catalan debconf translation (closes: #563836). Thanks to
+    Jordà Polo.
+  * Move all debconf interaction into config script to support
+    dpkg-preconfigure.
+
+ -- Torsten Landschoff <torsten@debian.org>  Sun, 10 Jan 2010 22:36:24 +0100
+
 ddclient (3.8.0-8) unstable; urgency=low
 
   * Convert to new source format "3.0 (quilt)".

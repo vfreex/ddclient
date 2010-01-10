@@ -119,8 +119,13 @@ create_new_config()
 	db_input critical ddclient/interface || true
   fi
   db_get ddclient/fetchhosts
-  if [ "$RET" = "Manually" ]; then
-  	db_input critical ddclient/names || true
+
+  # check if we should fetch the hostlist for a dyndns account
+  db_get ddclient/fetchhosts
+  if [ "$RET" = "From list" ]; then
+      retrieve_dyndns_hostlist
+  else
+      db_input critical ddclient/names || true
   fi
   db_go
 
