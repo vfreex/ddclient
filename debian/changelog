@@ -1,3 +1,10 @@
+ddclient (3.8.0-10) unstable; urgency=low
+
+  * Use correct server for zoneedit (closes: #550799). Kudos to Ezra Reeves
+    for forwarding the Ubuntu patch.
+
+ -- Torsten Landschoff <torsten@debian.org>  Sun, 07 Feb 2010 21:39:43 +0100
+
 ddclient (3.8.0-9) unstable; urgency=low
 
   * Update Catalan debconf translation (closes: #563836). Thanks to

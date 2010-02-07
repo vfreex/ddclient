@@ -76,7 +76,7 @@ create_new_config()
       protocol=dslreports1
       ;;
     www.zoneedit.com)
-      server=www.zoneedit.com
+      server=dynamic.zoneedit.com
       protocol=zoneedit1
       ;;
   esac
