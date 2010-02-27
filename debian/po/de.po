@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient 3.8.0-4\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-06-21 15:02+0200\n"
+"POT-Creation-Date: 2010-03-28 18:52+0200\n"
 "PO-Revision-Date: 2009-07-19 09:04+0200\n"
 "Last-Translator:  Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
@@ -36,9 +36,8 @@ msgid ""
 "the server name."
 msgstr ""
 "Bitte wählen Sie nun den Betreiber des dynamischen DNS-Dienstes, den Sie "
-"benutzen möchten. Falls Ihr Betreiber hier nicht aufgeführt ist, wählen "
-"Sie bitte »anderer« und Sie werden nach dem Protokoll und Servernamen "
-"gefragt."
+"benutzen möchten. Falls Ihr Betreiber hier nicht aufgeführt ist, wählen Sie "
+"bitte »anderer« und Sie werden nach dem Protokoll und Servernamen gefragt."
 
 #. Type: string
 #. Description
@@ -86,9 +85,9 @@ msgid ""
 "(for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns."
 "org,myname2.dyndns.org\" for two hosts)."
 msgstr ""
-"Bitte geben Sie die Liste der vollständigen Domainnamen für den/die "
-"lokalen Rechner ein (z.B.: »meinname.dyndns.org« bei nur einem Rechner oder "
-"für zwei Rechner »meinname1.dyndns.org,meinname2.dyndns.org«)."
+"Bitte geben Sie die Liste der vollständigen Domainnamen für den/die lokalen "
+"Rechner ein (z.B.: »meinname.dyndns.org« bei nur einem Rechner oder für zwei "
+"Rechner »meinname1.dyndns.org,meinname2.dyndns.org«)."
 
 #. Type: string
 #. Description
@@ -161,9 +160,14 @@ msgstr "Ddclient nach Aufbau der PPP-Verbindung ausführen?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You should enable this option if ddclient should be run every time a PPP "
+#| "connection is established."
 msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
-"connection is established."
+"connection is established. Note: This mode is not compatible with daemon "
+"mode."
 msgstr ""
 "Sie sollten diese Option aktivieren, falls ddclient nach jedem Aufbau einer "
 "PPP-Verbindung ausgeführt werden soll."
@@ -198,10 +202,9 @@ msgid ""
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
 "\") or in days (e.g. \"1d\")."
 msgstr ""
-"Bitte wählen Sie die Wartezeit zwischen Schnittstellen-"
-"Adressüberprüfungen aus. Werte können in Sekunden (z.B.: »5s«), Minuten "
-"(z.B.: »3m«), Stunden (z.B.: »7h«) oder Tagen (z.B.: »1d«) angegeben "
-"werden."
+"Bitte wählen Sie die Wartezeit zwischen Schnittstellen-Adressüberprüfungen "
+"aus. Werte können in Sekunden (z.B.: »5s«), Minuten (z.B.: »3m«), Stunden (z."
+"B.: »7h«) oder Tagen (z.B.: »1d«) angegeben werden."
 
 #. Type: error
 #. Description

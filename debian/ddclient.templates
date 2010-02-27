@@ -68,6 +68,7 @@ Default: false
 _Description: Run ddclient on PPP connect?
  You should enable this option if ddclient should be run every time a PPP connection is
  established.
+ Note: This mode is not compatible with daemon mode.
 
 Template: ddclient/run_daemon
 Type: boolean

@@ -152,9 +152,18 @@ create_new_config()
 
   # maybe ask the user to override the default values
   db_input medium ddclient/run_ipup || true
-  db_input medium ddclient/run_daemon || true
   db_go
-
+  
+  # if using ipup dont use daemon, bug #462207
+  db_get ddclient/run_ipup
+  if [ "$RET" = "true" ]; then
+      db_set ddclient/run_daemon false
+  else
+      db_input medium ddclient/run_daemon || true
+      db_go
+  fi
+  
+ 
   # if ddclient should run in daemon mode we ask for the update interval
   db_get ddclient/run_daemon
   if [ "$RET" = "true" ]; then

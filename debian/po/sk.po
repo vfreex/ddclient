@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-06-21 15:02+0200\n"
+"POT-Creation-Date: 2010-03-28 18:52+0200\n"
 "PO-Revision-Date: 2009-10-15 09:16+0100\n"
 "Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -30,8 +30,14 @@ msgstr "Poskytovateľ služby dynamického DNS:"
 #. Type: select
 #. Description
 #: ../ddclient.templates:2002
-msgid "Please select the dynamic DNS service you are using. If the service you use is not listed, choose \"other\" and you will be asked for the protocol and the server name."
-msgstr "Prosím, vyberte, ktorú službu dynamického DNS používate. Ak vaša služba nie je uvedená, vyberte „iný“ a budete vyzvaný na zadanie protokolu a názvu servera."
+msgid ""
+"Please select the dynamic DNS service you are using. If the service you use "
+"is not listed, choose \"other\" and you will be asked for the protocol and "
+"the server name."
+msgstr ""
+"Prosím, vyberte, ktorú službu dynamického DNS používate. Ak vaša služba nie "
+"je uvedená, vyberte „iný“ a budete vyzvaný na zadanie protokolu a názvu "
+"servera."
 
 #. Type: string
 #. Description
@@ -42,8 +48,12 @@ msgstr "Server dynamického DNS:"
 #. Type: string
 #. Description
 #: ../ddclient.templates:3001
-msgid "Please enter the name of the server which is providing you with dynamic DNS service (example: members.dyndns.org)."
-msgstr "Prosím, zadajte názov servera, ktorý vám poskytuje služby dynamického DNS (napríklad: members.dyndns.org)."
+msgid ""
+"Please enter the name of the server which is providing you with dynamic DNS "
+"service (example: members.dyndns.org)."
+msgstr ""
+"Prosím, zadajte názov servera, ktorý vám poskytuje služby dynamického DNS "
+"(napríklad: members.dyndns.org)."
 
 #. Type: select
 #. Description
@@ -54,8 +64,12 @@ msgstr "Protokol aktualizácie dynamického DNS:"
 #. Type: select
 #. Description
 #: ../ddclient.templates:4001
-msgid "Please select the dynamic DNS update protocol used by your dynamic DNS service provider."
-msgstr "Prosím, vyberte protokol aktualizácie dynamického DNS, ktorý používa váš poskytovateľ služby dynamického DNS:"
+msgid ""
+"Please select the dynamic DNS update protocol used by your dynamic DNS "
+"service provider."
+msgstr ""
+"Prosím, vyberte protokol aktualizácie dynamického DNS, ktorý používa váš "
+"poskytovateľ služby dynamického DNS:"
 
 #. Type: string
 #. Description
@@ -66,8 +80,14 @@ msgstr "Plne kvalifikované doménové názvy (FQDN) DynDNS:"
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
-msgid "Please enter the list of fully qualified domain names for the local host(s) (for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns.org,myname2.dyndns.org\" for two hosts)."
-msgstr "Prosím, zadajte zoznam plne kvalifikovaných názvov domén lokálnych hostiteľov (napr. „mojemeno.dyndns.org“ ak je to len jeden hostiteľ alebo „mojemeno1.dyndns.org,mojemeno2.dyndns.org“ ak sú to dvaja hostitelia)."
+msgid ""
+"Please enter the list of fully qualified domain names for the local host(s) "
+"(for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns."
+"org,myname2.dyndns.org\" for two hosts)."
+msgstr ""
+"Prosím, zadajte zoznam plne kvalifikovaných názvov domén lokálnych "
+"hostiteľov (napr. „mojemeno.dyndns.org“ ak je to len jeden hostiteľ alebo "
+"„mojemeno1.dyndns.org,mojemeno2.dyndns.org“ ak sú to dvaja hostitelia)."
 
 #. Type: string
 #. Description
@@ -79,7 +99,9 @@ msgstr "Používateľské meno služby dynamického DNS:"
 #. Description
 #: ../ddclient.templates:6001
 msgid "Please enter the username to use with the dynamic DNS service."
-msgstr "Prosím, zadajte používateľské meno, ktoré sa má použiť pri službe dynamického DNS:"
+msgstr ""
+"Prosím, zadajte používateľské meno, ktoré sa má použiť pri službe "
+"dynamického DNS:"
 
 #. Type: password
 #. Description
@@ -102,8 +124,14 @@ msgstr "Vyhľadať verejnú IP pomocou checkip.dyndns.com?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:8001
-msgid "Please choose whether ddclient should try to find the IP address of this machine via the DynDNS web interface.  This is recommended for machines that are using Network Address Translation."
-msgstr "Zvoľte prosím, či sa ddclient má pokúšať vyhľadať IP adresu tohto počítača prostredníctvom webového rozhrania DynDNS. Toto sa odporúča pre počítače, ktoré používajú NAT (Network Address Translation)."
+msgid ""
+"Please choose whether ddclient should try to find the IP address of this "
+"machine via the DynDNS web interface.  This is recommended for machines that "
+"are using Network Address Translation."
+msgstr ""
+"Zvoľte prosím, či sa ddclient má pokúšať vyhľadať IP adresu tohto počítača "
+"prostredníctvom webového rozhrania DynDNS. Toto sa odporúča pre počítače, "
+"ktoré používajú NAT (Network Address Translation)."
 
 #. Type: string
 #. Description
@@ -114,8 +142,12 @@ msgstr "Sieťové rozhranie pre službu dynamického DNS:"
 #. Type: string
 #. Description
 #: ../ddclient.templates:9001
-msgid "Please enter the name of the network interface (eth0/wlan0/ppp0/...) to use for dynamic DNS service."
-msgstr "Prosím, zadajte názov sieťového rozhrania (eth0/wlan0/ppp0/...), ktoré sa má použiť pri službe dynamického DNS."
+msgid ""
+"Please enter the name of the network interface (eth0/wlan0/ppp0/...) to use "
+"for dynamic DNS service."
+msgstr ""
+"Prosím, zadajte názov sieťového rozhrania (eth0/wlan0/ppp0/...), ktoré sa má "
+"použiť pri službe dynamického DNS."
 
 #. Type: boolean
 #. Description
@@ -126,8 +158,17 @@ msgstr "Spúšťať ddclient počas pripojenia PPP?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:10001
-msgid "You should enable this option if ddclient should be run every time a PPP connection is established."
-msgstr "Túto voľbu by ste mali zapnúť aj sa má ddclient spúšťať pri každom nadviazaní spojenia PPP."
+#, fuzzy
+#| msgid ""
+#| "You should enable this option if ddclient should be run every time a PPP "
+#| "connection is established."
+msgid ""
+"You should enable this option if ddclient should be run every time a PPP "
+"connection is established. Note: This mode is not compatible with daemon "
+"mode."
+msgstr ""
+"Túto voľbu by ste mali zapnúť aj sa má ddclient spúšťať pri každom "
+"nadviazaní spojenia PPP."
 
 #. Type: boolean
 #. Description
@@ -138,8 +179,12 @@ msgstr "Spúšťať ddclient ako démon?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:11001
-msgid "Please choose whether you want ddclient to be run in daemon mode on system startup."
-msgstr "Vyberte prosím, či chcete aby sa ddclient spúšťal v režime démon alebo pri štarte systému."
+msgid ""
+"Please choose whether you want ddclient to be run in daemon mode on system "
+"startup."
+msgstr ""
+"Vyberte prosím, či chcete aby sa ddclient spúšťal v režime démon alebo pri "
+"štarte systému."
 
 #. Type: string
 #. Description
@@ -150,8 +195,14 @@ msgstr "Interval medzi spusteniami programu ddclient:"
 #. Type: string
 #. Description
 #: ../ddclient.templates:12001
-msgid "Please choose the delay between interface address checks. Values may be given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h\") or in days (e.g. \"1d\")."
-msgstr "Prosím, vyberte interval medzi kontrolami adresy rozhrania. Hodnoty možno zadať v sekundách (napr. „5s“), v minútach (napr. „3m“), v hodinách (napr. „7h“) alebo v dňoch (napr. „1d“)."
+msgid ""
+"Please choose the delay between interface address checks. Values may be "
+"given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
+"\") or in days (e.g. \"1d\")."
+msgstr ""
+"Prosím, vyberte interval medzi kontrolami adresy rozhrania. Hodnoty možno "
+"zadať v sekundách (napr. „5s“), v minútach (napr. „3m“), v hodinách (napr. "
+"„7h“) alebo v dňoch (napr. „1d“)."
 
 #. Type: error
 #. Description
@@ -162,14 +213,22 @@ msgstr "Zmenený konfiguračný súbor"
 #. Type: error
 #. Description
 #: ../ddclient.templates:13001
-msgid "The config file /etc/ddclient.conf on your system does not consist of three entries. The automatic configuration utility cannot handle this situation."
-msgstr "Konfiguračný súbor /etc/ddclient.conf vášho systému neobsahuje tri položky. Automatický konfiguračný nástroj nedokáže v tejto situácii pracovať."
+msgid ""
+"The config file /etc/ddclient.conf on your system does not consist of three "
+"entries. The automatic configuration utility cannot handle this situation."
+msgstr ""
+"Konfiguračný súbor /etc/ddclient.conf vášho systému neobsahuje tri položky. "
+"Automatický konfiguračný nástroj nedokáže v tejto situácii pracovať."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:13001
-msgid "If you have edited the configuration file manually, it won't be modified. If you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
-msgstr "Ak ste upravili konfiguračný súbor ručne, nezmení sa. Ak chcete nový konfiguračný súbor, spustite „dpkg-reconfigure ddclient“."
+msgid ""
+"If you have edited the configuration file manually, it won't be modified. If "
+"you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
+msgstr ""
+"Ak ste upravili konfiguračný súbor ručne, nezmení sa. Ak chcete nový "
+"konfiguračný súbor, spustite „dpkg-reconfigure ddclient“."
 
 #. Type: select
 #. Choices
@@ -192,8 +251,14 @@ msgstr "Vyberte metódu aktualizovaných názvov:"
 #. Type: select
 #. Description
 #: ../ddclient.templates:14002
-msgid "You'll have to select which host names to update using ddclient.  You can select host names to update from a list (taken from your DynDNS account) or enter them manually."
-msgstr "Budete musieť vybrať, ktoré názvy počítačov sa majú aktualizovať pomocou ddclient. Môžete vybrať názvy počítačov zo zoznamu (zoznam pochádza z vášho účtu DynDNS) alebo ich zadať ručne."
+msgid ""
+"You'll have to select which host names to update using ddclient.  You can "
+"select host names to update from a list (taken from your DynDNS account) or "
+"enter them manually."
+msgstr ""
+"Budete musieť vybrať, ktoré názvy počítačov sa majú aktualizovať pomocou "
+"ddclient. Môžete vybrať názvy počítačov zo zoznamu (zoznam pochádza z vášho "
+"účtu DynDNS) alebo ich zadať ručne."
 
 #. Type: multiselect
 #. Description
@@ -204,8 +269,14 @@ msgstr "Ktoré názvy počítačov udržiavať aktuálne:"
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:15001
-msgid "The list of host names managed via your DynDNS account has been downloaded. Please choose the one(s) for which ddclient should be used to keep IP address records up to date."
-msgstr "Bol stiahnutý zoznam názvov počítačov spravovaných pomocou vášho účtu DynDNS. Vyberte si prosím, pre ktoré má ddclient udržiavať aktualizované záznamy IP adresy."
+msgid ""
+"The list of host names managed via your DynDNS account has been downloaded. "
+"Please choose the one(s) for which ddclient should be used to keep IP "
+"address records up to date."
+msgstr ""
+"Bol stiahnutý zoznam názvov počítačov spravovaných pomocou vášho účtu "
+"DynDNS. Vyberte si prosím, pre ktoré má ddclient udržiavať aktualizované "
+"záznamy IP adresy."
 
 #. Type: error
 #. Description
@@ -216,18 +287,30 @@ msgstr "Prázdny zoznam počítačov"
 #. Type: error
 #. Description
 #: ../ddclient.templates:16001
-msgid "The list of host names managed under your account is empty when retrieved from the dynamic DNS service website."
-msgstr "Zoznam názvov počítačov stiahnutých z webstránky dynamického DNS spravovaných prostredníctvom vášho účtu bol prázdny."
+msgid ""
+"The list of host names managed under your account is empty when retrieved "
+"from the dynamic DNS service website."
+msgstr ""
+"Zoznam názvov počítačov stiahnutých z webstránky dynamického DNS "
+"spravovaných prostredníctvom vášho účtu bol prázdny."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:16001
-msgid "You may have provided an incorrect username or password, or the online account may have no host names configured."
-msgstr "Možno ste zadali nesprávne prihlasovacie meno alebo heslo alebo na účte online nie sú nakonfigurované žiadne názvy počítačov."
+msgid ""
+"You may have provided an incorrect username or password, or the online "
+"account may have no host names configured."
+msgstr ""
+"Možno ste zadali nesprávne prihlasovacie meno alebo heslo alebo na účte "
+"online nie sú nakonfigurované žiadne názvy počítačov."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:16001
-msgid "Please check your account to be sure you have host names configured, then run \"dpkg-reconfigure ddclient\" to input your username and password again."
-msgstr "Skontrolujte prosím  svoj účet, aby ste sa uistili, že máte nastavené názvy počítačov a potom spustite „dpkg-reconfigure ddclient“ a znova zadajte svoje používateľské meno a heslo."
-
+msgid ""
+"Please check your account to be sure you have host names configured, then "
+"run \"dpkg-reconfigure ddclient\" to input your username and password again."
+msgstr ""
+"Skontrolujte prosím  svoj účet, aby ste sa uistili, že máte nastavené názvy "
+"počítačov a potom spustite „dpkg-reconfigure ddclient“ a znova zadajte svoje "
+"používateľské meno a heslo."

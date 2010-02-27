@@ -60,10 +60,11 @@ EOF
 # /etc/default/ddclient
 
 # Set to "true" if ddclient should be run every time a new ppp connection is 
-# established. This might be useful, if you are using dial-on-demand
+# established. This might be useful, if you are using dial-on-demand.
 run_ipup="$run_ipup"
 
 # Set to "true" if ddclient should run in daemon mode
+# If this is changed to true, run_ipup must be set to false.
 run_daemon="$run_daemon"
 
 # Set the time interval between the updates of the dynamic DNS name in seconds.

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient 3.8.0-4\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-06-21 15:02+0200\n"
+"POT-Creation-Date: 2010-03-28 18:52+0200\n"
 "PO-Revision-Date: 2009-07-11 11:18+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -16,7 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: select
 #. Choices
@@ -101,7 +102,8 @@ msgstr "Имя пользователя в службе динамическог
 #. Description
 #: ../ddclient.templates:6001
 msgid "Please enter the username to use with the dynamic DNS service."
-msgstr "Введите имя пользователя, используемого для входа в службу динамического DNS."
+msgstr ""
+"Введите имя пользователя, используемого для входа в службу динамического DNS."
 
 #. Type: password
 #. Description
@@ -158,9 +160,14 @@ msgstr "Запускать ddclient при установлении соедин
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You should enable this option if ddclient should be run every time a PPP "
+#| "connection is established."
 msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
-"connection is established."
+"connection is established. Note: This mode is not compatible with daemon "
+"mode."
 msgstr ""
 "Ответьте утвердительно, если ddclient должен запускаться всякий раз при "
 "установлении подключения через PPP."
@@ -310,4 +317,3 @@ msgstr ""
 "Проверьте, что в вашей учётной записи настроены имена хостов, а затем "
 "запустите \"dpkg-reconfigure ddclient\", чтобы ввести имя и пароль к службе "
 "ещё раз."
-

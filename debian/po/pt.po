@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient 3.6.7-2\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-06-21 15:02+0200\n"
+"POT-Creation-Date: 2010-03-28 18:52+0200\n"
 "PO-Revision-Date: 2009-10-18 16:58+0100\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -52,8 +52,8 @@ msgid ""
 "Please enter the name of the server which is providing you with dynamic DNS "
 "service (example: members.dyndns.org)."
 msgstr ""
-"Por favor introduza o nome do servidor que lhe disponibiliza o serviço de DNS "
-"dinâmico (exemplo: members.dyndns.org)."
+"Por favor introduza o nome do servidor que lhe disponibiliza o serviço de "
+"DNS dinâmico (exemplo: members.dyndns.org)."
 
 #. Type: select
 #. Description
@@ -132,8 +132,8 @@ msgid ""
 "are using Network Address Translation."
 msgstr ""
 "Por favor escolha se o ddclient deve tentar encontrar o endereço IP desta "
-"máquina através do interface web do DynDNS.  Isto é recomendado para máquinas "
-"que estão a utilizar Network Address Translation."
+"máquina através do interface web do DynDNS.  Isto é recomendado para "
+"máquinas que estão a utilizar Network Address Translation."
 
 #. Type: string
 #. Description
@@ -160,12 +160,17 @@ msgstr "Correr o ddclient quando se liga o PPP?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You should enable this option if ddclient should be run every time a PPP "
+#| "connection is established."
 msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
-"connection is established."
+"connection is established. Note: This mode is not compatible with daemon "
+"mode."
 msgstr ""
-"Deve activar essa opção se o ddclient deve ser chamado sempre que uma ligação "
-"PPP for estabelecida."
+"Deve activar essa opção se o ddclient deve ser chamado sempre que uma "
+"ligação PPP for estabelecida."
 
 #. Type: boolean
 #. Description

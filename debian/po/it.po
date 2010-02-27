@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient 3.8.0-5.1\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2009-06-21 15:02+0200\n"
+"POT-Creation-Date: 2010-03-28 18:52+0200\n"
 "PO-Revision-Date: 2009-10-28 19:39+0100\n"
 "Last-Translator: Vincenzo Campanella <vinz65@gmail.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -130,7 +130,8 @@ msgid ""
 msgstr ""
 "Scegliere se si desidera che ddclient provi a trovare l'indirizzo IP "
 "pubblico di questa macchina tramite l'interfaccia web di DynDNS. Questo è "
-"raccomandato per macchine che utilizzano il NAT (Network Address Translation)."
+"raccomandato per macchine che utilizzano il NAT (Network Address "
+"Translation)."
 
 #. Type: string
 #. Description
@@ -157,9 +158,14 @@ msgstr "Eseguire ddclient al momento della connessione PPP?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:10001
+#, fuzzy
+#| msgid ""
+#| "You should enable this option if ddclient should be run every time a PPP "
+#| "connection is established."
 msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
-"connection is established."
+"connection is established. Note: This mode is not compatible with daemon "
+"mode."
 msgstr ""
 "Abilitare questa opzione se ddclient deve essere eseguito ogni volta che "
 "viene stabilita una connessione PPP."
@@ -252,9 +258,9 @@ msgid ""
 "select host names to update from a list (taken from your DynDNS account) or "
 "enter them manually."
 msgstr ""
-"È necessario selezionare quali nomi di host sono da aggiornare usando ddclient. "
-"È possibile selezionare nomi di host da aggiornare da un elenco (prelevato dal "
-"proprio account DynDNS o inserirli manualmente."
+"È necessario selezionare quali nomi di host sono da aggiornare usando "
+"ddclient. È possibile selezionare nomi di host da aggiornare da un elenco "
+"(prelevato dal proprio account DynDNS o inserirli manualmente."
 
 #. Type: multiselect
 #. Description
@@ -270,9 +276,9 @@ msgid ""
 "Please choose the one(s) for which ddclient should be used to keep IP "
 "address records up to date."
 msgstr ""
-"L'elenco dei nomi degli host gestiti tramite l'account DynDNS è stato scaricato. "
-"Scegliere gli host dei quali ddclient deve mantenere aggiornati gli indirizzi "
-"IP."
+"L'elenco dei nomi degli host gestiti tramite l'account DynDNS è stato "
+"scaricato. Scegliere gli host dei quali ddclient deve mantenere aggiornati "
+"gli indirizzi IP."
 
 #. Type: error
 #. Description
@@ -297,8 +303,9 @@ msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
 msgstr ""
-"È possibile che si siano fornite credenziali d'accesso (nome utente o password) "
-"errati, oppure che l'account non abbia alcun nome di host configurato."
+"È possibile che si siano fornite credenziali d'accesso (nome utente o "
+"password) errati, oppure che l'account non abbia alcun nome di host "
+"configurato."
 
 #. Type: error
 #. Description

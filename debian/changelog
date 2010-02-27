@@ -1,3 +1,16 @@
+ddclient (3.8.0-11) unstable; urgency=low
+
+  [ Torsten Landschoff ]
+  * debian/control: Move the Vcs repository to collab-maint.
+  * Applied patch by Ezra Reeves to fix PPP and daemon mode incompatibility
+    (closes: #462207). Originally for Ubuntu (LP: #152875).
+
+  [ Marco Rodrigues ]
+  * debian/control:
+    + Bump Standards-Version to 3.8.4 (no changes).
+
+ -- Torsten Landschoff <torsten@debian.org>  Sat, 27 Feb 2010 13:09:36 +0100
+
 ddclient (3.8.0-10) unstable; urgency=low
 
   * Use correct server for zoneedit (closes: #550799). Kudos to Ezra Reeves
