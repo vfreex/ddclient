@@ -1,15 +1,16 @@
 # Vietnamese Translation for ddclient.
-# Copyright © 2009 Free Software Foundation, Inc.
-# Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
+# Copyright © 2010 Free Software Foundation, Inc.
+# Clytie Siddall <clytie@riverland.net.au>, 2005-2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ddclient 3.7.3-6\n"
+"Project-Id-Version: ddclient 3.8.0-5.1\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2010-03-28 18:52+0200\n"
-"PO-Revision-Date: 2009-01-30 23:03+1030\n"
+"PO-Revision-Date: 2010-03-07 20:47+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -117,7 +118,7 @@ msgstr "Hãy nhập mật khẩu cần dùng với dịch vụ DNS động."
 #. Description
 #: ../ddclient.templates:8001
 msgid "Find public IP using checkip.dyndns.com?"
-msgstr ""
+msgstr "Tìm IP công dùng checkip.dyndns.com ?"
 
 #. Type: boolean
 #. Description
@@ -127,6 +128,9 @@ msgid ""
 "machine via the DynDNS web interface.  This is recommended for machines that "
 "are using Network Address Translation."
 msgstr ""
+"Hãy chọn nếu ddclient nên thử tìm địa chỉ IP của máy này thông qua giao diện "
+"DynDNS hay không. Tuỳ chọn này khuyến khích cho máy nào dùng NAT (dịch địa "
+"chỉ mạng)."
 
 #. Type: string
 #. Description
@@ -232,19 +236,19 @@ msgstr ""
 #. Choices
 #: ../ddclient.templates:14001
 msgid "From list"
-msgstr ""
+msgstr "Từ danh sách"
 
 #. Type: select
 #. Choices
 #: ../ddclient.templates:14001
 msgid "Manually"
-msgstr ""
+msgstr "Bằng tay"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:14002
 msgid "Selection method for updated names:"
-msgstr ""
+msgstr "Phương pháp chọn các tên cần cập nhật:"
 
 #. Type: select
 #. Description
@@ -254,12 +258,15 @@ msgid ""
 "select host names to update from a list (taken from your DynDNS account) or "
 "enter them manually."
 msgstr ""
+"Bạn cần phải chọn những tên máy nào cần cập nhật dùng ddclient. Có thể chọn "
+"các tên máy này trong một danh sách (bắt nguồn từ tài khoản DynDNS của bạn) "
+"hoặc gõ mỗi tên bằng tay."
 
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:15001
 msgid "Host names to keep updated:"
-msgstr ""
+msgstr "Tên máy cần cứ cập nhật:"
 
 #. Type: multiselect
 #. Description
@@ -269,12 +276,15 @@ msgid ""
 "Please choose the one(s) for which ddclient should be used to keep IP "
 "address records up to date."
 msgstr ""
+"Đã tải về danh sách các tên máy được quản lý thông qua tài khoản DynDNS của "
+"bạn. Hãy chọn mỗi tên máy cho đó ddclient nên được dùng để bao tồn mục ghi "
+"địa chỉ IP hiện thời."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:16001
 msgid "Empty host list"
-msgstr ""
+msgstr "Danh sách máy trống"
 
 #. Type: error
 #. Description
@@ -283,6 +293,8 @@ msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
 msgstr ""
+"Danh sách các tên máy được quản lý dưới tài khoản của bạn vẫn còn trống khi "
+"được lấy từ địa chỉ Web của dịch vụ DNS động."
 
 #. Type: error
 #. Description
@@ -291,6 +303,8 @@ msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
 msgstr ""
+"Có thể là bạn đưa ra một tên người dùng hay mật khẩu không đúng, hoặc tài "
+"khoản trực tuyến không có tên máy nào được cấu hình."
 
 #. Type: error
 #. Description
@@ -299,3 +313,5 @@ msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
 msgstr ""
+"Hãy kiểm tra lại tài khoản của mình có tên máy được cấu hình, sau đó chạy "
+"câu lệnh « dpkg-reconfigure ddclient » để gõ lại tên người dùng và mật khẩu."

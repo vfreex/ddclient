@@ -11,6 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2009-02-28 11:43+0100\n"
 "Last-Translator: marce villarino <mvillarino@users.sourceforge.net>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,8 +39,8 @@ msgid ""
 "the server name."
 msgstr ""
 "Escolla o servizo de DNS dinámico que está a empregar. Se o servizo que "
-"emprega non aparece na lista, escolla «outro» e háselle preguntar o protocolo "
-"e o nome do servidor."
+"emprega non aparece na lista, escolla «outro» e háselle preguntar o "
+"protocolo e o nome do servidor."
 
 #. Type: string
 #. Description
@@ -198,8 +199,8 @@ msgid ""
 "\") or in days (e.g. \"1d\")."
 msgstr ""
 "Escolla o período entre comprobacións do enderezo da interface. Pódense dar "
-"os valores en segundos (p.ex. «5s»), en minutos (p.ex. «3m»), en horas (p.ex. "
-"«7h») ou en días (p.ex. «1d»)."
+"os valores en segundos (p.ex. «5s»), en minutos (p.ex. «3m»), en horas (p."
+"ex. «7h») ou en días (p.ex. «1d»)."
 
 #. Type: error
 #. Description

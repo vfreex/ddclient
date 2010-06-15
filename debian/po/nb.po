@@ -10,6 +10,7 @@ msgstr ""
 "PO-Revision-Date: 2009-02-14 13:08+0100\n"
 "Last-Translator: Bjørn Steensrud <bsteensr@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -86,8 +87,8 @@ msgid ""
 "org,myname2.dyndns.org\" for two hosts)."
 msgstr ""
 "Oppgi lista over fullstendige domenenavn for de(n) lokale verten(e) (f.eks. "
-"«mittnavn.dyndns.org» for bare én vert eller «mittnavn1.dyndns.org  mittnavn2."
-"dyndns.org» for to verter.)"
+"«mittnavn.dyndns.org» for bare én vert eller «mittnavn1.dyndns.org  "
+"mittnavn2.dyndns.org» for to verter.)"
 
 #. Type: string
 #. Description

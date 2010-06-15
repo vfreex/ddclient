@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the ddclient package.
 #
 # Translators:
-# Christian Perrier <bubulle@debian.org>, 2005, 2009.
+# Christian Perrier <bubulle@debian.org>, 2005, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2010-03-28 18:52+0200\n"
-"PO-Revision-Date: 2009-10-09 07:49+0200\n"
+"PO-Revision-Date: 2010-04-06 21:59+0200\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
-"Language-Team: French <debian-l10n-french@lists.debian.org>\n"
+"Language-Team: fr <debian-l10n-french@lists.debian.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,8 +90,8 @@ msgid ""
 "org,myname2.dyndns.org\" for two hosts)."
 msgstr ""
 "Veuillez indiquer la liste des noms de domaine complètement qualifiés des "
-"machines locales (p. ex. « myname.dyndns.org » pour un nom unique ou « myname1."
-"dyndns.org,myname2.dyndns.org » pour deux noms)."
+"machines locales (p. ex. « myname.dyndns.org » pour un nom unique ou "
+"« myname1.dyndns.org,myname2.dyndns.org » pour deux noms)."
 
 #. Type: string
 #. Description
@@ -164,17 +165,14 @@ msgstr "Faut-il lancer ddclient lors des connexions PPP ?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:10001
-#, fuzzy
-#| msgid ""
-#| "You should enable this option if ddclient should be run every time a PPP "
-#| "connection is established."
 msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
 "connection is established. Note: This mode is not compatible with daemon "
 "mode."
 msgstr ""
 "Veuillez choisir cette option si vous souhaitez lancer ddclient à chaque "
-"fois qu'une connexion PPP est établie."
+"fois qu'une connexion PPP est établie. Veuillez noter que ce choix est "
+"incompatible avec un fonctionnement en démon."
 
 #. Type: boolean
 #. Description
@@ -208,9 +206,9 @@ msgid ""
 msgstr ""
 "Veuillez choisir le délai entre les vérifications par ddclient de l'adresse "
 "de l'interface. Les valeurs peuvent être indiquées en secondes (p. ex. "
-"« 5s »), en minutes (p. ex. « 3m »), en heures (p. ex. « 7h ») ou en jours (p. "
-"ex. « 1d »). Utilisateurs francophones, attention à l'abréviation utilisée "
-"pour les jours."
+"« 5s »), en minutes (p. ex. « 3m »), en heures (p. ex. « 7h ») ou en jours "
+"(p. ex. « 1d »). Utilisateurs francophones, attention à l'abréviation "
+"utilisée pour les jours."
 
 #. Type: error
 #. Description

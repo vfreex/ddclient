@@ -1,3 +1,25 @@
+ddclient (3.8.0-11.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+    - Fix pending l10n issues. Debconf translations:
+    - Vietnamese (Clytie Siddall).  Closes: #572871
+    - French (Christian Perrier).  Closes: #576734
+    - Russian (Yuri Kozlov).  Closes: #577160
+    - German (Martin Eberhard Schauer).  Closes: #577277
+    - Swedish (Martin Bagge).  Closes: #577552
+    - Portuguese (Miguel Figueiredo).  Closes: #578564
+    - Slovak (Ivan Masár).  Closes: #584998
+    - Basque (Iñaki Larrañaga Murgoitio).  Closes: #585001
+    - Japanese (Kenshi Muto).  Closes: #585022
+    - Italian (Vincenzo Campanella).  Closes: #585444
+    - Brazilian Portuguese (Flamarion Jorge).  Closes: #585474
+    - Spanish (# traductor (campo Last-Translator) y ponga en copia a la
+      lista de Javier Fernandez-Sanguino).  Closes: #585492
+    - Danish (Joe Hansen).  Closes: #585707
+    - Czech (Miroslav Kure).  Closes: #585863
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 15 Jun 2010 07:38:40 +0200
+
 ddclient (3.8.0-11) unstable; urgency=low
 
   [ Torsten Landschoff ]
