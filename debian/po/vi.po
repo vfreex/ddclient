@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ddclient 3.8.0-5.1\n"
+"Project-Id-Version: ddclient 3.8.0-11.1\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2010-03-28 18:52+0200\n"
-"PO-Revision-Date: 2010-03-07 20:47+0930\n"
+"PO-Revision-Date: 2010-09-30 18:05+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
 "Language: vi\n"
@@ -157,23 +157,20 @@ msgstr "Kết nối PPP thì chạy ddclient không?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:10001
-#, fuzzy
-#| msgid ""
-#| "You should enable this option if ddclient should be run every time a PPP "
-#| "connection is established."
 msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
 "connection is established. Note: This mode is not compatible with daemon "
 "mode."
 msgstr ""
 "Có nên bật tùy chọn này nếu ứng dụng khách ddclient nên chạy mỗi lần một kết "
-"nối PPP được thiết lập."
+"nối PPP được thiết lập. Ghi chú : chế độ này không tương thích với chế độ "
+"trình nền (dæmon mode)."
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:11001
 msgid "Run ddclient as daemon?"
-msgstr "Chạy ddclient trong nền không?"
+msgstr "Chạy ddclient trong nền ?"
 
 #. Type: boolean
 #. Description
