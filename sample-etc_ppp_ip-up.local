@@ -1,6 +1,6 @@
 #!/bin/sh
 ######################################################################
-## $Id: sample-etc_ppp_ip-up.local 60 2007-07-07 12:37:42Z wimpunk $
+## $Id: sample-etc_ppp_ip-up.local 98 2008-06-13 20:26:56Z wimpunk $
 ######################################################################
 ## 
 ## On my host, pppd invokes this script with args:

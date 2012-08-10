@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: sample-etc_rc.d_init.d_ddclient.redhat 8 2006-06-14 19:51:39Z wimpunk $
+# $Id: sample-etc_rc.d_init.d_ddclient.redhat 98 2008-06-13 20:26:56Z wimpunk $
 # ddclient      This shell script takes care of starting and stopping
 #               ddclient.
 #
