@@ -1,7 +1,8 @@
-ddclient (3.8.1-1) UNRELEASED; urgency=low
+ddclient (3.8.1-1) unstable; urgency=low
 
   * Merge new upstream version 3.8.1 (closes: #334437).
     + Removed patches that were applied upstream.
+  * Moved to git repository in collab-maint on alioth.
 
  -- Torsten Landschoff <torsten@debian.org>  Fri, 10 Aug 2012 02:33:43 +0200
 

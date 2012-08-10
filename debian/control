@@ -6,8 +6,8 @@ Uploaders: Marco Rodrigues <gothicx@sapo.pt>
 Build-Depends: debhelper (>= 5), po-debconf, xmlto, quilt
 Standards-Version: 3.8.4
 Homepage: http://ddclient.sf.net
-Vcs-Bzr: http://bzr.debian.org/bzr/collab-maint/ddclient/sid
-Vcs-Browser: http://bzr.debian.org/loggerhead/collab-maint/ddclient
+Vcs-Git: git://git.debian.org/collab-maint/ddclient.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/ddclient.git
 
 Package: ddclient
 Architecture: all
