@@ -1,17 +1,17 @@
 #!/bin/sh
 ######################################################################
-## $Header: /home/paul/src/ddclient/RCS/sample-etc_dhcpc_dhcpcd-eth0.exe,v 3.5 2001/08/25 14:22:00 root Exp root $
+## $Header: /cvsroot/ddclient/ddclient/sample-etc_dhcpc_dhcpcd-eth0.exe,v 1.2 2004/12/03 07:30:44 wimpunk Exp $
 ######################################################################
-PATH=/usr/sbin:/root/bin:${PATH}
+PATH=/usr/sbin:${PATH}
 
 ## update the DNS server unless the IP address is a private address
-## that may be used as a internal LAN address. This may be true if
+## that may be used as an internal LAN address. This may be true if
 ## other interfaces are assigned private addresses from internal
 ## DHCP server.
 
 case "$1" in
 10.*)   	;;
-172.1[6-9].* | 172.2[0-9].* | 172.31.*)	;;
+172.1[6-9].* | 172.2[0-9].* | 172.3[0-1].*)	;;
 192.168.*)	;;
 *)
 	logger -t dhcpcd IP address changed to $1

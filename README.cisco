@@ -4,7 +4,7 @@ The following config will allow the Linux machine (10.1.1.2) to read
 the IP address from the DHCP interface on the Cisco router (eth0) as
 user ddclient.  Since ddclient is configured with a priv level of 1 it
 cannot do anything except look at the routers stats, ip addresses,
-etc.  This should be pretty harmless even if ddclients password were
+etc.  This should be pretty harmless even if ddclient's password were
 to be discovered.
 
 This has been tested with Cisco IOS 12.1(5)T5 running on a Cisco 2621
