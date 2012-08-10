@@ -1,3 +1,9 @@
+ddclient (3.8.1-1) UNRELEASED; urgency=low
+
+  * Merge new upstream version 3.8.1 (closes #334437).
+
+ -- Torsten Landschoff <torsten@debian.org>  Fri, 10 Aug 2012 02:33:43 +0200
+
 ddclient (3.8.0-11.5) unstable; urgency=low
 
   * Non-maintainer upload.
