@@ -1,8 +1,6 @@
-Index: ddclient-3.7.3/ddclient
-===================================================================
---- ddclient-3.7.3.orig/ddclient	2007-08-08 21:13:30.563431398 +0200
-+++ ddclient-3.7.3/ddclient	2007-08-08 21:13:48.183743309 +0200
-@@ -360,7 +360,7 @@
+--- a/ddclient
++++ b/ddclient
+@@ -387,7 +387,7 @@ my %variables = (
  	'atime'               => setv(T_NUMBER, 0, 1, 0, 0,                   undef),
  	'status'              => setv(T_ANY,    0, 1, 0, '',                  undef),
  	'min-interval'        => setv(T_DELAY,  0, 0, 1, interval('30s'),     0),

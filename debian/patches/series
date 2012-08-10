@@ -1,8 +1,3 @@
 smc-barricade-fw-alt.diff
-ip-up_run-parts.diff
 config_path.diff
 maxinterval.diff
-bug468320_minmax_logic.diff
-upstream_change_110.diff 
-prevent_cache_leak.diff
-checkip-hang.diff

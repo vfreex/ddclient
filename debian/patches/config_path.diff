@@ -1,8 +1,6 @@
-Index: ddclient-3.7.3/ddclient
-===================================================================
---- ddclient-3.7.3.orig/ddclient	2007-08-08 20:55:25.264000630 +0200
-+++ ddclient-3.7.3/ddclient	2007-08-08 20:55:25.296995597 +0200
-@@ -24,7 +24,7 @@
+--- a/ddclient
++++ b/ddclient
+@@ -29,7 +29,7 @@ my $program   = $programd;
  $program  =~ s/d$//;
  my $now       = time;
  my $hostname  = hostname();

@@ -1,10 +1,8 @@
-Index: ddclient-3.7.3/ddclient
-===================================================================
---- ddclient-3.7.3.orig/ddclient	2007-08-08 20:55:25.246003376 +0200
-+++ ddclient-3.7.3/ddclient	2007-08-08 20:56:34.117496598 +0200
-@@ -77,6 +77,11 @@
- 				  'url'  => '/status.htm',
- 				  'skip' => 'IP Address',
+--- a/ddclient
++++ b/ddclient
+@@ -88,6 +88,11 @@ my %builtinfw = (
+ 				  'url'  => '/status.HTM',
+ 				  'skip' => 'WAN IP',
  			        },
 +    'smc-barricade-alt'      => {
 +				  'name' => 'SMC Barricade FW (alternate config)',
