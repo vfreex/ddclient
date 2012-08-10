@@ -18,41 +18,31 @@ IMPORTANT:	The installation location for the ddclient script has changed from
 
 Dynamic DNS services currently supported include:
 
-DynDNS.org - See http://www.dyndns.org for details on obtaining a free account.
-Hammernode - See http://www.hn.org for details on obtaining a free account.
-Zoneedit   - See http://www.zoneedit.com for details.
-EasyDNS    - See http://www.easydns.com for details.
-NameCheap  - See http://www.namecheap.com for details
-
-Also include is support for DSL Reports host monitoring service. [Highly recommended]
-See http://dslreports.com for details.
+DynDNS.org  - See http://www.dyndns.org for details on obtaining a free account.
+Hammernode  - See http://www.hn.org for details on obtaining a free account.
+Zoneedit    - See http://www.zoneedit.com for details.
+EasyDNS     - See http://www.easydns.com for details.
+NameCheap   - See http://www.namecheap.com for details
+ConCont     - See http://www.dydns.za.net for details
+DnsPark     - See http://www.dnspark.com for details
+DslReports  - See http://www.dslreports.com for details
+Sitelutions - see http://www.sitelutions.com for details
 
 DDclient now supports many of cable/dsl broadband routers. 
 
-Comments, suggestions and requests can always be sent to:
-	mailto:paul+ddclient@burry.ca
+Comments, suggestions and requests: use the forums on 
+	http://sourceforge.net/projects/ddclient/
 
-If you use ddclient, please send a brief note to:
-	mailto:paul+ddclient@burry.ca
-and indicate if you would like to be notified of new releases.
-
-.. Paul Burry
-
-IMPORTANT UPDATE:
-Paul doesn't maintain the code anymore.  Everything is done through sf.net.
-Please check out http://ddclient.sourceforge.net and the project page.
+The code was originally written by Paul Burry and is now hosted and maintained  
+through sf.net.  Please check out http://ddclient.sf.net and the project page.
 
 -------------------------------------------------------------------------------
 REQUIREMENTS:
 
-- one or more accounts from:
-  DynDNS.org - See http://www.dyndns.org for details on obtaining a free account.
-  Hammernode - See http://www.hn.org for details on obtaining a free account.
-  Zoneedit   - See http://www.zoneedit.com for details.
-  EasyDNS    - See http://www.easydns.com for details.
-  NameCheap  - See http://www.namecheap.com for details
+- one or more accounts from one of the dynamic DNS services
 
 - Perl 5.004 or later
+  (you need the IO::Socket::SSL perl library for ssl-support)
 
 - Linux or probably any common Unix system
 
@@ -180,4 +170,4 @@ Alternatively, you may just configure ddclient to operate as a daemon
 and monitor your ethernet interface.
 
 -------------------------------------------------------------------------------
-$Header: /cvsroot/ddclient/ddclient/README,v 1.8 2004/12/03 07:30:44 wimpunk Exp $
+$Id: README 10 2006-06-14 19:59:31Z wimpunk $

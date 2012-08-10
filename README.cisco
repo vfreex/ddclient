@@ -1,3 +1,4 @@
+$Id: README.cisco 10 2006-06-14 19:59:31Z wimpunk $
 Method 1 ------------------------------------------------------
 
 The following config will allow the Linux machine (10.1.1.2) to read
@@ -32,4 +33,3 @@ fw=192.168.1.1/exec/show/interfaces/CR
 fw-skip=FastEthernet0/0
 fw-login=ddclient
 fw-password=xxxxxxxx
-
