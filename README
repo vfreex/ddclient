@@ -1,0 +1,372 @@
+===============================================================================
+DDCLIENT v3.6.2
+
+ddclient is a Perl client used to update dynamic DNS entries for accounts
+on many dynamic DNS services.
+
+IMPORTANT:	The format and options used by ddclient have CHANGED.
+		Please examine the sample configuration file.
+		It is highly recommended that you take advantage of the
+		new daemon mode of operation.
+
+IMPORTANT:	The installation location for the ddclient script has changed from
+			/root/bin/
+		to
+			/usr/sbin/
+
+===============================================================================
+
+Dynamic DNS services currently supported include:
+
+DynDNS.org - See http://www.dyndns.org for details on obtaining a free account.
+Hammernode - See http://www.hn.org for details on obtaining a free account.
+Zoneedit   - See http://www.zoneedit.com for details.
+EasyDNS    - See http://www.easydns.com for details.
+
+Also include is support for DSL Reports host monitoring service. [Highly recommended]
+See http://dslreports.com for details.
+
+DDclient now supports many of cable/dsl broadband routers. 
+
+Comments, suggestions and requests can always be sent to:
+	mailto:paul+ddclient@burry.ca
+
+If you use ddclient, please send a brief note to:
+	mailto:paul+ddclient@burry.ca
+and indicate if you would like to be notified of new releases.
+
+.. Paul Burry
+
+-------------------------------------------------------------------------------
+REQUIREMENTS:
+
+- one or more accounts from:
+  DynDNS.org - See http://www.dyndns.org for details on obtaining a free account.
+  Hammernode - See http://www.hn.org for details on obtaining a free account.
+  Zoneedit   - See http://www.zoneedit.com for details.
+  EasyDNS    - See http://www.easydns.com for details.
+
+- Perl 5.004 or later
+
+- Linux or probably any common Unix system
+
+-------------------------------------------------------------------------------
+INSTALLATION:
+
+  cp ddclient /usr/sbin/
+  cp sample-etc_ddclient.conf /etc/ddclient.conf
+  vi /etc/ddclient.conf
+  -- and change hostnames, logins, and passwords appropriately
+
+  ## For those using Redhat style rc files and using daemon-mode:
+  cp sample-etc_rc.d_init.d_ddclient /etc/rc.d/init.d/ddclient
+  ## enable automatic startup when booting
+  /sbin/chkconfig --add ddclient
+  ## start the first time by hand
+  /etc/rc.d/init.d/ddclient start
+
+  ## If you are not using daemon-mode, configure cron and dhcp or ppp
+  ## as described below.
+
+-------------------------------------------------------------------------------
+TROUBLESHOOTING:
+
+  1. enable debugging and verbose messages.
+	$ ddclient -daemon=0 -debug -verbose -noquiet
+
+  2. Do you need to specify a proxy?
+     If so, just add a
+	proxy=your.isp.proxy
+     to the ddclient.conf file.
+
+  3. Define the IP address of your router with fw=xxx.xxx.xxx.xxx in
+     /etc/ddclient.conf and then try
+    	$ ddclient -daemon=0 -query
+     to see if the router status web page can be understood.
+
+  4. Need support for another router/firewall?
+     Define the router status page yourself with:
+	fw=url-to-your-routers-status-page
+	fw-skip=any-string-preceeding-your-IP-address
+    
+     ddclient does something like this to provide builtin support for 
+     common routers.
+     For example, the Linksys routers could have been added with:
+        fw=192.168.1.1/Status.htm
+	fw-skip=WAN.*?IP Address
+
+     OR
+     Send me the output from:
+      $ ddclient -geturl {fw-ip-status-url} [-login login [-password password]]
+     and I'll add it to the next release!
+
+     ie. for my fw/router I used:
+	$ ddclient -geturl 192.168.1.254/status.htm
+
+  5. Some broadband routers require the use of a password when ddclient
+     accesses it's status page to determine the router's WAN IP address.
+     If this is the case for your router, add
+	fw-login=your-router-login
+	fw-password=your-router-password
+     to the beginning of your ddclient.conf file.
+     Note that some routers use either 'root' or 'admin' as their login
+     while some others accept anything.
+
+-------------------------------------------------------------------------------
+USING DDCLIENT WITH ppp
+
+If you ar using a ppp connection, you can easily update your DynDNS
+entry with each connection, with:
+  ## configure pppd to update DynDNS with each connection
+  cp sample-etc_ppp_ip-up.local /etc/ppp/ip-up.local
+
+Alternatively, you may just configure ddclient to operate as a daemon
+and monitor your ppp interface.
+
+-------------------------------------------------------------------------------
+USING DDCLIENT WITH cron
+
+If you have not configured ddclient to use daemon-mode, you'll need to
+configure cron to force an update once a month so that the dns entry will
+not become stale.
+
+  ## configure cron to force an update twice a month
+  cp sample-etc_cron.d_ddclient /etc/cron.d/ddclient
+  vi /etc/cron.d/ddclient
+
+-------------------------------------------------------------------------------
+USING DDCLIENT WITH dhcpcd-1.3.17
+
+If you are using dhcpcd-1.3.17 or thereabouts, you can easily update
+your DynDNS entry automatically every time your lease is obtained
+or renewed by creating an executable file named:
+  /etc/dhcpc/dhcpcd-{your-interface}.exe
+ie.:
+  cp sample-etc_dhcpc_dhcpcd-eth0.exe /etc/dhcpc/dhcpcd-{your-interface}.exe
+
+In my case, it is named dhcpcd-eth0.exe and contains the lines:
+  #!/bin/sh
+  PATH=/usr/sbin:/root/bin:${PATH}
+  logger -t dhcpcd IP address changed to $1
+  ddclient -proxy fasthttp.sympatico.ca -wildcard -ip $1 | logger -t ddclient 
+  exit 0
+
+Other DHCP clients may have another method of calling out to programs
+for updating DNS entries. 
+
+Alternatively, you may just configure ddclient to operate as a daemon
+and monitor your ethernet interface.
+
+-------------------------------------------------------------------------------
+USING DDCLIENT WITH dhclient
+
+If you are using the ISC DHCP client (dhclient) or thereabouts, you can update 
+your DynDNS entry automatically every time your lease is obtained
+or renewed by creating an executable file named:
+  /etc/dhclient-enter-hooks
+ie.:
+  cp sample-etc_dhclient-enter-hooks /etc/dhclient-enter-hooks
+
+Edit edit /etc/dhclient-enter-hooks to change any options required.
+
+Alternatively, you may just configure ddclient to operate as a daemon
+and monitor your ethernet interface.
+
+-------------------------------------------------------------------------------
+CHANGES
+
+- 3.6.2
+- add support for Xsense Aero
+- add support for Alcatel Speedtouch Pro
+- do authentication when either the login or password are defined.
+- fix parsing of web status pages
+
+- 3.6
+- add support for EasyDNS (see easydns.com)
+- add warning for possible incorrect continuation lines in the .conf file.
+- add if-skip with the default as was used before.
+- add cmd-skip. 
+
+- 3.5.4
+- added !active result code for DynDNS.org
+
+- 3.5.2
+- avoid undefined variable in get_ip
+
+- 3.5.1
+- fix parsing of quoted strings in .conf file
+- add filename and line number to any warnings regarding files.
+
+- 3.5
+- allow any url to be specified for -fw {address|url}
+  use -fw-skip {pattern} to specify a string preceding the IP address at the URL's page
+- allow any url to be specified for -web {address|url}
+  use -web-skip {pattern} to specify a string preceding the IP address at the URL's page
+- modify -test to display any IP addresses that could be obtained from 
+  any interfaces, builtin fw definitions, or web status pages.
+
+- 3.4.6 (not released)
+- fix errors in -help
+- allow non-FQDNs as hosts; dslreports requires this.
+- handle german ifconfig output
+- try to get english messages from ifconfig so other languages are handled too.
+- added support for com 3c886a 56k Lan Modem
+
+- 3.4.5
+- handle french ifconfig output
+
+- 3.4.4
+- added support for obtaining the IP address from a Cisco DHCP interface.
+  (Thanks, Tim)
+
+- 3.4.2
+- update last modified time when nochg is returned from dyndns
+- add example regarding fw-login and fw-password's required by some
+  home routers
+
+- 3.4.1
+- add option (-pid) to record process id in a file. This option should be 
+  defined in the .conf file as it is done in the sample.
+- add detection of SIGHUP. When this signal is received, ddclient will
+  wake up immediately, reload it's configuration file, and update
+  the IP addresses if necessary.
+
+- 3.4
+- ALL PEOPLE USING THIS CLIENT ARE URGED TO UPGRADE TO 3.4 or better.
+- fixed several timer related bugs.
+- reformatted some messages.
+
+- 3.3.8
+- added support for the ISDN channels on ELSA LANCOM DSL/10 router
+
+- 3.3.7
+- suppress repeated identical e-mail messages.
+
+- 3.3.6
+- added support for the ELSA LANCOM DSL/10 router
+- ignore 0.0.0.0 when obtained from any FW/router.
+
+- 3.3.5
+- fixed sample ddclient.conf.  fw-ip= should be fw=
+- fixed problem getting status pages for some routers
+
+- 3.3.4
+- added support for the MaxGate's UGATE-3x00 routers
+
+- 3.3.3
+- sample* correct checks for private addresses
+- add redhat specific sample-etc_rc.d_init.d_ddclient.redhat
+- make daemon-mode be the default when named ddclientd
+- added support for the Linksys BEF* Internet Routers
+
+- 3.3.2
+- (sample-etc_rc.d_init.d_ddclient) set COLUMNS to a large number so that
+  'ps -aef' will not prematurely truncate the CMD.
+
+- 3.3
+- added rpm (thanks to Bo Forslund)
+- added support for the Netgear RT3xx Internet Routers
+- modified sample-etc_rc.d_init.d_ddclient to work with other Unix beside RedHat.
+- avoid rewritting the ddclient.cache file unnecessarily
+- fixed other minor bugs
+
+- 3.2.0
+- add support for DynDNS's custom domain service.
+- change suggested directory to /usr/sbin
+
+- 3.1.0
+- clean up; fix minor bugs.
+- removed -refresh
+- add min-interval       to avoid too frequent update attempts.
+- add min-error-interval to avoid too frequent update attempts when the 
+  service is unavailable.
+
+- 3.0.1
+- make all values case sensitive (ie. passwords)
+
+- 3.0
+- new release!
+- new ddclient.conf format
+- rewritten to support DynDNS's NIC2 and other dynamic DNS services
+-   added Hammernode (hn.org)
+-   added ZoneEdit (zoneedit.com)
+-   added DSLreports (dslreports.com) host monitoring
+- added support for obtaining IP addresses from 
+-	interfaces,
+-	commands,
+-	web,
+-       external commands,
+-	Watchguard's SOHO router
+-   	Netopia's R910 router
+-   and SMC's Barracade
+- added daemon mode
+- added logging msgs to syslog and e-mail
+
+- 2.3.7
+- add -refresh to the sample scripts so default arguments are obtained from the cache
+- added local-ip script for obtaining the address of an interface
+- added public-ip script for obtaining the ip address as seen from a public web page
+
+- 2.3.6
+- fixed bug the broke enabling retrying when members.dyndns.org was down.
+
+- 2.3.5
+- prevent warnings from earlier versions of Perl.
+
+- 2.3.4
+- added sample-etc_dhclient-enter-hooks for those using the ISC DHCP client (dhclient)
+
+- 2.3.3
+- make sure that ddclient.conf is only readable by the owner so that no one
+- else can see the password (courtesy of Steve Greenland).
+-- NOTE: you will need to change the permissions on ddclient.conf to prevent
+-- others from obtaining viewing your password.
+--	ie. chmod go-rwx /etc/ddclient.conf
+
+- 2.3.2
+- make sure 'quiet' messages are printed when -verbose or -debug is enabled
+- fix error messages for those people using proxies.
+
+- 2.3
+- fixed a problem reading in cached entries
+
+
+- 2.2.1
+- sample-etc_ppp_ip-up.local - local ip address is $4 or $PPP_LOCAL (for debian)
+- use <CR><LF> as the line terminator (some proxies are strict about this)
+
+- 2.2
+- added support (-static) for updating static DNS (thanks Marc Sira)
+- changed ddclient.cache format (old style is still read)
+- sample-etc_ppp_ip-up.local - detect improper calling sequences
+- sample-etc_ppp_ip-up.local - local ip address is $3 or $PPP_LOCAL (for debian)
+
+- 2.1.2
+- updated README
+
+- 2.1.1
+- make sure result code reflects any failures
+- optionally (-quiet) omit messages for unnecessary updates
+- update sample-etc_cron.d_ddclient to use -quiet
+
+- 2.1
+- avoid unnecessary updates by recording the last hosts updated in a 
+  cache file (default /etc/ddclient.cache)
+
+- optionally (-force) force an update, even if it may be unnecessary. 
+
+  This can be used to prevent dyndns.org from deleting a host that has not 
+  required an update for a long period of time.
+
+- optionally (-refresh), reissue all host updates.
+
+  This can be used together with cron to periodically update DynDNS. 
+  See sample-etc-cron.d-ddclient for details.
+
+- optionally (-retry) save failed updates for future processing.
+
+  This feature can be used to reissue updates that may have failed due to
+  network connectivity problems or a DynDNS server outage
+
+-------------------------------------------------------------------------------
+$Header: /home/paul/src/ddclient/RCS/README,v 3.18 2002/01/03 23:55:12 root Exp $

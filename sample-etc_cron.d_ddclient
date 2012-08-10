@@ -1,0 +1,17 @@
+######################################################################
+## ddclient is an IP address updater for www.dyndns.org
+## $Header: /home/paul/src/ddclient/RCS/sample-etc_cron.d_ddclient,v 1.7 2001/04/21 23:06:43 root Exp $
+######################################################################
+## minute         0-59
+## hour           0-23
+## day of month   1-31
+## month          1-12 (or names, see below)
+## day of week    0-7 (0 or 7 is Sun, or use names)
+######################################################################
+## force an update twice a month
+##
+30 23 1,15 * *	root    /root/bin/ddclient -daemon=0 -syslog -quiet -force
+######################################################################
+## retry failed updates every hour (only if you are not using daemon-mode)
+##
+##0 * * * *	root    /usr/sbin/ddclient -daemon=0 -syslog -quiet retry
