@@ -1,6 +1,6 @@
 #!/bin/sh
 ######################################################################
-## $Id: sample-etc_ppp_ip-up.local 98 2008-06-13 20:26:56Z wimpunk $
+## $Id: sample-etc_ppp_ip-up.local 128 2011-07-11 20:24:43Z wimpunk $
 ######################################################################
 ## 
 ## On my host, pppd invokes this script with args:
@@ -22,6 +22,10 @@ IP=${IP:-$PPP_LOCAL}
 IP=${IP:-$IPLOCAL}
 IP=${IP:-$4}
 
+IFACE=
+IFACE=${IFACE:-$PPP_IFACE}
+IFACE=${IFACE:-$1}
+
 ## update the DNS server unless the IP address is a private address
 ## that may be used as an internal LAN address (or PPtP tunnel).
 
@@ -34,7 +38,7 @@ case "$IP" in
 		;;
 *)		(
 			sleep 5
-			ddclient -daemon=0 -syslog -use=if -if=$1 >/dev/null 2>&1
+			ddclient -daemon=0 -syslog -use=if -if=$IFACE >/dev/null 2>&1
 		) &
 		;;
 esac
