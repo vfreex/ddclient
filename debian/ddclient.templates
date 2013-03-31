@@ -62,6 +62,14 @@ _Description: Network interface used for dynamic DNS service:
  Please enter the name of the network interface (eth0/wlan0/ppp0/...)
  to use for dynamic DNS service.
 
+Template: ddclient/run_dhclient
+Type: boolean
+Default: false
+_Description: Run ddclient on DHCP update?
+ You should enable this option if ddclient should be run every time the
+ IP address is changed by the DHCP client (dhclient).
+ Note: This mode is not compatible with daemon mode.
+
 Template: ddclient/run_ipup
 Type: boolean
 Default: false

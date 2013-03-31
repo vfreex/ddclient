@@ -32,7 +32,9 @@ install: build
 
 	install -m 755 ddclient \
 	  $(DESTDIR)/usr/sbin/ddclient
-	
+	install -m 755 debian/ddclient.dhclient-exit-hook \
+	  $(DESTDIR)/etc/dhcp/dhclient-exit-hooks.d/ddclient
+
 %.8 : %.xml
 	xmlto -o $(@D) man $<
 

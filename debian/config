@@ -39,6 +39,7 @@ read_old_config()
 
   db_set ddclient/run_daemon false
   db_set ddclient/run_ipup false
+  db_set ddclient/run_dhclient false
 }
 
 
