@@ -1,3 +1,14 @@
+ddclient (3.8.1-1.1) unstable; urgency=low
+
+  [ Antonio Terceiro ]
+  * Non-maintainer upload.
+
+  [ Teemu Ikonen ]
+  * Call start-stop-daemon with --exec instead of --name. (Closes: #652298)
+  * Add dhclient exit hook and debconf configuration. (Closes: #704416)
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 14 Oct 2013 14:04:53 -0300
+
 ddclient (3.8.1-1) unstable; urgency=low
 
   * Merge new upstream version 3.8.1 (closes: #334437).
