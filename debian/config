@@ -97,6 +97,7 @@ create_new_config()
   # ask the user about the dynamic DNS names, account and interface
   db_input critical ddclient/username || true
   db_input critical ddclient/password || true
+  db_input critical ddclient/password-repeat || true
   db_get ddclient/service
   # if the chosen service is dyndns, ask some extra questions.  otherwise, set them to false
   if [ "$RET" = "www.dyndns.com" ]; then
@@ -114,6 +115,26 @@ create_new_config()
 	db_set ddclient/fetchhosts Manually
   fi
   db_go
+
+  # Re-request passwords until they match
+  while true; do
+    db_get ddclient/password
+    password="$RET"
+    db_get ddclient/password-repeat
+    if [ "$password" = "$RET" ]; then
+      break
+    fi
+    db_fset ddclient/password seen false
+    db_fset ddclient/password-repeat seen false
+    db_fset ddclient/password-mismatch seen false
+    db_input critical ddclient/password-mismatch || true
+    db_input critical ddclient/password || true
+    db_input critical ddclient/password-repeat || true
+    db_go
+  done
+
+  db_set ddclient/password-repeat ""
+
   db_get ddclient/checkip
   # ask the traditional questions if the dyndns questions weren't answered true
   if [ "$RET" = "false" ]; then

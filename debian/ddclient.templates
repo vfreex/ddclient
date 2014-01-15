@@ -48,6 +48,17 @@ Type: password
 _Description: Password for dynamic DNS service:
  Please enter the password to use with the dynamic DNS service.
 
+Template: ddclient/password-repeat
+Type: password
+_Description: Re-enter password to verify:
+ Please enter your dynamic DNS service password again to make sure
+ you typed it correctly.
+
+Template: ddclient/password-mismatch
+Type: error
+_Description: Passwords do not match
+ The two passwords you entered were not the same. Please try again.
+
 Template: ddclient/checkip
 Type: boolean
 Default: true
