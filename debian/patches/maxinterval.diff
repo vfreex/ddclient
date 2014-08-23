@@ -1,3 +1,6 @@
+Title: From version 3.8.1, maxinterval.diff
+DEP: 3
+Forwarded: no
 --- a/ddclient
 +++ b/ddclient
 @@ -387,7 +387,7 @@ my %variables = (
