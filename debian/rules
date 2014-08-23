@@ -8,6 +8,8 @@
 # set installation directory
 DESTDIR=$(shell pwd)/debian/ddclient
 
+build-arch: build
+build-indep: build
 build: build-stamp
 build-stamp:
 	dh_testdir
