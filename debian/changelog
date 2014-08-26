@@ -3,6 +3,9 @@ ddclient (3.8.2-1) unstable; urgency=medium
   * Verify service password during configuration (closes: #640014).
   * Remove Marco from uploaders due to bouncing email (closes: #694146).
   * New upstream version 3.8.2 (closes: #734661).
+    * Adds support for freedns (closes: #690568).
+    * Adds support for ChangeIP.com (closes: #754766).
+
   * Merge modifications by Tong Sun:
     - [*] update debian/copyright to the new standard format
     - [!] fix ancient-standards-version
