@@ -9,12 +9,14 @@ ddclient (3.8.2-1) unstable; urgency=medium
   * Merge modifications by Tong Sun:
     - [*] update debian/copyright to the new standard format
     - [!] fix ancient-standards-version
-    - [!] fix dh-clean-k-is-deprecated: dh_clean -k is deprecated; use dh_prep instead
+    - [!] fix dh-clean-k-is-deprecated: dh_clean -k is deprecated;
+          use dh_prep instead
     - [*] fix debian-rules-missing-recommended-target
     - [*] fix quilt-patch-missing-description
 
   * Apply upstream revision r166 as patch, removing a debug print containing
     authorization data. Noticed and fixed by Tong Sun.
+  * debian/ddclient.init: Also stop ddclient for runlevel 0 and 6 (lintian).
 
  -- Torsten Landschoff <torsten@debian.org>  Tue, 26 Aug 2014 07:37:17 +0200
 
