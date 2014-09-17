@@ -1,8 +1,15 @@
-ddclient (3.8.2-2) UNRELEASED; urgency=medium
+ddclient (3.8.2-2) unstable; urgency=medium
 
-  * 
+  * Updated Debconf translations from BTS patches:
+     + German translation by Chris Leick (closes: #751159).
+     + French translation by Christian Perrier (closes: #727153).
+     + Russian translation by Yuri Kozlov (closes: #729109).
+     + Danish translation by Joe Dalton (closes: #739751).
+     + Japanese translation by victory (?!) (closes: #741363).
+  * Ran debconf-updatepo to update po files.
+  * Add missing translations for german.
 
- -- Torsten Landschoff <torsten@debian.org>  Wed, 27 Aug 2014 06:27:00 +0200
+ -- Torsten Landschoff <torsten@debian.org>  Thu, 18 Sep 2014 00:34:26 +0200
 
 ddclient (3.8.2-1) unstable; urgency=medium
 
