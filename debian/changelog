@@ -1,3 +1,9 @@
+ddclient (3.8.2-3) UNRELEASED; urgency=medium
+
+  * debian/control: Update Vcs-Git field to anonscm.debian.org. 
+
+ -- Torsten Landschoff <torsten@debian.org>  Mon, 29 Sep 2014 22:20:15 +0200
+
 ddclient (3.8.2-2) unstable; urgency=medium
 
   * Updated Debconf translations from BTS patches:
