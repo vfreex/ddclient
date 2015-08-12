@@ -6,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ddclient\n"
+"Project-Id-Version: ddclient_3.8.2-2\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2014-01-16 00:49+0100\n"
-"PO-Revision-Date: 2014-02-22 17:30+01:00\n"
+"PO-Revision-Date: 2014-10-18 17:30+01:00\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org> \n"
 "Language: \n"
@@ -119,7 +119,7 @@ msgstr "Indtast venligst adgangskoden til brug med den dynamiske DNS-tjeneste."
 #. Description
 #: ../ddclient.templates:8001
 msgid "Re-enter password to verify:"
-msgstr ""
+msgstr "Genindtast adgangskode for at verificere:"
 
 #. Type: password
 #. Description
@@ -128,18 +128,20 @@ msgid ""
 "Please enter your dynamic DNS service password again to make sure you typed "
 "it correctly."
 msgstr ""
+"Indtast venligst din adgangskode for den dynamiske DNS-tjeneste igen for at "
+"sikre at du indtastede den korrekt."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:9001
 msgid "Passwords do not match"
-msgstr ""
+msgstr "Adgangskoder matcher ikke"
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:9001
 msgid "The two passwords you entered were not the same. Please try again."
-msgstr ""
+msgstr "De to adgangskoder du indtastede var ikke de samme. Prøv igen."
 
 #. Type: boolean
 #. Description
