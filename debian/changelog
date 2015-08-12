@@ -12,6 +12,7 @@ ddclient (3.8.2-3) UNRELEASED; urgency=medium
      + Danish translation by Joe Dalton (Closes: #765863)
      + Spanish translation by Javier Fernandez-Sanguino (Closes: #771965)
      + Russian translation by Yuri Kozlov (Closes: #775659)
+     + Swedish translation by Martin Bagge (Closes: #781677)
 
  -- Torsten Landschoff <torsten@debian.org>  Sun, 18 Jan 2015 20:53:20 +0100
 
