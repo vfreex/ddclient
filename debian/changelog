@@ -1,4 +1,4 @@
-ddclient (3.8.2-3) UNRELEASED; urgency=medium
+ddclient (3.8.2-3) unstable; urgency=medium
 
   [ Torsten Landschoff ]
   * debian/control: Update Vcs-Git field to anonscm.debian.org.
@@ -14,7 +14,7 @@ ddclient (3.8.2-3) UNRELEASED; urgency=medium
      + Russian translation by Yuri Kozlov (Closes: #775659)
      + Swedish translation by Martin Bagge (Closes: #781677)
 
- -- Torsten Landschoff <torsten@debian.org>  Sun, 18 Jan 2015 20:53:20 +0100
+ -- Torsten Landschoff <torsten@debian.org>  Thu, 10 Dec 2015 00:23:52 +0100
 
 ddclient (3.8.2-2) unstable; urgency=medium
 
