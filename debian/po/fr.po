@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the ddclient package.
 #
 # Translators:
-# Christian Perrier <bubulle@debian.org>, 2005, 2009, 2010, 2013.
+# Christian Perrier <bubulle@debian.org>, 2005, 2009, 2010, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2014-01-16 00:49+0100\n"
-"PO-Revision-Date: 2013-10-22 20:14+0200\n"
+"PO-Revision-Date: 2014-10-09 07:33+0200\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
@@ -125,7 +125,7 @@ msgstr ""
 #. Description
 #: ../ddclient.templates:8001
 msgid "Re-enter password to verify:"
-msgstr ""
+msgstr "Confirmation du mot de passe :"
 
 #. Type: password
 #. Description
@@ -134,18 +134,23 @@ msgid ""
 "Please enter your dynamic DNS service password again to make sure you typed "
 "it correctly."
 msgstr ""
+"Veuillez entrer à nouveau le mot de passe du service de DNS dynamique afin de "
+"vérifier qu'il a "
+"été saisi correctement."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:9001
 msgid "Passwords do not match"
-msgstr ""
+msgstr "Mots de passe différents"
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:9001
 msgid "The two passwords you entered were not the same. Please try again."
 msgstr ""
+"Le mot de passe et sa confirmation ne sont pas identiques. Veuillez "
+"recommencer."
 
 #. Type: boolean
 #. Description
@@ -367,3 +372,4 @@ msgstr ""
 "Veuillez vérifier si des noms d'hôte sont définis avec le compte utilisé, "
 "puis utilisez la commande « dpkg-reconfigure ddclient » pour indiquer à "
 "nouveau l'identifiant et le mot de passe à utiliser."
+
