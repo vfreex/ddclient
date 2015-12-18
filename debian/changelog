@@ -1,4 +1,4 @@
-ddclient (3.8.2-4) UNRELEASED; urgency=high
+ddclient (3.8.2-4) unstable; urgency=high
 
   * debian/control: Depend on perl instead of perl5 (closes: #808210).
   * debian/ddclient.dhclient-exit-hook: Put body in braces to have it run
