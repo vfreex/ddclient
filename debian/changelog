@@ -1,3 +1,9 @@
+ddclient (3.8.2-4) UNRELEASED; urgency=high
+
+  * debian/control: Depend on perl instead of perl5 (closes: #808210).
+
+ -- Torsten Landschoff <torsten@debian.org>  Sat, 19 Dec 2015 00:44:39 +0100
+
 ddclient (3.8.2-3) unstable; urgency=medium
 
   [ Torsten Landschoff ]
