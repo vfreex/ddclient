@@ -1,3 +1,9 @@
+ddclient (3.8.2-5) UNRELEASED; urgency=medium
+
+  * debian/control: Bumped Standards-Version (lintian, no changes required).
+
+ -- Torsten Landschoff <torsten@debian.org>  Sat, 16 Jan 2016 23:27:48 +0100
+
 ddclient (3.8.2-4) unstable; urgency=high
 
   * debian/control: Depend on perl instead of perl5 (closes: #808210).
