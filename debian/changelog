@@ -1,6 +1,8 @@
 ddclient (3.8.2-5) UNRELEASED; urgency=medium
 
   * debian/control: Bumped Standards-Version (lintian, no changes required).
+  * debian/patches/usev6.diff: Updated patch to ignore unusable addresses
+    when calling "ip addr" (#704467).
 
  -- Torsten Landschoff <torsten@debian.org>  Sat, 16 Jan 2016 23:27:48 +0100
 
