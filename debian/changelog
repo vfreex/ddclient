@@ -1,4 +1,4 @@
-ddclient (3.8.3-1) UNRELEASED; urgency=medium
+ddclient (3.8.3-1) unstable; urgency=medium
 
   * debian/control: Bumped Standards-Version (lintian, no changes required).
   * debian/patches/usev6.diff: Updated patch to ignore unusable addresses
@@ -6,7 +6,7 @@ ddclient (3.8.3-1) UNRELEASED; urgency=medium
   * New upstream release with new backends for nsupdate, cloudflare, duckdns.
     + Removed patch omit_password_print_r166.diff (applied upstream).
 
- -- Torsten Landschoff <torsten@debian.org>  Tue, 26 Jan 2016 06:00:55 +0100
+ -- Torsten Landschoff <torsten@debian.org>  Tue, 26 Jan 2016 06:13:55 +0100
 
 ddclient (3.8.2-4) unstable; urgency=high
 
