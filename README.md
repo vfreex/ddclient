@@ -22,6 +22,10 @@ Dynamic DNS services currently supported include:
     Freedns     - See http://freedns.afraid.org/ for details
     ChangeIP    - See http://www.changeip.com/ for details
     dtdns       - See http://www.dtdns.com/ for details
+    nsupdate    - See nsupdate(1) and ddns-confgen(8) for details
+    CloudFlare  - See https://www.cloudflare.com/ for details
+    Google      - See http://www.google.com/domains for details
+    Duckdns      - See https://duckdns.org/ for details
 
 DDclient now supports many of cable/dsl broadband routers. 
 
@@ -36,8 +40,9 @@ REQUIREMENTS:
 
 - one or more accounts from one of the dynamic DNS services
 
-- Perl 5.004 or later
-  (you need the IO::Socket::SSL perl library for ssl-support)
+- Perl 5.014 or later
+  (you need the IO::Socket::SSL perl library for ssl-support
+  and JSON::Any perl library for JSON support)
 
 - Linux or probably any common Unix system
 
@@ -58,6 +63,15 @@ INSTALLATION:
     /sbin/chkconfig --add ddclient
     ## start the first time by hand
     /etc/rc.d/init.d/ddclient start
+
+    ## For those using Alpine style rc files and using daemon-mode:
+    cp sample-etc_rc.d_init.d_ddclient.alpine /etc/init.d/ddclient
+    ## enable automatic startup when booting
+    rc-update add ddclient
+    ## make sure you have perl installed 
+    apk add perl
+    ## start the first time by hand
+    rc-service ddclient start
 
     ## If you are not using daemon-mode, configure cron and dhcp or ppp
     ## as described below.
@@ -170,4 +184,3 @@ Alternatively, you may just configure ddclient to operate as a daemon
 and monitor your ethernet interface.
 
 -------------------------------------------------------------------------------
-$Id: README.md 157 2013-12-26 09:02:05Z wimpunk $
