@@ -1,9 +1,17 @@
-Title: From version 3.8.1, smc-barricade-fw-alt.diff
-DEP: 3
+From: Torsten Landschoff <torsten@debian.org>
+Date: Fri, 10 Aug 2012 02:10:02 +0200
+Subject: From version 3.6.7-1, smc-barricade-fw-alt.diff
+
 Forwarded: no
+---
+ ddclient | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/ddclient b/ddclient
+index 54a31c0..9c8b0bd 100755
 --- a/ddclient
 +++ b/ddclient
-@@ -88,6 +88,11 @@ my %builtinfw = (
+@@ -94,6 +94,11 @@ my %builtinfw = (
  				  'url'  => '/status.HTM',
  				  'skip' => 'WAN IP',
  			        },

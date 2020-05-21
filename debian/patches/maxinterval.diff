@@ -1,9 +1,17 @@
-Title: From version 3.8.1, maxinterval.diff
-DEP: 3
+From: Torsten Landschoff <torsten@debian.org>
+Date: Tue, 18 Oct 2005 22:54:26 +0200
+Subject: From version 3.6.2-5, maxinterval.diff
+
 Forwarded: no
+---
+ ddclient | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/ddclient b/ddclient
+index e5afc7a..555ff27 100755
 --- a/ddclient
 +++ b/ddclient
-@@ -387,7 +387,7 @@ my %variables = (
+@@ -393,7 +393,7 @@ my %variables = (
  	'atime'               => setv(T_NUMBER, 0, 1, 0, 0,                   undef),
  	'status'              => setv(T_ANY,    0, 1, 0, '',                  undef),
  	'min-interval'        => setv(T_DELAY,  0, 0, 1, interval('30s'),     0),

@@ -1,18 +1,25 @@
-Description: Add ipv6 support for dyndns
- This adds a "usev6" variable to ddclient to support IPv6 updates
- with dyndns and freedns.
+From: Torsten Landschoff <torsten@landschoff.net>
+Date: Sun, 18 Jan 2015 20:54:02 +0100
+Subject: Add ipv6 support for dyndns
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+This adds a "usev6" variable to ddclient to support IPv6 updates
+with dyndns and freedns.
 
 Author: Eduardo Trápani <etrapani@gmail.com>
 Forwarded: no
 Bug-Debian: https://bugs.debian.org/704467
-
 ---
- ddclient |   73 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++------
+ ddclient | 73 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++------
  1 file changed, 67 insertions(+), 6 deletions(-)
 
+diff --git a/ddclient b/ddclient
+index 555ff27..4382547 100755
 --- a/ddclient
 +++ b/ddclient
-@@ -55,6 +55,7 @@ sub T_FILE	{'file name'};
+@@ -61,6 +61,7 @@ sub T_FILE	{'file name'};
  sub T_FQDNP	{'fully qualified host name and optional port number'};
  sub T_PROTO	{'protocol'}
  sub T_USE	{'ip strategy'}
@@ -20,7 +27,7 @@ Bug-Debian: https://bugs.debian.org/704467
  sub T_IF        {'interface'}
  sub T_PROG      {'program name'}
  sub T_IP        {'ip'}
-@@ -330,6 +331,7 @@ my %variables = (
+@@ -336,6 +337,7 @@ my %variables = (
  	'protocol'            => setv(T_PROTO, 0, 0, 1, 'dyndns2',            undef),
  
  	'use'                 => setv(T_USE,   0, 0, 1, 'ip',                 undef),
@@ -28,7 +35,7 @@ Bug-Debian: https://bugs.debian.org/704467
  	'ip'                  => setv(T_IP,    0, 0, 1, undef,                undef),
  	'if'                  => setv(T_IF,    0, 0, 1, 'ppp0',               undef),
  	'if-skip'             => setv(T_STRING,1, 0, 1, '',                   undef),
-@@ -370,6 +372,7 @@ my %variables = (
+@@ -376,6 +378,7 @@ my %variables = (
  	'host'                => setv(T_STRING, 1, 1, 1, '',                  undef),
  
  	'use'                 => setv(T_USE,   0, 0, 1, 'ip',                 undef),
@@ -36,7 +43,7 @@ Bug-Debian: https://bugs.debian.org/704467
  	'if'                  => setv(T_IF,    0, 0, 1, 'ppp0',               undef),
  	'if-skip'             => setv(T_STRING,0, 0, 1, '',                   undef),
  	'web'                 => setv(T_STRING,0, 0, 1, 'dyndns',             undef),
-@@ -597,7 +600,8 @@ my @opt = (
+@@ -662,7 +665,8 @@ my @opt = (
      [ "cache",       "=s", "-cache path           : record address used in 'path'" ],
      [ "pid",         "=s", "-pid path             : record process id in 'path'" ],
      "",			     
@@ -46,7 +53,7 @@ Bug-Debian: https://bugs.debian.org/704467
                                                    &ip_strategies_usage(),
      "",			     
      [ "ip",          "=s", "-ip address           : set the IP address to 'address'" ],
-@@ -788,12 +792,20 @@ sub update_nics {
+@@ -853,12 +857,20 @@ sub update_nics {
  		my (@hosts, %ips) = ();
  		my $updateable = $services{$s}{'updateable'};
  		my $update     = $services{$s}{'update'};
@@ -68,7 +75,7 @@ Bug-Debian: https://bugs.debian.org/704467
  			my $arg_ip = opt('ip', $h) || '';
  			my $arg_fw = opt('fw', $h) || '';
  			my $arg_if = opt('if', $h) || '';
-@@ -803,16 +815,20 @@ sub update_nics {
+@@ -868,16 +880,20 @@ sub update_nics {
  			if (exists $iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd}) {
  				$ip = $iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd};
  			} else {
@@ -91,7 +98,7 @@ Bug-Debian: https://bugs.debian.org/704467
  				$iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd} = $ip;
  			}
  			$config{$h}{'wantip'} = $ip;
-@@ -953,7 +969,7 @@ sub parse_assignment {
+@@ -1018,7 +1034,7 @@ sub parse_assignment {
      my ($c, $name, $value);
      my ($escape, $quote) = (0, '');
  
@@ -100,7 +107,7 @@ Bug-Debian: https://bugs.debian.org/704467
  	($name, $rest, $value) = ($1, $2, '');
  
  	while (length($c = substr($rest,0,1))) {
-@@ -1131,6 +1147,11 @@ sub init_config {
+@@ -1196,6 +1212,11 @@ sub init_config {
      $opt{'use'} = 'if'  if !define($opt{'use'}) && defined($opt{'if'});
      $opt{'use'} = 'web' if !define($opt{'use'}) && defined($opt{'web'});
  
@@ -112,7 +119,7 @@ Bug-Debian: https://bugs.debian.org/704467
      ## sanity check
      $opt{'max-interval'}       = min(interval(opt('max-interval')), interval(default('max-interval')));
      $opt{'min-interval'}       = max(interval(opt('min-interval')), interval(default('min-interval')));
-@@ -1740,6 +1761,10 @@ sub check_value {
+@@ -1806,6 +1827,10 @@ sub check_value {
  	$value = lc $value;
  	return undef if ! exists $ip_strategies{$value};
  
@@ -123,7 +130,7 @@ Bug-Debian: https://bugs.debian.org/704467
      } elsif ($type eq T_FILE) {
  	return undef if $value eq "";
  
-@@ -1756,7 +1781,7 @@ sub check_value {
+@@ -1822,7 +1847,7 @@ sub check_value {
  #	return undef if $value =~ /:/;
  
      } elsif ($type eq T_IP) {
@@ -132,17 +139,10 @@ Bug-Debian: https://bugs.debian.org/704467
      }
      return $value;
  }
-@@ -2046,6 +2071,42 @@ sub get_ip {
- 	$ip = $1;
-     }
-     if (($use ne 'ip') && (define($ip,'') eq '0.0.0.0')) {
-+	$ip = undef;
-+    }
-+
-+    debug("get_ip: using %s, %s reports %s", $use, $arg, define($ip, "<undefined>"));
-+    return $ip;
-+}
-+
+@@ -2132,6 +2157,42 @@ sub get_ip {
+     return $ip;
+ }
+ 
 +######################################################################
 +## get_ipv6
 +######################################################################
@@ -172,6 +172,13 @@ Bug-Debian: https://bugs.debian.org/704467
 +	$ip = $1;
 +    }
 +    if (($use ne 'ip') && (define($ip,'') eq '0.0.0.0')) {
- 	$ip = undef;
-     }
- 
++	$ip = undef;
++    }
++
++    debug("get_ip: using %s, %s reports %s", $use, $arg, define($ip, "<undefined>"));
++    return $ip;
++}
++
+ ######################################################################
+ ## group_hosts_by
+ ######################################################################

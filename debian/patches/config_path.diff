@@ -1,9 +1,17 @@
-Title: From version 3.8.1, config_path.diff
-DEP: 3
+From: Torsten Landschoff <torsten@debian.org>
+Date: Wed, 5 Apr 2006 02:01:22 +0200
+Subject: From version 3.6.7-1, config_path.diff
+
 Forwarded: no
+---
+ ddclient | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/ddclient b/ddclient
+index 9c8b0bd..e5afc7a 100755
 --- a/ddclient
 +++ b/ddclient
-@@ -29,7 +29,7 @@ my $program   = $programd;
+@@ -35,7 +35,7 @@ my $program   = $programd;
  $program  =~ s/d$//;
  my $now       = time;
  my $hostname  = hostname();
