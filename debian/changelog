@@ -1,4 +1,4 @@
-ddclient (3.9.0-1) UNRELEASED; urgency=medium
+ddclient (3.9.1-1) UNRELEASED; urgency=medium
 
   [ Martin Pitt ]
   * Drop obsolete initscripts dependency. /lib/init/vars.sh is now in the
@@ -13,8 +13,14 @@ ddclient (3.9.0-1) UNRELEASED; urgency=medium
   * New upstream version 3.9.0
   * Refresh patches
   * Add dependency on libdata-validate-ip-perl
+  * Bump Standards-Version to 4.0.0
+  * debian/copyright: Fix year
+  * Switch upstream to GitHub
+  * Add gbp.conf
+  * Merge tag 'v3.9.0'
+  * Merge tag 'v3.9.1'
 
- -- Richard Hansen <rhansen@rhansen.org>  Sat, 23 May 2020 11:43:03 -0400
+ -- Richard Hansen <rhansen@rhansen.org>  Sat, 23 May 2020 13:37:36 -0400
 
 ddclient (3.8.3-1) unstable; urgency=medium
 
