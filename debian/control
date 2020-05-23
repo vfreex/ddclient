@@ -3,7 +3,7 @@ Section: net
 Priority: extra
 Maintainer: Torsten Landschoff <torsten@debian.org>
 Build-Depends: debhelper (>= 5), po-debconf, xmlto, quilt
-Standards-Version: 3.9.8
+Standards-Version: 4.0.0
 Homepage: http://ddclient.sf.net
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/ddclient.git
 Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/ddclient.git
