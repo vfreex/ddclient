@@ -8,10 +8,10 @@ Forwarded: no
  1 file changed, 5 insertions(+)
 
 diff --git a/ddclient b/ddclient
-index 54a31c0..9c8b0bd 100755
+index 5f65d95..9176862 100755
 --- a/ddclient
 +++ b/ddclient
-@@ -94,6 +94,11 @@ my %builtinfw = (
+@@ -92,6 +92,11 @@ my %builtinfw = (
  				  'url'  => '/status.HTM',
  				  'skip' => 'WAN IP',
  			        },

@@ -12,14 +12,14 @@ Author: Eduardo Trápani <etrapani@gmail.com>
 Forwarded: no
 Bug-Debian: https://bugs.debian.org/704467
 ---
- ddclient | 73 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++------
- 1 file changed, 67 insertions(+), 6 deletions(-)
+ ddclient | 76 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 68 insertions(+), 8 deletions(-)
 
 diff --git a/ddclient b/ddclient
-index 555ff27..4382547 100755
+index bc6272e..72303c3 100755
 --- a/ddclient
 +++ b/ddclient
-@@ -61,6 +61,7 @@ sub T_FILE	{'file name'};
+@@ -59,6 +59,7 @@ sub T_FILE	{'file name'};
  sub T_FQDNP	{'fully qualified host name and optional port number'};
  sub T_PROTO	{'protocol'}
  sub T_USE	{'ip strategy'}
@@ -27,7 +27,7 @@ index 555ff27..4382547 100755
  sub T_IF        {'interface'}
  sub T_PROG      {'program name'}
  sub T_IP        {'ip'}
-@@ -336,6 +337,7 @@ my %variables = (
+@@ -334,6 +335,7 @@ my %variables = (
  	'protocol'            => setv(T_PROTO, 0, 0, 1, 'dyndns2',            undef),
  
  	'use'                 => setv(T_USE,   0, 0, 1, 'ip',                 undef),
@@ -35,7 +35,7 @@ index 555ff27..4382547 100755
  	'ip'                  => setv(T_IP,    0, 0, 1, undef,                undef),
  	'if'                  => setv(T_IF,    0, 0, 1, 'ppp0',               undef),
  	'if-skip'             => setv(T_STRING,1, 0, 1, '',                   undef),
-@@ -376,6 +378,7 @@ my %variables = (
+@@ -375,6 +377,7 @@ my %variables = (
  	'host'                => setv(T_STRING, 1, 1, 1, '',                  undef),
  
  	'use'                 => setv(T_USE,   0, 0, 1, 'ip',                 undef),
@@ -43,7 +43,7 @@ index 555ff27..4382547 100755
  	'if'                  => setv(T_IF,    0, 0, 1, 'ppp0',               undef),
  	'if-skip'             => setv(T_STRING,0, 0, 1, '',                   undef),
  	'web'                 => setv(T_STRING,0, 0, 1, 'dyndns',             undef),
-@@ -662,7 +665,8 @@ my @opt = (
+@@ -709,7 +712,8 @@ my @opt = (
      [ "cache",       "=s", "-cache path           : record address used in 'path'" ],
      [ "pid",         "=s", "-pid path             : record process id in 'path'" ],
      "",			     
@@ -53,7 +53,7 @@ index 555ff27..4382547 100755
                                                    &ip_strategies_usage(),
      "",			     
      [ "ip",          "=s", "-ip address           : set the IP address to 'address'" ],
-@@ -853,12 +857,20 @@ sub update_nics {
+@@ -902,12 +906,20 @@ sub update_nics {
  		my (@hosts, %ips) = ();
  		my $updateable = $services{$s}{'updateable'};
  		my $update     = $services{$s}{'update'};
@@ -75,7 +75,7 @@ index 555ff27..4382547 100755
  			my $arg_ip = opt('ip', $h) || '';
  			my $arg_fw = opt('fw', $h) || '';
  			my $arg_if = opt('if', $h) || '';
-@@ -868,16 +880,20 @@ sub update_nics {
+@@ -917,17 +929,20 @@ sub update_nics {
  			if (exists $iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd}) {
  				$ip = $iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd};
  			} else {
@@ -88,26 +88,21 @@ index 555ff27..4382547 100755
  					next;
  				}
 -				if ($ip !~ /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/) {
+-                    if( !ipv6_match($ip) ) {            
+-					    warning("malformed IP address (%s)", $ip);
+-					    next;
+-                    }
 +				if (!$ipv6 and $ip !~ /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/) {
- 					warning("malformed IP address (%s)", $ip);
- 					next;
- 				}
-+				if ($ipv6 and $ip !~ /^[0-9a-f:]+$/) {
-+					warning("malformed IPv6 address (%s)", $ip);
++					warning("malformed IPv4 address (%s)", $ip);
++					next;
 +				}
++				if ($ipv6 and !ipv6_match($ip)) {
++					warning("malformed IPv6 address (%s)", $ip);
++					next;
+ 				}
  				$iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd} = $ip;
  			}
- 			$config{$h}{'wantip'} = $ip;
-@@ -1018,7 +1034,7 @@ sub parse_assignment {
-     my ($c, $name, $value);
-     my ($escape, $quote) = (0, '');
- 
--    if ($rest =~ /^\s*([a-z][a-z_-]*)=(.*)/i) {
-+    if ($rest =~ /^\s*([a-z][0-9a-z_-]*)=(.*)/i) {
- 	($name, $rest, $value) = ($1, $2, '');
- 
- 	while (length($c = substr($rest,0,1))) {
-@@ -1196,6 +1212,11 @@ sub init_config {
+@@ -1247,6 +1262,11 @@ sub init_config {
      $opt{'use'} = 'if'  if !define($opt{'use'}) && defined($opt{'if'});
      $opt{'use'} = 'web' if !define($opt{'use'}) && defined($opt{'web'});
  
@@ -119,7 +114,7 @@ index 555ff27..4382547 100755
      ## sanity check
      $opt{'max-interval'}       = min(interval(opt('max-interval')), interval(default('max-interval')));
      $opt{'min-interval'}       = max(interval(opt('min-interval')), interval(default('min-interval')));
-@@ -1806,6 +1827,10 @@ sub check_value {
+@@ -1857,6 +1877,10 @@ sub check_value {
  	$value = lc $value;
  	return undef if ! exists $ip_strategies{$value};
  
@@ -130,16 +125,7 @@ index 555ff27..4382547 100755
      } elsif ($type eq T_FILE) {
  	return undef if $value eq "";
  
-@@ -1822,7 +1847,7 @@ sub check_value {
- #	return undef if $value =~ /:/;
- 
-     } elsif ($type eq T_IP) {
--	return undef if $value !~ /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/;
-+	return undef if $value !~ /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/ and $value !~ /^[0-9a-f:]+$/;
-     }
-     return $value;
- }
-@@ -2132,6 +2157,42 @@ sub get_ip {
+@@ -2268,6 +2292,42 @@ sub get_ip {
      return $ip;
  }
  
@@ -175,10 +161,10 @@ index 555ff27..4382547 100755
 +	$ip = undef;
 +    }
 +
-+    debug("get_ip: using %s, %s reports %s", $use, $arg, define($ip, "<undefined>"));
++    debug("get_ipv6: using %s, %s reports %s", $use, $arg, define($ip, "<undefined>"));
 +    return $ip;
 +}
 +
  ######################################################################
- ## group_hosts_by
+ ## ipv6_match determine ipv6 address from given string and return them
  ######################################################################
