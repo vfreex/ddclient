@@ -8,7 +8,7 @@ Forwarded: no
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/ddclient b/ddclient
-index 9176862..9180016 100755
+index 09c5fbc..e1cdf03 100755
 --- a/ddclient
 +++ b/ddclient
 @@ -33,7 +33,7 @@ my $program   = $programd;

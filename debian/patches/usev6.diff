@@ -16,7 +16,7 @@ Bug-Debian: https://bugs.debian.org/704467
  1 file changed, 68 insertions(+), 8 deletions(-)
 
 diff --git a/ddclient b/ddclient
-index bc6272e..72303c3 100755
+index 95e7064..6beb8b4 100755
 --- a/ddclient
 +++ b/ddclient
 @@ -59,6 +59,7 @@ sub T_FILE	{'file name'};
@@ -43,7 +43,7 @@ index bc6272e..72303c3 100755
  	'if'                  => setv(T_IF,    0, 0, 1, 'ppp0',               undef),
  	'if-skip'             => setv(T_STRING,0, 0, 1, '',                   undef),
  	'web'                 => setv(T_STRING,0, 0, 1, 'dyndns',             undef),
-@@ -709,7 +712,8 @@ my @opt = (
+@@ -759,7 +762,8 @@ my @opt = (
      [ "cache",       "=s", "-cache path           : record address used in 'path'" ],
      [ "pid",         "=s", "-pid path             : record process id in 'path'" ],
      "",			     
@@ -53,7 +53,7 @@ index bc6272e..72303c3 100755
                                                    &ip_strategies_usage(),
      "",			     
      [ "ip",          "=s", "-ip address           : set the IP address to 'address'" ],
-@@ -902,12 +906,20 @@ sub update_nics {
+@@ -952,12 +956,20 @@ sub update_nics {
  		my (@hosts, %ips) = ();
  		my $updateable = $services{$s}{'updateable'};
  		my $update     = $services{$s}{'update'};
@@ -75,7 +75,7 @@ index bc6272e..72303c3 100755
  			my $arg_ip = opt('ip', $h) || '';
  			my $arg_fw = opt('fw', $h) || '';
  			my $arg_if = opt('if', $h) || '';
-@@ -917,17 +929,20 @@ sub update_nics {
+@@ -967,17 +979,20 @@ sub update_nics {
  			if (exists $iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd}) {
  				$ip = $iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd};
  			} else {
@@ -102,7 +102,7 @@ index bc6272e..72303c3 100755
  				}
  				$iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd} = $ip;
  			}
-@@ -1247,6 +1262,11 @@ sub init_config {
+@@ -1297,6 +1312,11 @@ sub init_config {
      $opt{'use'} = 'if'  if !define($opt{'use'}) && defined($opt{'if'});
      $opt{'use'} = 'web' if !define($opt{'use'}) && defined($opt{'web'});
  
@@ -114,7 +114,7 @@ index bc6272e..72303c3 100755
      ## sanity check
      $opt{'max-interval'}       = min(interval(opt('max-interval')), interval(default('max-interval')));
      $opt{'min-interval'}       = max(interval(opt('min-interval')), interval(default('min-interval')));
-@@ -1857,6 +1877,10 @@ sub check_value {
+@@ -1907,6 +1927,10 @@ sub check_value {
  	$value = lc $value;
  	return undef if ! exists $ip_strategies{$value};
  
@@ -125,7 +125,7 @@ index bc6272e..72303c3 100755
      } elsif ($type eq T_FILE) {
  	return undef if $value eq "";
  
-@@ -2268,6 +2292,42 @@ sub get_ip {
+@@ -2327,6 +2351,42 @@ sub get_ip {
      return $ip;
  }
  
