@@ -16,7 +16,7 @@ Bug-Debian: https://bugs.debian.org/704467
  1 file changed, 68 insertions(+), 8 deletions(-)
 
 diff --git a/ddclient b/ddclient
-index 95e7064..6beb8b4 100755
+index 3b40f57..dfa4c1d 100755
 --- a/ddclient
 +++ b/ddclient
 @@ -59,6 +59,7 @@ sub T_FILE	{'file name'};
