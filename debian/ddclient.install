@@ -1,0 +1,3 @@
+#!/usr/bin/dh-exec
+ddclient usr/sbin
+debian/ddclient.dhclient-exit-hook => etc/dhcp/dhclient-exit-hooks.d/ddclient
