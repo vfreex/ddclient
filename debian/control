@@ -1,6 +1,6 @@
 Source: ddclient
 Section: net
-Priority: extra
+Priority: optional
 Maintainer: Torsten Landschoff <torsten@debian.org>
 Build-Depends: debhelper (>= 9), po-debconf, xmlto, quilt
 Standards-Version: 4.0.0
