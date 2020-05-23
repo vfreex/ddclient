@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: ddclient
-Source: http://ddclient.sf.net
+Source: https://ddclient.net
 
 Files: *
 Copyright: 2006-2014  wimpunk <wimpunk+github@gmail.com>
