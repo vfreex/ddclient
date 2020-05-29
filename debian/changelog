@@ -19,8 +19,19 @@ ddclient (3.9.1-1) UNRELEASED; urgency=medium
   * Add gbp.conf
   * Merge tag 'v3.9.0'
   * Merge tag 'v3.9.1'
+  * Refresh patches
+  * Bump debhelper compat to 9 (no changes)
+  * Change priority from extra to optional
+  * Set shebang as required by Debian policy >= 4.1.2
+  * Install RELEASENOTE as NEWS.gz
+  * Use dh to build
+  * Remove irrelevant examples
+  * Install new relevant examples
+  * Bump Standards-Version to 4.4.1
+  * Update the Vcs-Git, Vcs-Browser URLs to the new home on salsa
+  * Take over maintainership
 
- -- Richard Hansen <rhansen@rhansen.org>  Sat, 23 May 2020 13:37:36 -0400
+ -- Richard Hansen <rhansen@rhansen.org>  Fri, 29 May 2020 13:33:34 -0400
 
 ddclient (3.8.3-1) unstable; urgency=medium
 
