@@ -17,44 +17,6 @@ set -e
 load_debconf2 "$@"
 
 #----------------------------------------------------------------------------
-# read_old_config() - read the configuration from the old config file
-#----------------------------------------------------------------------------
-read_old_config()
-{
-  # read out the existing config file
-  read host username password </etc/ddclient.conf
-
-  # put the old values into the database
-  db_set ddclient/host $host
-  db_set ddclient/username $username
-  db_set ddclient/password $password
-  db_set ddclient/names $host
-
-  # set reasonable defaults for the new config options
-  db_set ddclient/service www.dyndns.com
-  db_set ddclient/server members.dyndns.org
-  db_set ddclient/protocol dyndns2
-
-  # important: we do not set the interface variable
-
-  db_set ddclient/run_daemon false
-  db_set ddclient/run_ipup false
-  db_set ddclient/run_dhclient false
-}
-
-
-#----------------------------------------------------------------------------
-# warn_config_broken() - show warning that the current config is broken
-#----------------------------------------------------------------------------
-warn_config_broken()
-{
-  db_fset ddclient/modifiedconfig seen false
-  db_input high ddclient/modifiedconfig || true
-  db_go
-}
-
-
-#----------------------------------------------------------------------------
 # create_new_config() - create a new config from scratch
 #----------------------------------------------------------------------------
 create_new_config()
@@ -203,19 +165,7 @@ if [ "$1" = "configure" ]; then
 	exit 0
   fi
 
-  if dpkg --compare-versions "$2" lt-nl 3.6.2-1; then
-    # if the existing /etc/ddclient.conf consists of three words:
-    if [ "`wc -w </etc/ddclient.conf`" -eq 3 ]; then
-      read_old_config
-      exit 0
-    else
-      warn_config_broken
-      exit 1
-    fi
-
-  else
-    exit 0
-  fi
+  exit 0
 
 elif [ "$1" = "reconfigure" ] ; then
 

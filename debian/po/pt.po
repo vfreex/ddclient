@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient 3.6.7-2\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2014-01-16 00:49+0100\n"
+"POT-Creation-Date: 2020-06-03 22:22-0400\n"
 "PO-Revision-Date: 2010-04-21 21:14+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -255,55 +255,27 @@ msgstr ""
 "Os valores podem ser dados em segundos (ex. \"5s\"), em minutos (ex. \"3m"
 "\"), em horas (ex. \"7h\") ou em dias (ex. \"1d\")."
 
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid "Modified configuration file"
-msgstr "Ficheiro de configuração modificado"
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"The config file /etc/ddclient.conf on your system does not consist of three "
-"entries. The automatic configuration utility cannot handle this situation."
-msgstr ""
-"O ficheiro de configuração /etc/ddclient.conf no seu sistema não é "
-"constituído por três entradas. O utilitário de configuração automática não "
-"consegue lidar com esta situação."
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"If you have edited the configuration file manually, it won't be modified. If "
-"you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
-msgstr ""
-"Se editou manualmente o ficheiro de configuração, este não será modificado. "
-"Se necessitar de um novo ficheiro de configuração, corra \"dpkg-reconfigure "
-"ddclient\"."
-
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "From list"
 msgstr "A partir da lista"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Manually"
 msgstr "Manualmente"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "Selection method for updated names:"
 msgstr "Método de escolha para para nomes actualizados:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
@@ -315,13 +287,13 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid "Host names to keep updated:"
 msgstr "Nomes das máquinas a manter actualizadas:"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The list of host names managed via your DynDNS account has been downloaded. "
 "Please choose the one(s) for which ddclient should be used to keep IP "
@@ -333,13 +305,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid "Empty host list"
 msgstr "Lista de máquinas vazia"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -349,7 +321,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -359,7 +331,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
@@ -367,6 +339,26 @@ msgstr ""
 "Por favor verifique a sua conta para se certificar que tem configurado nomes "
 "de máquinas, e depois corra \"dpkg-reconfigure ddclient\" para introduzir "
 "novamente o seu nome de utilizador e palavra-passe."
+
+#~ msgid "Modified configuration file"
+#~ msgstr "Ficheiro de configuração modificado"
+
+#~ msgid ""
+#~ "The config file /etc/ddclient.conf on your system does not consist of "
+#~ "three entries. The automatic configuration utility cannot handle this "
+#~ "situation."
+#~ msgstr ""
+#~ "O ficheiro de configuração /etc/ddclient.conf no seu sistema não é "
+#~ "constituído por três entradas. O utilitário de configuração automática "
+#~ "não consegue lidar com esta situação."
+
+#~ msgid ""
+#~ "If you have edited the configuration file manually, it won't be modified. "
+#~ "If you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
+#~ msgstr ""
+#~ "Se editou manualmente o ficheiro de configuração, este não será "
+#~ "modificado. Se necessitar de um novo ficheiro de configuração, corra "
+#~ "\"dpkg-reconfigure ddclient\"."
 
 #~ msgid "www.dyndns.com"
 #~ msgstr "www.dyndns.com"

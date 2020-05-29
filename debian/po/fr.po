@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2014-01-16 00:49+0100\n"
+"POT-Creation-Date: 2020-06-03 22:22-0400\n"
 "PO-Revision-Date: 2014-10-09 07:33+0200\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -134,9 +134,8 @@ msgid ""
 "Please enter your dynamic DNS service password again to make sure you typed "
 "it correctly."
 msgstr ""
-"Veuillez entrer à nouveau le mot de passe du service de DNS dynamique afin de "
-"vérifier qu'il a "
-"été saisi correctement."
+"Veuillez entrer à nouveau le mot de passe du service de DNS dynamique afin "
+"de vérifier qu'il a été saisi correctement."
 
 #. Type: error
 #. Description
@@ -259,56 +258,27 @@ msgstr ""
 "(p. ex. « 1d »). Utilisateurs francophones, attention à l'abréviation "
 "utilisée pour les jours."
 
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid "Modified configuration file"
-msgstr "Le fichier de configuration a été modifié"
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"The config file /etc/ddclient.conf on your system does not consist of three "
-"entries. The automatic configuration utility cannot handle this situation."
-msgstr ""
-"Le fichier de configuration, /etc/ddclient.conf, de ce système ne comporte "
-"pas trois entrées. Cette interface d'automatisation de configuration ne peut "
-"gérer cela."
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"If you have edited the configuration file manually, it won't be modified. If "
-"you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
-msgstr ""
-"Vous avez peut-être modifié le fichier de configuration vous-même : en "
-"conséquence, il ne sera pas changé. Si vous souhaitez créer un nouveau "
-"fichier de configuration, veuillez utiliser la commande « dpkg-reconfigure "
-"ddclient »."
-
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "From list"
 msgstr "Dans une liste"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Manually"
 msgstr "Manuellement"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "Selection method for updated names:"
 msgstr "Méthode de choix des noms à mettre à jour :"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
@@ -320,13 +290,13 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid "Host names to keep updated:"
 msgstr "Noms d'hôte à tenir à jour :"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The list of host names managed via your DynDNS account has been downloaded. "
 "Please choose the one(s) for which ddclient should be used to keep IP "
@@ -338,13 +308,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid "Empty host list"
 msgstr "Liste d'hôtes vide"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -354,7 +324,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -364,7 +334,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
@@ -373,3 +343,23 @@ msgstr ""
 "puis utilisez la commande « dpkg-reconfigure ddclient » pour indiquer à "
 "nouveau l'identifiant et le mot de passe à utiliser."
 
+#~ msgid "Modified configuration file"
+#~ msgstr "Le fichier de configuration a été modifié"
+
+#~ msgid ""
+#~ "The config file /etc/ddclient.conf on your system does not consist of "
+#~ "three entries. The automatic configuration utility cannot handle this "
+#~ "situation."
+#~ msgstr ""
+#~ "Le fichier de configuration, /etc/ddclient.conf, de ce système ne "
+#~ "comporte pas trois entrées. Cette interface d'automatisation de "
+#~ "configuration ne peut gérer cela."
+
+#~ msgid ""
+#~ "If you have edited the configuration file manually, it won't be modified. "
+#~ "If you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
+#~ msgstr ""
+#~ "Vous avez peut-être modifié le fichier de configuration vous-même : en "
+#~ "conséquence, il ne sera pas changé. Si vous souhaitez créer un nouveau "
+#~ "fichier de configuration, veuillez utiliser la commande « dpkg-"
+#~ "reconfigure ddclient »."

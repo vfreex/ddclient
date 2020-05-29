@@ -104,16 +104,6 @@ _Description: Interval between ddclient runs:
  Values may be given in seconds (e.g. "5s"), in minutes (e.g. "3m"), in
  hours (e.g. "7h") or in days (e.g. "1d").
 
-Template: ddclient/modifiedconfig
-Type: error
-_Description: Modified configuration file
- The config file /etc/ddclient.conf on your system does not consist of
- three entries. The automatic configuration utility cannot handle
- this situation.
- .
- If you have edited the configuration file manually, it won't be modified.
- If you need a new configuration file, run "dpkg-reconfigure ddclient".
-
 Template: ddclient/fetchhosts
 Type: select
 Default: From list

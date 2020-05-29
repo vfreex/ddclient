@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient_3.8.2-2\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2014-01-16 00:49+0100\n"
+"POT-Creation-Date: 2020-06-03 22:22-0400\n"
 "PO-Revision-Date: 2014-10-18 17:30+01:00\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org> \n"
@@ -248,55 +248,27 @@ msgstr ""
 "angives i sekunder (f.eks. »5s«), i minutter (f.eks. »3m«), i timer (f.eks. "
 "»7h« eller i dage (f.eks. »1d«)."
 
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid "Modified configuration file"
-msgstr "Ændret konfigurationsfil"
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"The config file /etc/ddclient.conf on your system does not consist of three "
-"entries. The automatic configuration utility cannot handle this situation."
-msgstr ""
-"Konfigurationsfilen /etc/ddclient.conf på dit system består ikke af tre "
-"punkter. Det automatiske konfigurationsværktøj kan ikke håndtere denne "
-"situation."
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"If you have edited the configuration file manually, it won't be modified. If "
-"you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
-msgstr ""
-"Hvis du har redigeret konfigurationsfilen manuelt, vil den ikke blive "
-"ændret. Hvis du skal bruge en ny konfigurationsfil, så kør »dpkg-reconfigure "
-"ddclient«."
-
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "From list"
 msgstr "Fra liste"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Manually"
 msgstr "Manuelt"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "Selection method for updated names:"
 msgstr "Markeringsmetode for opdaterede navne:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
@@ -308,13 +280,13 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid "Host names to keep updated:"
 msgstr "Værtsnavne der skal holdes opdateret:"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The list of host names managed via your DynDNS account has been downloaded. "
 "Please choose the one(s) for which ddclient should be used to keep IP "
@@ -326,13 +298,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid "Empty host list"
 msgstr "Tom værtsliste"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -342,7 +314,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -352,7 +324,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
@@ -360,3 +332,23 @@ msgstr ""
 "Tjek venligst din konto for at være sikker på, at du har værtsnavne "
 "konfigureret, og kør så »dpkg-reconfigure ddclient« for at indtaste dit "
 "brugernavn og adgangskode igen."
+
+#~ msgid "Modified configuration file"
+#~ msgstr "Ændret konfigurationsfil"
+
+#~ msgid ""
+#~ "The config file /etc/ddclient.conf on your system does not consist of "
+#~ "three entries. The automatic configuration utility cannot handle this "
+#~ "situation."
+#~ msgstr ""
+#~ "Konfigurationsfilen /etc/ddclient.conf på dit system består ikke af tre "
+#~ "punkter. Det automatiske konfigurationsværktøj kan ikke håndtere denne "
+#~ "situation."
+
+#~ msgid ""
+#~ "If you have edited the configuration file manually, it won't be modified. "
+#~ "If you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
+#~ msgstr ""
+#~ "Hvis du har redigeret konfigurationsfilen manuelt, vil den ikke blive "
+#~ "ændret. Hvis du skal bruge en ny konfigurationsfil, så kør »dpkg-"
+#~ "reconfigure ddclient«."

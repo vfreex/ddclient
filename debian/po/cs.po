@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2014-01-16 00:49+0100\n"
+"POT-Creation-Date: 2020-06-03 22:22-0400\n"
 "PO-Revision-Date: 2010-06-14 15:50+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-10n-czech@lists.debian.org>\n"
@@ -261,53 +261,27 @@ msgstr ""
 "sekundách (např. „5s“), minutách („3m“), hodinách („7h“) nebo dnech (např. "
 "„1d“)."
 
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid "Modified configuration file"
-msgstr "Upravený konfigurační soubor"
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"The config file /etc/ddclient.conf on your system does not consist of three "
-"entries. The automatic configuration utility cannot handle this situation."
-msgstr ""
-"Konfigurační soubor /etc/ddclient.conf se ve vašem systému neskládá ze tří "
-"záznamů, což nástroj pro automatické nastavení nezvládne."
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"If you have edited the configuration file manually, it won't be modified. If "
-"you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
-msgstr ""
-"Pokud jste konfigurační soubor změnili ručně, nebude změněn. Chcete-li "
-"vytvořit nový konfigurační soubor, spusťte „dpkg-reconfigure ddclient“."
-
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "From list"
 msgstr "Ze seznamu"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Manually"
 msgstr "Ručně"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "Selection method for updated names:"
 msgstr "Způsob zadání jmen počítačů:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
@@ -319,13 +293,13 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid "Host names to keep updated:"
 msgstr "Jména počítačů, která se mají udržovat aktualizovaná:"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The list of host names managed via your DynDNS account has been downloaded. "
 "Please choose the one(s) for which ddclient should be used to keep IP "
@@ -336,13 +310,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid "Empty host list"
 msgstr "Prázdný seznam počítačů"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -351,7 +325,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -361,7 +335,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
@@ -369,6 +343,24 @@ msgstr ""
 "Zkontrolujte prosím svůj účet, abyste se ujistili, že jsou jména počítačů "
 "nastavena a poté spusťte „dpkg-reconfigure ddclient“ a znovu zadejte své "
 "uživatelské jméno a heslo."
+
+#~ msgid "Modified configuration file"
+#~ msgstr "Upravený konfigurační soubor"
+
+#~ msgid ""
+#~ "The config file /etc/ddclient.conf on your system does not consist of "
+#~ "three entries. The automatic configuration utility cannot handle this "
+#~ "situation."
+#~ msgstr ""
+#~ "Konfigurační soubor /etc/ddclient.conf se ve vašem systému neskládá ze "
+#~ "tří záznamů, což nástroj pro automatické nastavení nezvládne."
+
+#~ msgid ""
+#~ "If you have edited the configuration file manually, it won't be modified. "
+#~ "If you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
+#~ msgstr ""
+#~ "Pokud jste konfigurační soubor změnili ručně, nebude změněn. Chcete-li "
+#~ "vytvořit nový konfigurační soubor, spusťte „dpkg-reconfigure ddclient“."
 
 #~ msgid "ddclient update interval:"
 #~ msgstr "Interval mezi aktualizacemi:"

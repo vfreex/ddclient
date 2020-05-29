@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient 3.8.0-11.1\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2014-01-16 00:49+0100\n"
+"POT-Creation-Date: 2020-06-03 22:22-0400\n"
 "PO-Revision-Date: 2010-09-30 18:05+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -254,53 +254,27 @@ msgstr ""
 " • giờ\th\t7h\n"
 " • ngày\td\t1d."
 
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid "Modified configuration file"
-msgstr "Tập tin cấu hình bị sửa đổi"
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"The config file /etc/ddclient.conf on your system does not consist of three "
-"entries. The automatic configuration utility cannot handle this situation."
-msgstr ""
-"Tập tin cấu hình « /etc/ddclient.conf » trên hệ thống này không chứa ba mục "
-"nhập. Tiện ích tự động cấu hình không thể quyết định trường hợp này."
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"If you have edited the configuration file manually, it won't be modified. If "
-"you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
-msgstr ""
-"Nếu bạn đã tự chỉnh sửa tập tin cấu hình này, nó sẽ không được sửa đổi. Để "
-"tạo một tập tin cấu hình mới, chạy câu lệnh « dpkg-reconfigure ddclient »."
-
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "From list"
 msgstr "Từ danh sách"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Manually"
 msgstr "Bằng tay"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "Selection method for updated names:"
 msgstr "Phương pháp chọn các tên cần cập nhật:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
@@ -312,13 +286,13 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid "Host names to keep updated:"
 msgstr "Tên máy cần cứ cập nhật:"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The list of host names managed via your DynDNS account has been downloaded. "
 "Please choose the one(s) for which ddclient should be used to keep IP "
@@ -330,13 +304,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid "Empty host list"
 msgstr "Danh sách máy trống"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -346,7 +320,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -356,10 +330,29 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
 msgstr ""
 "Hãy kiểm tra lại tài khoản của mình có tên máy được cấu hình, sau đó chạy "
 "câu lệnh « dpkg-reconfigure ddclient » để gõ lại tên người dùng và mật khẩu."
+
+#~ msgid "Modified configuration file"
+#~ msgstr "Tập tin cấu hình bị sửa đổi"
+
+#~ msgid ""
+#~ "The config file /etc/ddclient.conf on your system does not consist of "
+#~ "three entries. The automatic configuration utility cannot handle this "
+#~ "situation."
+#~ msgstr ""
+#~ "Tập tin cấu hình « /etc/ddclient.conf » trên hệ thống này không chứa ba "
+#~ "mục nhập. Tiện ích tự động cấu hình không thể quyết định trường hợp này."
+
+#~ msgid ""
+#~ "If you have edited the configuration file manually, it won't be modified. "
+#~ "If you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
+#~ msgstr ""
+#~ "Nếu bạn đã tự chỉnh sửa tập tin cấu hình này, nó sẽ không được sửa đổi. "
+#~ "Để tạo một tập tin cấu hình mới, chạy câu lệnh « dpkg-reconfigure "
+#~ "ddclient »."

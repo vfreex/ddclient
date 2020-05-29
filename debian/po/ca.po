@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.8.0-5\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2014-01-16 00:49+0100\n"
+"POT-Creation-Date: 2020-06-03 22:22-0400\n"
 "PO-Revision-Date: 2009-12-27 11:13+0100\n"
 "Last-Translator: Jordà Polo <jorda@ettin.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -256,55 +256,27 @@ msgstr ""
 "valors es poden especificar en segons (p.ex. «5s»), en minuts (p.ex. «3m»), "
 "en hores (p.ex. «7h»), o en dies (p.ex. «1d»)."
 
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid "Modified configuration file"
-msgstr "S'ha editat el fitxer de configuració"
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"The config file /etc/ddclient.conf on your system does not consist of three "
-"entries. The automatic configuration utility cannot handle this situation."
-msgstr ""
-"El fitxer de configuració /etc/ddclient.conf d'aquest sistema no conté tres "
-"entrades. L'eina de configuració automàtica (debconf) no pot gestionar "
-"correctament aquesta situació."
-
-#. Type: error
-#. Description
-#: ../ddclient.templates:16001
-msgid ""
-"If you have edited the configuration file manually, it won't be modified. If "
-"you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
-msgstr ""
-"No es modificarà el fitxer de configuració si ja l'havíeu editat manualment. "
-"Si desitgeu generar un nou fitxer de configuració, executeu «dpkg-"
-"reconfigure ddclient»."
-
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "From list"
 msgstr "Des d'una llista"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Manually"
 msgstr "Manualment"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "Selection method for updated names:"
 msgstr "Mètode de selecció de noms a actualitzar:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
@@ -316,13 +288,13 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid "Host names to keep updated:"
 msgstr "Nom dels ordinadors que cal mantenir actualitzats:"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The list of host names managed via your DynDNS account has been downloaded. "
 "Please choose the one(s) for which ddclient should be used to keep IP "
@@ -334,13 +306,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid "Empty host list"
 msgstr "Llista de noms buida"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -350,7 +322,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -360,7 +332,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
@@ -368,6 +340,26 @@ msgstr ""
 "Comproveu el vostre compte per assegurar-vos que heu configurat els noms, i "
 "després executeu «dpkg-reconfigure ddclient» per indicar un altre cop el nom "
 "d'usuari i la contrasenya."
+
+#~ msgid "Modified configuration file"
+#~ msgstr "S'ha editat el fitxer de configuració"
+
+#~ msgid ""
+#~ "The config file /etc/ddclient.conf on your system does not consist of "
+#~ "three entries. The automatic configuration utility cannot handle this "
+#~ "situation."
+#~ msgstr ""
+#~ "El fitxer de configuració /etc/ddclient.conf d'aquest sistema no conté "
+#~ "tres entrades. L'eina de configuració automàtica (debconf) no pot "
+#~ "gestionar correctament aquesta situació."
+
+#~ msgid ""
+#~ "If you have edited the configuration file manually, it won't be modified. "
+#~ "If you need a new configuration file, run \"dpkg-reconfigure ddclient\"."
+#~ msgstr ""
+#~ "No es modificarà el fitxer de configuració si ja l'havíeu editat "
+#~ "manualment. Si desitgeu generar un nou fitxer de configuració, executeu "
+#~ "«dpkg-reconfigure ddclient»."
 
 #~ msgid "www.dyndns.com"
 #~ msgstr "www.dyndns.com"
