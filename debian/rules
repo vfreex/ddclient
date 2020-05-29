@@ -4,7 +4,3 @@
 
 %.8 : %.xml
 	xmlto -o $(@D) man $<
-
-override_dh_installdeb:
-	dh_installdeb
-	perl -w debian/dh_installscripts-common

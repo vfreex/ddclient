@@ -12,9 +12,44 @@
 
 set -e
 
-#SCRIPTSCOMMON#
+fatal() { printf %s\\n "$0: $*" >&2; exit 1; }
 
-load_debconf2 "$@"
+. /usr/share/debconf/confmodule
+db_version 2.0 || fatal "need DebConf 2.0 or later"
+
+# Usage: hosts=`download_hostlist USER PASSWORD`
+# Retrieves the DynDNS hosts of given user
+download_hostlist() {
+  local username=$1 password=$2
+  # FIXME: protect against wget not installed
+  wget "http://$username:$password@update.dyndns.com/text/gethostlist" -q -O -\
+    | awk -F \: '{print $2, $4}' | sed -e "N;s/ \n/,/g" | sed -e "s/,/, /g"
+}
+
+# Retrieve the list of DynDNS hosts of the user's account from the DynDNS
+# server and let the user select which hosts to update.
+retrieve_dyndns_hostlist() {
+  db_get ddclient/username	&& username="$RET"
+  db_get ddclient/password	&& password="$RET"
+
+  hostslist=`download_hostlist $username $password`
+
+  # add the list to our multichoice template, then prompt the user
+  db_subst ddclient/hostslist choices $hostslist
+  db_input critical ddclient/hostslist || true
+  db_go
+
+  # set names using the host list to write it to the config file later
+  db_get ddclient/hostslist
+  hostslist=`echo "$RET" | sed -e "s/, /,/g"`
+  db_set ddclient/names "$hostslist"
+
+  # if the hostslist was blank, let the user know some possible reasons
+  if [ -z $hostslist ]; then
+    db_input high ddclient/blankhostslist || true
+    db_go
+  fi
+}
 
 #----------------------------------------------------------------------------
 # create_new_config() - create a new config from scratch
