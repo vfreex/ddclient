@@ -61,6 +61,22 @@ create_new_config()
   db_go
   db_get ddclient/service
   case "$RET" in
+    no-ip.com)
+      server=  # use the default server
+      protocol=noip
+      ;;
+    freedns.afraid.org)
+      protocol=freedns
+      server=  # use the default server
+      ;;
+    duckdns.org)
+      protocol=duckdns
+      server=  # use the default server
+      ;;
+    domains.google)
+      protocol=googledomains
+      server=  # use the default server
+      ;;
     www.dyndns.com)
       protocol=dyndns2
       server=members.dyndns.org

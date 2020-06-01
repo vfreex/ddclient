@@ -9,9 +9,9 @@
 
 Template: ddclient/service
 Type: select
-#flag:translate:5
-__Choices: www.dyndns.com, www.easydns.com, www.dslreports.com, www.zoneedit.com, other
-Default: www.dyndns.com
+#flag:translate:9
+__Choices: no-ip.com, freedns.afraid.org, duckdns.org, domains.google, www.dyndns.com, www.easydns.com, www.dslreports.com, www.zoneedit.com, other
+Default: no-ip.com
 _Description: Dynamic DNS service provider:
  Please select the dynamic DNS service you are using. If the service you use is
  not listed, choose "other" and you will be asked for the protocol and the
@@ -25,8 +25,8 @@ _Description: Dynamic DNS server:
 
 Template: ddclient/protocol
 Type: select
-Choices: dyndns2, dslreports1, easydns, hammernode1, zoneedit1, dyndns1
-Default: dyndns2
+Choices: changeip, cloudflare, concont, dnsmadeeasy, dnspark, dondominio, dslreports1, dtdns, duckdns, dyndns1, dyndns2, easydns, freedns, freemyip, googledomains, hammernode1, namecheap, nfsn, noip, nsupdate, sitelutions, woima, yandex, zoneedit1,
+Default: noip
 _Description: Dynamic DNS update protocol:
  Please select the dynamic DNS update protocol used by your dynamic DNS service
  provider.
