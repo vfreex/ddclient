@@ -62,32 +62,32 @@ create_new_config()
   db_get ddclient/service
   case "$RET" in
     www.dyndns.com)
-      server=members.dyndns.org
       protocol=dyndns2
+      server=members.dyndns.org
       ;;
     www.easydns.com)
-      server=members.easydns.com
       protocol=easydns
+      server=members.easydns.com
       ;;
     www.dslreports.com)
-      server=www.dslreports.com
       protocol=dslreports1
+      server=www.dslreports.com
       ;;
     www.zoneedit.com)
-      server=dynamic.zoneedit.com
       protocol=zoneedit1
+      server=dynamic.zoneedit.com
       ;;
   esac
   if [ "$RET" != other ]; then
-    # if we know the service we put in the server and protocol
-    db_set ddclient/server "$server"
-    db_fset ddclient/server seen true
+    # if we know the service we put in the protocol and server
     db_set ddclient/protocol "$protocol"
     db_fset ddclient/protocol seen true
+    db_set ddclient/server "$server"
+    db_fset ddclient/server seen true
   else
-    # if not we ask the user about the server and protocol
-    db_input critical ddclient/server || true
+    # if not we ask the user about the protocol and server
     db_input critical ddclient/protocol || true
+    db_input critical ddclient/server || true
     db_go
   fi
 
