@@ -17,11 +17,16 @@ case "$1" in
 
     if [ ! -f /etc/ddclient.conf ]; then
       # get the values from the debconf database
-      db_get ddclient/protocol && protocol="$RET"
-      db_get ddclient/server && server="$RET"
-      db_get ddclient/names && names="$RET"
-      db_get ddclient/username && username="$RET"
-      db_get ddclient/password && password=$(echo "$RET"|sed -e "s/'/\\\\'/g")
+      db_get ddclient/protocol
+      protocol="$RET"
+      db_get ddclient/server
+      server="$RET"
+      db_get ddclient/names
+      names="$RET"
+      db_get ddclient/username
+      username="$RET"
+      db_get ddclient/password
+      password=$(echo "$RET"|sed -e "s/'/\\\\'/g")
       db_get ddclient/interface
       if [ "$RET" ]; then
         interface="use=if, if=$RET"
@@ -52,10 +57,14 @@ EOF
 
       # create /etc/default/ddclient if it does not exist
       if [ ! -f /etc/default/ddclient ]; then
-        db_get ddclient/run_daemon && run_daemon="$RET"
-        db_get ddclient/daemon_interval && daemon_interval="$RET"
-        db_get ddclient/run_ipup && run_ipup="$RET"
-        db_get ddclient/run_dhclient && run_dhclient="$RET"
+        db_get ddclient/run_daemon
+        run_daemon="$RET"
+        db_get ddclient/daemon_interval
+        daemon_interval="$RET"
+        db_get ddclient/run_ipup
+        run_ipup="$RET"
+        db_get ddclient/run_dhclient
+        run_dhclient="$RET"
         temp=`mktemp /etc/default/ddclient.XXXXXX`
         trap "rm -f $temp; exit 1" HUP INT QUIT TERM
         cat <<EOF >"$temp"
