@@ -20,7 +20,7 @@ db_version 2.0 || fatal "need DebConf 2.0 or later"
 # Usage: hosts=`download_hostlist USER PASSWORD`
 # Retrieves the DynDNS hosts of given user
 download_hostlist() {
-  local username=$1 password=$2
+  local username="$1" password="$2"
   # FIXME: protect against wget not installed
   wget "http://$username:$password@update.dyndns.com/text/gethostlist" -q -O -\
     | awk -F \: '{print $2, $4}' | sed -e "N;s/ \n/,/g" | sed -e "s/,/, /g"
@@ -32,10 +32,10 @@ retrieve_dyndns_hostlist() {
   db_get ddclient/username && username="$RET"
   db_get ddclient/password && password="$RET"
 
-  hostslist=`download_hostlist $username $password`
+  hostslist=`download_hostlist "$username" "$password"`
 
   # add the list to our multichoice template, then prompt the user
-  db_subst ddclient/hostslist choices $hostslist
+  db_subst ddclient/hostslist choices "$hostslist"
   db_input critical ddclient/hostslist || true
   db_go
 
@@ -45,7 +45,7 @@ retrieve_dyndns_hostlist() {
   db_set ddclient/names "$hostslist"
 
   # if the hostslist was blank, let the user know some possible reasons
-  if [ -z $hostslist ]; then
+  if [ -z "$hostslist" ]; then
     db_input high ddclient/blankhostslist || true
     db_go
   fi
@@ -80,9 +80,9 @@ create_new_config()
   esac
   if [ "$RET" != other ]; then
     # if we know the service we put in the server and protocol
-    db_set ddclient/server $server
+    db_set ddclient/server "$server"
     db_fset ddclient/server seen true
-    db_set ddclient/protocol $protocol
+    db_set ddclient/protocol "$protocol"
     db_fset ddclient/protocol seen true
   else
     # if not we ask the user about the server and protocol

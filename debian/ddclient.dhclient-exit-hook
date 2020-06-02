@@ -6,11 +6,11 @@
   [ -x /usr/sbin/ddclient ] || exit 0
   [ -f /etc/default/ddclient ] || exit 0
   . /etc/default/ddclient
-  [ $run_dhclient = "true" ] || exit 0
+  [ "$run_dhclient" = "true" ] || exit 0
 
   case $reason in
     BOUND|RENEW|REBIND)
-      /usr/bin/logger -t dhclient $reason, updating IP address with ddclient
+      /usr/bin/logger -t dhclient "$reason, updating IP address with ddclient"
       /usr/sbin/ddclient -daemon=0 -syslog > /dev/null 2>&1
       ;;
     *)
