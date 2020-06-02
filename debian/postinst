@@ -13,6 +13,9 @@ quote_backslashes() {
   echo -n "$1" | sed 's,\\,\\\\,g'
 }
 
+newline='
+'
+
 case "$1" in
   configure)
     if [ ! -f /etc/ddclient.conf ]; then
@@ -20,7 +23,7 @@ case "$1" in
       db_get ddclient/protocol
       protocol="$RET"
       db_get ddclient/server
-      server="$RET"
+      server=${RET:+${newline}server=${RET}}
       db_get ddclient/names
       names="$RET"
       db_get ddclient/username
@@ -47,8 +50,7 @@ case "$1" in
 # /etc/ddclient.conf
 
 protocol=$protocol
-$interface
-server=$server
+$interface$server
 login=$username
 password='$password_quoted'
 $names
