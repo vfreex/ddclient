@@ -29,8 +29,8 @@ download_hostlist() {
 # Retrieve the list of DynDNS hosts of the user's account from the DynDNS
 # server and let the user select which hosts to update.
 retrieve_dyndns_hostlist() {
-  db_get ddclient/username	&& username="$RET"
-  db_get ddclient/password	&& password="$RET"
+  db_get ddclient/username && username="$RET"
+  db_get ddclient/password && password="$RET"
 
   hostslist=`download_hostlist $username $password`
 
@@ -98,18 +98,18 @@ create_new_config()
   db_get ddclient/service
   # if the chosen service is dyndns, ask some extra questions.  otherwise, set them to false
   if [ "$RET" = "www.dyndns.com" ]; then
-  	db_input critical ddclient/checkip || true
-	if [ -f /usr/bin/wget ]; then
-		db_input critical ddclient/fetchhosts || true
-	else
-		db_fset ddclient/fetchhosts seen true
-		db_set ddclient/fetchhosts Manually
-	fi
+    db_input critical ddclient/checkip || true
+    if [ -f /usr/bin/wget ]; then
+      db_input critical ddclient/fetchhosts || true
+    else
+      db_fset ddclient/fetchhosts seen true
+      db_set ddclient/fetchhosts Manually
+    fi
   else
-  	db_fset ddclient/checkip seen true
-	db_fset ddclient/fetchhosts seen true
-	db_set ddclient/checkip false
-	db_set ddclient/fetchhosts Manually
+    db_fset ddclient/checkip seen true
+    db_fset ddclient/fetchhosts seen true
+    db_set ddclient/checkip false
+    db_set ddclient/fetchhosts Manually
   fi
   db_go
 
@@ -135,16 +135,16 @@ create_new_config()
   db_get ddclient/checkip
   # ask the traditional questions if the dyndns questions weren't answered true
   if [ "$RET" = "false" ]; then
-	db_input critical ddclient/interface || true
+    db_input critical ddclient/interface || true
   fi
   db_get ddclient/fetchhosts
 
   # check if we should fetch the hostlist for a dyndns account
   db_get ddclient/fetchhosts
   if [ "$RET" = "From list" ]; then
-      retrieve_dyndns_hostlist
+    retrieve_dyndns_hostlist
   else
-      db_input critical ddclient/names || true
+    db_input critical ddclient/names || true
   fi
   db_go
 
@@ -172,17 +172,16 @@ create_new_config()
   # maybe ask the user to override the default values
   db_input medium ddclient/run_ipup || true
   db_go
-  
+
   # if using ipup dont use daemon, bug #462207
   db_get ddclient/run_ipup
   if [ "$RET" = "true" ]; then
-      db_set ddclient/run_daemon false
+    db_set ddclient/run_daemon false
   else
-      db_input medium ddclient/run_daemon || true
-      db_go
+    db_input medium ddclient/run_daemon || true
+    db_go
   fi
-  
- 
+
   # if ddclient should run in daemon mode we ask for the update interval
   db_get ddclient/run_daemon
   if [ "$RET" = "true" ]; then
@@ -191,19 +190,13 @@ create_new_config()
   fi
 }
 
-
-
 if [ "$1" = "configure" ]; then
-
   if [ ! -f /etc/ddclient.conf ]; then
-	create_new_config
-	exit 0
+    create_new_config
+    exit 0
   fi
-
   exit 0
-
-elif [ "$1" = "reconfigure" ] ; then
-
+elif [ "$1" = "reconfigure" ]; then
   create_new_config
   rm -f /etc/ddclient.conf /etc/default/ddclient
 fi
