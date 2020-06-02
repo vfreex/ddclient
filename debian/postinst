@@ -4,6 +4,9 @@ set -e
 
 fatal() { printf %s\\n "$0: $*" >&2; exit 1; }
 
+. /usr/share/debconf/confmodule
+db_version 2.0 || fatal "need DebConf 2.0 or later"
+
 # Usage: y=`quote_backslashes "$x"`
 # Quotes each backslash in $x with another backslash, outputs result.
 quote_backslashes() {
@@ -12,9 +15,6 @@ quote_backslashes() {
 
 case "$1" in
   configure)
-    . /usr/share/debconf/confmodule
-    db_version 2.0 || fatal "need DebConf 2.0 or later"
-
     if [ ! -f /etc/ddclient.conf ]; then
       # get the values from the debconf database
       db_get ddclient/protocol
