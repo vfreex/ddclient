@@ -2,5 +2,13 @@
 %:
 	dh $@
 
+# This package conditionally enables the ddclient service based on
+# debconf answers.
+#
+# The --no-start flag is required because --no-enable only controls
+# whether the service is enabled, not whether the service is started.
+override_dh_installinit:
+	dh_installinit --no-enable --no-start
+
 %.8 : %.xml
 	xmlto -o $(@D) man $<

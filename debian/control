@@ -10,7 +10,7 @@ Vcs-Browser: https://salsa.debian.org/debian/ddclient
 
 Package: ddclient
 Architecture: all
-Depends: ${perl:Depends}, libdata-validate-ip-perl, ${misc:Depends}, lsb-base (>= 3.1)
+Depends: ${perl:Depends}, libdata-validate-ip-perl, ${misc:Depends}, init-system-helpers (>= 1.51), lsb-base (>= 3.1)
 Recommends: libio-socket-ssl-perl, libio-socket-inet6-perl, libdigest-sha-perl, libjson-pp-perl
 Provides: dyndns-client
 Description: address updating utility for dynamic DNS services
