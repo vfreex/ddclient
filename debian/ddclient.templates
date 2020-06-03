@@ -98,7 +98,7 @@ _Description: Run ddclient as daemon?
 
 Template: ddclient/daemon_interval
 Type: string
-Default: 300
+Default: 5m
 _Description: Interval between ddclient runs:
  Please choose the delay between interface address checks.
  Values may be given in seconds (e.g. "5s"), in minutes (e.g. "3m"), in
