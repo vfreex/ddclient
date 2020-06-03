@@ -7,8 +7,18 @@
 #
 # The --no-start flag is required because --no-enable only controls
 # whether the service is enabled, not whether the service is started.
+#
+# dh_installsystemd is used instead of dh_systemd_enable and
+# dh_systemd_start for forward compatibility with debhelper 11 and
+# newer.
+override_dh_systemd_enable:
+	dh_installsystemd --no-enable --no-start
 override_dh_installinit:
 	dh_installinit --no-enable --no-start
+# Empty for forward compatibility with debhelper 11 and newer.
+override_dh_installsystemd:
+# Empty because it is handled by dh_installsystemd
+override_dh_systemd_start:
 
 %.8 : %.xml
 	xmlto -o $(@D) man $<
