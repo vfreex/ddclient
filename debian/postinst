@@ -17,7 +17,13 @@ newline='
 '
 
 case "$1" in
-  configure)
+  # 'reconfigure' is here because of this comment from debconf-devel(7):
+  #
+  #     Make your postinst script accept a first parameter of
+  #     "reconfigure". It can treat it just like "configure". This
+  #     will be used in a later version of debconf to let postinsts
+  #     know when they are reconfigured.
+  configure|reconfigure)
     if [ ! -f /etc/ddclient.conf ]; then
       # get the values from the debconf database
       db_get ddclient/protocol
