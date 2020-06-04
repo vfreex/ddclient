@@ -18,7 +18,7 @@ ddclient (3.9.1-1) UNRELEASED; urgency=medium
   * Switch upstream to GitHub
   * Add gbp.conf
   * Merge tag 'v3.9.0'
-  * Merge tag 'v3.9.1'
+  * Merge tag 'v3.9.1' (Closes: #913308)
   * Refresh patches
   * Bump debhelper compat to 9 (no changes)
   * Change priority from extra to optional
@@ -30,8 +30,25 @@ ddclient (3.9.1-1) UNRELEASED; urgency=medium
   * Bump Standards-Version to 4.4.1
   * Update the Vcs-Git, Vcs-Browser URLs to the new home on salsa
   * Take over maintainership
+  * Remove support for upgrading from ancient ddclient
+  * Simplify debian/config and debian/postinst
+  * Fail postinst if debconf's `db_get` fails
+  * Fix quoting in shell scripts (Closes: #729960)
+  * Unconditionally source debconf/confmodule in postinst
+  * Recommend additional Perl modules for full protocol support
+  * Ask for the protocol before asking for the server
+  * Interpret an empty server as "use the default"
+  * Update service and protocol choices (Closes: #745217, #625715)
+  * Change default debconf check interval from 300 to 5m
+  * Support `postinst reconfigure` (recommended by debconf-devel(7))
+  * Remove the `run_daemon` control from the init script
+  * Bump debhelper compat to 10
+  * Add a systemd service node config.
+    Thanks to Andreas Henriksson (Closes: #950246)
+  * Change the default for "Run as a daemon?" to true
+  * Bump Standards-Version to 4.5.0
 
- -- Richard Hansen <rhansen@rhansen.org>  Fri, 29 May 2020 13:33:34 -0400
+ -- Richard Hansen <rhansen@rhansen.org>  Wed, 03 Jun 2020 22:05:03 -0400
 
 ddclient (3.8.3-1) unstable; urgency=medium
 
