@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Richard Hansen <rhansen@rhansen.org>
 Build-Depends: debhelper (>= 10), dh-exec, po-debconf, xmlto, quilt
-Standards-Version: 4.4.1
+Standards-Version: 4.5.0
 Homepage: https://ddclient.net
 Vcs-Git: https://salsa.debian.org/debian/ddclient.git
 Vcs-Browser: https://salsa.debian.org/debian/ddclient
