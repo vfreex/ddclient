@@ -91,7 +91,7 @@ _Description: Run ddclient on PPP connect?
 
 Template: ddclient/run_daemon
 Type: boolean
-Default: false
+Default: true
 _Description: Run ddclient as daemon?
  Please choose whether you want ddclient to be run in daemon mode on system
  startup.
