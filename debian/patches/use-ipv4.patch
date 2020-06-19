@@ -1,0 +1,29 @@
+From: Richard Hansen <rhansen@rhansen.org>
+Date: Tue, 16 Jun 2020 22:59:51 -0400
+Subject: Fix `use=ip` when `ip` is set to an IPv4 address
+
+Before, with `use=ip,ip=1.2.3.4`, `get_ip` would return `undef` and
+print a warning:
+
+  WARNING:  found neither ipv4 nor ipv6 address
+
+Origin: upstream, https://github.com/ddclient/ddclient/commit/99a60995c47348ea3281cf992f1605712b1c7598
+---
+ ddclient | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/ddclient b/ddclient
+index 70fd48b..bfc0975 100755
+--- a/ddclient
++++ b/ddclient
+@@ -2333,7 +2333,9 @@ sub get_ip {
+         $skip  =~ s/ /\\s/is;
+         $reply =~ s/^.*?${skip}//is;
+     }
+-    if ($reply =~ /^.*?\b(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\b.*/is) {
++    if (defined($ip)) {
++        # no need to parse $reply
++    } elsif ($reply =~ /^.*?\b(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\b.*/is) {
+ 	    $ip = $1;
+         $ip = un_zero_pad($ip);
+ 	    $ip = filter_local($ip) if opt('fw-banlocal', $h);
