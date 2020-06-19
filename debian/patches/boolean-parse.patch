@@ -1,0 +1,29 @@
+From: Richard Hansen <rhansen@rhansen.org>
+Date: Tue, 16 Jun 2020 22:58:09 -0400
+Subject: Fix parsing of "true" as a boolean value
+
+Before, "t" and "ttrue" were accepted as true, but not "true".
+
+Also simplify the true and false regular expressions.
+
+Origin: upstream, https://github.com/ddclient/ddclient/commit/40f355d05ef8f0a194f100784216fe1e928e8394
+---
+ ddclient | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/ddclient b/ddclient
+index dfa4c1d..70fd48b 100755
+--- a/ddclient
++++ b/ddclient
+@@ -1904,9 +1904,9 @@ sub check_value {
+ 	$value = $min if defined($min) && $value < $min;
+ 
+     } elsif ($type eq T_BOOL) {
+-	if ($value =~ /^y(es)?$|^t(true)?$|^1$/i) {
++        if ($value =~ /^(y(es)?|t(rue)?|1)$/i) {
+ 	    $value = 1;
+-	} elsif ($value =~ /^n(o)?$|^f(alse)?$|^0$/i) {
++        } elsif ($value =~ /^(n(o)?|f(alse)?|0)$/i) {
+ 	    $value = 0;
+ 	} else {
+ 	    return undef;

@@ -4,3 +4,4 @@ smc-barricade-fw-alt.diff
 config_path.diff
 maxinterval.diff
 usev6.diff
+boolean-parse.patch
