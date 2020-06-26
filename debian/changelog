@@ -53,6 +53,7 @@ ddclient (3.9.1-1) UNRELEASED; urgency=medium
 
   [ Debian Janitor ]
   * debian/changelog: Trim trailing whitespace.
+  * Set upstream metadata fields.
 
  -- Richard Hansen <rhansen@rhansen.org>  Sat, 27 Jun 2020 12:26:17 -0400
 
