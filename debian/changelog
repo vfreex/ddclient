@@ -51,6 +51,9 @@ ddclient (3.9.1-1) UNRELEASED; urgency=medium
   * Apply upstream fix for use=ip when ip=<IPv4 address>
   * debian/copyright: Untabify, style fixes.
 
+  [ Debian Janitor ]
+  * debian/changelog: Trim trailing whitespace.
+
  -- Richard Hansen <rhansen@rhansen.org>  Sat, 27 Jun 2020 12:26:17 -0400
 
 ddclient (3.8.3-1) unstable; urgency=medium
@@ -233,7 +236,7 @@ ddclient (3.8.0-9) unstable; urgency=low
 ddclient (3.8.0-8) unstable; urgency=low
 
   * Convert to new source format "3.0 (quilt)".
-  * debian/control: Bump Standards-Version (no changes required). 
+  * debian/control: Bump Standards-Version (no changes required).
   * ddclient: Do not leak the cache content into the global configuration.
     Thanks to Ingo Schwarze for the patch (closes: #527848).
 
@@ -245,7 +248,7 @@ ddclient (3.8.0-7) unstable; urgency=low
   * postinst: ignore debconf errors about blankhostslist, thus enabling
     installation with non-interactive mode. Patch by Jonathan Niehof.
     (Closes: #533888)
-  
+
   [ Torsten Landschoff ]
   * debian/{postinst,config}: Load debconf correctly, passing the same shell
     parameters again (closes: #555151). Kudos to Jonathan Niehof for finding.
@@ -266,10 +269,10 @@ ddclient (3.8.0-6) unstable; urgency=low
     + Portuguese (Miguel Figueiredo).  Closes: #551493
     + Brazilian Portuguese (Flamarion Jorge).  Closes: #551943
     + Italian (Vincenzo Campanella). Closes: #553042
-  
-  * Introduce ddclient.scripts-common with common functions for 
+
+  * Introduce ddclient.scripts-common with common functions for
     postinst and config scripts.
-  
+
  -- Torsten Landschoff <torsten@debian.org>  Mon, 02 Nov 2009 00:19:11 +0100
 
 ddclient (3.8.0-5) unstable; urgency=low
@@ -289,11 +292,11 @@ ddclient (3.8.0-4) unstable; urgency=low
   * Update Czech translation by Miroslav Kure (closes: #534960).
   * Pass pidfile path via ddclient command line instead of configuring it in
     the configuration file (closes: #534974).
-  * debian/control: Add Vcs-* entries for current location of the master 
+  * debian/control: Add Vcs-* entries for current location of the master
     Bazaar repository for ddclient as requested by Savvas Radevic.
   * debian/control: Update Standards-Version to 3.8.2 [lintian]. No changes.
   * debian/postinst: Do not use full path when running wget [lintian].
-    + Added some notes how this has to be fixed, especially checking if 
+    + Added some notes how this has to be fixed, especially checking if
       wget is really installed.
   * Update German translation provided by Helge Kreutzmann (closes: #535995).
 
@@ -306,7 +309,7 @@ ddclient (3.8.0-3) unstable; urgency=low
   * Use dh_installppp for installing our ip-up script (closes: #212862).
   * debian/control: Increase Standards-Version to 3.8.1 (checked against
     upgrading-checklist, no changes required).
-  * Fix handling of backslashes in password (every other character should 
+  * Fix handling of backslashes in password (every other character should
     already be fine, at least in 8 bit charsets) by escaping all backslashes
     with another backslash in the configuration file (closes: #516282).
   * Apply Basque translation update (closes: #516548).
@@ -365,15 +368,15 @@ ddclient (3.7.3-6) unstable; urgency=low
     + Call dh_installinit with -- start 20 2 3 4 5 . stop 20 1 .
   * debian/copyright:
     + Change license path from GPL to GPL-2.
- 
+
  -- Marco Rodrigues <gothicx@sapo.pt>  Fri, 23 Jan 2009 20:17:46 +0000
 
 ddclient (3.7.3-5) unstable; urgency=low
 
   * Acknowledge uploads by the l10n team. Thanks, guys!
   * Adjust wording for ddclient/interface option (closes: #230768).
-  * debian/patches/daemon_doc.diff: Document that the daemon option 
-    takes any interval (closes: #206272). Taken from upstream SVN, 
+  * debian/patches/daemon_doc.diff: Document that the daemon option
+    takes any interval (closes: #206272). Taken from upstream SVN,
     revision 90.
   * Patch bug468320_minmax_logic.diff: Include the patch provided
     by Chris Carr to fix the sanity check on max-interval
@@ -773,4 +776,3 @@ ddclient (2.3.3-1) unstable; urgency=low
   * Check that ddclient.conf is readable only by user running ddclient.
   * Move cache file to /var/cache/ddclient
  -- Steve Greenland <stevegr@debian.org>  Tue, 22 Aug 2000 15:28:59 -0500
-
