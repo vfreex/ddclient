@@ -113,7 +113,6 @@ ddclient (3.8.2-1) unstable; urgency=medium
   * New upstream version 3.8.2 (closes: #734661).
     * Adds support for freedns (closes: #690568).
     * Adds support for ChangeIP.com (closes: #754766).
-
   * Merge modifications by Tong Sun:
     - [*] update debian/copyright to the new standard format
     - [!] fix ancient-standards-version
@@ -121,11 +120,9 @@ ddclient (3.8.2-1) unstable; urgency=medium
           use dh_prep instead
     - [*] fix debian-rules-missing-recommended-target
     - [*] fix quilt-patch-missing-description
-
   * Apply upstream revision r166 as patch, removing a debug print containing
     authorization data. Noticed and fixed by Tong Sun.
   * debian/ddclient.init: Also stop ddclient for runlevel 0 and 6 (lintian).
-
     + debian/rules: Change dh_installinit invocation to not pass start and
       stop options to update-rc.d as they are no longer supported.
 
@@ -270,7 +267,6 @@ ddclient (3.8.0-6) unstable; urgency=low
     + Portuguese (Miguel Figueiredo).  Closes: #551493
     + Brazilian Portuguese (Flamarion Jorge).  Closes: #551943
     + Italian (Vincenzo Campanella). Closes: #553042
-
   * Introduce ddclient.scripts-common with common functions for
     postinst and config scripts.
 
@@ -769,6 +765,7 @@ ddclient (2.3.7-1) unstable; urgency=low
   * Added Build-Depends
   * New upstream release (closes:#79343)
   * Change '==' to '=' in config script (closes:#75467)
+
  -- Steve Greenland <stevegr@debian.org>  Mon, 11 Dec 2000 11:07:02 -0600
 
 ddclient (2.3.3-1) unstable; urgency=low
@@ -776,4 +773,5 @@ ddclient (2.3.3-1) unstable; urgency=low
   * Initial Release.
   * Check that ddclient.conf is readable only by user running ddclient.
   * Move cache file to /var/cache/ddclient
+
  -- Steve Greenland <stevegr@debian.org>  Tue, 22 Aug 2000 15:28:59 -0500
