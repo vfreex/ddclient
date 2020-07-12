@@ -1,13 +1,5 @@
 ddclient (3.9.1-1) unstable; urgency=medium
 
-  [ Martin Pitt ]
-  * Drop obsolete initscripts dependency. /lib/init/vars.sh is now in the
-    (required) sysvinit-utils. (Closes: #804975)
-
-  [ Christian Hofstaedtler ]
-  * Bump Standards-Version to 3.9.8 (no changes required)
-  * Update Vcs-Browser, Vcd-Git to use https URLs
-
   [ Richard Hansen ]
   * Refresh patches via 'gbp pq'
   * New upstream version 3.9.0
@@ -56,6 +48,20 @@ ddclient (3.9.1-1) unstable; urgency=medium
   * Set upstream metadata fields.
 
  -- Richard Hansen <rhansen@rhansen.org>  Sun, 12 Jul 2020 15:58:55 +0000
+
+ddclient (3.8.3-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+
+  [ Martin Pitt ]
+  * Drop obsolete initscripts dependency. /lib/init/vars.sh is now in the
+    (required) sysvinit-utils. (Closes: #804975)
+
+  [ Christian Hofstaedtler ]
+  * Bump Standards-Version to 3.9.8 (no changes required)
+  * Update Vcs-Browser, Vcd-Git to use https URLs
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Sat, 02 Jul 2016 13:16:57 +0200
 
 ddclient (3.8.3-1) unstable; urgency=medium
 
