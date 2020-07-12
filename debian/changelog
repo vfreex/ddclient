@@ -1,4 +1,4 @@
-ddclient (3.9.1-1) UNRELEASED; urgency=medium
+ddclient (3.9.1-1) unstable; urgency=medium
 
   [ Martin Pitt ]
   * Drop obsolete initscripts dependency. /lib/init/vars.sh is now in the
@@ -55,7 +55,7 @@ ddclient (3.9.1-1) UNRELEASED; urgency=medium
   * debian/changelog: Trim trailing whitespace.
   * Set upstream metadata fields.
 
- -- Richard Hansen <rhansen@rhansen.org>  Sat, 27 Jun 2020 12:26:17 -0400
+ -- Richard Hansen <rhansen@rhansen.org>  Sun, 12 Jul 2020 15:58:55 +0000
 
 ddclient (3.8.3-1) unstable; urgency=medium
 
