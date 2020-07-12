@@ -1,3 +1,14 @@
+ddclient (3.9.1-2) unstable; urgency=medium
+
+  [ Andreas Henriksson ]
+  * debian/skeleton: drop leftover example file
+  * Add debian/salsa-ci.yml with default pipelines
+
+  [ Richard Hansen ]
+  * Silence lintian false positive (duplicate-updaterc.d-calls-in-postinst)
+
+ -- Richard Hansen <rhansen@rhansen.org>  Sun, 12 Jul 2020 18:34:05 +0000
+
 ddclient (3.9.1-1) unstable; urgency=medium
 
   [ Richard Hansen ]
