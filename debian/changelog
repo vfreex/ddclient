@@ -30,7 +30,7 @@ ddclient (3.9.1-1) unstable; urgency=medium
   * Merge tag 'v3.9.0'
   * Merge tag 'v3.9.1' (Closes: #913308)
   * Refresh patches
-  * Bump debhelper compat to 9 (no changes)
+  * Bump debhelper compat to 9 (no changes) (Closes: #965481)
   * Change priority from extra to optional
   * Set shebang as required by Debian policy >= 4.1.2
   * Install RELEASENOTE as NEWS.gz
