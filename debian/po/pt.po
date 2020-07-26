@@ -2,19 +2,20 @@
 # This file is distributed under the same license as the ddclient package.
 # Ricardo Silva <ardoric@gmail.com>, 2006.
 # Miguel Figueiredo <elmig@debianpt.org>, 2009, 2010.
-#
+# Rui Branco - DebianPT <ruipb@debianpt.org>, 2017.
 msgid ""
 msgstr ""
-"Project-Id-Version: ddclient 3.6.7-2\n"
+"Project-Id-Version: ddclient 3.8.3-1.1\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2020-06-03 22:22-0400\n"
-"PO-Revision-Date: 2010-04-21 21:14+0000\n"
-"Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
+"PO-Revision-Date: 2017-08-05 16:19+0000\n"
+"Last-Translator: Rui Branco - DebianPT <ruipb@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Type: select
 #. Choices
@@ -122,7 +123,7 @@ msgstr ""
 #. Description
 #: ../ddclient.templates:8001
 msgid "Re-enter password to verify:"
-msgstr ""
+msgstr "Reintroduza a palavra-chave para verificação:"
 
 #. Type: password
 #. Description
@@ -131,18 +132,21 @@ msgid ""
 "Please enter your dynamic DNS service password again to make sure you typed "
 "it correctly."
 msgstr ""
+"Por favor introduza novamente a sua palavra-passe do serviço DNS dinâmico "
+"para verificar que a digitou correctamente."
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:9001
 msgid "Passwords do not match"
-msgstr ""
+msgstr "As palavras chaves não coincidem"
 
 #. Type: error
 #. Description
 #: ../ddclient.templates:9001
 msgid "The two passwords you entered were not the same. Please try again."
 msgstr ""
+"As duas palavras-passe que inseriu não são iguais. Por favor tente de novo."
 
 #. Type: boolean
 #. Description
@@ -181,27 +185,20 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:12001
-#, fuzzy
-#| msgid "Run ddclient on PPP connect?"
 msgid "Run ddclient on DHCP update?"
-msgstr "Correr o ddclient quando se liga o PPP?"
+msgstr "Correr o ddclient na actualização do DHCP?"
 
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:12001
-#, fuzzy
-#| msgid ""
-#| "You should enable this option if ddclient should be run every time a PPP "
-#| "connection is established. Note: This mode is not compatible with daemon "
-#| "mode."
 msgid ""
 "You should enable this option if ddclient should be run every time the IP "
 "address is changed by the DHCP client (dhclient). Note: This mode is not "
 "compatible with daemon mode."
 msgstr ""
 "Deve activar esta opção se pretender que o ddclient seja executado sempre "
-"que seja estabelecida uma ligação PPP. Nota: este modo não é compatível com "
-"o modo daemon."
+"que o endereço IP seja alterado pelo cliente DHCP (dhclient). Nota: este "
+"modo não é compatível com o modo daemon."
 
 #. Type: boolean
 #. Description
@@ -359,18 +356,3 @@ msgstr ""
 #~ "Se editou manualmente o ficheiro de configuração, este não será "
 #~ "modificado. Se necessitar de um novo ficheiro de configuração, corra "
 #~ "\"dpkg-reconfigure ddclient\"."
-
-#~ msgid "www.dyndns.com"
-#~ msgstr "www.dyndns.com"
-
-#~ msgid "www.easydns.com"
-#~ msgstr "www.easydns.com"
-
-#~ msgid "www.dslreports.com"
-#~ msgstr "www.dslreports.com"
-
-#~ msgid "www.zoneedit.com"
-#~ msgstr "www.zoneedit.com"
-
-#~ msgid "ddclient update interval:"
-#~ msgstr "intervalo de actualizações do ddclient:"
