@@ -29,7 +29,7 @@ case "$1" in
       db_get ddclient/protocol
       protocol="$RET"
       db_get ddclient/server
-      server=${RET:+${newline}server=${RET}}
+      server=${RET:+ \\${newline}server=${RET}}
       db_get ddclient/names
       names="$RET"
       db_get ddclient/username
@@ -55,10 +55,10 @@ case "$1" in
 #
 # /etc/ddclient.conf
 
-protocol=$protocol
-$interface$server
-login=$username
-password='$password_quoted'
+protocol=$protocol \\
+$interface$server \\
+login=$username \\
+password='$password_quoted' \\
 $names
 EOF
       mv "$config" /etc/ddclient.conf
