@@ -12,11 +12,11 @@ Author: Eduardo Trápani <etrapani@gmail.com>
 Forwarded: no
 Bug-Debian: https://bugs.debian.org/704467
 ---
- ddclient | 76 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------
- 1 file changed, 68 insertions(+), 8 deletions(-)
+ ddclient | 70 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++--------
+ 1 file changed, 62 insertions(+), 8 deletions(-)
 
 diff --git a/ddclient b/ddclient
-index 3b40f57..dfa4c1d 100755
+index 3b40f57..ee2f09e 100755
 --- a/ddclient
 +++ b/ddclient
 @@ -59,6 +59,7 @@ sub T_FILE	{'file name'};
@@ -53,29 +53,18 @@ index 3b40f57..dfa4c1d 100755
                                                    &ip_strategies_usage(),
      "",			     
      [ "ip",          "=s", "-ip address           : set the IP address to 'address'" ],
-@@ -952,12 +956,20 @@ sub update_nics {
- 		my (@hosts, %ips) = ();
- 		my $updateable = $services{$s}{'updateable'};
- 		my $update     = $services{$s}{'update'};
-+		my $ipv6 = 0;
- 
- 		foreach my $h (sort keys %config) {
+@@ -957,7 +961,9 @@ sub update_nics {
  			next if $config{$h}{'protocol'} ne lc($s);
  			$examined{$h} = 1;
  			# we only do this once per 'use' and argument combination
 -			my $use = opt('use', $h);
 +			my $use = '';
-+			$ipv6 = 1 if (defined $config{$h}{'usev6'});
-+			if ($ipv6) {
-+				$use = opt('usev6', $h);
-+			}
-+			else {
-+				$use = opt('use', $h);
-+			}
++			my $ipv6 = defined($config{$h}{'usev6'});
++			my $use = $ipv6 ? opt('usev6', $h) : opt('use', $h);
  			my $arg_ip = opt('ip', $h) || '';
  			my $arg_fw = opt('fw', $h) || '';
  			my $arg_if = opt('if', $h) || '';
-@@ -967,17 +979,20 @@ sub update_nics {
+@@ -967,17 +973,20 @@ sub update_nics {
  			if (exists $iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd}) {
  				$ip = $iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd};
  			} else {
@@ -102,7 +91,7 @@ index 3b40f57..dfa4c1d 100755
  				}
  				$iplist{$use}{$arg_ip}{$arg_fw}{$arg_if}{$arg_web}{$arg_cmd} = $ip;
  			}
-@@ -1297,6 +1312,11 @@ sub init_config {
+@@ -1297,6 +1306,11 @@ sub init_config {
      $opt{'use'} = 'if'  if !define($opt{'use'}) && defined($opt{'if'});
      $opt{'use'} = 'web' if !define($opt{'use'}) && defined($opt{'web'});
  
@@ -114,7 +103,7 @@ index 3b40f57..dfa4c1d 100755
      ## sanity check
      $opt{'max-interval'}       = min(interval(opt('max-interval')), interval(default('max-interval')));
      $opt{'min-interval'}       = max(interval(opt('min-interval')), interval(default('min-interval')));
-@@ -1907,6 +1927,10 @@ sub check_value {
+@@ -1907,6 +1921,10 @@ sub check_value {
  	$value = lc $value;
  	return undef if ! exists $ip_strategies{$value};
  
@@ -125,7 +114,7 @@ index 3b40f57..dfa4c1d 100755
      } elsif ($type eq T_FILE) {
  	return undef if $value eq "";
  
-@@ -2327,6 +2351,42 @@ sub get_ip {
+@@ -2327,6 +2345,42 @@ sub get_ip {
      return $ip;
  }
  
@@ -135,7 +124,7 @@ index 3b40f57..dfa4c1d 100755
 +sub get_ipv6 {
 +    my $use = lc shift;
 +    my $h = shift;
-+    my ($ip, $arg, $reply, $url, $skip) = (undef, opt($use), '');
++    my ($ip, $arg, $reply, $url, $skip) = (undef, opt($use, $h), '');
 +    $arg = '' unless $arg;
 +
 +    if ($use eq 'ip') {

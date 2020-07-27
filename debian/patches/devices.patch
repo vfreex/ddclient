@@ -9,7 +9,7 @@ Applied-Upstream: https://github.com/ddclient/ddclient/commit/f8185182e97d7fda6c
  1 file changed, 20 insertions(+)
 
 diff --git a/ddclient b/ddclient
-index bfc0975..270fc5d 100755
+index 827d283..71e69be 100755
 --- a/ddclient
 +++ b/ddclient
 @@ -178,6 +178,11 @@ my %builtinfw = (
