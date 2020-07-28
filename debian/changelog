@@ -1,3 +1,17 @@
+ddclient (3.9.1-5) unstable; urgency=medium
+
+  * Add line continuations to /etc/ddclient.conf
+  * Update Japanese debconf translation.
+    Thanks to Takuma Yamada (Closes: #815388)
+  * Update Portuguese debconf translation.
+    Thanks to Rui Branco (Closes: #871402)
+  * Add new device built-ins (`fw=<device>`)
+    Thanks to Geoff Simmons (Closes: #589980)
+  * Fix `usev6` processing (Closes: #832395, #832396)
+  * debian/control: Set `Rules-Requires-Root: no`
+
+ -- Richard Hansen <rhansen@rhansen.org>  Tue, 28 Jul 2020 01:46:01 -0400
+
 ddclient (3.9.1-4) unstable; urgency=medium
 
   * Delete superseded debian/salsa-ci.yml file.
