@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2020-08-05 01:53-0400\n"
+"POT-Creation-Date: 2020-08-05 18:22-0400\n"
 "PO-Revision-Date: 2016-02-21 14:55+0900\n"
 "Last-Translator: Takuma Yamada <tyamada@takumayamada.com>\n"
 "Language-Team: 日本語 <debian-japanese@lists.debian.org>\n"
@@ -42,10 +42,14 @@ msgstr "Dynamic DNS サービスプロバイダ:"
 #. Type: select
 #. Description
 #: ../ddclient.templates:2002
+#, fuzzy
+#| msgid ""
+#| "Please select the dynamic DNS service you are using. If the service you "
+#| "use is not listed, choose \"other\" and you will be asked for the "
+#| "protocol and the server name."
 msgid ""
-"Please select the dynamic DNS service you are using. If the service you use "
-"is not listed, choose \"other\" and you will be asked for the protocol and "
-"the server name."
+"Dynamic DNS service you are using. If the service you use is not listed, "
+"choose \"other\"."
 msgstr ""
 "利用している Dynamic DNS サービスを選択してください。使っているサービスがリス"
 "トされていない場合には、\"その他\" を選ぶと、プロトコルとサーバ名を尋ねられま"
@@ -60,9 +64,11 @@ msgstr "Dynamic DNS サーバ:"
 #. Type: string
 #. Description
 #: ../ddclient.templates:3001
-msgid ""
-"Please enter the name of the server which is providing you with dynamic DNS "
-"service (example: members.dyndns.org)."
+#, fuzzy
+#| msgid ""
+#| "Please enter the name of the server which is providing you with dynamic "
+#| "DNS service (example: members.dyndns.org)."
+msgid "Server providing the dynamic DNS service (example: members.dyndns.org)."
 msgstr ""
 "Dynamic DNS サービスを提供しているサーバの名前を入力してください (例: "
 "members.dyndns.org)。"
@@ -76,9 +82,11 @@ msgstr "Dynamic DNS の更新プロトコル:"
 #. Type: select
 #. Description
 #: ../ddclient.templates:4001
-msgid ""
-"Please select the dynamic DNS update protocol used by your dynamic DNS "
-"service provider."
+#, fuzzy
+#| msgid ""
+#| "Please select the dynamic DNS update protocol used by your dynamic DNS "
+#| "service provider."
+msgid "Dynamic DNS update protocol used by your dynamic DNS service provider."
 msgstr ""
 "あなたの Dynamic DNS サービスプロバイダで使っている Dynamic DNS の更新プロト"
 "コルを選択してください。"
@@ -86,16 +94,21 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
-msgid "DynDNS fully qualified domain names:"
-msgstr "DynDNS の完全修飾ドメイン名:"
+msgid "Hosts to update (comma-separated):"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
+#, fuzzy
+#| msgid ""
+#| "Please enter the list of fully qualified domain names for the local "
+#| "host(s) (for instance, \"myname.dyndns.org\" with only one host or "
+#| "\"myname1.dyndns.org,myname2.dyndns.org\" for two hosts)."
 msgid ""
-"Please enter the list of fully qualified domain names for the local host(s) "
-"(for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns."
-"org,myname2.dyndns.org\" for two hosts)."
+"Comma-separated list of fully qualified domain names to update (for "
+"instance, \"myname.dyndns.org\" with only one host, or \"myname1.dyndns.org,"
+"myname2.dyndns.org\" for two hosts)."
 msgstr ""
 "ローカルのホストの完全修飾ドメイン名のリストを入力してください (もし 1 ホスト"
 "のみなら \"myname.dyndns.org\"、2 ホストなら \"myname1.dyndns.org,myname2."
@@ -104,42 +117,49 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:6001
-msgid "Username for dynamic DNS service:"
-msgstr "Dynamic DNS サービスのユーザ名:"
+msgid "Username:"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:6001
-msgid "Please enter the username to use with the dynamic DNS service."
+#, fuzzy
+#| msgid "Please enter the username to use with the dynamic DNS service."
+msgid ""
+"Username (or other type of account identifer) to use with the dynamic DNS "
+"service."
 msgstr "Dynamic DNS サービスに使うユーザ名を入力してください。"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:7001
-msgid "Password for dynamic DNS service:"
-msgstr "Dynamic DNS サービスのパスワード:"
+msgid "Password:"
+msgstr ""
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:7001
-msgid "Please enter the password to use with the dynamic DNS service."
+#, fuzzy
+#| msgid "Please enter the password to use with the dynamic DNS service."
+msgid "Password, API key, or token to use with the dynamic DNS service."
 msgstr "Dynamic DNS サービスに使うパスワードを入力してください。"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:8001
-msgid "Re-enter password to verify:"
+#, fuzzy
+#| msgid "Re-enter password to verify:"
+msgid "Re-enter password:"
 msgstr "確認のためパスワードを再入力してください:"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:8001
+#, fuzzy
+#| msgid "Please enter the password to use with the dynamic DNS service."
 msgid ""
-"Please enter your dynamic DNS service password again to make sure you typed "
-"it correctly."
-msgstr ""
-"正しく入力したことを確認するため、もう一度ダイナミック DNS サービスのパスワー"
-"ドを入力してください。"
+"Password, API key, or token entered again to ensure it was entered correctly."
+msgstr "Dynamic DNS サービスに使うパスワードを入力してください。"
 
 #. Type: error
 #. Description
@@ -162,10 +182,15 @@ msgstr "checkip.dyndns.com を使ってパブリックな IP を探しますか?
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:10001
+#, fuzzy
+#| msgid ""
+#| "Please choose whether ddclient should try to find the IP address of this "
+#| "machine via the DynDNS web interface.  This is recommended for machines "
+#| "that are using Network Address Translation."
 msgid ""
-"Please choose whether ddclient should try to find the IP address of this "
-"machine via the DynDNS web interface.  This is recommended for machines that "
-"are using Network Address Translation."
+"Whether ddclient should try to find the IP address of this machine via the "
+"DynDNS web interface. This is recommended for machines that are using "
+"Network Address Translation."
 msgstr ""
 "DynDNS Web インターフェイスで ddclient にこのマシンの IP アドレスを探すことを"
 "試みさせるべきかどうか選んでください。これは NAT (ネットワークアドレス変換) "
@@ -174,18 +199,16 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:11001
-msgid "Network interface used for dynamic DNS service:"
-msgstr "Dynamic DNS サービスに使うネットワークインターフェイス:"
+msgid "Network interface:"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:11001
 msgid ""
-"Please enter the name of the network interface (eth0/wlan0/ppp0/...) to use "
-"for dynamic DNS service."
+"The name of the network interface (e.g., eth0, wlan0, ppp0) that ddclient "
+"will look at to determine the current IP address."
 msgstr ""
-"Dynamic DNS サービスに使うネットワークインターフェイス名 (eth0/wlan0/ppp0/…) "
-"を入力してください。"
 
 #. Type: boolean
 #. Description
@@ -196,10 +219,14 @@ msgstr "PPP 接続上で ddclient を実行しますか?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:12001
+#, fuzzy
+#| msgid ""
+#| "You should enable this option if ddclient should be run every time a PPP "
+#| "connection is established. Note: This mode is not compatible with daemon "
+#| "mode."
 msgid ""
-"You should enable this option if ddclient should be run every time a PPP "
-"connection is established. Note: This mode is not compatible with daemon "
-"mode."
+"Whether ddclient should run every time a PPP connection is established. "
+"Note: This mode is not compatible with daemon mode."
 msgstr ""
 "ddclient を PPP 接続が確立したときに毎回実行したいときには、この選択肢で「は"
 "い」を選ぶべきです。注意: このモードは、デーモンモードとは互換性がありませ"
@@ -214,9 +241,11 @@ msgstr "ddclient をデーモンとして実行しますか?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:13001
-msgid ""
-"Please choose whether you want ddclient to be run in daemon mode on system "
-"startup."
+#, fuzzy
+#| msgid ""
+#| "Please choose whether you want ddclient to be run in daemon mode on "
+#| "system startup."
+msgid "Whether ddclient should run in daemon mode on system startup."
 msgstr ""
 "ddclient をシステムのスタートアップ時にデーモンモードで実行するかどうか選んで"
 "ください。"
@@ -224,16 +253,21 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:14001
-msgid "Interval between ddclient runs:"
-msgstr "ddclient を実行する間隔:"
+msgid "Time between address checks:"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:14001
+#, fuzzy
+#| msgid ""
+#| "Please choose the delay between interface address checks. Values may be "
+#| "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. "
+#| "\"7h\") or in days (e.g. \"1d\")."
 msgid ""
-"Please choose the delay between interface address checks. Values may be "
-"given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
-"\") or in days (e.g. \"1d\")."
+"How long ddclient should wait between IP address checks. Values may be given "
+"in seconds (e.g., \"300s\"), in minutes (e.g., \"5m\"), in hours (e.g., \"7h"
+"\") or in days (e.g., \"1d\")."
 msgstr ""
 "インターフェイスアドレスチェックの待ち間隔を選んでください。値は秒 (例 \"5s"
 "\")、分 (例 \"3m\")、時 (例 \"7h\")、あるいは日 (例 \"1d\") で指定できます。"
@@ -253,38 +287,45 @@ msgstr "手動"
 #. Type: select
 #. Description
 #: ../ddclient.templates:15002
-msgid "Selection method for updated names:"
-msgstr "更新名に使う手法の選択:"
+msgid "How to enter host names:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:15002
+msgid "How to prompt you for the host name(s) that ddclient will update."
+msgstr ""
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:15002
 msgid ""
-"You'll have to select which host names to update using ddclient.  You can "
-"select host names to update from a list (taken from your DynDNS account) or "
-"enter them manually."
+"If you choose \"From list\", this program will attempt to look up the host "
+"names that are registered with your DynDNS account. You will then select "
+"hosts from that list."
 msgstr ""
-"ddclient を使って更新するためのホスト名を選択する必要があります。(あなたの "
-"DynDNS アカウントから取得した) リスト、または手動入力で更新するホスト名を選ぶ"
-"ことができます。"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:15002
+msgid "If you choose \"Manually\", you will have to type in the host name(s)."
+msgstr ""
 
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:16001
-msgid "Host names to keep updated:"
+#, fuzzy
+#| msgid "Host names to keep updated:"
+msgid "Hosts to update:"
 msgstr "更新から保持するホスト名:"
 
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:16001
 msgid ""
-"The list of host names managed via your DynDNS account has been downloaded. "
-"Please choose the one(s) for which ddclient should be used to keep IP "
-"address records up to date."
+"The host name(s) to keep updated with your current IP address. (This list of "
+"host names was downloaded from your DynDNS account.)"
 msgstr ""
-"あなたの DynDNS アカウント経由で管理されるホスト名のリストをダウンロード済み"
-"です。IP アドレスの記録を最新の状態で保持するのに ddclient が使用すべきもの"
-"を 1 つ選んでください。"
 
 #. Type: error
 #. Description
@@ -321,6 +362,56 @@ msgid ""
 msgstr ""
 "ホスト名が正しく設定されているかあなたのアカウントを確認し、ユーザー名とパス"
 "ワードを再度入力するために \"dpkg-reconfigure ddclient\" を実行してください。"
+
+#~ msgid ""
+#~ "The list of host names managed via your DynDNS account has been "
+#~ "downloaded. Please choose the one(s) for which ddclient should be used to "
+#~ "keep IP address records up to date."
+#~ msgstr ""
+#~ "あなたの DynDNS アカウント経由で管理されるホスト名のリストをダウンロード済"
+#~ "みです。IP アドレスの記録を最新の状態で保持するのに ddclient が使用すべき"
+#~ "ものを 1 つ選んでください。"
+
+#~ msgid "Selection method for updated names:"
+#~ msgstr "更新名に使う手法の選択:"
+
+#~ msgid ""
+#~ "You'll have to select which host names to update using ddclient.  You can "
+#~ "select host names to update from a list (taken from your DynDNS account) "
+#~ "or enter them manually."
+#~ msgstr ""
+#~ "ddclient を使って更新するためのホスト名を選択する必要があります。(あなた"
+#~ "の DynDNS アカウントから取得した) リスト、または手動入力で更新するホスト名"
+#~ "を選ぶことができます。"
+
+#~ msgid "Interval between ddclient runs:"
+#~ msgstr "ddclient を実行する間隔:"
+
+#~ msgid "Network interface used for dynamic DNS service:"
+#~ msgstr "Dynamic DNS サービスに使うネットワークインターフェイス:"
+
+#~ msgid ""
+#~ "Please enter the name of the network interface (eth0/wlan0/ppp0/...) to "
+#~ "use for dynamic DNS service."
+#~ msgstr ""
+#~ "Dynamic DNS サービスに使うネットワークインターフェイス名 (eth0/wlan0/ppp0/"
+#~ "…) を入力してください。"
+
+#~ msgid ""
+#~ "Please enter your dynamic DNS service password again to make sure you "
+#~ "typed it correctly."
+#~ msgstr ""
+#~ "正しく入力したことを確認するため、もう一度ダイナミック DNS サービスのパス"
+#~ "ワードを入力してください。"
+
+#~ msgid "Password for dynamic DNS service:"
+#~ msgstr "Dynamic DNS サービスのパスワード:"
+
+#~ msgid "Username for dynamic DNS service:"
+#~ msgstr "Dynamic DNS サービスのユーザ名:"
+
+#~ msgid "DynDNS fully qualified domain names:"
+#~ msgstr "DynDNS の完全修飾ドメイン名:"
 
 #~ msgid "Run ddclient on DHCP update?"
 #~ msgstr "DHCP 更新時に ddclient を実行しますか?"

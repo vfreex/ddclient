@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient 3.8.0-11.1\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2020-08-05 01:53-0400\n"
+"POT-Creation-Date: 2020-08-05 18:22-0400\n"
 "PO-Revision-Date: 2010-06-10 16:57+0200\n"
 "Last-Translator: Vincenzo Campanella <vinz65@gmail.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -31,10 +31,14 @@ msgstr "Fornitore del servizio DNS dinamico:"
 #. Type: select
 #. Description
 #: ../ddclient.templates:2002
+#, fuzzy
+#| msgid ""
+#| "Please select the dynamic DNS service you are using. If the service you "
+#| "use is not listed, choose \"other\" and you will be asked for the "
+#| "protocol and the server name."
 msgid ""
-"Please select the dynamic DNS service you are using. If the service you use "
-"is not listed, choose \"other\" and you will be asked for the protocol and "
-"the server name."
+"Dynamic DNS service you are using. If the service you use is not listed, "
+"choose \"other\"."
 msgstr ""
 "Selezionare il servizio dinamico DNS in uso. Se il servizio che si utilizza "
 "non è incluso nell'elenco, scegliere «altro» e verranno richiesti il "
@@ -49,9 +53,11 @@ msgstr "Server DNS dinamico:"
 #. Type: string
 #. Description
 #: ../ddclient.templates:3001
-msgid ""
-"Please enter the name of the server which is providing you with dynamic DNS "
-"service (example: members.dyndns.org)."
+#, fuzzy
+#| msgid ""
+#| "Please enter the name of the server which is providing you with dynamic "
+#| "DNS service (example: members.dyndns.org)."
+msgid "Server providing the dynamic DNS service (example: members.dyndns.org)."
 msgstr ""
 "Inserire il nome del server che fornisce il servizio DNS dinamico (per "
 "esempio «members.dyndns.org»)."
@@ -65,9 +71,11 @@ msgstr "Protocollo di aggiornamento del DNS dinamico:"
 #. Type: select
 #. Description
 #: ../ddclient.templates:4001
-msgid ""
-"Please select the dynamic DNS update protocol used by your dynamic DNS "
-"service provider."
+#, fuzzy
+#| msgid ""
+#| "Please select the dynamic DNS update protocol used by your dynamic DNS "
+#| "service provider."
+msgid "Dynamic DNS update protocol used by your dynamic DNS service provider."
 msgstr ""
 "Selezionare il protocollo di aggiornamento del DNS dinamico utilizzato dal "
 "proprio fornitore del servizio."
@@ -75,16 +83,21 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
-msgid "DynDNS fully qualified domain names:"
-msgstr "Nomi completi di dominio non ambigui (FQDN) DynDNS:"
+msgid "Hosts to update (comma-separated):"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
+#, fuzzy
+#| msgid ""
+#| "Please enter the list of fully qualified domain names for the local "
+#| "host(s) (for instance, \"myname.dyndns.org\" with only one host or "
+#| "\"myname1.dyndns.org,myname2.dyndns.org\" for two hosts)."
 msgid ""
-"Please enter the list of fully qualified domain names for the local host(s) "
-"(for instance, \"myname.dyndns.org\" with only one host or \"myname1.dyndns."
-"org,myname2.dyndns.org\" for two hosts)."
+"Comma-separated list of fully qualified domain names to update (for "
+"instance, \"myname.dyndns.org\" with only one host, or \"myname1.dyndns.org,"
+"myname2.dyndns.org\" for two hosts)."
 msgstr ""
 "Inserire l'elenco dei nomi completi di dominio non ambigui (FQDN) per l'host "
 "locale (per esempio «mionome.dyndns.org», se si ha un solo host, oppure "
@@ -93,41 +106,49 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:6001
-msgid "Username for dynamic DNS service:"
-msgstr "Nome utente per il servizio DNS dinamico:"
+msgid "Username:"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:6001
-msgid "Please enter the username to use with the dynamic DNS service."
+#, fuzzy
+#| msgid "Please enter the username to use with the dynamic DNS service."
+msgid ""
+"Username (or other type of account identifer) to use with the dynamic DNS "
+"service."
 msgstr "Inserire il nome utente da usare per il servizio DNS dinamico."
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:7001
-msgid "Password for dynamic DNS service:"
-msgstr "Password per il servizio DNS dinamico:"
+msgid "Password:"
+msgstr ""
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:7001
-msgid "Please enter the password to use with the dynamic DNS service."
+#, fuzzy
+#| msgid "Please enter the password to use with the dynamic DNS service."
+msgid "Password, API key, or token to use with the dynamic DNS service."
 msgstr ""
 "Inserire la password da usare per annunciarsi al servizio DNS dinamico."
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:8001
-msgid "Re-enter password to verify:"
+msgid "Re-enter password:"
 msgstr ""
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:8001
+#, fuzzy
+#| msgid "Please enter the password to use with the dynamic DNS service."
 msgid ""
-"Please enter your dynamic DNS service password again to make sure you typed "
-"it correctly."
+"Password, API key, or token entered again to ensure it was entered correctly."
 msgstr ""
+"Inserire la password da usare per annunciarsi al servizio DNS dinamico."
 
 #. Type: error
 #. Description
@@ -150,10 +171,15 @@ msgstr "Trovare l'indirizzo IP pubblico usando checkip.dyndns.com?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:10001
+#, fuzzy
+#| msgid ""
+#| "Please choose whether ddclient should try to find the IP address of this "
+#| "machine via the DynDNS web interface.  This is recommended for machines "
+#| "that are using Network Address Translation."
 msgid ""
-"Please choose whether ddclient should try to find the IP address of this "
-"machine via the DynDNS web interface.  This is recommended for machines that "
-"are using Network Address Translation."
+"Whether ddclient should try to find the IP address of this machine via the "
+"DynDNS web interface. This is recommended for machines that are using "
+"Network Address Translation."
 msgstr ""
 "Scegliere se si desidera che ddclient provi a trovare l'indirizzo IP "
 "pubblico di questa macchina tramite l'interfaccia web di DynDNS. Questo è "
@@ -163,18 +189,16 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:11001
-msgid "Network interface used for dynamic DNS service:"
-msgstr "Interfaccia di rete utilizzata per il servizio DNS dinamico:"
+msgid "Network interface:"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:11001
 msgid ""
-"Please enter the name of the network interface (eth0/wlan0/ppp0/...) to use "
-"for dynamic DNS service."
+"The name of the network interface (e.g., eth0, wlan0, ppp0) that ddclient "
+"will look at to determine the current IP address."
 msgstr ""
-"Inserire il nome dell'interfaccia di rete (eth0/wlan0/ppp0/...) da usare per "
-"il sistema DNS dinamico."
 
 #. Type: boolean
 #. Description
@@ -185,10 +209,14 @@ msgstr "Eseguire ddclient al momento della connessione PPP?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:12001
+#, fuzzy
+#| msgid ""
+#| "You should enable this option if ddclient should be run every time a PPP "
+#| "connection is established. Note: This mode is not compatible with daemon "
+#| "mode."
 msgid ""
-"You should enable this option if ddclient should be run every time a PPP "
-"connection is established. Note: This mode is not compatible with daemon "
-"mode."
+"Whether ddclient should run every time a PPP connection is established. "
+"Note: This mode is not compatible with daemon mode."
 msgstr ""
 "Abilitare questa opzione se ddclient deve essere eseguito ogni volta che "
 "viene stabilita una connessione PPP. Notare che questa modalità non è "
@@ -203,9 +231,11 @@ msgstr "Eseguire ddclient come demone?"
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:13001
-msgid ""
-"Please choose whether you want ddclient to be run in daemon mode on system "
-"startup."
+#, fuzzy
+#| msgid ""
+#| "Please choose whether you want ddclient to be run in daemon mode on "
+#| "system startup."
+msgid "Whether ddclient should run in daemon mode on system startup."
 msgstr ""
 "Scegliere se si vuole o meno che ddclient venga eseguito come demone "
 "all'avvio del sistema."
@@ -213,16 +243,21 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:14001
-msgid "Interval between ddclient runs:"
-msgstr "Intervallo fra le esecuzioni di ddclient:"
+msgid "Time between address checks:"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:14001
+#, fuzzy
+#| msgid ""
+#| "Please choose the delay between interface address checks. Values may be "
+#| "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. "
+#| "\"7h\") or in days (e.g. \"1d\")."
 msgid ""
-"Please choose the delay between interface address checks. Values may be "
-"given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
-"\") or in days (e.g. \"1d\")."
+"How long ddclient should wait between IP address checks. Values may be given "
+"in seconds (e.g., \"300s\"), in minutes (e.g., \"5m\"), in hours (e.g., \"7h"
+"\") or in days (e.g., \"1d\")."
 msgstr ""
 "Scegliere l'intervallo fra i controlli dell'indirizzo di interfaccia. I "
 "valori possono essere dati in secondi (per esempio «5s»), in minuti (per "
@@ -243,38 +278,45 @@ msgstr "Manualmente"
 #. Type: select
 #. Description
 #: ../ddclient.templates:15002
-msgid "Selection method for updated names:"
-msgstr "Selezionare il metodo per i nomi aggiornati:"
+msgid "How to enter host names:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:15002
+msgid "How to prompt you for the host name(s) that ddclient will update."
+msgstr ""
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:15002
 msgid ""
-"You'll have to select which host names to update using ddclient.  You can "
-"select host names to update from a list (taken from your DynDNS account) or "
-"enter them manually."
+"If you choose \"From list\", this program will attempt to look up the host "
+"names that are registered with your DynDNS account. You will then select "
+"hosts from that list."
 msgstr ""
-"È necessario selezionare quali nomi di host sono da aggiornare usando "
-"ddclient. È possibile selezionare nomi di host da aggiornare da un elenco "
-"(prelevato dal proprio account DynDNS o inserirli manualmente."
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:15002
+msgid "If you choose \"Manually\", you will have to type in the host name(s)."
+msgstr ""
 
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:16001
-msgid "Host names to keep updated:"
+#, fuzzy
+#| msgid "Host names to keep updated:"
+msgid "Hosts to update:"
 msgstr "Nomi degli host da mantenere aggiornati:"
 
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:16001
 msgid ""
-"The list of host names managed via your DynDNS account has been downloaded. "
-"Please choose the one(s) for which ddclient should be used to keep IP "
-"address records up to date."
+"The host name(s) to keep updated with your current IP address. (This list of "
+"host names was downloaded from your DynDNS account.)"
 msgstr ""
-"L'elenco dei nomi degli host gestiti tramite l'account DynDNS è stato "
-"scaricato. Scegliere gli host dei quali ddclient deve mantenere aggiornati "
-"gli indirizzi IP."
 
 #. Type: error
 #. Description
@@ -313,6 +355,49 @@ msgstr ""
 "Controllare l'account per accertarsi di avere nomi di host configurati, poi "
 "eseguire «dpkg-reconfigure ddclient» per inserire nuovamente le proprie "
 "credenziali d'accesso."
+
+#~ msgid ""
+#~ "The list of host names managed via your DynDNS account has been "
+#~ "downloaded. Please choose the one(s) for which ddclient should be used to "
+#~ "keep IP address records up to date."
+#~ msgstr ""
+#~ "L'elenco dei nomi degli host gestiti tramite l'account DynDNS è stato "
+#~ "scaricato. Scegliere gli host dei quali ddclient deve mantenere "
+#~ "aggiornati gli indirizzi IP."
+
+#~ msgid "Selection method for updated names:"
+#~ msgstr "Selezionare il metodo per i nomi aggiornati:"
+
+#~ msgid ""
+#~ "You'll have to select which host names to update using ddclient.  You can "
+#~ "select host names to update from a list (taken from your DynDNS account) "
+#~ "or enter them manually."
+#~ msgstr ""
+#~ "È necessario selezionare quali nomi di host sono da aggiornare usando "
+#~ "ddclient. È possibile selezionare nomi di host da aggiornare da un elenco "
+#~ "(prelevato dal proprio account DynDNS o inserirli manualmente."
+
+#~ msgid "Interval between ddclient runs:"
+#~ msgstr "Intervallo fra le esecuzioni di ddclient:"
+
+#~ msgid "Network interface used for dynamic DNS service:"
+#~ msgstr "Interfaccia di rete utilizzata per il servizio DNS dinamico:"
+
+#~ msgid ""
+#~ "Please enter the name of the network interface (eth0/wlan0/ppp0/...) to "
+#~ "use for dynamic DNS service."
+#~ msgstr ""
+#~ "Inserire il nome dell'interfaccia di rete (eth0/wlan0/ppp0/...) da usare "
+#~ "per il sistema DNS dinamico."
+
+#~ msgid "Password for dynamic DNS service:"
+#~ msgstr "Password per il servizio DNS dinamico:"
+
+#~ msgid "Username for dynamic DNS service:"
+#~ msgstr "Nome utente per il servizio DNS dinamico:"
+
+#~ msgid "DynDNS fully qualified domain names:"
+#~ msgstr "Nomi completi di dominio non ambigui (FQDN) DynDNS:"
 
 #, fuzzy
 #~| msgid "Run ddclient on PPP connect?"
