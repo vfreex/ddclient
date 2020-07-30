@@ -147,6 +147,13 @@ else
 #DEBHELPER#
 fi
 
+# Configuration was successful so remove the password from debconf as
+# recommended by debconf-devel(7).
+db_set ddclient/password ""
+db_fset ddclient/password seen false
+db_set ddclient/password-repeat ""
+db_fset ddclient/password-repeat seen false
+
 db_stop
 
 exit 0

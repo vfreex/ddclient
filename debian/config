@@ -144,8 +144,6 @@ create_new_config()
     db_input critical ddclient/password-repeat || true
   done
 
-  db_set ddclient/password-repeat ""
-
   db_go
   db_get ddclient/checkip
   # ask the traditional questions if the dyndns questions weren't answered true
