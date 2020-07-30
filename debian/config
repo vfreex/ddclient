@@ -61,38 +61,14 @@ create_new_config()
   db_go
   db_get ddclient/service
   case "$RET" in
-    no-ip.com)
-      server=  # use the default server
-      protocol=noip
-      ;;
-    freedns.afraid.org)
-      protocol=freedns
-      server=  # use the default server
-      ;;
-    duckdns.org)
-      protocol=duckdns
-      server=  # use the default server
-      ;;
-    domains.google)
-      protocol=googledomains
-      server=  # use the default server
-      ;;
-    www.dyndns.com)
-      protocol=dyndns2
-      server=members.dyndns.org
-      ;;
-    www.easydns.com)
-      protocol=easydns
-      server=members.easydns.com
-      ;;
-    www.dslreports.com)
-      protocol=dslreports1
-      server=www.dslreports.com
-      ;;
-    www.zoneedit.com)
-      protocol=zoneedit1
-      server=dynamic.zoneedit.com
-      ;;
+    no-ip.com) protocol=noip;;
+    freedns.afraid.org) protocol=freedns;;
+    duckdns.org) protocol=duckdns;;
+    domains.google) protocol=googledomains;;
+    www.dyndns.com) protocol=dyndns2;;
+    www.easydns.com) protocol=easydns;;
+    www.dslreports.com) protocol=dslreports1;;
+    www.zoneedit.com) protocol=zoneedit1;;
     other);;  # The user will be asked for a protocol and server.
     # Either the script is not in sync with the ddclient/service
     # template, or the question was previously answered (e.g., with
@@ -104,7 +80,7 @@ create_new_config()
     # if we know the service we put in the protocol and server
     db_set ddclient/protocol "$protocol"
     db_fset ddclient/protocol seen true
-    db_set ddclient/server "$server"
+    db_set ddclient/server ""  # use the default server
     db_fset ddclient/server seen true
   else
     # if not we ask the user about the protocol and server
