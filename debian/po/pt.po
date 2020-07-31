@@ -48,7 +48,9 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:3001
-msgid "Dynamic DNS server:"
+#, fuzzy
+#| msgid "Dynamic DNS server:"
+msgid "Dynamic DNS server (blank for default):"
 msgstr "Servidor de DNS dinâmico:"
 
 #. Type: string
@@ -58,7 +60,9 @@ msgstr "Servidor de DNS dinâmico:"
 #| msgid ""
 #| "Please enter the name of the server which is providing you with dynamic "
 #| "DNS service (example: members.dyndns.org)."
-msgid "Server providing the dynamic DNS service (example: members.dyndns.org)."
+msgid ""
+"Server providing the dynamic DNS service (example: members.dyndns.org). "
+"Leave blank to use the default for the \"${protocol}\" protocol."
 msgstr ""
 "Por favor introduza o nome do servidor que lhe disponibiliza o serviço de "
 "DNS dinâmico (exemplo: members.dyndns.org)."

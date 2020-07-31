@@ -84,6 +84,7 @@ www.zoneedit.com protocol=zoneedit1
     db_input critical ddclient/protocol || true
     db_go
     db_get ddclient/protocol; protocol=${RET}
+    db_subst ddclient/server protocol "${protocol}"
     # Usually the protocol's default server is acceptable, but if the user
     # picked "other" in ddclient/service and then picked a protocol used by one
     # of the well-known services returned from get_services, then we can be

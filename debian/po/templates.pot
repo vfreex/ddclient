@@ -40,13 +40,15 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:3001
-msgid "Dynamic DNS server:"
+msgid "Dynamic DNS server (blank for default):"
 msgstr ""
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:3001
-msgid "Server providing the dynamic DNS service (example: members.dyndns.org)."
+msgid ""
+"Server providing the dynamic DNS service (example: members.dyndns.org). "
+"Leave blank to use the default for the \"${protocol}\" protocol."
 msgstr ""
 
 #. Type: select

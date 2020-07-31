@@ -18,9 +18,10 @@ _Description: Dynamic DNS service provider:
 
 Template: ddclient/server
 Type: string
-_Description: Dynamic DNS server:
+_Description: Dynamic DNS server (blank for default):
  Server providing the dynamic DNS service (example:
- members.dyndns.org).
+ members.dyndns.org). Leave blank to use the default for the
+ "${protocol}" protocol.
 
 Template: ddclient/protocol
 Type: select
