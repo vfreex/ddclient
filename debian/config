@@ -93,6 +93,12 @@ create_new_config()
       protocol=zoneedit1
       server=dynamic.zoneedit.com
       ;;
+    other);;  # The user will be asked for a protocol and server.
+    # Either the script is not in sync with the ddclient/service
+    # template, or the question was previously answered (e.g., with
+    # debconf-set-selections) with a value that is either invalid or
+    # no longer supported.
+    *) RET=other;;
   esac
   if [ "$RET" != other ]; then
     # if we know the service we put in the protocol and server
