@@ -25,11 +25,19 @@ _Description: Dynamic DNS server (blank for default):
 
 Template: ddclient/protocol
 Type: select
-Choices: changeip, cloudflare, concont, dnsmadeeasy, dnspark, dondominio, dslreports1, dtdns, duckdns, dyndns1, dyndns2, easydns, freedns, freemyip, googledomains, hammernode1, namecheap, nfsn, noip, nsupdate, sitelutions, woima, yandex, zoneedit1,
+#flag:translate:25
+__Choices: changeip, cloudflare, concont, dnsmadeeasy, dnspark, dondominio, dslreports1, dtdns, duckdns, dyndns1, dyndns2, easydns, freedns, freemyip, googledomains, hammernode1, namecheap, nfsn, noip, nsupdate, sitelutions, woima, yandex, zoneedit1, other
 Default: dyndns2
 _Description: Dynamic DNS update protocol:
  Dynamic DNS update protocol used by your dynamic DNS service
- provider.
+ provider. If the protocol your service uses is not listed, select
+ "other".
+
+Template: ddclient/protocol-other
+Type: string
+_Description: Dynamic DNS update protocol:
+ The name of the dynamic DNS update protocol used by your dynamic DNS
+ service provider.
 
 Template: ddclient/names
 Type: string

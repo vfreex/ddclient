@@ -21,7 +21,9 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:2001
+#. Type: select
+#. Choices
+#: ../ddclient.templates:2001 ../ddclient.templates:4001
 msgid "other"
 msgstr "Autre"
 
@@ -71,18 +73,22 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:4001
+#. Type: string
+#. Description
+#: ../ddclient.templates:4002 ../ddclient.templates:5001
 msgid "Dynamic DNS update protocol:"
 msgstr "Protocole de mise à jour du DNS dynamique :"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:4001
+#: ../ddclient.templates:4002
 #, fuzzy
 #| msgid ""
 #| "Please select the dynamic DNS update protocol used by your dynamic DNS "
 #| "service provider."
-msgid "Dynamic DNS update protocol used by your dynamic DNS service provider."
+msgid ""
+"Dynamic DNS update protocol used by your dynamic DNS service provider. If "
+"the protocol your service uses is not listed, select \"other\"."
 msgstr ""
 "Veuillez choisir le protocole de mise à jour du DNS dynamique utilisé par le "
 "fournisseur du service."
@@ -90,12 +96,26 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
+#, fuzzy
+#| msgid ""
+#| "Please select the dynamic DNS update protocol used by your dynamic DNS "
+#| "service provider."
+msgid ""
+"The name of the dynamic DNS update protocol used by your dynamic DNS service "
+"provider."
+msgstr ""
+"Veuillez choisir le protocole de mise à jour du DNS dynamique utilisé par le "
+"fournisseur du service."
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:6001
 msgid "Hosts to update (comma-separated):"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:5001
+#: ../ddclient.templates:6001
 #, fuzzy
 #| msgid ""
 #| "Please enter the list of fully qualified domain names for the local "
@@ -112,13 +132,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:6001
+#: ../ddclient.templates:7001
 msgid "Username:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:6001
+#: ../ddclient.templates:7001
 #, fuzzy
 #| msgid "Please enter the username to use with the dynamic DNS service."
 msgid ""
@@ -130,13 +150,13 @@ msgstr ""
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:7001
+#: ../ddclient.templates:8001
 msgid "Password:"
 msgstr ""
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:7001
+#: ../ddclient.templates:8001
 #, fuzzy
 #| msgid "Please enter the password to use with the dynamic DNS service."
 msgid "Password, API key, or token to use with the dynamic DNS service."
@@ -146,7 +166,7 @@ msgstr ""
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:8001
+#: ../ddclient.templates:9001
 #, fuzzy
 #| msgid "Re-enter password to verify:"
 msgid "Re-enter password:"
@@ -154,7 +174,7 @@ msgstr "Confirmation du mot de passe :"
 
 #. Type: password
 #. Description
-#: ../ddclient.templates:8001
+#: ../ddclient.templates:9001
 #, fuzzy
 #| msgid "Please enter the password to use with the dynamic DNS service."
 msgid ""
@@ -165,13 +185,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:9001
+#: ../ddclient.templates:10001
 msgid "Passwords do not match"
 msgstr "Mots de passe différents"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:9001
+#: ../ddclient.templates:10001
 msgid "The two passwords you entered were not the same. Please try again."
 msgstr ""
 "Le mot de passe et sa confirmation ne sont pas identiques. Veuillez "
@@ -179,13 +199,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:10001
+#: ../ddclient.templates:11001
 msgid "Find public IP using checkip.dyndns.com?"
 msgstr "Faut-il rechercher l'adresse IP publique avec checkip.dyndns.com ?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:10001
+#: ../ddclient.templates:11001
 #, fuzzy
 #| msgid ""
 #| "Please choose whether ddclient should try to find the IP address of this "
@@ -203,13 +223,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:11001
+#: ../ddclient.templates:12001
 msgid "Network interface:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:11001
+#: ../ddclient.templates:12001
 msgid ""
 "The name of the network interface (e.g., eth0, wlan0, ppp0) that ddclient "
 "will look at to determine the current IP address."
@@ -217,13 +237,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:12001
+#: ../ddclient.templates:13001
 msgid "Run ddclient on PPP connect?"
 msgstr "Faut-il lancer ddclient lors des connexions PPP ?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:12001
+#: ../ddclient.templates:13001
 #, fuzzy
 #| msgid ""
 #| "You should enable this option if ddclient should be run every time a PPP "
@@ -239,13 +259,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:13001
+#: ../ddclient.templates:14001
 msgid "Run ddclient as daemon?"
 msgstr "Faut-il lancer ddclient en tant que démon ?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:13001
+#: ../ddclient.templates:14001
 #, fuzzy
 #| msgid ""
 #| "Please choose whether you want ddclient to be run in daemon mode on "
@@ -257,13 +277,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:15001
 msgid "Time between address checks:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:15001
 #, fuzzy
 #| msgid ""
 #| "Please choose the delay between interface address checks. Values may be "
@@ -282,31 +302,31 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:15001
+#: ../ddclient.templates:16001
 msgid "From list"
 msgstr "Dans une liste"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:15001
+#: ../ddclient.templates:16001
 msgid "Manually"
 msgstr "Manuellement"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:15002
+#: ../ddclient.templates:16002
 msgid "How to enter host names:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:15002
+#: ../ddclient.templates:16002
 msgid "How to prompt you for the host name(s) that ddclient will update."
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:15002
+#: ../ddclient.templates:16002
 msgid ""
 "If you choose \"From list\", this program will attempt to look up the host "
 "names that are registered with your DynDNS account. You will then select "
@@ -315,13 +335,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:15002
+#: ../ddclient.templates:16002
 msgid "If you choose \"Manually\", you will have to type in the host name(s)."
 msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:17001
 #, fuzzy
 #| msgid "Host names to keep updated:"
 msgid "Hosts to update:"
@@ -329,7 +349,7 @@ msgstr "Noms d'hôte à tenir à jour :"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:17001
 msgid ""
 "The host name(s) to keep updated with your current IP address. (This list of "
 "host names was downloaded from your DynDNS account.)"
@@ -337,13 +357,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:18001
 msgid "Empty host list"
 msgstr "Liste d'hôtes vide"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:18001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -353,7 +373,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:18001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -363,7 +383,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:18001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
