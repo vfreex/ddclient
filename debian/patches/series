@@ -7,3 +7,4 @@ usev6.diff
 boolean-parse.patch
 use-ipv4.patch
 devices.patch
+dslreports.patch
