@@ -21,8 +21,10 @@ db_version 2.0 || fatal "need DebConf 2.0 or later"
 # Retrieves the DynDNS hosts of given user
 download_hostlist() {
   local username="$1" password="$2"
+  db_get ddclient/proxy && proxy=$RET || proxy=
   # FIXME: protect against wget not installed
-  wget "http://$username:$password@update.dyndns.com/text/gethostlist" -q -O -\
+  http_proxy="$proxy" https_proxy="$proxy" wget -q -O - \
+    "http://$username:$password@update.dyndns.com/text/gethostlist" \
     | awk -F \: '{print $2, $4}' | sed -e "N;s/ \n/,/g" | sed -e "s/,/, /g"
 }
 
@@ -102,6 +104,8 @@ www.zoneedit.com protocol=zoneedit1
       || server_priority=low
     db_input "${server_priority}" ddclient/server || true
   fi
+
+  db_input low ddclient/proxy || true
 
   db_input critical ddclient/username || true
   while true; do

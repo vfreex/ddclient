@@ -39,6 +39,13 @@ _Description: Dynamic DNS update protocol:
  The name of the dynamic DNS update protocol used by your dynamic DNS
  service provider.
 
+Template: ddclient/proxy
+Type: string
+_Description: Optional HTTP proxy:
+ HTTP proxy in the form http://proxy.example.com or
+ https://proxy.example.com. Proxy authentication is not supported.
+ Leave blank if you do not use an HTTP proxy.
+
 Template: ddclient/names
 Type: string
 _Description: Hosts to update (comma-separated):
