@@ -94,13 +94,8 @@ Type: boolean
 Default: false
 _Description: Run ddclient on PPP connect?
  Whether ddclient should run every time a PPP connection is
- established. Note: This mode is not compatible with daemon mode.
-
-Template: ddclient/run_daemon
-Type: boolean
-Default: true
-_Description: Run ddclient as daemon?
- Whether ddclient should run in daemon mode on system startup.
+ established. Note: ddclient will not run as a daemon if this is
+ enabled.
 
 Template: ddclient/daemon_interval
 Type: string

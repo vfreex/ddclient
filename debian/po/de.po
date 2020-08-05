@@ -266,39 +266,21 @@ msgstr "Ddclient nach Aufbau der PPP-Verbindung ausführen?"
 #| "mode."
 msgid ""
 "Whether ddclient should run every time a PPP connection is established. "
-"Note: This mode is not compatible with daemon mode."
+"Note: ddclient will not run as a daemon if this is enabled."
 msgstr ""
 "Sie sollten diese Option aktivieren, falls Ddclient nach jedem Aufbau einer "
 "PPP-Verbindung ausgeführt werden soll. Hinweis: Dieser Modus ist nicht "
 "kompatibel mit dem Betrieb als Daemon."
 
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:15001
-msgid "Run ddclient as daemon?"
-msgstr "Ddclient als Daemon starten?"
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:15001
-#, fuzzy
-#| msgid ""
-#| "Please choose whether you want ddclient to be run in daemon mode on "
-#| "system startup."
-msgid "Whether ddclient should run in daemon mode on system startup."
-msgstr ""
-"Bitte wählen Sie aus, ob der Ddclient nach dem Start Ihres Systems als "
-"Daemon laufen soll."
-
 #. Type: string
 #. Description
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 msgid "Time between address checks:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 #, fuzzy
 #| msgid ""
 #| "Please choose the delay between interface address checks. Values may be "
@@ -315,31 +297,31 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "From list"
 msgstr "aus der Liste"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Manually"
 msgstr "manuell"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "How to enter host names:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "How to prompt you for the host name(s) that ddclient will update."
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid ""
 "If you choose \"From list\", this program will attempt to look up the host "
 "names that are registered with your DynDNS account. You will then select "
@@ -348,13 +330,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "If you choose \"Manually\", you will have to type in the host name(s)."
 msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 #, fuzzy
 #| msgid "Host names to keep updated:"
 msgid "Hosts to update:"
@@ -362,7 +344,7 @@ msgstr "Aktuell zu haltende Rechnernamen:"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The host name(s) to keep updated with your current IP address. (This list of "
 "host names was downloaded from your DynDNS account.)"
@@ -370,13 +352,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid "Empty host list"
 msgstr "Leere Rechnerliste"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -386,7 +368,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -397,7 +379,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
@@ -405,6 +387,18 @@ msgstr ""
 "Bitte überprüfen Sie Ihr Konto, um sicherzustellen, dass Sie Rechnernamen "
 "konfiguriert haben. Führen Sie danach »dpkg-reconfigure ddclient« aus, um "
 "erneut Ihren Benutzernamen und Ihr Passwort einzugeben."
+
+#~ msgid "Run ddclient as daemon?"
+#~ msgstr "Ddclient als Daemon starten?"
+
+#, fuzzy
+#~| msgid ""
+#~| "Please choose whether you want ddclient to be run in daemon mode on "
+#~| "system startup."
+#~ msgid "Whether ddclient should run in daemon mode on system startup."
+#~ msgstr ""
+#~ "Bitte wählen Sie aus, ob der Ddclient nach dem Start Ihres Systems als "
+#~ "Daemon laufen soll."
 
 #~ msgid ""
 #~ "The list of host names managed via your DynDNS account has been "

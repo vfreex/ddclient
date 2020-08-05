@@ -264,38 +264,21 @@ msgstr "Spustit ddclient při PPP spojení?"
 #| "mode."
 msgid ""
 "Whether ddclient should run every time a PPP connection is established. "
-"Note: This mode is not compatible with daemon mode."
+"Note: ddclient will not run as a daemon if this is enabled."
 msgstr ""
 "Jestliže chcete, aby se ddclient spustil pokaždé, když navážete PPP spojení, "
 "odpovězte kladně. Poznámka: tento režim není kompatibilní s režimem "
 "spouštění jako daemon."
 
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:15001
-msgid "Run ddclient as daemon?"
-msgstr "Spustit ddclient jako daemon?"
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:15001
-#, fuzzy
-#| msgid ""
-#| "Please choose whether you want ddclient to be run in daemon mode on "
-#| "system startup."
-msgid "Whether ddclient should run in daemon mode on system startup."
-msgstr ""
-"Vyberte, zda chcete ddclient spouštět při zavádění systému v režimu daemona."
-
 #. Type: string
 #. Description
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 msgid "Time between address checks:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 #, fuzzy
 #| msgid ""
 #| "Please choose the delay between interface address checks. Values may be "
@@ -312,31 +295,31 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "From list"
 msgstr "Ze seznamu"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Manually"
 msgstr "Ručně"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "How to enter host names:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "How to prompt you for the host name(s) that ddclient will update."
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid ""
 "If you choose \"From list\", this program will attempt to look up the host "
 "names that are registered with your DynDNS account. You will then select "
@@ -345,13 +328,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "If you choose \"Manually\", you will have to type in the host name(s)."
 msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 #, fuzzy
 #| msgid "Host names to keep updated:"
 msgid "Hosts to update:"
@@ -359,7 +342,7 @@ msgstr "Jména počítačů, která se mají udržovat aktualizovaná:"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The host name(s) to keep updated with your current IP address. (This list of "
 "host names was downloaded from your DynDNS account.)"
@@ -367,13 +350,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid "Empty host list"
 msgstr "Prázdný seznam počítačů"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -382,7 +365,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -392,7 +375,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
@@ -400,6 +383,18 @@ msgstr ""
 "Zkontrolujte prosím svůj účet, abyste se ujistili, že jsou jména počítačů "
 "nastavena a poté spusťte „dpkg-reconfigure ddclient“ a znovu zadejte své "
 "uživatelské jméno a heslo."
+
+#~ msgid "Run ddclient as daemon?"
+#~ msgstr "Spustit ddclient jako daemon?"
+
+#, fuzzy
+#~| msgid ""
+#~| "Please choose whether you want ddclient to be run in daemon mode on "
+#~| "system startup."
+#~ msgid "Whether ddclient should run in daemon mode on system startup."
+#~ msgstr ""
+#~ "Vyberte, zda chcete ddclient spouštět při zavádění systému v režimu "
+#~ "daemona."
 
 #~ msgid ""
 #~ "The list of host names managed via your DynDNS account has been "

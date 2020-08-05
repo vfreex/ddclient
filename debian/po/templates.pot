@@ -198,30 +198,18 @@ msgstr ""
 #: ../ddclient.templates:14001
 msgid ""
 "Whether ddclient should run every time a PPP connection is established. "
-"Note: This mode is not compatible with daemon mode."
-msgstr ""
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:15001
-msgid "Run ddclient as daemon?"
-msgstr ""
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:15001
-msgid "Whether ddclient should run in daemon mode on system startup."
+"Note: ddclient will not run as a daemon if this is enabled."
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 msgid "Time between address checks:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 msgid ""
 "How long ddclient should wait between IP address checks. Values may be given "
 "in seconds (e.g., \"300s\"), in minutes (e.g., \"5m\"), in hours (e.g., \"7h"
@@ -230,31 +218,31 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "From list"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Manually"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "How to enter host names:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "How to prompt you for the host name(s) that ddclient will update."
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid ""
 "If you choose \"From list\", this program will attempt to look up the host "
 "names that are registered with your DynDNS account. You will then select "
@@ -263,19 +251,19 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:17002
+#: ../ddclient.templates:16002
 msgid "If you choose \"Manually\", you will have to type in the host name(s)."
 msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid "Hosts to update:"
 msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The host name(s) to keep updated with your current IP address. (This list of "
 "host names was downloaded from your DynDNS account.)"
@@ -283,13 +271,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid "Empty host list"
 msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -297,7 +285,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -305,7 +293,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:19001
+#: ../ddclient.templates:18001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."

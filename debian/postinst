@@ -16,6 +16,13 @@ quote_backslashes() {
 newline='
 '
 
+run_as_daemon() {
+  db_get ddclient/checkip
+  [ "${RET}" = false ] || return 0
+  db_get ddclient/run_ipup
+  [ "${RET}" = false ]
+}
+
 write_ddclient_conf() {
   # get the values from the debconf database
   db_get ddclient/protocol
@@ -105,8 +112,7 @@ case "$1" in
     ;;
 esac
 
-db_get ddclient/run_daemon
-if [ "$RET" = true ]; then
+if run_as_daemon; then
   # We can't use the DEBHELPER magic comment to enable and start the
   # service because of the --no-enable --no-start options in
   # debian/rules. Instead we copy the code that would have been

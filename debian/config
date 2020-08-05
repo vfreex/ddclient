@@ -131,46 +131,32 @@ www.zoneedit.com protocol=zoneedit1
   fi
   db_go
   db_get ddclient/checkip; checkip=${RET}
+  daemon=true
   if [ "${checkip}" = "false" ]; then
     db_input critical ddclient/interface || true
-  fi
 
-  # set the default mode ddclient should run in (ip-up | daemon),
-  # depending on the entered interface (XpppX or other)
-  db_go
-  db_get ddclient/interface
-  interface=$RET
-
-  # if it is actually a ppp or related interface, and we're not using checkip
-  if [ "$checkip" != "true"  ] && [ -z "${interface##*ppp*}" ]; then
+    # set the default mode ddclient should run in (ip-up | daemon),
+    # depending on the entered interface (XpppX or other)
+    db_go
+    db_get ddclient/interface
+    case ${RET} in
+      *ppp*) ipup_default=true;;
+      *) ipup_default=false;;
+    esac
     db_fget ddclient/run_ipup seen
-    if [ "$RET" = "false" ]; then
-      db_set ddclient/run_ipup true
-    fi
-  # if it is an interface of a different type
-  else
-    db_fget ddclient/run_daemon seen
-    if [ "$RET" = "false" ]; then
-      db_set ddclient/run_daemon true
-    fi
-  fi
+    [ "${RET}" = true ] || db_set ddclient/run_ipup "${ipup_default}"
 
-  # maybe ask the user to override the default values
-  db_input medium ddclient/run_ipup || true
+    # maybe ask the user to override the default values
+    db_input medium ddclient/run_ipup || true
 
-  # if using ipup dont use daemon, bug #462207
-  db_go
-  db_get ddclient/run_ipup
-  if [ "$RET" = "true" ]; then
-    db_set ddclient/run_daemon false
-  else
-    db_input medium ddclient/run_daemon || true
+    # if using ipup dont use daemon, bug #462207
+    db_go
+    db_get ddclient/run_ipup
+    [ "${RET}" = false ] || daemon=false
   fi
 
   # if ddclient should run in daemon mode we ask for the update interval
-  db_go
-  db_get ddclient/run_daemon
-  if [ "$RET" = "true" ]; then
+  if [ "${daemon}" = true ]; then
     db_input medium ddclient/daemon_interval || true
   fi
 
