@@ -103,33 +103,15 @@ create_new_config()
     db_input critical ddclient/password-mismatch || true
   done
 
-  # if the chosen service is dyndns, ask some extra questions.  otherwise, set them to false
   if [ "${service}" = "www.dyndns.com" ]; then
     db_input critical ddclient/checkip || true
-    if command -v wget >/dev/null; then
-      db_input critical ddclient/fetchhosts || true
-    else
-      db_set ddclient/fetchhosts Manually
-    fi
   else
     db_set ddclient/checkip false
-    db_set ddclient/fetchhosts Manually
   fi
-
   db_go
   db_get ddclient/checkip; checkip=${RET}
-  # ask the traditional questions if the dyndns questions weren't answered true
   if [ "${checkip}" = "false" ]; then
     db_input critical ddclient/interface || true
-  fi
-
-  # check if we should fetch the hostlist for a dyndns account
-  db_go
-  db_get ddclient/fetchhosts
-  if [ "$RET" = "From list" ]; then
-    retrieve_dyndns_hostlist
-  else
-    db_input critical ddclient/names || true
   fi
 
   # set the default mode ddclient should run in (ip-up | daemon),
@@ -169,6 +151,19 @@ create_new_config()
   db_get ddclient/run_daemon
   if [ "$RET" = "true" ]; then
     db_input medium ddclient/daemon_interval || true
+  fi
+
+  if [ "${service}" = "www.dyndns.com" ] && command -v wget >/dev/null; then
+    db_input critical ddclient/fetchhosts || true
+  else
+    db_set ddclient/fetchhosts Manually
+  fi
+  db_go
+  db_get ddclient/fetchhosts
+  if [ "${RET}" = "From list" ]; then
+    retrieve_dyndns_hostlist
+  else
+    db_input critical ddclient/names || true
   fi
 
   db_go
