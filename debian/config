@@ -79,9 +79,7 @@ create_new_config()
   if [ "${service}" != other ]; then
     # if we know the service we put in the protocol and server
     db_set ddclient/protocol "$protocol"
-    db_fset ddclient/protocol seen true
     db_set ddclient/server ""  # use the default server
-    db_fset ddclient/server seen true
   else
     # if not we ask the user about the protocol and server
     db_input critical ddclient/protocol || true
@@ -111,12 +109,9 @@ create_new_config()
     if [ -f /usr/bin/wget ]; then
       db_input critical ddclient/fetchhosts || true
     else
-      db_fset ddclient/fetchhosts seen true
       db_set ddclient/fetchhosts Manually
     fi
   else
-    db_fset ddclient/checkip seen true
-    db_fset ddclient/fetchhosts seen true
     db_set ddclient/checkip false
     db_set ddclient/fetchhosts Manually
   fi
