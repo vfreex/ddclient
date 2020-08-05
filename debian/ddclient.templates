@@ -75,13 +75,23 @@ Type: error
 _Description: Passwords do not match
  The two passwords you entered were not the same. Please try again.
 
-Template: ddclient/checkip
-Type: boolean
-Default: true
-_Description: Find public IP using checkip.dyndns.com?
- Whether ddclient should try to find the IP address of this machine
- via the DynDNS web interface. This is recommended for machines that
- are using Network Address Translation.
+Template: ddclient/method
+Type: select
+__Choices: Web-based IP discovery service, Network interface
+Default: Web-based IP discovery service
+_Description: IP address discovery method:
+ The method ddclient uses to determine your current IP address.
+ Your options:
+ .
+ Web-based IP discovery service: Periodically visit a web page that
+ shows your IP address. You probably want this option if your computer
+ is connected to the Internet via a Network Address Translation (NAT)
+ device such as a typical consumer router.
+ .
+ Network interface: Use the IP address assigned to your computer's
+ network interface (such as an Ethernet adapter or PPP connection).
+ You probably want this option if your computer connects directly to
+ the Internet (your connection does not go through a NAT device).
 
 Template: ddclient/interface
 Type: string

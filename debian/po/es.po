@@ -234,29 +234,50 @@ msgid "The two passwords you entered were not the same. Please try again."
 msgstr ""
 "Las dos contraseñas introducidas no son iguales. Por favor, pruebe de nuevo."
 
-#. Type: boolean
-#. Description
+#. Type: select
+#. Choices
 #: ../ddclient.templates:12001
-msgid "Find public IP using checkip.dyndns.com?"
-msgstr "¿Desea obtener la dirección IP pública utilizando checkip.dyndns.com?"
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:12001
-#, fuzzy
-#| msgid ""
-#| "Please choose whether ddclient should try to find the IP address of this "
-#| "machine via the DynDNS web interface.  This is recommended for machines "
-#| "that are using Network Address Translation."
-msgid ""
-"Whether ddclient should try to find the IP address of this machine via the "
-"DynDNS web interface. This is recommended for machines that are using "
-"Network Address Translation."
+msgid "Web-based IP discovery service"
 msgstr ""
-"Escoja si el programa ddclient debería obtener la dirección IP pública de "
-"este equipo a través de la interfaz web de DynDNS. Se recomienda hacer esto "
-"para equipos que utilizan traducción de direcciones de red («Network Address "
-"Translation» o «NAT», N. del T.)."
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:12001
+msgid "Network interface"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid "IP address discovery method:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid ""
+"The method ddclient uses to determine your current IP address. Your options:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid ""
+"Web-based IP discovery service: Periodically visit a web page that shows "
+"your IP address. You probably want this option if your computer is connected "
+"to the Internet via a Network Address Translation (NAT) device such as a "
+"typical consumer router."
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid ""
+"Network interface: Use the IP address assigned to your computer's network "
+"interface (such as an Ethernet adapter or PPP connection). You probably want "
+"this option if your computer connects directly to the Internet (your "
+"connection does not go through a NAT device)."
+msgstr ""
 
 #. Type: string
 #. Description
@@ -408,6 +429,25 @@ msgstr ""
 "Asegúrese de comprobar de que en su cuenta tiene nombres de equipo "
 "configurados. A continuación ejecute «dpkg-reconfigure ddclient» para "
 "introducir de nuevo su nombre de usuario y contraseña."
+
+#~ msgid "Find public IP using checkip.dyndns.com?"
+#~ msgstr ""
+#~ "¿Desea obtener la dirección IP pública utilizando checkip.dyndns.com?"
+
+#, fuzzy
+#~| msgid ""
+#~| "Please choose whether ddclient should try to find the IP address of this "
+#~| "machine via the DynDNS web interface.  This is recommended for machines "
+#~| "that are using Network Address Translation."
+#~ msgid ""
+#~ "Whether ddclient should try to find the IP address of this machine via "
+#~ "the DynDNS web interface. This is recommended for machines that are using "
+#~ "Network Address Translation."
+#~ msgstr ""
+#~ "Escoja si el programa ddclient debería obtener la dirección IP pública de "
+#~ "este equipo a través de la interfaz web de DynDNS. Se recomienda hacer "
+#~ "esto para equipos que utilizan traducción de direcciones de red («Network "
+#~ "Address Translation» o «NAT», N. del T.)."
 
 #~ msgid "Run ddclient as daemon?"
 #~ msgstr "Â¿Desea ejecutar ddclient como un demonio?"

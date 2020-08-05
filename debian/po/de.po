@@ -213,28 +213,50 @@ msgstr ""
 "Sie haben zwei verschiedene Passwörter eingegeben. Bitte versuchen Sie es "
 "noch einmal."
 
-#. Type: boolean
-#. Description
+#. Type: select
+#. Choices
 #: ../ddclient.templates:12001
-msgid "Find public IP using checkip.dyndns.com?"
-msgstr "Öffentliche IP mittels checkip.dyndns.com ermitteln?"
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:12001
-#, fuzzy
-#| msgid ""
-#| "Please choose whether ddclient should try to find the IP address of this "
-#| "machine via the DynDNS web interface.  This is recommended for machines "
-#| "that are using Network Address Translation."
-msgid ""
-"Whether ddclient should try to find the IP address of this machine via the "
-"DynDNS web interface. This is recommended for machines that are using "
-"Network Address Translation."
+msgid "Web-based IP discovery service"
 msgstr ""
-"Bitte wählen Sie aus, ob der Ddclient versuchen soll, die IP-Adresse dieser "
-"Maschine mittels der DynDNS-Webschnittstelle zu ermitteln. Dies wird für "
-"Maschinen empfohlen, die »Network Address Translation« verwenden."
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:12001
+msgid "Network interface"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid "IP address discovery method:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid ""
+"The method ddclient uses to determine your current IP address. Your options:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid ""
+"Web-based IP discovery service: Periodically visit a web page that shows "
+"your IP address. You probably want this option if your computer is connected "
+"to the Internet via a Network Address Translation (NAT) device such as a "
+"typical consumer router."
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid ""
+"Network interface: Use the IP address assigned to your computer's network "
+"interface (such as an Ethernet adapter or PPP connection). You probably want "
+"this option if your computer connects directly to the Internet (your "
+"connection does not go through a NAT device)."
+msgstr ""
 
 #. Type: string
 #. Description
@@ -387,6 +409,23 @@ msgstr ""
 "Bitte überprüfen Sie Ihr Konto, um sicherzustellen, dass Sie Rechnernamen "
 "konfiguriert haben. Führen Sie danach »dpkg-reconfigure ddclient« aus, um "
 "erneut Ihren Benutzernamen und Ihr Passwort einzugeben."
+
+#~ msgid "Find public IP using checkip.dyndns.com?"
+#~ msgstr "Öffentliche IP mittels checkip.dyndns.com ermitteln?"
+
+#, fuzzy
+#~| msgid ""
+#~| "Please choose whether ddclient should try to find the IP address of this "
+#~| "machine via the DynDNS web interface.  This is recommended for machines "
+#~| "that are using Network Address Translation."
+#~ msgid ""
+#~ "Whether ddclient should try to find the IP address of this machine via "
+#~ "the DynDNS web interface. This is recommended for machines that are using "
+#~ "Network Address Translation."
+#~ msgstr ""
+#~ "Bitte wählen Sie aus, ob der Ddclient versuchen soll, die IP-Adresse "
+#~ "dieser Maschine mittels der DynDNS-Webschnittstelle zu ermitteln. Dies "
+#~ "wird für Maschinen empfohlen, die »Network Address Translation« verwenden."
 
 #~ msgid "Run ddclient as daemon?"
 #~ msgstr "Ddclient als Daemon starten?"

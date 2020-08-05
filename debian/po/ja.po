@@ -212,28 +212,50 @@ msgstr "パスワードが一致しません"
 msgid "The two passwords you entered were not the same. Please try again."
 msgstr "入力した 2 つのパスワードが一致しません。もう一度やり直してください。"
 
-#. Type: boolean
-#. Description
+#. Type: select
+#. Choices
 #: ../ddclient.templates:12001
-msgid "Find public IP using checkip.dyndns.com?"
-msgstr "checkip.dyndns.com を使ってパブリックな IP を探しますか?"
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:12001
-#, fuzzy
-#| msgid ""
-#| "Please choose whether ddclient should try to find the IP address of this "
-#| "machine via the DynDNS web interface.  This is recommended for machines "
-#| "that are using Network Address Translation."
-msgid ""
-"Whether ddclient should try to find the IP address of this machine via the "
-"DynDNS web interface. This is recommended for machines that are using "
-"Network Address Translation."
+msgid "Web-based IP discovery service"
 msgstr ""
-"DynDNS Web インターフェイスで ddclient にこのマシンの IP アドレスを探すことを"
-"試みさせるべきかどうか選んでください。これは NAT (ネットワークアドレス変換) "
-"を使っているマシンで推奨されます。"
+
+#. Type: select
+#. Choices
+#: ../ddclient.templates:12001
+msgid "Network interface"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid "IP address discovery method:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid ""
+"The method ddclient uses to determine your current IP address. Your options:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid ""
+"Web-based IP discovery service: Periodically visit a web page that shows "
+"your IP address. You probably want this option if your computer is connected "
+"to the Internet via a Network Address Translation (NAT) device such as a "
+"typical consumer router."
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:12002
+msgid ""
+"Network interface: Use the IP address assigned to your computer's network "
+"interface (such as an Ethernet adapter or PPP connection). You probably want "
+"this option if your computer connects directly to the Internet (your "
+"connection does not go through a NAT device)."
+msgstr ""
 
 #. Type: string
 #. Description
@@ -383,6 +405,23 @@ msgid ""
 msgstr ""
 "ホスト名が正しく設定されているかあなたのアカウントを確認し、ユーザー名とパス"
 "ワードを再度入力するために \"dpkg-reconfigure ddclient\" を実行してください。"
+
+#~ msgid "Find public IP using checkip.dyndns.com?"
+#~ msgstr "checkip.dyndns.com を使ってパブリックな IP を探しますか?"
+
+#, fuzzy
+#~| msgid ""
+#~| "Please choose whether ddclient should try to find the IP address of this "
+#~| "machine via the DynDNS web interface.  This is recommended for machines "
+#~| "that are using Network Address Translation."
+#~ msgid ""
+#~ "Whether ddclient should try to find the IP address of this machine via "
+#~ "the DynDNS web interface. This is recommended for machines that are using "
+#~ "Network Address Translation."
+#~ msgstr ""
+#~ "DynDNS Web インターフェイスで ddclient にこのマシンの IP アドレスを探すこ"
+#~ "とを試みさせるべきかどうか選んでください。これは NAT (ネットワークアドレス"
+#~ "変換) を使っているマシンで推奨されます。"
 
 #~ msgid "Run ddclient as daemon?"
 #~ msgstr "ddclient をデーモンとして実行しますか?"

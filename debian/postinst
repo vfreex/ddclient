@@ -17,8 +17,8 @@ newline='
 '
 
 run_as_daemon() {
-  db_get ddclient/checkip
-  [ "${RET}" = false ] || return 0
+  db_get ddclient/method
+  [ "${RET}" != "Web-based IP discovery service" ] || return 0
   db_get ddclient/run_ipup
   [ "${RET}" = false ]
 }
@@ -35,15 +35,17 @@ write_ddclient_conf() {
   username="$RET"
   db_get ddclient/password
   password=$(echo "$RET"|sed -e "s/'/\\\\'/g")
-  db_get ddclient/interface
-  if [ "$RET" ]; then
-    interface="use=if, if=$RET"
-  else
-    db_get ddclient/checkip
-    if [ "$RET" = "true" ]; then
-      interface="use=web, web=checkip.dyndns.com, web-skip='IP Address'"
-    fi
-  fi
+  db_get ddclient/method
+  case ${RET} in
+    "Web-based IP discovery service")
+      use="web, web=checkip.dyndns.com, web-skip='IP Address'"
+      ;;
+    "Network interface")
+      db_get ddclient/interface
+      use="if, if=${RET}"
+      ;;
+    *) fatal "unsupported IP discovery method: ${RET}";;
+  esac
   db_get ddclient/proxy
   [ -n "${RET}" ] && proxy="${newline}proxy=${RET}${newline}" || proxy=
 
@@ -57,7 +59,7 @@ write_ddclient_conf() {
 # /etc/ddclient.conf
 $proxy
 protocol=$protocol \\
-$interface$server \\
+use=$use$server \\
 login=$username \\
 password='$password_quoted' \\
 $names

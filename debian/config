@@ -125,35 +125,40 @@ www.zoneedit.com protocol=zoneedit1
   done
 
   if [ "${service}" = "www.dyndns.com" ]; then
-    db_input critical ddclient/checkip || true
+    db_input critical ddclient/method || true
   else
-    db_set ddclient/checkip false
+    db_set ddclient/method "Network interface"
   fi
-  db_go
-  db_get ddclient/checkip; checkip=${RET}
   daemon=true
-  if [ "${checkip}" = "false" ]; then
-    db_input critical ddclient/interface || true
+  db_go
+  db_get ddclient/method
+  case ${RET} in
+    "Web-based IP discovery service")
+      ;;
+    "Network interface")
+      db_input critical ddclient/interface || true
 
-    # set the default mode ddclient should run in (ip-up | daemon),
-    # depending on the entered interface (XpppX or other)
-    db_go
-    db_get ddclient/interface
-    case ${RET} in
-      *ppp*) ipup_default=true;;
-      *) ipup_default=false;;
-    esac
-    db_fget ddclient/run_ipup seen
-    [ "${RET}" = true ] || db_set ddclient/run_ipup "${ipup_default}"
+      # set the default mode ddclient should run in (ip-up | daemon),
+      # depending on the entered interface (XpppX or other)
+      db_go
+      db_get ddclient/interface
+      case ${RET} in
+        *ppp*) ipup_default=true;;
+        *) ipup_default=false;;
+      esac
+      db_fget ddclient/run_ipup seen
+      [ "${RET}" = true ] || db_set ddclient/run_ipup "${ipup_default}"
 
-    # maybe ask the user to override the default values
-    db_input medium ddclient/run_ipup || true
+      # maybe ask the user to override the default values
+      db_input medium ddclient/run_ipup || true
 
-    # if using ipup dont use daemon, bug #462207
-    db_go
-    db_get ddclient/run_ipup
-    [ "${RET}" = false ] || daemon=false
-  fi
+      # if using ipup dont use daemon, bug #462207
+      db_go
+      db_get ddclient/run_ipup
+      [ "${RET}" = false ] || daemon=false
+      ;;
+    *) fatal "unsupported IP discovery method: ${RET}";;
+  esac
 
   # if ddclient should run in daemon mode we ask for the update interval
   if [ "${daemon}" = true ]; then
