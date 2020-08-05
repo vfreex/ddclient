@@ -88,10 +88,23 @@ create_new_config()
     db_input critical ddclient/server || true
   fi
 
-  # ask the user about the dynamic DNS names, account and interface
   db_input critical ddclient/username || true
-  db_input critical ddclient/password || true
-  db_input critical ddclient/password-repeat || true
+  while true; do
+    db_input critical ddclient/password || true
+    db_input critical ddclient/password-repeat || true
+    db_go
+    db_get ddclient/password
+    password="$RET"
+    db_get ddclient/password-repeat
+    if [ "$password" = "$RET" ]; then
+      break
+    fi
+    db_fset ddclient/password seen false
+    db_fset ddclient/password-repeat seen false
+    db_fset ddclient/password-mismatch seen false
+    db_input critical ddclient/password-mismatch || true
+  done
+
   # if the chosen service is dyndns, ask some extra questions.  otherwise, set them to false
   if [ "${service}" = "www.dyndns.com" ]; then
     db_input critical ddclient/checkip || true
@@ -107,23 +120,6 @@ create_new_config()
     db_set ddclient/checkip false
     db_set ddclient/fetchhosts Manually
   fi
-
-  # Re-request passwords until they match
-  while true; do
-    db_go
-    db_get ddclient/password
-    password="$RET"
-    db_get ddclient/password-repeat
-    if [ "$password" = "$RET" ]; then
-      break
-    fi
-    db_fset ddclient/password seen false
-    db_fset ddclient/password-repeat seen false
-    db_fset ddclient/password-mismatch seen false
-    db_input critical ddclient/password-mismatch || true
-    db_input critical ddclient/password || true
-    db_input critical ddclient/password-repeat || true
-  done
 
   db_go
   db_get ddclient/checkip; checkip=${RET}
