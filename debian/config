@@ -53,20 +53,63 @@ retrieve_dyndns_hostlist() {
   fi
 }
 
+web_choices() {
+  cat <<EOF
+dyndns              http://checkip.dyndns.org/
+freedns             https://freedns.afraid.org/dynamic/check.php
+googledomains       https://domains.google.com/checkip
+he                  http://checkip.dns.he.net/
+ip4only.me          http://ip4only.me/api/
+ip6only.me          http://ip6only.me/api/
+ipify-ipv4          https://api.ipify.org/
+ipify-ipv6          https://api6.ipify.org/
+loopia              http://dns.loopia.se/checkip/checkip.php
+myonlineportal      https://myonlineportal.net/checkip
+noip-ipv4           http://ip1.dynupdate.no-ip.com/
+noip-ipv6           http://ip1.dynupdate6.no-ip.com/
+nsupdate.info-ipv4  http://ipv4.nsupdate.info/myip
+nsupdate.info-ipv6  http://ipv6.nsupdate.info/myip
+zoneedit            http://dynamic.zoneedit.com/checkip.html
+EOF
+}
+
+set_web_default() {
+  choices=$1
+  preferred=$2
+  default=ipify-ipv4
+  db_get ddclient/web; old=${RET}
+  new=${preferred:-${old}}
+  # Give debconf-set-selections pre-seeding priority over the preferred choice.
+  db_fget ddclient/web seen
+  [ "${RET}" = false ] || new=${old:-${preferred}}
+  new=${new:-${default}}
+  new=${new%% *}
+  if [ "${new}" != other ]; then
+    # Expand shorthand (e.g., noip-ipv4) to the full line
+    new=$(printf %s\\n "${choices}" | grep -m 1 "^${new} ") || {
+      # The user pre-seeded an unsupported choice. Force a re-pick.
+      db_fset ddclient/web seen false
+      new=$(printf %s\\n "${choices}" | grep -m 1 "^${default} ")
+    }
+  fi
+  db_set ddclient/web "${new}"
+}
+
 #----------------------------------------------------------------------------
 # create_new_config() - create a new config from scratch
 #----------------------------------------------------------------------------
 create_new_config()
 {
+  web=
   services="\
-no-ip.com protocol=noip
-freedns.afraid.org protocol=freedns
+no-ip.com protocol=noip web=noip-ipv4
+freedns.afraid.org protocol=freedns web=freedns
 duckdns.org protocol=duckdns
-domains.google protocol=googledomains
-www.dyndns.com protocol=dyndns2
+domains.google protocol=googledomains web=googledomains
+www.dyndns.com protocol=dyndns2 web=dyndns
 www.easydns.com protocol=easydns
 www.dslreports.com protocol=dslreports1
-www.zoneedit.com protocol=zoneedit1
+www.zoneedit.com protocol=zoneedit1 web=zoneedit
 "
   services_comma=$(printf %s "${services}" | awk -v ORS=', ' '{print$1}')
   db_subst ddclient/service choices "${services_comma%, }"
@@ -124,16 +167,25 @@ www.zoneedit.com protocol=zoneedit1
     db_input critical ddclient/password-mismatch || true
   done
 
-  if [ "${service}" = "www.dyndns.com" ]; then
-    db_input critical ddclient/method || true
-  else
-    db_set ddclient/method "Network interface"
-  fi
+  db_input critical ddclient/method || true
   daemon=true
   db_go
   db_get ddclient/method
   case ${RET} in
     "Web-based IP discovery service")
+      choices=$(web_choices) || exit 1
+      choices_comma=$(printf %s "${choices}" | awk -v ORS=', ' '1')
+      db_subst ddclient/web choices "${choices_comma%, }"
+      set_web_default "${choices}" "${web}"
+      db_input medium ddclient/web || true
+      db_go
+      db_get ddclient/web; web=${RET%% *}
+      case ${web} in
+        other) db_input critical ddclient/web-url || true;;
+        # Use ddclient's built-in shorthands when possible
+        dyndns|loopia) db_set ddclient/web-url "";;
+        *) db_set ddclient/web-url "${RET##* }";;
+      esac
       ;;
     "Network interface")
       db_input critical ddclient/interface || true

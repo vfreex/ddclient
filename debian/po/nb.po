@@ -22,7 +22,10 @@ msgstr ""
 #. Choices
 #. Type: select
 #. Choices
+#. Type: select
+#. Choices
 #: ../ddclient.templates:2001 ../ddclient.templates:4001
+#: ../ddclient.templates:13001
 msgid "other"
 msgstr "andre"
 
@@ -244,15 +247,41 @@ msgid ""
 "connection does not go through a NAT device)."
 msgstr ""
 
+#. Type: select
+#. Description
+#: ../ddclient.templates:13002
+msgid "IP discovery service:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:13002
+msgid ""
+"The web-based IP discovery service you would like ddclient to use to "
+"determine your current IP address."
+msgstr ""
+
 #. Type: string
 #. Description
-#: ../ddclient.templates:13001
+#: ../ddclient.templates:14001
+msgid "IP discovery service URL:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:14001
+msgid "URL to a web page that returns your IP address."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../ddclient.templates:15001
 msgid "Network interface:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:13001
+#: ../ddclient.templates:15001
 msgid ""
 "The name of the network interface (e.g., eth0, wlan0, ppp0) that ddclient "
 "will look at to determine the current IP address."
@@ -260,13 +289,13 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:16001
 msgid "As a daemon"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:16001
 #, fuzzy
 #| msgid "Run ddclient on PPP connect?"
 msgid "On PPP connect"
@@ -274,19 +303,19 @@ msgstr "Skal ddclient kjøres når PPP kobles opp?"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:14002
+#: ../ddclient.templates:16002
 msgid "How to run ddclient:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:14002
+#: ../ddclient.templates:16002
 msgid "The ddclient run mode. Your options:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:14002
+#: ../ddclient.templates:16002
 msgid ""
 "As a daemon: ddclient runs in the background periodically checking to see if "
 "the IP address has changed."
@@ -294,7 +323,7 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:14002
+#: ../ddclient.templates:16002
 msgid ""
 "On PPP connect: Each time you connect via PPP ddclient will start, update "
 "the IP address, and exit."
@@ -302,13 +331,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:15001
+#: ../ddclient.templates:17001
 msgid "Time between address checks:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:15001
+#: ../ddclient.templates:17001
 #, fuzzy
 #| msgid ""
 #| "Please choose the delay between interface address checks. Values may be "
@@ -325,31 +354,31 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:18001
 msgid "From list"
 msgstr "Fra liste"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:18001
 msgid "Manually"
 msgstr "Manuelt"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:16002
+#: ../ddclient.templates:18002
 msgid "How to enter host names:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:16002
+#: ../ddclient.templates:18002
 msgid "How to prompt you for the host name(s) that ddclient will update."
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:16002
+#: ../ddclient.templates:18002
 msgid ""
 "If you choose \"From list\", this program will attempt to look up the host "
 "names that are registered with your DynDNS account. You will then select "
@@ -358,13 +387,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:16002
+#: ../ddclient.templates:18002
 msgid "If you choose \"Manually\", you will have to type in the host name(s)."
 msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:19001
 #, fuzzy
 #| msgid "Host names to keep updated:"
 msgid "Hosts to update:"
@@ -372,7 +401,7 @@ msgstr "Vertsnavn som skal holdes oppdaterte:"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:19001
 msgid ""
 "The host name(s) to keep updated with your current IP address. (This list of "
 "host names was downloaded from your DynDNS account.)"
@@ -380,13 +409,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:20001
 msgid "Empty host list"
 msgstr "Tom vertsliste"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:20001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -396,7 +425,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:20001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -406,7 +435,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:20001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."

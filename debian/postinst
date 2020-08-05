@@ -38,7 +38,9 @@ write_ddclient_conf() {
   db_get ddclient/method
   case ${RET} in
     "Web-based IP discovery service")
-      use="web, web=checkip.dyndns.com, web-skip='IP Address'"
+      db_get ddclient/web-url
+      [ -n "${RET}" ] || db_get ddclient/web
+      use="web, web=${RET%% *}"
       ;;
     "Network interface")
       db_get ddclient/interface
