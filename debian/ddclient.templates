@@ -26,7 +26,7 @@ _Description: Dynamic DNS server:
 Template: ddclient/protocol
 Type: select
 Choices: changeip, cloudflare, concont, dnsmadeeasy, dnspark, dondominio, dslreports1, dtdns, duckdns, dyndns1, dyndns2, easydns, freedns, freemyip, googledomains, hammernode1, namecheap, nfsn, noip, nsupdate, sitelutions, woima, yandex, zoneedit1,
-Default: noip
+Default: dyndns2
 _Description: Dynamic DNS update protocol:
  Please select the dynamic DNS update protocol used by your dynamic DNS service
  provider.
