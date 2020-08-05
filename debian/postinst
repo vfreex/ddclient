@@ -19,8 +19,8 @@ newline='
 run_as_daemon() {
   db_get ddclient/method
   [ "${RET}" != "Web-based IP discovery service" ] || return 0
-  db_get ddclient/run_ipup
-  [ "${RET}" = false ]
+  db_get ddclient/run_mode
+  [ "${RET}" = "As a daemon" ]
 }
 
 write_ddclient_conf() {
@@ -70,8 +70,7 @@ EOF
 write_etc_default_ddclient() {
   db_get ddclient/daemon_interval
   daemon_interval="$RET"
-  db_get ddclient/run_ipup
-  run_ipup="$RET"
+  run_as_daemon && run_ipup=false || run_ipup=true
   temp=`mktemp /etc/default/ddclient.XXXXXX`
   trap 'rm -f "$temp"; exit 1' HUP INT QUIT TERM
   cat <<EOF >"$temp"

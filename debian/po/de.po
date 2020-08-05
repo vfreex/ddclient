@@ -272,27 +272,47 @@ msgid ""
 "will look at to determine the current IP address."
 msgstr ""
 
-#. Type: boolean
-#. Description
+#. Type: select
+#. Choices
 #: ../ddclient.templates:14001
-msgid "Run ddclient on PPP connect?"
-msgstr "Ddclient nach Aufbau der PPP-Verbindung ausführen?"
+msgid "As a daemon"
+msgstr ""
 
-#. Type: boolean
-#. Description
+#. Type: select
+#. Choices
 #: ../ddclient.templates:14001
 #, fuzzy
-#| msgid ""
-#| "You should enable this option if ddclient should be run every time a PPP "
-#| "connection is established. Note: This mode is not compatible with daemon "
-#| "mode."
-msgid ""
-"Whether ddclient should run every time a PPP connection is established. "
-"Note: ddclient will not run as a daemon if this is enabled."
+#| msgid "Run ddclient on PPP connect?"
+msgid "On PPP connect"
+msgstr "Ddclient nach Aufbau der PPP-Verbindung ausführen?"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
+msgid "How to run ddclient:"
 msgstr ""
-"Sie sollten diese Option aktivieren, falls Ddclient nach jedem Aufbau einer "
-"PPP-Verbindung ausgeführt werden soll. Hinweis: Dieser Modus ist nicht "
-"kompatibel mit dem Betrieb als Daemon."
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
+msgid "The ddclient run mode. Your options:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
+msgid ""
+"As a daemon: ddclient runs in the background periodically checking to see if "
+"the IP address has changed."
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
+msgid ""
+"On PPP connect: Each time you connect via PPP ddclient will start, update "
+"the IP address, and exit."
+msgstr ""
 
 #. Type: string
 #. Description
@@ -409,6 +429,19 @@ msgstr ""
 "Bitte überprüfen Sie Ihr Konto, um sicherzustellen, dass Sie Rechnernamen "
 "konfiguriert haben. Führen Sie danach »dpkg-reconfigure ddclient« aus, um "
 "erneut Ihren Benutzernamen und Ihr Passwort einzugeben."
+
+#, fuzzy
+#~| msgid ""
+#~| "You should enable this option if ddclient should be run every time a PPP "
+#~| "connection is established. Note: This mode is not compatible with daemon "
+#~| "mode."
+#~ msgid ""
+#~ "Whether ddclient should run every time a PPP connection is established. "
+#~ "Note: ddclient will not run as a daemon if this is enabled."
+#~ msgstr ""
+#~ "Sie sollten diese Option aktivieren, falls Ddclient nach jedem Aufbau "
+#~ "einer PPP-Verbindung ausgeführt werden soll. Hinweis: Dieser Modus ist "
+#~ "nicht kompatibel mit dem Betrieb als Daemon."
 
 #~ msgid "Find public IP using checkip.dyndns.com?"
 #~ msgstr "Öffentliche IP mittels checkip.dyndns.com ermitteln?"

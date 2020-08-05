@@ -261,25 +261,47 @@ msgid ""
 "will look at to determine the current IP address."
 msgstr ""
 
-#. Type: boolean
-#. Description
+#. Type: select
+#. Choices
 #: ../ddclient.templates:14001
-msgid "Run ddclient on PPP connect?"
-msgstr "Tulisiko ddclient ajaa, kun PPP-yhteys otetaan?"
+msgid "As a daemon"
+msgstr ""
 
-#. Type: boolean
-#. Description
+#. Type: select
+#. Choices
 #: ../ddclient.templates:14001
 #, fuzzy
-#| msgid ""
-#| "You should enable this option if ddclient should be run every time a PPP "
-#| "connection is established."
-msgid ""
-"Whether ddclient should run every time a PPP connection is established. "
-"Note: ddclient will not run as a daemon if this is enabled."
+#| msgid "Run ddclient on PPP connect?"
+msgid "On PPP connect"
+msgstr "Tulisiko ddclient ajaa, kun PPP-yhteys otetaan?"
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
+msgid "How to run ddclient:"
 msgstr ""
-"Jos valitset tämän vaihtoehdon, ddclient ajetaan aina, kun PPP-yhteys "
-"avataan."
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
+msgid "The ddclient run mode. Your options:"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
+msgid ""
+"As a daemon: ddclient runs in the background periodically checking to see if "
+"the IP address has changed."
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../ddclient.templates:14002
+msgid ""
+"On PPP connect: Each time you connect via PPP ddclient will start, update "
+"the IP address, and exit."
+msgstr ""
 
 #. Type: string
 #. Description
@@ -395,6 +417,17 @@ msgstr ""
 "Tarkista tili varmistaaksesi, että verkkonimiä on asetettuina ja aja sen "
 "jälkeen komento ”dpkg-reconfigure ddclient” antaaksesi käyttäjätunnuksen, ja "
 "salasanan uudelleen."
+
+#, fuzzy
+#~| msgid ""
+#~| "You should enable this option if ddclient should be run every time a PPP "
+#~| "connection is established."
+#~ msgid ""
+#~ "Whether ddclient should run every time a PPP connection is established. "
+#~ "Note: ddclient will not run as a daemon if this is enabled."
+#~ msgstr ""
+#~ "Jos valitset tämän vaihtoehdon, ddclient ajetaan aina, kun PPP-yhteys "
+#~ "avataan."
 
 #~ msgid "Find public IP using checkip.dyndns.com?"
 #~ msgstr "Etsitäänkö julkinen IP käyttäen palvelua checkip.dyndns.com?"

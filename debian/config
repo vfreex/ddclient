@@ -143,19 +143,18 @@ www.zoneedit.com protocol=zoneedit1
       db_go
       db_get ddclient/interface
       case ${RET} in
-        *ppp*) ipup_default=true;;
-        *) ipup_default=false;;
+        *ppp*) default_run_mode="On PPP connect";;
+        *) default_run_mode="As a daemon";;
       esac
-      db_fget ddclient/run_ipup seen
-      [ "${RET}" = true ] || db_set ddclient/run_ipup "${ipup_default}"
+      db_fget ddclient/run_mode seen
+      [ "${RET}" = true ] || db_set ddclient/run_mode "${default_run_mode}"
 
       # maybe ask the user to override the default values
-      db_input medium ddclient/run_ipup || true
+      db_input medium ddclient/run_mode || true
 
-      # if using ipup dont use daemon, bug #462207
       db_go
-      db_get ddclient/run_ipup
-      [ "${RET}" = false ] || daemon=false
+      db_get ddclient/run_mode
+      [ "${RET}" = "As a daemon" ] || daemon=false
       ;;
     *) fatal "unsupported IP discovery method: ${RET}";;
   esac

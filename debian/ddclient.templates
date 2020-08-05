@@ -99,13 +99,18 @@ _Description: Network interface:
  The name of the network interface (e.g., eth0, wlan0, ppp0) that
  ddclient will look at to determine the current IP address.
 
-Template: ddclient/run_ipup
-Type: boolean
-Default: false
-_Description: Run ddclient on PPP connect?
- Whether ddclient should run every time a PPP connection is
- established. Note: ddclient will not run as a daemon if this is
- enabled.
+Template: ddclient/run_mode
+Type: select
+__Choices: As a daemon, On PPP connect
+Default: As a daemon
+_Description: How to run ddclient:
+ The ddclient run mode. Your options:
+ .
+ As a daemon: ddclient runs in the background periodically checking to
+ see if the IP address has changed.
+ .
+ On PPP connect: Each time you connect via PPP ddclient will start,
+ update the IP address, and exit.
 
 Template: ddclient/daemon_interval
 Type: string
