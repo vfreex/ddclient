@@ -59,8 +59,8 @@ create_new_config()
   # get the service to use with ddclient
   db_input critical ddclient/service || true
   db_go
-  db_get ddclient/service
-  case "$RET" in
+  db_get ddclient/service; service=${RET}
+  case ${service} in
     no-ip.com) protocol=noip;;
     freedns.afraid.org) protocol=freedns;;
     duckdns.org) protocol=duckdns;;
@@ -74,9 +74,9 @@ create_new_config()
     # template, or the question was previously answered (e.g., with
     # debconf-set-selections) with a value that is either invalid or
     # no longer supported.
-    *) RET=other;;
+    *) service=other;;
   esac
-  if [ "$RET" != other ]; then
+  if [ "${service}" != other ]; then
     # if we know the service we put in the protocol and server
     db_set ddclient/protocol "$protocol"
     db_fset ddclient/protocol seen true
@@ -92,9 +92,8 @@ create_new_config()
   db_input critical ddclient/username || true
   db_input critical ddclient/password || true
   db_input critical ddclient/password-repeat || true
-  db_get ddclient/service
   # if the chosen service is dyndns, ask some extra questions.  otherwise, set them to false
-  if [ "$RET" = "www.dyndns.com" ]; then
+  if [ "${service}" = "www.dyndns.com" ]; then
     db_input critical ddclient/checkip || true
     if [ -f /usr/bin/wget ]; then
       db_input critical ddclient/fetchhosts || true
@@ -127,9 +126,9 @@ create_new_config()
   done
 
   db_go
-  db_get ddclient/checkip
+  db_get ddclient/checkip; checkip=${RET}
   # ask the traditional questions if the dyndns questions weren't answered true
-  if [ "$RET" = "false" ]; then
+  if [ "${checkip}" = "false" ]; then
     db_input critical ddclient/interface || true
   fi
 
@@ -147,8 +146,6 @@ create_new_config()
   db_go
   db_get ddclient/interface
   interface=$RET
-  db_get ddclient/checkip
-  checkip=$RET
 
   # if it is actually a ppp or related interface, and we're not using checkip
   if [ "$checkip" != "true"  ] && [ -z "${interface##*ppp*}" ]; then
