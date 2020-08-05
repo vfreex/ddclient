@@ -106,7 +106,7 @@ create_new_config()
   # if the chosen service is dyndns, ask some extra questions.  otherwise, set them to false
   if [ "${service}" = "www.dyndns.com" ]; then
     db_input critical ddclient/checkip || true
-    if [ -f /usr/bin/wget ]; then
+    if command -v wget >/dev/null; then
       db_input critical ddclient/fetchhosts || true
     else
       db_set ddclient/fetchhosts Manually
