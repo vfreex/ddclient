@@ -67,8 +67,6 @@ EOF
 
       # create /etc/default/ddclient if it does not exist
       if [ ! -f /etc/default/ddclient ]; then
-        db_get ddclient/run_daemon
-        run_daemon="$RET"
         db_get ddclient/daemon_interval
         daemon_interval="$RET"
         db_get ddclient/run_ipup
