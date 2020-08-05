@@ -153,7 +153,6 @@ create_new_config()
   if [ "$RET" = "false" ]; then
     db_input critical ddclient/interface || true
   fi
-  db_get ddclient/fetchhosts
 
   # check if we should fetch the hostlist for a dyndns account
   db_get ddclient/fetchhosts
