@@ -29,6 +29,7 @@ download_hostlist() {
 # Retrieve the list of DynDNS hosts of the user's account from the DynDNS
 # server and let the user select which hosts to update.
 retrieve_dyndns_hostlist() {
+  db_go
   db_get ddclient/username && username="$RET"
   db_get ddclient/password && password="$RET"
 
@@ -37,9 +38,9 @@ retrieve_dyndns_hostlist() {
   # add the list to our multichoice template, then prompt the user
   db_subst ddclient/hostslist choices "$hostslist"
   db_input critical ddclient/hostslist || true
-  db_go
 
   # set names using the host list to write it to the config file later
+  db_go
   db_get ddclient/hostslist
   hostslist=`echo "$RET" | sed -e "s/, /,/g"`
   db_set ddclient/names "$hostslist"
@@ -47,7 +48,6 @@ retrieve_dyndns_hostlist() {
   # if the hostslist was blank, let the user know some possible reasons
   if [ -z "$hostslist" ]; then
     db_input high ddclient/blankhostslist || true
-    db_go
   fi
 }
 
@@ -104,7 +104,6 @@ create_new_config()
     # if not we ask the user about the protocol and server
     db_input critical ddclient/protocol || true
     db_input critical ddclient/server || true
-    db_go
   fi
 
   # ask the user about the dynamic DNS names, account and interface
@@ -127,10 +126,10 @@ create_new_config()
     db_set ddclient/checkip false
     db_set ddclient/fetchhosts Manually
   fi
-  db_go
 
   # Re-request passwords until they match
   while true; do
+    db_go
     db_get ddclient/password
     password="$RET"
     db_get ddclient/password-repeat
@@ -143,11 +142,11 @@ create_new_config()
     db_input critical ddclient/password-mismatch || true
     db_input critical ddclient/password || true
     db_input critical ddclient/password-repeat || true
-    db_go
   done
 
   db_set ddclient/password-repeat ""
 
+  db_go
   db_get ddclient/checkip
   # ask the traditional questions if the dyndns questions weren't answered true
   if [ "$RET" = "false" ]; then
@@ -155,16 +154,17 @@ create_new_config()
   fi
 
   # check if we should fetch the hostlist for a dyndns account
+  db_go
   db_get ddclient/fetchhosts
   if [ "$RET" = "From list" ]; then
     retrieve_dyndns_hostlist
   else
     db_input critical ddclient/names || true
   fi
-  db_go
 
   # set the default mode ddclient should run in (ip-up | daemon),
   # depending on the entered interface (XpppX or other)
+  db_go
   db_get ddclient/interface
   interface=$RET
   db_get ddclient/checkip
@@ -186,23 +186,24 @@ create_new_config()
 
   # maybe ask the user to override the default values
   db_input medium ddclient/run_ipup || true
-  db_go
 
   # if using ipup dont use daemon, bug #462207
+  db_go
   db_get ddclient/run_ipup
   if [ "$RET" = "true" ]; then
     db_set ddclient/run_daemon false
   else
     db_input medium ddclient/run_daemon || true
-    db_go
   fi
 
   # if ddclient should run in daemon mode we ask for the update interval
+  db_go
   db_get ddclient/run_daemon
   if [ "$RET" = "true" ]; then
     db_input medium ddclient/daemon_interval || true
-    db_go
   fi
+
+  db_go
 }
 
 if [ "$1" = "configure" ]; then
