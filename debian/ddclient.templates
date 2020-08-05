@@ -9,8 +9,8 @@
 
 Template: ddclient/service
 Type: select
-#flag:translate:9
-__Choices: no-ip.com, freedns.afraid.org, duckdns.org, domains.google, www.dyndns.com, www.easydns.com, www.dslreports.com, www.zoneedit.com, other
+#flag:translate:2
+__Choices: ${choices}, other
 Default: no-ip.com
 _Description: Dynamic DNS service provider:
  Please select the dynamic DNS service you are using. If the service you use is

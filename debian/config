@@ -56,32 +56,31 @@ retrieve_dyndns_hostlist() {
 #----------------------------------------------------------------------------
 create_new_config()
 {
-  # get the service to use with ddclient
+  services="\
+no-ip.com protocol=noip
+freedns.afraid.org protocol=freedns
+duckdns.org protocol=duckdns
+domains.google protocol=googledomains
+www.dyndns.com protocol=dyndns2
+www.easydns.com protocol=easydns
+www.dslreports.com protocol=dslreports1
+www.zoneedit.com protocol=zoneedit1
+"
+  services_comma=$(printf %s "${services}" | awk -v ORS=', ' '{print$1}')
+  db_subst ddclient/service choices "${services_comma%, }"
   db_input critical ddclient/service || true
   db_go
   db_get ddclient/service; service=${RET}
-  case ${service} in
-    no-ip.com) protocol=noip;;
-    freedns.afraid.org) protocol=freedns;;
-    duckdns.org) protocol=duckdns;;
-    domains.google) protocol=googledomains;;
-    www.dyndns.com) protocol=dyndns2;;
-    www.easydns.com) protocol=easydns;;
-    www.dslreports.com) protocol=dslreports1;;
-    www.zoneedit.com) protocol=zoneedit1;;
-    other);;  # The user will be asked for a protocol and server.
-    # Either the script is not in sync with the ddclient/service
-    # template, or the question was previously answered (e.g., with
-    # debconf-set-selections) with a value that is either invalid or
-    # no longer supported.
-    *) service=other;;
-  esac
-  if [ "${service}" != other ]; then
-    # if we know the service we put in the protocol and server
+  if [ "${service}" != other ] &&
+      svcdef=$(printf %s "${services}" | grep -m 1 "^${service} "); then
+    eval "${svcdef#* }"
     db_set ddclient/protocol "$protocol"
     db_set ddclient/server ""  # use the default server
   else
-    # if not we ask the user about the protocol and server
+    # If this case is reached and ${service} != other, the question was
+    # previously answered (e.g., with debconf-set-selections) with a value that
+    # is either invalid or no longer supported. Either way, treat it as if the
+    # user chose "other".
     db_input critical ddclient/protocol || true
     db_input critical ddclient/server || true
   fi
