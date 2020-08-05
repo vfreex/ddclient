@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient_3.8.2-2\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2020-06-03 22:22-0400\n"
+"POT-Creation-Date: 2020-08-05 01:53-0400\n"
 "PO-Revision-Date: 2014-10-18 17:30+01:00\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org> \n"
@@ -177,36 +177,18 @@ msgstr ""
 "Indtast venligst navnet på netværksgrænsefladen (eth0/wlan0/ppp0/...) til "
 "brug for dynamisk DNS-tjeneste."
 
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:12001
-msgid "Run ddclient on DHCP update?"
-msgstr "Kør ddclient på DHCP-opdatering?"
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:12001
-msgid ""
-"You should enable this option if ddclient should be run every time the IP "
-"address is changed by the DHCP client (dhclient). Note: This mode is not "
-"compatible with daemon mode."
-msgstr ""
-"Du skal aktivere denne indstilling, hvis ddclient skal køres hver gang IP-"
-"adressen ændres af DHCP-klienten (dhclient). Bemærk: Denne tilstand er ikke "
-"kompatibel med dæmontilstand."
-
 # Jeg godt 'connect' kan oversættes, f.eks.:
 # '...ved oprettelse af PPP-forbindelse?'
 # (http://en.wikipedia.org/wiki/Point-to-Point_Protocol)
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:13001
+#: ../ddclient.templates:12001
 msgid "Run ddclient on PPP connect?"
 msgstr "Kør ddclient på PPP-forbindelse?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:13001
+#: ../ddclient.templates:12001
 msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
 "connection is established. Note: This mode is not compatible with daemon "
@@ -218,13 +200,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:13001
 msgid "Run ddclient as daemon?"
 msgstr "Kør ddclient som dæmon?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:13001
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
@@ -232,13 +214,13 @@ msgstr "Vælg venligst om ddclient skal køre i dæmontilstand ved systemopstart
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:15001
+#: ../ddclient.templates:14001
 msgid "Interval between ddclient runs:"
 msgstr "Interval mellem ddclient-kørsler:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:15001
+#: ../ddclient.templates:14001
 msgid ""
 "Please choose the delay between interface address checks. Values may be "
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
@@ -250,25 +232,25 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 msgid "From list"
 msgstr "Fra liste"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 msgid "Manually"
 msgstr "Manuelt"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:16002
+#: ../ddclient.templates:15002
 msgid "Selection method for updated names:"
 msgstr "Markeringsmetode for opdaterede navne:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:16002
+#: ../ddclient.templates:15002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
@@ -280,13 +262,13 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Host names to keep updated:"
 msgstr "Værtsnavne der skal holdes opdateret:"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid ""
 "The list of host names managed via your DynDNS account has been downloaded. "
 "Please choose the one(s) for which ddclient should be used to keep IP "
@@ -298,13 +280,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid "Empty host list"
 msgstr "Tom værtsliste"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -314,7 +296,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -324,7 +306,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
@@ -332,6 +314,18 @@ msgstr ""
 "Tjek venligst din konto for at være sikker på, at du har værtsnavne "
 "konfigureret, og kør så »dpkg-reconfigure ddclient« for at indtaste dit "
 "brugernavn og adgangskode igen."
+
+#~ msgid "Run ddclient on DHCP update?"
+#~ msgstr "Kør ddclient på DHCP-opdatering?"
+
+#~ msgid ""
+#~ "You should enable this option if ddclient should be run every time the IP "
+#~ "address is changed by the DHCP client (dhclient). Note: This mode is not "
+#~ "compatible with daemon mode."
+#~ msgstr ""
+#~ "Du skal aktivere denne indstilling, hvis ddclient skal køres hver gang IP-"
+#~ "adressen ændres af DHCP-klienten (dhclient). Bemærk: Denne tilstand er "
+#~ "ikke kompatibel med dæmontilstand."
 
 #~ msgid "Modified configuration file"
 #~ msgstr "Ændret konfigurationsfil"

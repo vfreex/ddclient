@@ -71,8 +71,6 @@ EOF
         daemon_interval="$RET"
         db_get ddclient/run_ipup
         run_ipup="$RET"
-        db_get ddclient/run_dhclient
-        run_dhclient="$RET"
         temp=`mktemp /etc/default/ddclient.XXXXXX`
         trap 'rm -f "$temp"; exit 1' HUP INT QUIT TERM
         cat <<EOF >"$temp"
@@ -83,7 +81,7 @@ EOF
 
 # Set to "true" if ddclient should be run every time DHCP client ('dhclient'
 # from package isc-dhcp-client) updates the systems IP address.
-run_dhclient="$run_dhclient"
+run_dhclient="false"
 
 # Set to "true" if ddclient should be run every time a new ppp connection is
 # established. This might be useful, if you are using dial-on-demand.

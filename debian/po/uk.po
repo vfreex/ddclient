@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2020-06-03 22:22-0400\n"
+"POT-Creation-Date: 2020-08-05 01:53-0400\n"
 "PO-Revision-Date: 2008-10-12 15:29+0300\n"
 "Last-Translator: Olexandr Kravchuk <sashko.debian@gmail.com>\n"
 "Language-Team: \n"
@@ -196,35 +196,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:12001
-#, fuzzy
-#| msgid "Run ddclient on PPP connect?"
-msgid "Run ddclient on DHCP update?"
-msgstr "Запускати ddclient після встановлення з'єднання PPP?"
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:12001
-#, fuzzy
-#| msgid ""
-#| "Enable this if ddclient should be run every time a PPP connection is "
-#| "established."
-msgid ""
-"You should enable this option if ddclient should be run every time the IP "
-"address is changed by the DHCP client (dhclient). Note: This mode is not "
-"compatible with daemon mode."
-msgstr ""
-"Увімкніть цю опцію, якщо бажаєте, щоб ddclient запускався щоразу після "
-"встановлення з'єднання PPP."
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:13001
 msgid "Run ddclient on PPP connect?"
 msgstr "Запускати ddclient після встановлення з'єднання PPP?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:13001
+#: ../ddclient.templates:12001
 #, fuzzy
 #| msgid ""
 #| "Enable this if ddclient should be run every time a PPP connection is "
@@ -239,13 +216,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:13001
 msgid "Run ddclient as daemon?"
 msgstr "Запускати ddclient, як демон?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:13001
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
@@ -255,13 +232,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:15001
+#: ../ddclient.templates:14001
 msgid "Interval between ddclient runs:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:15001
+#: ../ddclient.templates:14001
 msgid ""
 "Please choose the delay between interface address checks. Values may be "
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
@@ -273,25 +250,25 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 msgid "From list"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 msgid "Manually"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:16002
+#: ../ddclient.templates:15002
 msgid "Selection method for updated names:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:16002
+#: ../ddclient.templates:15002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
@@ -300,13 +277,13 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Host names to keep updated:"
 msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid ""
 "The list of host names managed via your DynDNS account has been downloaded. "
 "Please choose the one(s) for which ddclient should be used to keep IP "
@@ -315,13 +292,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid "Empty host list"
 msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -329,7 +306,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -337,11 +314,28 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Run ddclient on PPP connect?"
+#~ msgid "Run ddclient on DHCP update?"
+#~ msgstr "Запускати ddclient після встановлення з'єднання PPP?"
+
+#, fuzzy
+#~| msgid ""
+#~| "Enable this if ddclient should be run every time a PPP connection is "
+#~| "established."
+#~ msgid ""
+#~ "You should enable this option if ddclient should be run every time the IP "
+#~ "address is changed by the DHCP client (dhclient). Note: This mode is not "
+#~ "compatible with daemon mode."
+#~ msgstr ""
+#~ "Увімкніть цю опцію, якщо бажаєте, щоб ddclient запускався щоразу після "
+#~ "встановлення з'єднання PPP."
 
 #~ msgid "Modified configuration file"
 #~ msgstr "Модифікований конфігураційний файл"

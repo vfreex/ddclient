@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
-"POT-Creation-Date: 2020-06-03 22:22-0400\n"
+"POT-Creation-Date: 2020-08-05 01:53-0400\n"
 "PO-Revision-Date: 2014-12-03 23:42+0100\n"
 "Last-Translator: Javier Fernandez-Sanguino <jfs@debian.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -212,30 +212,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../ddclient.templates:12001
-msgid "Run ddclient on DHCP update?"
-msgstr "¿Desea ejecutar «ddclient» al hacer una actualización DHCP?"
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:12001
-msgid ""
-"You should enable this option if ddclient should be run every time the IP "
-"address is changed by the DHCP client (dhclient). Note: This mode is not "
-"compatible with daemon mode."
-msgstr ""
-"Debería habilitar esta opción si desea que se ejecute «ddclient» cada vez "
-"que la dirección IP cambie por el cliente DHCP (dhclient). Nota: Este modo "
-"no es compatible con el modo demonio."
-
-#. Type: boolean
-#. Description
-#: ../ddclient.templates:13001
 msgid "Run ddclient on PPP connect?"
 msgstr "¿Desea ejecutar «ddclient» al establecer una conexión PPP?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:13001
+#: ../ddclient.templates:12001
 msgid ""
 "You should enable this option if ddclient should be run every time a PPP "
 "connection is established. Note: This mode is not compatible with daemon "
@@ -247,13 +229,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:13001
 msgid "Run ddclient as daemon?"
 msgstr "Â¿Desea ejecutar ddclient como un demonio?"
 
 #. Type: boolean
 #. Description
-#: ../ddclient.templates:14001
+#: ../ddclient.templates:13001
 msgid ""
 "Please choose whether you want ddclient to be run in daemon mode on system "
 "startup."
@@ -263,13 +245,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:15001
+#: ../ddclient.templates:14001
 msgid "Interval between ddclient runs:"
 msgstr "Intervalo entre las ejecuciones de ddclient:"
 
 #. Type: string
 #. Description
-#: ../ddclient.templates:15001
+#: ../ddclient.templates:14001
 msgid ""
 "Please choose the delay between interface address checks. Values may be "
 "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. \"7h"
@@ -281,25 +263,25 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 msgid "From list"
 msgstr "De una lista"
 
 #. Type: select
 #. Choices
-#: ../ddclient.templates:16001
+#: ../ddclient.templates:15001
 msgid "Manually"
 msgstr "Manualmente"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:16002
+#: ../ddclient.templates:15002
 msgid "Selection method for updated names:"
 msgstr "Método de selección para nombres actualizados:"
 
 #. Type: select
 #. Description
-#: ../ddclient.templates:16002
+#: ../ddclient.templates:15002
 msgid ""
 "You'll have to select which host names to update using ddclient.  You can "
 "select host names to update from a list (taken from your DynDNS account) or "
@@ -311,13 +293,13 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid "Host names to keep updated:"
 msgstr "Nombres de equipo a actualizar:"
 
 #. Type: multiselect
 #. Description
-#: ../ddclient.templates:17001
+#: ../ddclient.templates:16001
 msgid ""
 "The list of host names managed via your DynDNS account has been downloaded. "
 "Please choose the one(s) for which ddclient should be used to keep IP "
@@ -329,13 +311,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid "Empty host list"
 msgstr "Lista de equipos vacía"
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "The list of host names managed under your account is empty when retrieved "
 "from the dynamic DNS service website."
@@ -345,7 +327,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "You may have provided an incorrect username or password, or the online "
 "account may have no host names configured."
@@ -355,7 +337,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../ddclient.templates:18001
+#: ../ddclient.templates:17001
 msgid ""
 "Please check your account to be sure you have host names configured, then "
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
@@ -363,6 +345,18 @@ msgstr ""
 "Asegúrese de comprobar de que en su cuenta tiene nombres de equipo "
 "configurados. A continuación ejecute «dpkg-reconfigure ddclient» para "
 "introducir de nuevo su nombre de usuario y contraseña."
+
+#~ msgid "Run ddclient on DHCP update?"
+#~ msgstr "¿Desea ejecutar «ddclient» al hacer una actualización DHCP?"
+
+#~ msgid ""
+#~ "You should enable this option if ddclient should be run every time the IP "
+#~ "address is changed by the DHCP client (dhclient). Note: This mode is not "
+#~ "compatible with daemon mode."
+#~ msgstr ""
+#~ "Debería habilitar esta opción si desea que se ejecute «ddclient» cada vez "
+#~ "que la dirección IP cambie por el cliente DHCP (dhclient). Nota: Este "
+#~ "modo no es compatible con el modo demonio."
 
 #~ msgid "Modified configuration file"
 #~ msgstr "Archivo de configuración modificado"
