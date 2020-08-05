@@ -94,10 +94,8 @@ case "$1" in
   #     will be used in a later version of debconf to let postinsts
   #     know when they are reconfigured.
   configure|reconfigure)
-    [ -f /etc/ddclient.conf ] || {
-      write_ddclient_conf
-      [ -f /etc/default/ddclient ] || write_etc_default_ddclient
-    }
+    [ -f /etc/ddclient.conf ] || write_ddclient_conf
+    [ -f /etc/default/ddclient ] || write_etc_default_ddclient
     ;;
   abort-upgrade|abort-remove|abort-deconfigure)
     ;;
