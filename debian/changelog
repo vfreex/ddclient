@@ -1,3 +1,33 @@
+ddclient (3.9.1-7) UNRELEASED; urgency=medium
+
+  * Change the default server for dslreports1 to www.dslreports.com
+  * debconf: Delete unused ddclient/run_dhclient template
+  * debconf: Move db_go calls to just before db_get
+  * debconf: Clear password from db after writing config
+  * debconf: Handle unknown ddclient/service answers as "other"
+  * debconf: Rely on default server
+  * debconf: Avoid reading answer twice
+  * debconf: Move up password re-prompting and simplify
+  * debconf: Don't set seen=true unless it has been seen
+  * debconf: Use `command -v` to test for command availability
+  * debconf: Group all run mode logic together
+  * debconf: Move services list to config script
+  * debconf: Drop priority of ddclient/server question
+  * debconf: Change default for ddclient/protocol back to dyndns2
+  * debconf: Improve template wording
+  * debconf: Tell user that server="" means use the ddclient default
+  * debconf: Add "other" to list of protocol choices (Closes: #742194)
+  * debconf: Prompt for a proxy (Closes: #289084)
+  * postinst: Delete unused run_daemon variable
+  * postinst: Move bulk of logic to helper functions
+  * postinst: Always write /etc/default/ddclient if missing
+  * debconf: Only prompt for PPP ip-up mode when use=if
+  * debconf: Convert checkip boolean to method selection
+  * debconf: Convert run_ipup boolean to run_mode selection
+  * debconf: Support use=web for all services, not just DynDNS (Closes: #216923)
+
+ -- Richard Hansen <rhansen@rhansen.org>  Wed, 19 Aug 2020 17:11:18 -0400
+
 ddclient (3.9.1-6) unstable; urgency=medium
 
   * Fix '"my" variable $use masks earlier declaration' bug in usev6.diff
