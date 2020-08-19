@@ -9,117 +9,149 @@
 
 Template: ddclient/service
 Type: select
-#flag:translate:9
-__Choices: no-ip.com, freedns.afraid.org, duckdns.org, domains.google, www.dyndns.com, www.easydns.com, www.dslreports.com, www.zoneedit.com, other
+#flag:translate:2
+__Choices: ${choices}, other
 Default: no-ip.com
 _Description: Dynamic DNS service provider:
- Please select the dynamic DNS service you are using. If the service you use is
- not listed, choose "other" and you will be asked for the protocol and the
- server name.
+ Dynamic DNS service you are using. If the service you use is not
+ listed, choose "other".
 
 Template: ddclient/server
 Type: string
-_Description: Dynamic DNS server:
- Please enter the name of the server which is providing you with dynamic DNS
- service (example: members.dyndns.org).
+_Description: Dynamic DNS server (blank for default):
+ Server providing the dynamic DNS service (example:
+ members.dyndns.org). Leave blank to use the default for the
+ "${protocol}" protocol.
 
 Template: ddclient/protocol
 Type: select
-Choices: changeip, cloudflare, concont, dnsmadeeasy, dnspark, dondominio, dslreports1, dtdns, duckdns, dyndns1, dyndns2, easydns, freedns, freemyip, googledomains, hammernode1, namecheap, nfsn, noip, nsupdate, sitelutions, woima, yandex, zoneedit1,
-Default: noip
+#flag:translate:25
+__Choices: changeip, cloudflare, concont, dnsmadeeasy, dnspark, dondominio, dslreports1, dtdns, duckdns, dyndns1, dyndns2, easydns, freedns, freemyip, googledomains, hammernode1, namecheap, nfsn, noip, nsupdate, sitelutions, woima, yandex, zoneedit1, other
+Default: dyndns2
 _Description: Dynamic DNS update protocol:
- Please select the dynamic DNS update protocol used by your dynamic DNS service
- provider.
+ Dynamic DNS update protocol used by your dynamic DNS service
+ provider. If the protocol your service uses is not listed, select
+ "other".
+
+Template: ddclient/protocol-other
+Type: string
+_Description: Dynamic DNS update protocol:
+ The name of the dynamic DNS update protocol used by your dynamic DNS
+ service provider.
+
+Template: ddclient/proxy
+Type: string
+_Description: Optional HTTP proxy:
+ HTTP proxy in the form http://proxy.example.com or
+ https://proxy.example.com. Proxy authentication is not supported.
+ Leave blank if you do not use an HTTP proxy.
 
 Template: ddclient/names
 Type: string
-_Description: DynDNS fully qualified domain names:
- Please enter the list of fully qualified domain names for the local host(s)
- (for instance, "myname.dyndns.org" with only one host or
+_Description: Hosts to update (comma-separated):
+ Comma-separated list of fully qualified domain names to update (for
+ instance, "myname.dyndns.org" with only one host, or
  "myname1.dyndns.org,myname2.dyndns.org" for two hosts).
 
 Template: ddclient/username
 Type: string
-_Description: Username for dynamic DNS service:
- Please enter the username to use with the dynamic DNS service.
+_Description: Username:
+ Username (or other type of account identifer) to use with the dynamic
+ DNS service.
 
 Template: ddclient/password
 Type: password
-_Description: Password for dynamic DNS service:
- Please enter the password to use with the dynamic DNS service.
+_Description: Password:
+ Password, API key, or token to use with the dynamic DNS service.
 
 Template: ddclient/password-repeat
 Type: password
-_Description: Re-enter password to verify:
- Please enter your dynamic DNS service password again to make sure
- you typed it correctly.
+_Description: Re-enter password:
+ Password, API key, or token entered again to ensure it was entered
+ correctly.
 
 Template: ddclient/password-mismatch
 Type: error
 _Description: Passwords do not match
  The two passwords you entered were not the same. Please try again.
 
-Template: ddclient/checkip
-Type: boolean
-Default: true
-_Description: Find public IP using checkip.dyndns.com?
- Please choose whether ddclient should try to find the IP address
- of this machine via the DynDNS web interface.  This is recommended
- for machines that are using Network Address Translation.
+Template: ddclient/method
+Type: select
+__Choices: Web-based IP discovery service, Network interface
+Default: Web-based IP discovery service
+_Description: IP address discovery method:
+ The method ddclient uses to determine your current IP address.
+ Your options:
+ .
+ Web-based IP discovery service: Periodically visit a web page that
+ shows your IP address. You probably want this option if your computer
+ is connected to the Internet via a Network Address Translation (NAT)
+ device such as a typical consumer router.
+ .
+ Network interface: Use the IP address assigned to your computer's
+ network interface (such as an Ethernet adapter or PPP connection).
+ You probably want this option if your computer connects directly to
+ the Internet (your connection does not go through a NAT device).
+
+Template: ddclient/web
+Type: select
+#flag:translate:2
+__Choices: ${choices}, other
+_Description: IP discovery service:
+ The web-based IP discovery service you would like ddclient to use to
+ determine your current IP address.
+
+Template: ddclient/web-url
+Type: string
+_Description: IP discovery service URL:
+ URL to a web page that returns your IP address.
 
 Template: ddclient/interface
 Type: string
-_Description: Network interface used for dynamic DNS service:
- Please enter the name of the network interface (eth0/wlan0/ppp0/...)
- to use for dynamic DNS service.
+_Description: Network interface:
+ The name of the network interface (e.g., eth0, wlan0, ppp0) that
+ ddclient will look at to determine the current IP address.
 
-Template: ddclient/run_dhclient
-Type: boolean
-Default: false
-_Description: Run ddclient on DHCP update?
- You should enable this option if ddclient should be run every time the
- IP address is changed by the DHCP client (dhclient).
- Note: This mode is not compatible with daemon mode.
-
-Template: ddclient/run_ipup
-Type: boolean
-Default: false
-_Description: Run ddclient on PPP connect?
- You should enable this option if ddclient should be run every time a PPP connection is
- established.
- Note: This mode is not compatible with daemon mode.
-
-Template: ddclient/run_daemon
-Type: boolean
-Default: true
-_Description: Run ddclient as daemon?
- Please choose whether you want ddclient to be run in daemon mode on system
- startup.
+Template: ddclient/run_mode
+Type: select
+__Choices: As a daemon, On PPP connect
+Default: As a daemon
+_Description: How to run ddclient:
+ The ddclient run mode. Your options:
+ .
+ As a daemon: ddclient runs in the background periodically checking to
+ see if the IP address has changed.
+ .
+ On PPP connect: Each time you connect via PPP ddclient will start,
+ update the IP address, and exit.
 
 Template: ddclient/daemon_interval
 Type: string
 Default: 5m
-_Description: Interval between ddclient runs:
- Please choose the delay between interface address checks.
- Values may be given in seconds (e.g. "5s"), in minutes (e.g. "3m"), in
- hours (e.g. "7h") or in days (e.g. "1d").
+_Description: Time between address checks:
+ How long ddclient should wait between IP address checks. Values may
+ be given in seconds (e.g., "300s"), in minutes (e.g., "5m"), in hours
+ (e.g., "7h") or in days (e.g., "1d").
 
 Template: ddclient/fetchhosts
 Type: select
 Default: From list
 __Choices: From list, Manually
-_Description: Selection method for updated names:
- You'll have to select which host names to update using ddclient.  You can
- select host names to update from a list (taken from your DynDNS account)
- or enter them manually.
+_Description: How to enter host names:
+ How to prompt you for the host name(s) that ddclient will update.
+ .
+ If you choose "From list", this program will attempt to look up the
+ host names that are registered with your DynDNS account. You will
+ then select hosts from that list.
+ .
+ If you choose "Manually", you will have to type in the host name(s).
 
 Template: ddclient/hostslist
 Type: multiselect
 Choices: ${choices}
-_Description: Host names to keep updated:
- The list of host names managed via your DynDNS account has been downloaded.
- Please choose the one(s) for which ddclient should be used to keep IP address
- records up to date.
+_Description: Hosts to update:
+ The host name(s) to keep updated with your current IP address. (This
+ list of host names was downloaded from your DynDNS account.)
 
 Template: ddclient/blankhostslist
 Type: error
