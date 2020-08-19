@@ -12,10 +12,10 @@ Origin: upstream, https://github.com/ddclient/ddclient/commit/40f355d05ef8f0a194
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/ddclient b/ddclient
-index ee2f09e..1494efc 100755
+index 5e4876d..655b0aa 100755
 --- a/ddclient
 +++ b/ddclient
-@@ -1898,9 +1898,9 @@ sub check_value {
+@@ -1897,9 +1897,9 @@ sub check_value {
  	$value = $min if defined($min) && $value < $min;
  
      } elsif ($type eq T_BOOL) {

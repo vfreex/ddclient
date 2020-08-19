@@ -1,3 +1,10 @@
+ddclient (3.9.1-6) unstable; urgency=medium
+
+  * Fix '"my" variable $use masks earlier declaration' bug in usev6.diff
+    (Closes: #968254)
+
+ -- Richard Hansen <rhansen@rhansen.org>  Wed, 19 Aug 2020 17:00:18 -0400
+
 ddclient (3.9.1-5) unstable; urgency=medium
 
   * Add line continuations to /etc/ddclient.conf

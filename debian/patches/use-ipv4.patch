@@ -13,10 +13,10 @@ Origin: upstream, https://github.com/ddclient/ddclient/commit/99a60995c47348ea32
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/ddclient b/ddclient
-index 1494efc..827d283 100755
+index 655b0aa..984fc4f 100755
 --- a/ddclient
 +++ b/ddclient
-@@ -2327,7 +2327,9 @@ sub get_ip {
+@@ -2326,7 +2326,9 @@ sub get_ip {
          $skip  =~ s/ /\\s/is;
          $reply =~ s/^.*?${skip}//is;
      }
