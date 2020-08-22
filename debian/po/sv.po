@@ -1,21 +1,22 @@
 # Translation of ddclient debconf template to Swedish
-# Copyright (C) 2015 Martin Bagge <brother@bsnet.se>
+# Copyright (C) 2015, 2020 Martin Bagge <brother@bsnet.se>
 # This file is distributed under the same license as the ddclient package.
 #
 # Martin Bagge <brother@bsnet.se>, 2009, 2010, 2015
+# Sebastian Rasmussen <sebras@gmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: ddclient\n"
 "Report-Msgid-Bugs-To: ddclient@packages.debian.org\n"
 "POT-Creation-Date: 2020-08-05 18:23-0400\n"
-"PO-Revision-Date: 2015-04-01 18:52+0100\n"
-"Last-Translator: Martin Bagge / brother <brother@bsnet.se>\n"
+"PO-Revision-Date: 2020-08-21 14:18+0800\n"
+"Last-Translator: Sebastian Rasmussen <sebras@gmail.com>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #. Type: select
 #. Choices
@@ -26,7 +27,7 @@ msgstr ""
 #: ../ddclient.templates:2001 ../ddclient.templates:4001
 #: ../ddclient.templates:13001
 msgid "other"
-msgstr "Annan"
+msgstr "annan"
 
 #. Type: select
 #. Description
@@ -37,40 +38,29 @@ msgstr "Leverantör av dynamisk DNS:"
 #. Type: select
 #. Description
 #: ../ddclient.templates:2002
-#, fuzzy
-#| msgid ""
-#| "Please select the dynamic DNS service you are using. If the service you "
-#| "use is not listed, choose \"other\" and you will be asked for the "
-#| "protocol and the server name."
 msgid ""
 "Dynamic DNS service you are using. If the service you use is not listed, "
 "choose \"other\"."
 msgstr ""
-"Välj vilken leverantör av dynamisk DNS du använder. Om den leverantör du "
-"använder inte finns i listan väljer du \"annan\" och får då fylla i en del "
-"uppgifter manuellt."
+"Den dynamiska DNS-tjänst du använder. Om tjänsten du använder inte finns i "
+"listan väljer du ”annan”."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:3001
-#, fuzzy
-#| msgid "Dynamic DNS server:"
 msgid "Dynamic DNS server (blank for default):"
-msgstr "Dynamisk DNS-server:"
+msgstr "Dynamisk DNS-server (blankt för standardvärde):"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:3001
-#, fuzzy
-#| msgid ""
-#| "Please enter the name of the server which is providing you with dynamic "
-#| "DNS service (example: members.dyndns.org)."
 msgid ""
 "Server providing the dynamic DNS service (example: members.dyndns.org). "
 "Leave blank to use the default for the \"${protocol}\" protocol."
 msgstr ""
-"Ange namnet på den server som förser dig med den dynamiska DNS-tjänsten "
-"(exempelvis members.dyndns.org)."
+"Server som förser dig med den dynamiska DNS-tjänsten (exempelvis medlemmar."
+"dyndns.org). Lämna blankt för att använda standardvärdet för ”${protocol}”-"
+"protokollet."
 
 #. Type: select
 #. Description
@@ -83,34 +73,28 @@ msgstr "Protokoll för uppdateringar av dynamisk DNS:"
 #. Type: select
 #. Description
 #: ../ddclient.templates:4002
-#, fuzzy
-#| msgid ""
-#| "Please select the dynamic DNS update protocol used by your dynamic DNS "
-#| "service provider."
 msgid ""
 "Dynamic DNS update protocol used by your dynamic DNS service provider. If "
 "the protocol your service uses is not listed, select \"other\"."
 msgstr ""
-"Ange uppdateringsprotokollet som din leverantör av dynamisk DNS använder."
+"Uppdateringsprotokollet som används av din tjänsteleverantör av dynamisk "
+"DNS. Om protokollet din tjänst använder inte finns, välj ”annan”."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:5001
-#, fuzzy
-#| msgid ""
-#| "Please select the dynamic DNS update protocol used by your dynamic DNS "
-#| "service provider."
 msgid ""
 "The name of the dynamic DNS update protocol used by your dynamic DNS service "
 "provider."
 msgstr ""
-"Ange uppdateringsprotokollet som din leverantör av dynamisk DNS använder."
+"Namnet på uppdateringsprotokollet som används av din tjänsteleverantör av "
+"dynamisk DNS."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:6001
 msgid "Optional HTTP proxy:"
-msgstr ""
+msgstr "Valfri HTTP-proxy:"
 
 #. Type: string
 #. Description
@@ -120,76 +104,72 @@ msgid ""
 "com. Proxy authentication is not supported. Leave blank if you do not use an "
 "HTTP proxy."
 msgstr ""
+"HTTP-proxy på formen http://proxy.example.com eller https://proxy.example."
+"com. Proxy-autentisering stöds inte. Lämna blankt om du inte använder en "
+"HTTP-proxy."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
 msgid "Hosts to update (comma-separated):"
-msgstr ""
+msgstr "Värdar att uppdatera (kommaseparerade):"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:7001
-#, fuzzy
-#| msgid ""
-#| "Please enter the list of fully qualified domain names for the local "
-#| "host(s) (for instance, \"myname.dyndns.org\" with only one host or "
-#| "\"myname1.dyndns.org,myname2.dyndns.org\" for two hosts)."
 msgid ""
 "Comma-separated list of fully qualified domain names to update (for "
 "instance, \"myname.dyndns.org\" with only one host, or \"myname1.dyndns.org,"
 "myname2.dyndns.org\" for two hosts)."
 msgstr ""
-"Ange listan med kompletta domännamn för den/de lokala värden/värdarna "
-"(exempelvis \"mittnamn.dyndns.org\" för endast en värd eller \"mittnamn1."
-"dyndns.org mittnamn2.dyndns.org\" för två värdar)."
+"Kommaseparerad lista av kompletta domännamn som ska uppdateras (exempelvis "
+"”mittnamn.dyndns.org” för endast en värd eller ”mittnamn1.dyndns.org,"
+"mittnamn2.dyndns.org” för två värdar)."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:8001
 msgid "Username:"
-msgstr ""
+msgstr "Användarnamn:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:8001
-#, fuzzy
-#| msgid "Please enter the username to use with the dynamic DNS service."
 msgid ""
 "Username (or other type of account identifer) to use with the dynamic DNS "
 "service."
-msgstr "Ange användarnamnet som ska användas för den dynamiska DNS-tjänsten."
+msgstr ""
+"Användarnamn (eller annan typ av kontoidentifierare) som ska användas för "
+"den dynamiska DNS-tjänsten."
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:9001
 msgid "Password:"
-msgstr ""
+msgstr "Lösenord:"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:9001
-#, fuzzy
-#| msgid "Please enter the password to use with the dynamic DNS service."
 msgid "Password, API key, or token to use with the dynamic DNS service."
-msgstr "Ange lösenordet som ska användas för den dynamiska DNS-tjänsten."
+msgstr ""
+"Lösenord, API-nyckel eller symbol som ska användas för den dynamiska DNS-"
+"tjänsten."
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:10001
-#, fuzzy
-#| msgid "Re-enter password to verify:"
 msgid "Re-enter password:"
-msgstr "Ange lösenordet igen för verifikation."
+msgstr "Ange lösenordet igen:"
 
 #. Type: password
 #. Description
 #: ../ddclient.templates:10001
-#, fuzzy
-#| msgid "Please enter the password to use with the dynamic DNS service."
 msgid ""
 "Password, API key, or token entered again to ensure it was entered correctly."
-msgstr "Ange lösenordet som ska användas för den dynamiska DNS-tjänsten."
+msgstr ""
+"Lösenord, API-nyckel eller symbol angivet igen för att försäkra att det "
+"matats in korrekt."
 
 #. Type: error
 #. Description
@@ -207,19 +187,19 @@ msgstr "De båda lösenorden stämde inte överens. Försök igen."
 #. Choices
 #: ../ddclient.templates:12001
 msgid "Web-based IP discovery service"
-msgstr ""
+msgstr "Webb-baserad IP-identifieringstjänst"
 
 #. Type: select
 #. Choices
 #: ../ddclient.templates:12001
 msgid "Network interface"
-msgstr ""
+msgstr "Nätverksgränssnitt"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:12002
 msgid "IP address discovery method:"
-msgstr ""
+msgstr "Identifieringsmetod för IP-adress:"
 
 #. Type: select
 #. Description
@@ -227,6 +207,8 @@ msgstr ""
 msgid ""
 "The method ddclient uses to determine your current IP address. Your options:"
 msgstr ""
+"Metoden ddclient använder för att identifiera din aktuella IP-adress. Dina "
+"alternativ:"
 
 #. Type: select
 #. Description
@@ -237,6 +219,10 @@ msgid ""
 "to the Internet via a Network Address Translation (NAT) device such as a "
 "typical consumer router."
 msgstr ""
+"Webb-baserad IP-identifieringstjänst: Besöker periodiskt en webbsida som "
+"visar din IP-adress. Du vill förmodligen använda detta alternativ om din "
+"dator är ansluten till internet via en nätverksadressöversättningsenhet "
+"(Network Address Translation, NAT), exempelvis en vanlig router."
 
 #. Type: select
 #. Description
@@ -247,12 +233,16 @@ msgid ""
 "this option if your computer connects directly to the Internet (your "
 "connection does not go through a NAT device)."
 msgstr ""
+"Nätverksgränssnitt: Använd IP-adressen som tilldelats till din dators "
+"nätverksgränssnitt (exempelvis en Ethernet-adapter eller PPP-anslutning). Du "
+"vill förmodligen använda detta alternativ om datorn ansluter direkt till "
+"internet (din anslutning går inte via en NAT-enhet)."
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:13002
 msgid "IP discovery service:"
-msgstr ""
+msgstr "IP-identifieringstjänst:"
 
 #. Type: select
 #. Description
@@ -261,24 +251,26 @@ msgid ""
 "The web-based IP discovery service you would like ddclient to use to "
 "determine your current IP address."
 msgstr ""
+"Den webb-baserade IP-identifieringstjänsten du vill att ddclient ska använda "
+"för att bestämma din aktuella IP-adress."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:14001
 msgid "IP discovery service URL:"
-msgstr ""
+msgstr "Tjänst-URL för IP-identifieringstjänst:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:14001
 msgid "URL to a web page that returns your IP address."
-msgstr ""
+msgstr "URL till en webbsida som returnerar din IP-adress."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:15001
 msgid "Network interface:"
-msgstr ""
+msgstr "Nätverksgränssnitt:"
 
 #. Type: string
 #. Description
@@ -287,32 +279,32 @@ msgid ""
 "The name of the network interface (e.g., eth0, wlan0, ppp0) that ddclient "
 "will look at to determine the current IP address."
 msgstr ""
+"Namnet på nätverksgränssnittet (t.ex., eth0, wlan0, ppp0) för vilket "
+"ddclient kommer att försöka bestämma aktuell IP-adress."
 
 #. Type: select
 #. Choices
 #: ../ddclient.templates:16001
 msgid "As a daemon"
-msgstr ""
+msgstr "Som en demon"
 
 #. Type: select
 #. Choices
 #: ../ddclient.templates:16001
-#, fuzzy
-#| msgid "Run ddclient on PPP connect?"
 msgid "On PPP connect"
-msgstr "Starta ddclient vid PPP-anslutning?"
+msgstr "Vid PPP-anslutning"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:16002
 msgid "How to run ddclient:"
-msgstr ""
+msgstr "Hur ddclient ska köras:"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:16002
 msgid "The ddclient run mode. Your options:"
-msgstr ""
+msgstr "ddclients körläge. Dina alternativ:"
 
 #. Type: select
 #. Description
@@ -321,6 +313,8 @@ msgid ""
 "As a daemon: ddclient runs in the background periodically checking to see if "
 "the IP address has changed."
 msgstr ""
+"Som en demon: ddclient körs periodiskt i bakgrunden för att kontrollera om "
+"IP-adressen ändrats."
 
 #. Type: select
 #. Description
@@ -329,28 +323,26 @@ msgid ""
 "On PPP connect: Each time you connect via PPP ddclient will start, update "
 "the IP address, and exit."
 msgstr ""
+"Vid varje PPP-anslutning: Varje gång du ansluter via PPP kommer ddclient att "
+"starta, uppdatera IP-adressen och avslutas."
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:17001
 msgid "Time between address checks:"
-msgstr ""
+msgstr "Tiden mellan adresskontroller:"
 
 #. Type: string
 #. Description
 #: ../ddclient.templates:17001
-#, fuzzy
-#| msgid ""
-#| "Please choose the delay between interface address checks. Values may be "
-#| "given in seconds (e.g. \"5s\"), in minutes (e.g. \"3m\"), in hours (e.g. "
-#| "\"7h\") or in days (e.g. \"1d\")."
 msgid ""
 "How long ddclient should wait between IP address checks. Values may be given "
 "in seconds (e.g., \"300s\"), in minutes (e.g., \"5m\"), in hours (e.g., \"7h"
 "\") or in days (e.g., \"1d\")."
 msgstr ""
-"Ange fördröjningen mellan uppdateringen av adresser. Värdet kan anges i "
-"sekunder (\"5s\"), minuter (\"3m\"), timmar (\"7h\") eller i dagar (\"1d\")."
+"Hur länge ddclient ska vänta mellan IP-adresskontroller. Värden kan anges i "
+"sekunder (t.ex ”300s”), minuter (t.ex. ”5m”), timmar (t.ex. ”7h”) eller i "
+"dagar (t.ex. ”1d”)."
 
 #. Type: select
 #. Choices
@@ -368,13 +360,15 @@ msgstr "Manuellt"
 #. Description
 #: ../ddclient.templates:18002
 msgid "How to enter host names:"
-msgstr ""
+msgstr "Hur värdnamn anges:"
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:18002
 msgid "How to prompt you for the host name(s) that ddclient will update."
 msgstr ""
+"Hur du kommer att efterfrågas efter värdnamnen som ddclient kommer att "
+"uppdatera."
 
 #. Type: select
 #. Description
@@ -384,20 +378,21 @@ msgid ""
 "names that are registered with your DynDNS account. You will then select "
 "hosts from that list."
 msgstr ""
+"Om du väljer ”Från lista” kommer detta program att försöka att slå upp "
+"värdnamnen som är registrerade med ditt DynDNS-konto. Du kommer sedan att "
+"välja värdar från den listan."
 
 #. Type: select
 #. Description
 #: ../ddclient.templates:18002
 msgid "If you choose \"Manually\", you will have to type in the host name(s)."
-msgstr ""
+msgstr "Om du väljer ”Manuellt” måste du mata in värdnamnen."
 
 #. Type: multiselect
 #. Description
 #: ../ddclient.templates:19001
-#, fuzzy
-#| msgid "Host names to keep updated:"
 msgid "Hosts to update:"
-msgstr "Värdnamn som ska hållas uppdaterat/uppdaterade:"
+msgstr "Värdnamn att uppdaterade:"
 
 #. Type: multiselect
 #. Description
@@ -406,6 +401,8 @@ msgid ""
 "The host name(s) to keep updated with your current IP address. (This list of "
 "host names was downloaded from your DynDNS account.)"
 msgstr ""
+"Värdnamn att hålla uppdaterade med din aktuella IP-adress. (Denna lista av "
+"värdnamn hämtades från ditt DynDNS-konto.)"
 
 #. Type: error
 #. Description
@@ -441,8 +438,8 @@ msgid ""
 "run \"dpkg-reconfigure ddclient\" to input your username and password again."
 msgstr ""
 "Kontrollera ditt konto för att säkerställa att det finns värdnamn att nyttja "
-"och kör sedan \"dpkg-reconfigure ddclient\" och ange dina "
-"inloggningsuppgifter på nytt."
+"och kör sedan ”dpkg-reconfigure ddclient” och ange dina inloggningsuppgifter "
+"på nytt."
 
 #, fuzzy
 #~| msgid ""

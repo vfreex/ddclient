@@ -31,8 +31,10 @@ ddclient (3.9.1-7) UNRELEASED; urgency=medium
   * debian/po/de.po: Add missing space to Language-Team header
   * debian/po/gl.po: Change Galician language team email to Debian list
   * debian/po/sk.po: Change Slovak language team email to Debian list
+  * Update Swedish debconf translation.
+    Thanks to Sebastian Rasmussen
 
- -- Richard Hansen <rhansen@rhansen.org>  Wed, 19 Aug 2020 18:54:06 -0400
+ -- Richard Hansen <rhansen@rhansen.org>  Sat, 22 Aug 2020 16:38:14 -0400
 
 ddclient (3.9.1-6) unstable; urgency=medium
 
