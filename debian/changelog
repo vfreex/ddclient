@@ -39,8 +39,10 @@ ddclient (3.9.1-7) UNRELEASED; urgency=medium
     Thanks to José Vieira
   * Update German debconf translation.
     Thanks to Helge Kreutzmann (Closes: #969248)
+  * Update Dutch debconf translation.
+    Thanks to Frans Spiesschaert (Closes: #969344)
 
- -- Richard Hansen <rhansen@rhansen.org>  Mon, 31 Aug 2020 00:49:38 -0400
+ -- Richard Hansen <rhansen@rhansen.org>  Tue, 08 Sep 2020 14:10:41 -0400
 
 ddclient (3.9.1-6) unstable; urgency=medium
 
