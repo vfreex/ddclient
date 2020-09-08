@@ -1,4 +1,4 @@
-ddclient (3.9.1-7) UNRELEASED; urgency=medium
+ddclient (3.9.1-7) unstable; urgency=medium
 
   * Change the default server for dslreports1 to www.dslreports.com
   * debconf: Delete unused ddclient/run_dhclient template
@@ -48,7 +48,7 @@ ddclient (3.9.1-7) UNRELEASED; urgency=medium
   * Update Finnish debconf translation.
     Thanks to Ari Ervasti
 
- -- Richard Hansen <rhansen@rhansen.org>  Tue, 08 Sep 2020 14:22:15 -0400
+ -- Richard Hansen <rhansen@rhansen.org>  Tue, 08 Sep 2020 14:24:00 -0400
 
 ddclient (3.9.1-6) unstable; urgency=medium
 
