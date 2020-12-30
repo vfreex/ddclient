@@ -1,3 +1,9 @@
+ddclient (3.9.1-8) UNRELEASED; urgency=medium
+
+  * Fix Portuguese (Portugal) debconf translation
+
+ -- Richard Hansen <rhansen@rhansen.org>  Tue, 29 Dec 2020 22:31:17 -0500
+
 ddclient (3.9.1-7) unstable; urgency=medium
 
   * Change the default server for dslreports1 to www.dslreports.com
