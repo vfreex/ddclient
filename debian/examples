@@ -1,5 +1,5 @@
 sample-ddclient-wrapper.sh
 sample-etc_cron.d_ddclient
-sample-etc_ddclient.conf
+ddclient.conf
 sample-etc_dhcpc_dhcpcd-eth0.exe
 sample-get-ip-from-fritzbox

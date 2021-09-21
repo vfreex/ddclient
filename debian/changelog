@@ -1,4 +1,4 @@
-ddclient (3.9.1-8) UNRELEASED; urgency=medium
+ddclient (3.9.2-0.git.c56ce41) UNRELEASED; urgency=medium
 
   * Fix Portuguese (Portugal) debconf translation
 
